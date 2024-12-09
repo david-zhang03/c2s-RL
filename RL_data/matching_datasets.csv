@@ -1,0 +1,92 @@
+dataset,filename
+Activated PBMCs - Expanded cohort CITE-seq,local(304).h5ad
+blood and bone marrow from a healthy young donor,local(477).h5ad
+scRNA-seq analysis of healthy human fallopian tubes,local(770).h5ad
+HypoMap – a unified single cell gene expression atlas of the murine hypothalamus,local(52).h5ad
+L4 IT - MTG: Seattle Alzheimer's Disease Atlas (SEA-AD),local(274).h5ad
+Lung Parenchyma,local(636).h5ad
+Molecular characterization of selectively vulnerable neurons in Alzheimer’s Disease: SFG astrocytes,local(609).h5ad
+Human kidney cortex snATAC-seq data from donors with and without diabetic kidney disease,local(192).h5ad
+fetal,local(473).h5ad
+healthy young bone marrow donor,local(475).h5ad
+A Single-Cell Transcriptional Roadmap of the Mouse and Human Lymph Node Lymphatic Vasculature - mouse,local(707).h5ad
+e14.5 glutamatergic lineage,local(467).h5ad
+VLMC - MTG: Seattle Alzheimer's Disease Atlas (SEA-AD),local(287).h5ad
+e16.5 glutamatergic lineage,local(468).h5ad
+Sst Chodl - MTG: Seattle Alzheimer's Disease Atlas (SEA-AD),local(280).h5ad
+Bipolar cells of the human fovea and peripheral retina,local(702).h5ad
+Single cell RNA sequencing of CD19 CAR T-cell infusion products,local(635).h5ad
+Non-pregnant Uterus (Endometrium - Epithelial),local(481).h5ad
+Sst - MTG: Seattle Alzheimer's Disease Atlas (SEA-AD),local(277).h5ad
+L6 IT Car3 - MTG: Seattle Alzheimer's Disease Atlas (SEA-AD),local(289).h5ad
+Vip - MTG: Seattle Alzheimer's Disease Atlas (SEA-AD),local(273).h5ad
+Single-cell transcriptomics of human T cells reveals tissue and activation signatures in health and disease,local(726).h5ad
+Molecular characterization of selectively vulnerable neurons in Alzheimer’s Disease: Entorhinal Cortex,local(603).h5ad
+Molecular characterization of selectively vulnerable neurons in Alzheimer’s Disease: EC inhibitory neurons,local(607).h5ad
+Chandelier - MTG: Seattle Alzheimer's Disease Atlas (SEA-AD),local(272).h5ad
+L5 ET - MTG: Seattle Alzheimer's Disease Atlas (SEA-AD),local(282).h5ad
+scRNA-seq analysis of human fallopian tubes in healthy Vs. hydrosalphinx states,local(771).h5ad
+e18.5 glutamatergic lineage,local(465).h5ad
+Non-pregnant Uterus (Endometrium - Organoid),local(482).h5ad
+Steady-state B cells - scRNA-seq,local(303).h5ad
+e12.5 thalamic progenitors,local(463).h5ad
+Molecular characterization of selectively vulnerable neurons in Alzheimer’s Disease: EC microglia,local(614).h5ad
+OPC - MTG: Seattle Alzheimer's Disease Atlas (SEA-AD),local(267).h5ad
+Molecular characterization of selectively vulnerable neurons in Alzheimer’s Disease: SFG excitatory neurons,local(608).h5ad
+Single-cell reconstruction of follicular remodeling in the human adult ovary,local(728).h5ad
+L6b - MTG: Seattle Alzheimer's Disease Atlas (SEA-AD),local(276).h5ad
+Modeling Hepatoblastoma: Identification of Distinct Tumor Cell Populations and Key Genetic Mechanisms through Single Cell Sequencing,local(479).h5ad
+Molecular characterization of selectively vulnerable neurons in Alzheimer’s Disease: SFG microglia,local(613).h5ad
+Single-cell transcriptomes of the human skin reveal age-related loss of fibroblast priming,local(762).h5ad
+Core GBmap,local(199).h5ad
+Molecular characterization of selectively vulnerable neurons in Alzheimer’s Disease: EC excitatory neurons,local(611).h5ad
+Multiomics single-cell analysis of human pancreatic islets reveals novel cellular states in health and type 1 diabetes,local(471).h5ad
+Single cell transcriptional and chromatin accessibility profiling redefine cellular heterogeneity in the adult human kidney - RNAseq,local(486).h5ad
+scRNA-seq analysis of non-ciliated epithelial cells of healthy human fallopian tubes,local(769).h5ad
+Spleen,local(637).h5ad
+Photoreceptor cells of the human fovea and peripheral retina,local(699).h5ad
+Esophagus Epithelium,local(638).h5ad
+Horizontal cells of the human fovea and peripheral retina,local(698).h5ad
+Human cortical expansion involves diversification and specialization of supragranular intratelencephalic-projecting neurons,local(513).h5ad
+Molecular characterization of selectively vulnerable neurons in Alzheimer’s Disease: SFG inhibitory neurons,local(605).h5ad
+scRNA-seq data analysis of HUVECs treated with high glucose and TNFα,local(633).h5ad
+All cells,local(738).h5ad
+15 leukemic bone marrow donors,local(478).h5ad
+e18.5 thalamic nuclei,local(462).h5ad
+Amacrine cells of the human fovea and peripheral retina,local(701).h5ad
+L5 IT - MTG: Seattle Alzheimer's Disease Atlas (SEA-AD),local(290).h5ad
+Non-pregnant Uterus (Endometrium - All),local(474).h5ad
+scRNA-seq data analysis of endothelium-enriched mesenteric arterial tissues from human donors,local(634).h5ad
+Non-neuronal cells of the human fovea and peripheral retina,local(700).h5ad
+Human kidney cortex snRNA-seq data from donors with and without diabetic kidney disease,local(191).h5ad
+Activated PBMCs - Twins scRNA-seq,local(305).h5ad
+Molecular characterization of selectively vulnerable neurons in Alzheimer’s Disease: SFG oligodendrocyte,local(610).h5ad
+L6 IT - MTG: Seattle Alzheimer's Disease Atlas (SEA-AD),local(281).h5ad
+Molecular characterization of selectively vulnerable neurons in Alzheimer’s Disease: Superior frontal gyrus,local(612).h5ad
+Extended GBmap,local(198).h5ad
+Adult mouse cortical cell taxonomy revealed by single cell transcriptomics,local(763).h5ad
+3 healthy young and 3 healthy old bone marrow donors (Reference sample),local(476).h5ad
+Molecular characterization of selectively vulnerable neurons in Alzheimer’s Disease: EC astrocytes,local(606).h5ad
+Single cell transcriptional and chromatin accessibility profiling redefine cellular heterogeneity in the adult human kidney - ATACseq,local(487).h5ad
+wilms,local(480).h5ad
+Liver,local(739).h5ad
+L6 CT - MTG: Seattle Alzheimer's Disease Atlas (SEA-AD),local(284).h5ad
+Sncg - MTG: Seattle Alzheimer's Disease Atlas (SEA-AD),local(269).h5ad
+A Single-Cell Transcriptional Roadmap of the Mouse and Human Lymph Node Lymphatic Vasculature - human,local(706).h5ad
+Olah et al (2020) Single-cell Human Microglia,local(632).h5ad
+scRNA-seq analysis of ciliated cells of healthy human fallopian tubes,local(772).h5ad
+Retinal ganglion cells of the human fovea and peripheral retina,local(703).h5ad
+scRNA-seq analysis of stromal cells of healthy human fallopian tubes,local(768).h5ad
+Lamp5 - MTG: Seattle Alzheimer's Disease Atlas (SEA-AD),local(268).h5ad
+Pax6 - MTG: Seattle Alzheimer's Disease Atlas (SEA-AD),local(286).h5ad
+L2/3 IT - MTG: Seattle Alzheimer's Disease Atlas (SEA-AD),local(275).h5ad
+Single-cell multi-omics analysis of the immune response in COVID-19,local(546).h5ad
+Single-cell of aged oligodendrocytes,local(51).h5ad
+e12.5 glutamatergic lineage,local(464).h5ad
+L5/6 NP - MTG: Seattle Alzheimer's Disease Atlas (SEA-AD),local(285).h5ad
+Integrated adult and foetal hearts,local(23).h5ad
+Molecular characterization of selectively vulnerable neurons in Alzheimer’s Disease: EC oligodendrocyte,local(604).h5ad
+Single-cell longitudinal analysis of SARS-CoV-2 infection in human bronchial epithelial cells,local(778).h5ad
+Atlas of the developing mouse thalamus,local(466).h5ad
+Colon,local(777).h5ad
+Microglia - 24 months old wild-type and Rag1-KO,local(50).h5ad
