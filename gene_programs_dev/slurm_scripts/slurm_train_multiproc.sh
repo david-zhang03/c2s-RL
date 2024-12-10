@@ -8,8 +8,8 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1                        # Run on a single CPU
 #SBATCH --gres=gpu:1                               # start with 1
-#SBATCH --cpus-per-task=8
-#SBATCH --mem=256gb                                 # Job memory request
+#SBATCH --cpus-per-task=16
+#SBATCH --mem=512gb                                 # Job memory request
 #SBATCH --time=1-00:00:00                          # Time limit hrs:min:sec
 date;hostname
 
@@ -17,9 +17,9 @@ source /home/ddz5/miniconda3/bin/activate activate  /home/ddz5/.conda/envs/c2gse
 
 nvidia-smi
 declare -A GPU_MEMORY_THRESHOLDS
-GPU_MEMORY_THRESHOLDS["A100"]=20000  # These are just placeholders, actual benchmarking IP
-GPU_MEMORY_THRESHOLDS["H100"]=16000  
-GPU_MEMORY_THRESHOLDS["A40"]=16000
+GPU_MEMORY_THRESHOLDS["A100"]=80000
+GPU_MEMORY_THRESHOLDS["H100"]=80000
+GPU_MEMORY_THRESHOLDS["A40"]=48000
 
 # GPU memory thresholds per model
 # include memory requirements for dataset
@@ -37,6 +37,19 @@ echo "Detected GPU: $GPU_TYPE with memory threshold: $GPU_MEMORY_THRESHOLD MiB"
 check_memory_usage() {
     local memory_used=$(nvidia-smi --query-gpu=memory.used --format=csv,noheader,nounits | awk '{sum+=$1} END {print sum}')
     echo $memory_used
+}
+
+# Function to calculate memory usage for dataset
+calculate_memory_required() {
+    local metadata_file="$1/metadata.txt"
+    if [ -f "$metadata_file" ]; then
+        local num_cells=$(grep "num_cells" "$metadata_file" | awk '{print $2}')
+        # heuristic: 0.5GB/ 10k cells
+        local memory_required_gb=$(awk "BEGIN {print ($num_cells / 10000) * 0.5}")
+        echo "$memory_required_gb"
+    else
+        echo "$0"
+    fi
 }
 
 DATASET_DIR="/home/ddz5/scratch/Cell2GSEA_QA_dataset_models/"
@@ -64,7 +77,15 @@ while true; do
         if [ -f "$dataset/training_inputs.pickle" ] && [ ! -f "$dataset/training_done.flag" ]; then
             # Check GPU memory usage
             current_memory=$(check_memory_usage)
-            if (( current_memory + GPU_MEMORY_THRESHOLD < 80000 )); then
+
+            memory_required=$(calculate_memory_required "$dataset")
+            memory_required_mib=$(awk "BEGIN {print $memory_required * 1024}")
+
+            echo "Dataset: $(basename $dataset)"
+            echo "Memory required: $memory_required_gb GB ($memory_required_mib MiB)"
+            echo "Current GPU memory usage: $current_memory MiB"
+
+            if (( current_memory + memory_required_mib < GPU_MEMORY_THRESHOLD )); then
                 echo "Starting training for $dataset on GPU"
                 python /home/ddz5/Desktop/gene_programs_dev/scripts/run_training.py \
                     --input_path "${dataset}/training_inputs.pickle" \

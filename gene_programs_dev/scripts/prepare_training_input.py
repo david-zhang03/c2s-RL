@@ -86,14 +86,14 @@ log_str(f"Built KNN graph: n_edges = {len(edge_list[0]):,}")
 log_str(f"Intersecting genes in library and genes in single-cell dataset")
 terms = geneset_lib_df['gene_set'].values
 member_genes = geneset_lib_df['genes'].values
-all_geneset_name_list=terms.tolist()
+# all_geneset_name_list=terms.tolist()
 
 # dict of gene set to genes
-gene_set_of = {terms[i]: member_genes[i].split(',') for i in range(len(terms))}
-size_of_gene_set = {terms[i]: len(gene_set_of[terms[i]]) for i in range(len(terms))}
+gene_set_gene_map = {terms[i]: member_genes[i].split(',') for i in range(len(terms))}
+# size_of_gene_set = {terms[i]: len(gene_set_gene_map[terms[i]]) for i in range(len(terms))}
 genes_in_lib = set()
-for term in gene_set_of:
-    genes_in_lib |= set(gene_set_of[term])
+for term in gene_set_gene_map:
+    genes_in_lib |= set(gene_set_gene_map[term])
 
 ## filter the gene sets
 
@@ -105,7 +105,7 @@ elif 'gene_symbols' in adata.var.columns:
 
 # Filter out versioning and duplicates
 sc_dataset_genes = set()
-columns = []
+column_map = {}
 
 if column_name == "index":
     unfiltered_genes = list(adata.var.index)
@@ -115,35 +115,41 @@ else:
 for column, gene in enumerate(unfiltered_genes):
     if '-' in gene:
         gene = gene.split('-')[0]
-    sc_dataset_genes.add(gene)
-    columns.append(column)
+    if gene not in sc_dataset_genes:
+        sc_dataset_genes.add(gene)
+        column_map[gene] = column
 
-# Filter out gene sets with > args.max_missing proportion of genes
-gene_set_name_list = []
-filtered_gene_set_of = {}
-for term in gene_set_of:
-    intersection = set(gene_set_of[term]) & sc_dataset_genes
-    if (len(intersection)/len(gene_set_of[term])) < (1-args.max_missing):
+filtered_gene_set_names = []
+filtered_gene_set_gene_map = {}
+filtered_gene_set_size = []
+
+# filter out gene sets with > args.max_missing proportion of genes
+for term in gene_set_gene_map:
+    intersection = set(gene_set_gene_map[term]) & sc_dataset_genes
+    if (len(intersection)/len(gene_set_gene_map[term])) < (1-args.max_missing):
         pass
     else:
-        filtered_gene_set_of[term] = list(intersection)
-        gene_set_name_list.append(term)
+        filtered_gene_set_gene_map[term] = list(intersection)
+        filtered_gene_set_names.append(term)
+        filtered_gene_set_size.append(len(intersection))
 
-# Print out number of conserved gene sets
+# gene_set_size = [size_of_gene_set[term] for term in filtered_gene_set_names]
+n_progs = len(filtered_gene_set_names)
 
-geneset_size_list = [size_of_gene_set[term] for term in gene_set_name_list]
-n_progs = len(gene_set_name_list)
-index_of_gene_set = {gene_set_name_list[i]: i for i in range(len(gene_set_name_list))}
+# new_gene_set_index = {filtered_gene_set_names[i]: i for i in range(len(filtered_gene_set_names))}
 
 common_genes = sc_dataset_genes & genes_in_lib
-gene_name_list = list(common_genes)
-n_genes = len(gene_name_list)
-index_of_gene = {gene_name_list[i]: i for i in range(len(gene_name_list))}
+# gene_name_list = list(common_genes)
+n_genes = len(common_genes)
+index_of_gene = {gene: i for i, gene in enumerate(common_genes)}
 
 # Filter adata
 if column_name != "index":
     adata.var.index = adata.var[column_name]
-# column index
+# column index --> make sure this is filtering out non intersected genes
+columns = []
+for gene in common_genes:
+    columns.append(column_map[gene])
 
 adata_relevant= adata[:, columns]
 log_str(f"Filtered genes and gene-sets: {n_genes:,} genes were in the intersection. {n_progs:,} gene-sets passed the (maximum missing ratio) threshold of {args.max_missing}")
@@ -153,7 +159,7 @@ log_str(f"Filtered genes and gene-sets: {n_genes:,} genes were in the intersecti
 progs = csr_matrix((n_progs, n_genes), dtype=int)
 # Form the filtered gene set by gene binary matrix
 for i in range(n_progs):
-    gene_indices = [index_of_gene[gene] for gene in filtered_gene_set_of[gene_set_name_list[i]]]
+    gene_indices = [index_of_gene[gene] for gene in filtered_gene_set_gene_map[filtered_gene_set_names[i]]]
     progs[i,gene_indices] = 1
 
 
@@ -164,7 +170,7 @@ terms = geneset_lib_df['gene_set'].values
 for cl in cluster_cols:    
     clusters = geneset_lib_df[cl].astype(int).values
     cluster_of  = {terms[i]:clusters[i] for i in range(len(terms))}
-    cluster_dict[cl] = pd.Series(gene_set_name_list).map(cluster_of).values
+    cluster_dict[cl] = pd.Series(filtered_gene_set_names).map(cluster_of).values
 
 
 ## store the prepared inputs in a dictionary 
@@ -172,9 +178,9 @@ log_str(f"Saving the prepared training inputs...")
 prepared_input = dict()
 prepared_input['input_gene_set_csv_path'] = args.genesets_path  # the path to csv file that contains the gene sets using which this training input was built
 prepared_input['input_h5ad_file_path'] = args.h5ad_path # input path to h5ad file from which this training input was prepared
-prepared_input['gene_set_names'] = gene_set_name_list # list of length (n_programs) to store the name of gene programs
-prepared_input['gene_set_sizes'] = geneset_size_list # list of length (n_programs) which stores the number of genes in the gene set before intersecting with dataset's genes
-prepared_input['gene_names'] = gene_name_list # array of shape (n_genes) to store the name of genes that correspond to columns of the matrix X and columns of the matrix progs. This will be the intersection of genes in the dataset and genes in all gene sets combined
+prepared_input['gene_set_names'] = filtered_gene_set_names # list of length (n_programs) to store the name of gene programs
+prepared_input['gene_set_sizes'] = filtered_gene_set_size # list of length (n_programs) which stores the number of genes in the gene set before intersecting with dataset's genes
+prepared_input['gene_names'] = list(common_genes) # array of shape (n_genes) to store the name of genes that correspond to columns of the matrix X and columns of the matrix progs. This will be the intersection of genes in the dataset and genes in all gene sets combined
 
 # adata_relevant is the gene filtered .X matrix
 prepared_input['cell_ids'] = adata_relevant.obs.index.tolist() # array of shape (n_cells) to store the cell ids that correpond rows in matrix x when it would be inputed to the training script
