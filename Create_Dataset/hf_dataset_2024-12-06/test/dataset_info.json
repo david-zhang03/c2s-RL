@@ -1,0 +1,52 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "Context": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "cell_sentences_data": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "Question": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "Answer": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "Keyword": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "full_QA_pair": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "Publication_Title": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "Dataset_URL": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "Dataset_Index": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "Used_Rows": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "openai_batch_response_id": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": ""
+}
