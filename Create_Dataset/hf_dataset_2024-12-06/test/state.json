@@ -1,0 +1,25 @@
+{
+  "_data_files": [
+    {
+      "filename": "data-00000-of-00001.arrow"
+    }
+  ],
+  "_fingerprint": "1bdad38367d17f5e",
+  "_format_columns": [
+    "Context",
+    "cell_sentences_data",
+    "Question",
+    "Answer",
+    "Keyword",
+    "full_QA_pair",
+    "Publication_Title",
+    "Dataset_URL",
+    "Dataset_Index",
+    "Used_Rows",
+    "openai_batch_response_id"
+  ],
+  "_format_kwargs": {},
+  "_format_type": null,
+  "_output_all_columns": false,
+  "_split": null
+}
