@@ -17,6 +17,7 @@ from torch_geometric.sampler.neighbor_sampler import NeighborSampler
 
 from scipy import sparse
 from sklearn.metrics import r2_score, roc_auc_score, log_loss, accuracy_score
+from sklearn.preprocessing import LabelEncoder
 from sklearn.decomposition import PCA
 import umap
 
@@ -579,7 +580,8 @@ def train_gnn(
 
 
             # plot umap of 
-            if ENABLE_OUTPUT_SCORES and (epoch+1) % conf.UMAP_PLOTTING == 0:
+            # (epoch + 1)
+            if ENABLE_OUTPUT_SCORES and (epoch) % conf.UMAP_PLOTTING == 0:
                 # Apply UMAP
                 umap_model = umap.UMAP(n_neighbors=15, min_dist=0.1, metric='euclidean', random_state=42)
                 umap_embedding = umap_model.fit_transform(validation_assigned_prog_scores)
@@ -587,9 +589,11 @@ def train_gnn(
                 # Plot UMAP
                 plt.figure(figsize=(10, 8))
                 if val_cell_types:
+                    label_encoder = LabelEncoder()
+                    num_labels = label_encoder.fit_transform(val_cell_types)
                     scatter = plt.scatter(
                         umap_embedding[:, 0], umap_embedding[:, 1],
-                        c=val_cell_types, cmap='tab10', s=5, alpha=0.8
+                        c=num_labels, cmap='tab10', s=5, alpha=0.8
                     )
                     plt.colorbar(scatter, label="Cell Type")
                 else:
