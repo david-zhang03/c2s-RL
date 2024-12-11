@@ -10,16 +10,19 @@ import wandb
 import torch
 import numpy as np
 from tqdm import tqdm
-from sklearn.metrics import r2_score, roc_auc_score, log_loss, accuracy_score
-from sklearn.decomposition import PCA
-from scipy import sparse
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt 
 
 from torch_geometric.data import Data
 from torch_geometric.loader import NodeLoader
 from torch_geometric.sampler.neighbor_sampler import NeighborSampler
+
+from scipy import sparse
+from sklearn.metrics import r2_score, roc_auc_score, log_loss, accuracy_score
+from sklearn.decomposition import PCA
+import umap
+
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt 
 
 sys.path.append('..')
 from cell2gsea.models import *
@@ -41,10 +44,10 @@ class gnn_config:
         PROGRAM_NORMALIZE = True,
         PROGRAM_DROPOUT = 0.5, # used only when prog_groups is None
         PROGRAM_L1_PENALTY=0,
-        LEARNING_RATE = 0.0005,
+        LEARNING_RATE = 0.001,
         MIN_LRN_RATE = 1e-7,
         WEIGHT_DECAY = 1e-5,
-        N_EPOCHS = 5,   
+        N_EPOCHS = 250,   
         VAL_SPLIT = 0.2,     
         # Graph sampling hyperparameters
         GSAMP_BATCH_SIZE = 10,  # number of seed nodes
@@ -53,6 +56,7 @@ class gnn_config:
         CLUSTER_RESOL = 300,
         # General
         SEED = 42,
+        UMAP_PLOTTING=50, # plotting every X epochs
         **kwargs
         ):
         # store config parameters in the config object (set the parameters as attributes)
@@ -68,8 +72,6 @@ class gnn_config:
             setattr(self, key, value)
 
 
-
-
 def train_gnn(
         train_x=None,
         validation_x=None,
@@ -79,16 +81,18 @@ def train_gnn(
         prog_groups = None,
         prog_cluster_labels = None,
         train_tru_labels= None,
-        validation_tru_labels= None,
+        train_cell_types = None,
+        val_tru_labels= None,
+        val_cell_types = None,
         training_config=None,
         wandb_run = None, 
         base_model = None,
         OUTPUT_PREFIX = "./cell2gsea_training_runs",
         ENABLE_SAVE_MODEL=True,
         ENABLE_OUTPUT_SCORES=False,
+        REGRESSION=True,
         RUN_ID = None,
         RUN_NAME = "cell2gsea_default",
-        EVAL_FREQUENCY=5,
         ):
 
     print ("__________________________________", flush=True)
@@ -101,7 +105,7 @@ def train_gnn(
         WANDB_LOGGING = True
 
     if RUN_ID is None:
-        RUN_ID = f"{RUN_NAME}__{get_timestamp()}"
+        RUN_ID = f"{RUN_NAME}_{get_timestamp()}"
 
     conf_dict = training_config.__dict__
     conf = training_config
@@ -113,7 +117,7 @@ def train_gnn(
 
 
     label_list = list(range(progs.shape[0]))
-    if (train_tru_labels is not None):
+    if (train_tru_labels is not None and not REGRESSION):
         train_labels_exist = True
     else:
         log_str("Labels are not provided for training data. Ignore classification scores (AUC,Accuracy, etc.) for training data")
@@ -124,25 +128,25 @@ def train_gnn(
     if validation_x is not None:
         n_validation , _ = validation_x.shape
         validation_exist= True
-        if (validation_tru_labels is not None):
+        if (val_tru_labels is not None and not REGRESSION):
             validation_labels_exist = True
         else:
             validation_labels_exist = False
-            validation_tru_labels = np.zeros(n_validation)
+            val_tru_labels = np.zeros(n_validation)
             log_str("Labels are not provided for validation data. Ignore classification scores (AUC,Accuracy, etc.) for validation data")
     else:
         log_str("Validation data is not provided. Continuing without validation")
         n_validation = 0
         validation_exist = False
         validation_labels_exist = False
-        validation_tru_labels = np.zeros(n_validation)
+        val_tru_labels = np.zeros(n_validation)
 
     # conf.NUM_VALIDATION_EXAMPLES = n_validation
 
 
     if train_edges is not None:
         log_str("Using provided graph for training data")
-        train_edge_list = np.array(train_edges)        
+        train_edge_list = np.array(train_edges)
     else:
         log_str(f"Input graph was not provided for the training data. Building KNN graph with K={conf.KNN_GRAPH_K} using {conf.KNN_GRAPH_N_PCA} PCA dimensions.")
         train_edge_list = get_knn_edges(train_x,conf.KNN_GRAPH_K,conf.KNN_GRAPH_N_PCA)
@@ -218,7 +222,7 @@ def train_gnn(
 
     if validation_exist:
         validation_X= torch.tensor(validation_x, dtype=torch.float32)
-        validation_labels = torch.tensor(validation_tru_labels, dtype=torch.long)
+        validation_labels = torch.tensor(val_tru_labels, dtype=torch.long)
         validation_edge_list = torch.tensor(validation_edge_list, dtype=torch.long)
         validation_node_pos = torch.arange(n_validation).reshape(n_validation,1)
         validation_data = Data(x=validation_X , edge_index=validation_edge_list,y=validation_labels,pos=validation_node_pos)
@@ -320,8 +324,7 @@ def train_gnn(
         default_auc = 0.5
 
 
-
-        for idx, subgraph in enumerate(train_loader):
+        for idx, subgraph in enumerate(tqdm(train_loader)):
 
             #### Program dropout
             if (prog_groups is None) and (conf.PROGRAM_DROPOUT == 0):
@@ -433,9 +436,9 @@ def train_gnn(
             avg_train_auc = np.mean(temp_train_auc)
             avg_train_acc = np.mean(temp_train_acc)
         else:
-            avg_train_cross_entropy = -0.123456
-            avg_train_auc = -0.123456
-            avg_train_acc = -0.123456
+            avg_train_cross_entropy = float('nan')
+            avg_train_auc = float('nan')
+            avg_train_acc = float('nan')
 
 
         if validation_exist:
@@ -449,8 +452,10 @@ def train_gnn(
             model.eval()
             default_auc = 0.5
 
+            log_str(f"Started validation for epoch {epoch}...")
+
             with torch.no_grad():
-                for idx, subgraph in enumerate(validation_loader):
+                for idx, subgraph in enumerate(tqdm(validation_loader)):
 
                     #### Program dropout
                     if (prog_groups is None) and (conf.PROGRAM_DROPOUT == 0):
@@ -477,6 +482,7 @@ def train_gnn(
                     x_array = subgraph.x.detach().numpy()
                     flattened_x = x_array.flatten()
 
+                    # original indices in the val set
                     original_indices = subgraph.pos.reshape(-1).numpy()      
                     subgraph = subgraph.to(device)
 
@@ -493,14 +499,12 @@ def train_gnn(
                     validation_source_epoch[original_indices] = epoch
 
                     
-
                     X_reconst = torch.matmul(batch_program_scores[:,keep_indices],filtered_prog_def_tensor)  # [cells, gene_programs] x [gene_programs, num_genes]
 
                     if conf.PROGRAM_L1_PENALTY > 0:
                         loss = criterion(subgraph.x, X_reconst) + conf.PROGRAM_L1_PENALTY * torch.norm(batch_program_scores[:,keep_indices], p = 1)
                     else:
                         loss = criterion(subgraph.x, X_reconst)
-
 
                     
                     reconst_array = X_reconst.detach().cpu().numpy()
@@ -557,7 +561,8 @@ def train_gnn(
                         temp_val_auc.append(auc)
 
                     val_batch_idx +=1
-    
+
+
             log_memory_usage("Load val", device)
             avg_validation_loss = np.mean(temp_val_loss)
             avg_validation_r2_score = np.mean(temp_val_r2_score)
@@ -573,23 +578,52 @@ def train_gnn(
                     # log_str(f"At epoch {epoch}, saved model checkpoint at {os.path.abspath(model_save_path)}")
 
 
+            # plot umap of 
+            if ENABLE_OUTPUT_SCORES and (epoch+1) % conf.UMAP_PLOTTING == 0:
+                # Apply UMAP
+                umap_model = umap.UMAP(n_neighbors=15, min_dist=0.1, metric='euclidean', random_state=42)
+                umap_embedding = umap_model.fit_transform(validation_assigned_prog_scores)
+
+                # Plot UMAP
+                plt.figure(figsize=(10, 8))
+                if val_cell_types:
+                    scatter = plt.scatter(
+                        umap_embedding[:, 0], umap_embedding[:, 1],
+                        c=val_cell_types, cmap='tab10', s=5, alpha=0.8
+                    )
+                    plt.colorbar(scatter, label="Cell Type")
+                else:
+                    plt.scatter(umap_embedding[:, 0], umap_embedding[:, 1], s=5, alpha=0.8)
+                plt.title(f"UMAP of Validation Output Scores at Epoch {epoch}")
+                plt.xlabel("UMAP 1")
+                plt.ylabel("UMAP 2")
+                umap_plot_path = os.path.join(SAVE_DIR, f"umap_validation_epoch_{epoch}.png")
+                plt.savefig(umap_plot_path)
+                plt.close()
+
+                # Log to wandb
+                if WANDB_LOGGING:
+                    wandb.log({
+                        f"UMAP_Validation_Epoch_{epoch}": wandb.Image(umap_plot_path)
+                    }, step=epoch)
+
             if validation_labels_exist:
                 avg_validation_auc = np.mean(temp_val_auc)
                 avg_validation_acc = np.mean(temp_val_acc)
                 avg_validation_cross_entropy = np.mean(temp_val_cross_entropy)
         
             else:
-                avg_validation_cross_entropy = -0.123456
-                avg_validation_auc = -0.123456
-                avg_validation_acc = -0.123456
+                avg_validation_cross_entropy = float('nan')
+                avg_validation_auc = float('nan')
+                avg_validation_acc = float('nan')
 
         if not validation_exist:                
-                avg_validation_cross_entropy = -0.123456
-                avg_validation_auc = -0.123456
-                avg_validation_acc = -0.123456
-                avg_validation_loss = -0.123456
-                avg_validation_r2_score =-0.123456
-                avg_validation_pearsonr_score = -0.123456
+                avg_validation_cross_entropy = float('nan')
+                avg_validation_auc = float('nan')
+                avg_validation_acc = float('nan')
+                avg_validation_loss = float('nan')
+                avg_validation_r2_score =float('nan')
+                avg_validation_pearsonr_score = float('nan')
 
         if WANDB_LOGGING:
             wandb.log({
@@ -643,12 +677,10 @@ def train_gnn(
         "validation_num_rep": validation_num_rep,        
         "validation_cell_r2": validation_cell_r2,
         "validation_gene_r2": validation_gene_r2,
-
-
         })
         if ENABLE_OUTPUT_SCORES:
-            output["validation_source_epoch"] =validation_source_epoch
-            output['validation_assigned_prog_scores': validation_assigned_prog_scores]
+            output["validation_source_epoch"] = validation_source_epoch
+            output['validation_assigned_prog_scores'] = validation_assigned_prog_scores
 
 
     return output
@@ -727,6 +759,6 @@ if __name__ == '__main__':
         progs = np.random.rand(n_progs,n_genes),
         prog_groups = [[0,1],[2,3],[4,5],[6,7],[8,9]],
         # train_tru_labels = np.random.randint(0,n_progs,n_train),
-        # validation_tru_labels = np.random.randint(0,n_progs,n_validation),
+        # val_tru_labels = np.random.randint(0,n_progs,n_validation),
         training_config = train_config
     )

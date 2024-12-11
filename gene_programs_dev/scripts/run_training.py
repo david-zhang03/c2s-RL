@@ -10,6 +10,7 @@ import scanpy as sc
 import pandas as pd
 import numpy as np
 import pickle
+import anndata as ad
 
 from sklearn.model_selection import train_test_split
 
@@ -71,6 +72,8 @@ progs =  prepared_input['progs_sparse']
 
 log_str("Preparing train and val set")
 
+dataset = ad.read_h5ad(prepared_input['input_h5ad_file_path'])
+
 train_indices, val_indices = train_test_split(
     np.arange(n_cell),
     test_size = conf.VAL_SPLIT,
@@ -84,15 +87,23 @@ train_edges = get_knn_edges(train_x, conf.KNN_GRAPH_K, conf.KNN_GRAPH_N_PCA)
 
 val_edges = get_knn_edges(val_x, conf.KNN_GRAPH_K, conf.KNN_GRAPH_N_PCA)
 
-log_str("Normalizing programs")
-prog_norm_factor = np.array(prepared_input['gene_set_sizes'])
-norm_factor_bcast = prog_norm_factor[:, np.newaxis]
-progs_norm = progs / norm_factor_bcast
+# cell types
+train_cell_types = None
+val_cell_types = None
+if 'cell_type' in dataset.obs.columns:
+    train_cell_types = dataset.obs['cell_type'][train_indices].values
+    val_cell_types = dataset.obs['cell_type'][val_indices].values
 
 log_str("Converting programs from sparse to dense")
 
 if conf.PROGRAM_NORMALIZE:
-    input_progs = progs_norm.toarray()
+    log_str("Normalizing programs first")
+
+    prog_norm_factor = np.array(prepared_input['gene_set_sizes'])
+    norm_factor_bcast = prog_norm_factor[:, np.newaxis]
+    progs_norm = progs / norm_factor_bcast # numpy matrix
+
+    input_progs = np.asarray(progs_norm)
 else:
     input_progs = progs.toarray()
 
@@ -116,11 +127,14 @@ training_output = train_gnn(
     validation_edges = val_edges,    
     progs = input_progs,
     prog_cluster_labels = cluster_labels,
+    train_cell_types=train_cell_types,
+    val_cell_types=val_cell_types,
     training_config = conf,
     wandb_run = curr_run,
     OUTPUT_PREFIX =output_path,
     RUN_NAME = args.run_name,
     ENABLE_OUTPUT_SCORES= True,
+    REGRESSION=True,
 )
 
 curr_run.finish()
