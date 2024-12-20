@@ -11,7 +11,7 @@
 #SBATCH --constraint=h100|a100
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=512gb                                 # Job memory request
-#SBATCH --time=1-00:00:00                          # Time limit hrs:min:sec
+#SBATCH --time=2-00:00:00                          # Time limit hrs:min:sec
 date;hostname
 
 module load miniconda
@@ -77,6 +77,7 @@ all_datasets_done() {
 # Main loop
 # specify the index of the gpu on node
 # gpu_index=3
+running_jobs=()
 while true; do
     all_datasets_done
     if [ $? -eq 0 ]; then
@@ -94,24 +95,28 @@ while true; do
             memory_required_gb=$(calculate_memory_required "$dataset")
             memory_required_mib=$(awk "BEGIN {print int($memory_required_gb * 1024)}")
 
-            current_memory=$((current_memory + memory_required_mib))
-
-            echo "Dataset: $(basename $dataset)"
-            echo "Memory required: $memory_required_gb GB ($memory_required_mib MiB)"
-            echo "Current GPU memory usage: $current_memory MiB"
-
             if (( current_memory < GPU_MEMORY_THRESHOLD )); then
                 echo "Starting training for $dataset on GPU"
                 /gpfs/radev/home/sr2464/.conda/envs/llamp/bin/python /home/ddz5/Desktop/c2s-RL/gene_programs_dev/scripts/run_training.py \
                     --input_path "${dataset}/training_inputs.pickle" \
                     --output_prefix "/home/ddz5/scratch/Cell2GSEA_QA_dataset_models/" \
-                    --dataset_name "$(basename $dataset)" &&
+                    --dataset_name "$(basename $dataset)" &
+
+                running_jobs+=($!)
                 touch "$dataset/training_done.flag"
+                
+                current_memory=$((current_memory + memory_required_mib))
             else
                 echo "Not enough GPU memory for $dataset. Reset current memory. Waiting..."
-                current_memory=$((current_memory - memory_required_mib))
                 break
             fi
+        fi
+    done
+
+    # Wait for some jobs to finish if GPU memory is full
+    for job in "${running_jobs[@]}"; do
+        if ! kill -0 $job 2>/dev/null; then
+            running_jobs=("${running_jobs[@]/$job}")
         fi
     done
     sleep $SLEEP_INTERVAL
