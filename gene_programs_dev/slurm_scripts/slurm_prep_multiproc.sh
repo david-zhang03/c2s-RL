@@ -14,10 +14,7 @@ date;hostname
 
 # Script to multiprocess training inputs for GNN gene set annotation
 
-# module load miniconda
-source /home/ddz5/miniconda3/bin/activate activate    /home/ddz5/.conda/envs/c2gsea 
-
-python /home/ddz5/Desktop/c2s-RL/gene_programs_dev/scripts/multiprocess_datasets.py
+/gpfs/radev/home/sr2464/.conda/envs/llamp/bin/python /home/ddz5/Desktop/c2s-RL/gene_programs_dev/scripts/multiprocess_datasets.py
 
 # python /home/ddz5/work/gene_programs_dev/scripts/prepare_training_input.py \
 #    --h5ad_path /home/sz568/scratch/C2S_RL/all_datasets/hca_cellxgene_cleaned_h5ad/local(23)_cleaned.h5ad \
