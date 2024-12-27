@@ -61,7 +61,7 @@ def log_string(log_fout, out_str):
 
 
 def get_timestamp():
-    return datetime.now().strftime(r'%Y_%m_%d___%H_%M_%S')
+    return datetime.now().strftime(r'%Y_%m_%d__%H_%M_%S')
 
 def log_str(msg):
     print(f"[{get_timestamp()}] {msg}", flush=True)

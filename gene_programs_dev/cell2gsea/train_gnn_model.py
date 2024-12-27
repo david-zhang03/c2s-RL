@@ -3,9 +3,11 @@ import random
 import os
 import sys
 import pickle
-import yaml
+import json
+# import yaml
 
 import anndata as ad
+import scanpy as sc
 import wandb
 import torch
 import numpy as np
@@ -93,7 +95,7 @@ def train_gnn(
         ENABLE_OUTPUT_SCORES=False,
         REGRESSION=True,
         RUN_ID = None,
-        RUN_NAME = "cell2gsea_default",
+        RUN_NAME = "train_cell2gsea",
         ):
 
     print ("__________________________________", flush=True)
@@ -121,7 +123,7 @@ def train_gnn(
     if (train_tru_labels is not None and not REGRESSION):
         train_labels_exist = True
     else:
-        log_str("Labels are not provided for training data. Ignore classification scores (AUC,Accuracy, etc.) for training data")
+        log_str("Labels are not provided for training data. Ignore classification scores (AUC, Accuracy, etc.) for training data")
         train_labels_exist = False
         train_tru_labels = np.zeros(n_train)
 
@@ -134,7 +136,7 @@ def train_gnn(
         else:
             validation_labels_exist = False
             val_tru_labels = np.zeros(n_validation)
-            log_str("Labels are not provided for validation data. Ignore classification scores (AUC,Accuracy, etc.) for validation data")
+            log_str("Labels are not provided for validation data. Ignore classification scores (AUC, Accuracy, etc.) for validation data")
     else:
         log_str("Validation data is not provided. Continuing without validation")
         n_validation = 0
@@ -247,12 +249,22 @@ def train_gnn(
 
     conf.model_desc = str(model)
 
-    # Print out config arguments
+    # Log config arguments
+    config_dict = {attr: getattr(conf, attr) for attr in dir(conf) 
+               if not attr.startswith('__') and not callable(getattr(conf, attr))}
+
+    config_dict.update({
+        'num_train_examples': n_train,
+        'num_validation_examples': n_validation,
+        'num_programs': progs.shape[0],
+        'num_genes': progs.shape[1],
+    })
+
     with open(os.path.join(SAVE_DIR, 'arguments.txt'), 'w') as f:
-        for attr in dir(conf):
-            if not attr.startswith('__'):
-                value = getattr(conf, attr)
-                f.write(f'{attr}: {value}\n')
+        for key, value in config_dict.items():
+            f.write(f"{key}: {value}")
+    
+    wandb.config.update(config_dict)
 
     criterion = torch.nn.MSELoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=conf.LEARNING_RATE, weight_decay=conf.WEIGHT_DECAY)
@@ -580,30 +592,26 @@ def train_gnn(
 
 
             # plot umap of 
-            # (epoch + 1)
-            if ENABLE_OUTPUT_SCORES and (epoch) % conf.UMAP_PLOTTING == 0:
+            if ENABLE_OUTPUT_SCORES and (epoch) % conf.UMAP_PLOTTING == 0 and val_cell_types:
                 # Apply UMAP
-                umap_model = umap.UMAP(n_neighbors=15, min_dist=0.1, metric='euclidean', random_state=42)
-                umap_embedding = umap_model.fit_transform(validation_assigned_prog_scores)
+                adata = ad.AnnData(X=validation_assigned_prog_scores)
+                adata.obs['cell_type'] = val_cell_types
 
-                # Plot UMAP
-                plt.figure(figsize=(10, 8))
-                if val_cell_types:
-                    label_encoder = LabelEncoder()
-                    num_labels = label_encoder.fit_transform(val_cell_types)
-                    scatter = plt.scatter(
-                        umap_embedding[:, 0], umap_embedding[:, 1],
-                        c=num_labels, cmap='tab10', s=5, alpha=0.8
-                    )
-                    plt.colorbar(scatter, label="Cell Type")
-                else:
-                    plt.scatter(umap_embedding[:, 0], umap_embedding[:, 1], s=5, alpha=0.8)
-                plt.title(f"UMAP of Validation Output Scores at Epoch {epoch}")
-                plt.xlabel("UMAP 1")
-                plt.ylabel("UMAP 2")
+                sc.pp.pca(adata)
+                sc.pp.neighbors(adata)
+                sc.tl.umap(adata)
+
+                plt.figure(figsize=(10, 10))
+                fig, ax = plt.subplots(1, 1, figsize=(10, 10))
+                sc.pl.umap(adata, 
+                        ax=ax,
+                        color="cell_type",
+                        title=f"UMAP of Validation Output Scores at Epoch {epoch}",
+                        size=5)
+
                 umap_plot_path = os.path.join(SAVE_DIR, f"umap_validation_epoch_{epoch}.png")
-                plt.savefig(umap_plot_path)
-                plt.close()
+                plt.savefig(umap_plot_path, bbox_inches='tight', dpi=400)
+                plt.close('all')
 
                 # Log to wandb
                 if WANDB_LOGGING:

@@ -1,6 +1,6 @@
 import random
 import os
-import yaml
+# import yaml
 from tqdm import tqdm
 import sys
 
@@ -23,7 +23,7 @@ from cell2gsea.utils import *
 parser = argparse.ArgumentParser()
 
 parser.add_argument('--input_path', type=str, 
-                    default='/home/ddz5/scratch/Cell2GSEA_QA_dataset_models/local_23/training_inputs.pickle')
+                    help='Usage: /home/ddz5/scratch/Cell2GSEA_QA_dataset_models/local_23/training_inputs.pickle')
 
 parser.add_argument('--output_prefix', type=str, 
                     default="/home/ddz5/scratch/Cell2GSEA_QA_dataset_models/")
@@ -35,8 +35,7 @@ parser.add_argument('--dataset_name', type=str,
 parser.add_argument('--config_file', type=str, 
                     default=None)
 
-parser.add_argument('--run_name', type=str, 
-                    default='train_cell2gsea')
+parser.add_argument('--run_name', type=str, default=None)
 
 
 args = parser.parse_args()
@@ -117,8 +116,13 @@ if (clusters != ""):
     log_str(f"Using program clusters in resolution column {clusters} of gene-set libray (tsv) file. Number of clusters: {n_clusters}")
 conf.PROG_CLUSTER = cluster_labels
 
+# set wandb run name
+if args.run_name is None:
+    run_name = args.dataset_name
+else:
+    run_name = args.run_name
 
-curr_run.name = args.run_name
+curr_run.name = run_name
 
 training_output = train_gnn(
     train_x = train_x,
@@ -127,12 +131,12 @@ training_output = train_gnn(
     validation_edges = val_edges,    
     progs = input_progs,
     prog_cluster_labels = cluster_labels,
-    train_cell_types=train_cell_types,
-    val_cell_types=val_cell_types,
+    train_cell_types = train_cell_types,
+    val_cell_types = val_cell_types,
     training_config = conf,
     wandb_run = curr_run,
-    OUTPUT_PREFIX =output_path,
-    RUN_NAME = args.run_name,
+    OUTPUT_PREFIX = output_path,
+    RUN_NAME = run_name,
     ENABLE_OUTPUT_SCORES= True,
     REGRESSION=True,
 )
@@ -159,3 +163,8 @@ with open(output_path, 'wb') as f:
 
 log_str(f"Saved outputs at {os.path.abspath(output_path)}")
 print ("__________________________________",flush=True)
+
+# generate training done flag (for interacting with the slurm training)
+training_flag_path = os.path.join(output_dir, 'training_done.flag')
+with open(training_flag_path, 'w') as f:
+    pass

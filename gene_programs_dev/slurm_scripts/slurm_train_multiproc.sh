@@ -18,33 +18,11 @@ module load miniconda
 conda activate /gpfs/radev/home/sr2464/.conda/envs/llamp/
 
 nvidia-smi
-# declare -A GPU_MEMORY_THRESHOLDS
-# GPU_MEMORY_THRESHOLDS["A100"]=80000
-# GPU_MEMORY_THRESHOLDS["H100"]=80000
-# GPU_MEMORY_THRESHOLDS["A40"]=48000
 
-# GPU memory thresholds per model
-# include memory requirements for dataset
-# Detect GPU type and set memory threshold
-GPU_TYPE=$(nvidia-smi --query-gpu=name --format=csv,noheader | head -n 1)
-# GPU_MEMORY_THRESHOLD=${GPU_MEMORY_THRESHOLDS[$GPU_TYPE]}
-# if [ -z "$GPU_MEMORY_THRESHOLD" ]; then
-#     echo "Unknown GPU type: $GPU_TYPE"
-#     exit 1
-# fi
-# Change if not A/H100
-GPU_MEMORY_THRESHOLD=80000
-
-echo "Detected GPU: $GPU_TYPE with memory threshold: $GPU_MEMORY_THRESHOLD MiB"
-
-# Function to check GPU memory usage - NOT USED
-# calculate_baseline_memory_usage() {
-#     local gpu_index=$1
-#     local memory_used=$(nvidia-smi --query-gpu=memory.used --format=csv,noheader,nounits | sed -n "$((gpu_index + 1))p")
-#     echo $memory_used
-# }
-check_memory_usage() {
-    local memory_used=$(nvidia-smi --query-gpu=memory.used --format=csv,noheader,nounits | awk '{sum+=$1} END {print sum}')
+# Helpers
+calculate_memory_usage() {
+    local gpu_index=$1
+    local memory_used=$(nvidia-smi --id=$gpu_index --query-gpu=memory.used --format=csv,noheader,nounits | awk '{sum+=$1} END {print sum}')
     echo $memory_used
 }
 
@@ -61,12 +39,9 @@ calculate_memory_required() {
     fi
 }
 
-DATASET_DIR="/home/ddz5/scratch/Cell2GSEA_QA_dataset_models/"
-SLEEP_INTERVAL=1800  # Interval to check for processed datasets (in seconds)
-
 # Function to check if all datasets are done
 all_datasets_done() {
-    for dataset in $(ls -d $DATASET_DIR/*/); do
+    for dataset in $(ls -d $DATASET_DIR*/); do
         if [ ! -f "$dataset/training_done.flag" ]; then
             return 1  # At least one dataset is not done
         fi
@@ -74,51 +49,101 @@ all_datasets_done() {
     return 0  # All datasets are done
 }
 
+
+# Testing proper gpu indexing
+
+export GPU_ID=$(echo $CUDA_VISIBLE_DEVICES | awk -F, '{print $1}')
+# GPU_MEMORY_USED=$(nvidia-smi --id=$GPU_ID --query-gpu=memory.used --format=csv,noheader,nounits | awk '{sum+=$1} END {print sum}')
+
+# Detect GPU type and set memory threshold
+GPU_TYPE=$(nvidia-smi --query-gpu=name --format=csv,noheader | head -n 1)
+
+# Change if not A/H100 (80k was causing OOM - probably due to intermediate tensors)
+GPU_MEMORY_THRESHOLD=60000
+
+echo "Detected GPU: $GPU_TYPE at index $GPU_ID with memory threshold: $GPU_MEMORY_THRESHOLD MiB"
+
+declare -A job_memory_usage # associate memory usage with PID
+declare -A job_datasets # track dataset each job is processing
+
+# test - change path
+# /home/ddz5/scratch/test_cell2gsea_qa
+DATASET_DIR="/home/ddz5/scratch/Cell2GSEA_QA_dataset_models/"
+SLEEP_INTERVAL=1800  # Interval to check for processed datasets (in seconds)
+
 # Main loop
-# specify the index of the gpu on node
-# gpu_index=3
+current_memory=$(calculate_memory_usage $GPU_INDEX)
 running_jobs=()
+
+trap "echo 'Script terminated. Cleaning up...'; exit 1" SIGINT SIGTERM
 while true; do
-    all_datasets_done
-    if [ $? -eq 0 ]; then
-        echo "All datasets have been trained. Exiting."
-        break
-    fi
+    all_datasets_done && { echo "All datasets have been trained. Exiting."; break; }
+
+    echo "$(date): Current memory used: ${current_memory} MiB"
+
+    # Check if any jobs have finished
+    for job_pid in "${running_jobs[@]}"; do
+        if ! kill -0 $job_pid 2>/dev/null; then
+            echo "$(date) Job $job_pid terminated unexpectedly. Cleaning up..."
+            dataset=${job_datasets[$job_pid]}
+
+            # Remove job from tracking
+            running_jobs=("${running_jobs[@]/$job_pid}")
+            unset job_memory_usage[$job_pid]
+            unset job_datasets[$job_pid]
+
+            current_memory=$(calculate_memory_usage $GPU_INDEX)
+            echo "$(date): Current memory updated after job $job_pid finished: ${current_memory} MiB"
+        fi
+    done
 
     # baseline memory used
-    current_memory=87
-    for dataset in $(ls -d $DATASET_DIR/*/); do
+    for dataset in $(ls -d $DATASET_DIR*/); do
         if [ -f "$dataset/training_inputs.pickle" ] && [ ! -f "$dataset/training_done.flag" ]; then
-            # Check GPU memory usage
-            # current_memory=$(check_memory_usage)
+            # Check if dataset is already being processed
+            dataset_being_processed=0
+            for job in "${running_jobs[@]}"; do
+                if [[ "${job_datasets[$job]}" == "$dataset" ]]; then
+                    dataset_being_processed=1
+                    break
+                fi
+            done
 
-            memory_required_gb=$(calculate_memory_required "$dataset")
-            memory_required_mib=$(awk "BEGIN {print int($memory_required_gb * 1024)}")
+            if [ $dataset_being_processed -eq 0 ]; then
+                # this is a heuristic calculation as we do not know how much memory will be used until loading
+                memory_required_gb=$(calculate_memory_required "$dataset")
+                memory_required_mib=$(awk "BEGIN {print int($memory_required_gb * 1024)}")
 
-            if (( current_memory < GPU_MEMORY_THRESHOLD )); then
-                echo "Starting training for $dataset on GPU"
-                /gpfs/radev/home/sr2464/.conda/envs/llamp/bin/python /home/ddz5/Desktop/c2s-RL/gene_programs_dev/scripts/run_training.py \
-                    --input_path "${dataset}/training_inputs.pickle" \
-                    --output_prefix "/home/ddz5/scratch/Cell2GSEA_QA_dataset_models/" \
-                    --dataset_name "$(basename $dataset)" &
+                echo "$(date): Dataset ${dataset} requires ${memory_required_mib} MiB of memory"
 
-                running_jobs+=($!)
-                touch "$dataset/training_done.flag"
-                
-                current_memory=$((current_memory + memory_required_mib))
-            else
-                echo "Not enough GPU memory for $dataset. Reset current memory. Waiting..."
-                break
+                if (( current_memory + memory_required_mib < GPU_MEMORY_THRESHOLD )); then
+                    echo "$(date): Starting training for $dataset on GPU"
+                    /gpfs/radev/home/sr2464/.conda/envs/llamp/bin/python /home/ddz5/Desktop/c2s-RL/gene_programs_dev/scripts/run_training.py \
+                        --input_path "${dataset}/training_inputs.pickle" \
+                        --output_prefix "/home/ddz5/scratch/Cell2GSEA_QA_dataset_models/" \
+                        --dataset_name "$(basename $dataset)" &
+
+                    job_pid=$!
+                    running_jobs+=($job_pid)
+                    job_memory_usage[$job_pid]=$memory_required_mib
+                    job_datasets[$job_pid]=$dataset
+
+                    # Preemptively update memory with heuristic
+                    current_memory=$((current_memory + memory_required_mib))
+                    echo "$(date): Memory updated preemptively: ${current_memory} MiB"
+                else
+                    echo "Not enough GPU memory for $dataset. Current: ${current_memory} MiB, Required: ${memory_required_mib} MiB"
+                    continue
+                fi
             fi
         fi
     done
-
-    # Wait for some jobs to finish if GPU memory is full
+    echo "$(date): Current memory usage: ${current_memory} MiB"
+    echo "$(date): Memory threshold: ${GPU_MEMORY_THRESHOLD} MiB"
+    echo "$(date): Currently running jobs: ${#running_jobs[@]}"
     for job in "${running_jobs[@]}"; do
-        if ! kill -0 $job 2>/dev/null; then
-            running_jobs=("${running_jobs[@]/$job}")
-        fi
+        echo "$(date): Job ${job}: ${job_memory_usage[$job]} MiB"
     done
+    
     sleep $SLEEP_INTERVAL
 done
-
