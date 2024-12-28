@@ -60,16 +60,17 @@ GPU_TYPE=$(nvidia-smi --query-gpu=name --format=csv,noheader | head -n 1)
 
 # Change if not A/H100 (80k was causing OOM - probably due to intermediate tensors)
 GPU_MEMORY_THRESHOLD=60000
+MAX_CONCURRENT_CHILDS=3
 
 echo "Detected GPU: $GPU_TYPE at index $GPU_ID with memory threshold: $GPU_MEMORY_THRESHOLD MiB"
-
-declare -A job_memory_usage # associate memory usage with PID
-declare -A job_datasets # track dataset each job is processing
 
 # test - change path
 # /home/ddz5/scratch/test_cell2gsea_qa
 DATASET_DIR="/home/ddz5/scratch/Cell2GSEA_QA_dataset_models/"
 SLEEP_INTERVAL=1800  # Interval to check for processed datasets (in seconds)
+
+declare -A job_memory_usage # associate memory usage with PID
+declare -A job_datasets # track the dataset each job is processing
 
 # Main loop
 current_memory=$(calculate_memory_usage $GPU_INDEX)
@@ -85,15 +86,19 @@ while true; do
     for job_pid in "${running_jobs[@]}"; do
         if ! kill -0 $job_pid 2>/dev/null; then
             echo "$(date) Job $job_pid terminated unexpectedly. Cleaning up..."
-            dataset=${job_datasets[$job_pid]}
-
-            # Remove job from tracking
-            running_jobs=("${running_jobs[@]/$job_pid}")
-            unset job_memory_usage[$job_pid]
-            unset job_datasets[$job_pid]
-
-            current_memory=$(calculate_memory_usage $GPU_INDEX)
-            echo "$(date): Current memory updated after job $job_pid finished: ${current_memory} MiB"
+            
+            if [[ -n "${job_memory_usage[$job_pid]}" ]]; then
+                memory_freed=${job_memory_usage[$job_pid]}
+                current_memory=$((current_memory - memory_freed))
+                echo "$(date): Freed ${memory_freed} MiB from job $job_pid. Updated memory: ${current_memory} MiB"
+                
+                # Remove job from tracking
+                running_jobs=("${running_jobs[@]/$job_pid}")
+                unset job_memory_usage[$job_pid]
+                unset job_datasets[$job_pid]
+            else
+                echo "$(date): Warning: job_memory_usage[$job_pid] not found. Skipping memory update for this job."
+            fi
         fi
     done
 
@@ -116,7 +121,7 @@ while true; do
 
                 echo "$(date): Dataset ${dataset} requires ${memory_required_mib} MiB of memory"
 
-                if (( current_memory + memory_required_mib < GPU_MEMORY_THRESHOLD )); then
+                if (( current_memory + memory_required_mib < GPU_MEMORY_THRESHOLD )) && (( ${#running_jobs[@]} < MAX_CONCURRENT_CHILDS )); then
                     echo "$(date): Starting training for $dataset on GPU"
                     /gpfs/radev/home/sr2464/.conda/envs/llamp/bin/python /home/ddz5/Desktop/c2s-RL/gene_programs_dev/scripts/run_training.py \
                         --input_path "${dataset}/training_inputs.pickle" \
@@ -132,8 +137,13 @@ while true; do
                     current_memory=$((current_memory + memory_required_mib))
                     echo "$(date): Memory updated preemptively: ${current_memory} MiB"
                 else
-                    echo "Not enough GPU memory for $dataset. Current: ${current_memory} MiB, Required: ${memory_required_mib} MiB"
-                    continue
+                    if (( ${#running_jobs[@]} >= MAX_CONCURRENT_CHILDS )); then
+                        echo "$(date): Maximum concurrent jobs reached. ${#running_jobs[@]} / ${MAX_CONCURRENT_CHILDS}"
+                        break
+                    else
+                        echo "$(date): Not enough GPU memory for $dataset. Current: ${current_memory} MiB, Required: ${memory_required_mib} MiB"
+                        continue
+                    fi
                 fi
             fi
         fi
