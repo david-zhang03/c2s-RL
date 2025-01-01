@@ -84,21 +84,27 @@ while true; do
 
     # Check if any jobs have finished
     for job_pid in "${running_jobs[@]}"; do
-        if ! kill -0 $job_pid 2>/dev/null; then
-            echo "$(date) Job $job_pid terminated unexpectedly. Cleaning up..."
-            
+        # Skip blank entries - shouldn't happen
+        if [[ -z "$job_pid" ]]; then
+            echo "$(date): Skipping empty job PID in running_jobs"
+            continue
+        fi
+        if ! kill -0 "$job_pid" 2>/dev/null; then
+            echo "$(date): Job $job_pid terminated unexpectedly. Cleaning up..."
+
+            # Update memory and remove from tracking
             if [[ -n "${job_memory_usage[$job_pid]}" ]]; then
                 memory_freed=${job_memory_usage[$job_pid]}
                 current_memory=$((current_memory - memory_freed))
                 echo "$(date): Freed ${memory_freed} MiB from job $job_pid. Updated memory: ${current_memory} MiB"
-                
-                # Remove job from tracking
-                running_jobs=("${running_jobs[@]/$job_pid}")
-                unset job_memory_usage[$job_pid]
-                unset job_datasets[$job_pid]
             else
                 echo "$(date): Warning: job_memory_usage[$job_pid] not found. Skipping memory update for this job."
             fi
+
+            # Remove job from tracking
+            running_jobs=($(for pid in "${running_jobs[@]}"; do [[ "$pid" != "$job_pid" && -n "$pid" ]] && echo "$pid"; done))
+            unset job_memory_usage[$job_pid]
+            unset job_datasets[$job_pid]
         fi
     done
 
