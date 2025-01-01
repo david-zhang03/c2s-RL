@@ -48,10 +48,10 @@ if args.config_file is not None:
 if args.output_prefix is None:
     args.output_prefix = os.path.dirname(args.input_path) + '/'
 
-output_path = os.path.join(args.output_prefix, args.dataset_name)
+output_dir = os.path.join(args.output_prefix, args.dataset_name)
 
-if not os.path.exists(output_path):
-    os.makedirs(output_path, exist_ok=True)
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir, exist_ok=True)
 
 
 # read prepared input from pickle file
@@ -135,7 +135,7 @@ training_output = train_gnn(
     val_cell_types = val_cell_types,
     training_config = conf,
     wandb_run = curr_run,
-    OUTPUT_PREFIX = output_path,
+    OUTPUT_PREFIX = output_dir,
     RUN_NAME = run_name,
     ENABLE_OUTPUT_SCORES= True,
     REGRESSION=True,
@@ -156,7 +156,7 @@ output_dict['output'] = training_output
 
 ## save the ouptut as a pickle file
 log_str("Training done. Saving outputs")
-output_path = os.path.join(output_path,'training_output.pickle')
+output_path = os.path.join(output_dir,'training_output.pickle')
 
 with open(output_path, 'wb') as f:
     pickle.dump(output_dict, f)
