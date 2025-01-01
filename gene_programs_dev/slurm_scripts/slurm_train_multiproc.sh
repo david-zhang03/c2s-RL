@@ -102,44 +102,44 @@ while true; do
         fi
     done
 
-    # baseline memory used
-    for dataset in $(ls -d $DATASET_DIR*/); do
-        if [ -f "$dataset/training_inputs.pickle" ] && [ ! -f "$dataset/training_done.flag" ]; then
-            # Check if dataset is already being processed
-            dataset_being_processed=0
-            for job in "${running_jobs[@]}"; do
-                if [[ "${job_datasets[$job]}" == "$dataset" ]]; then
-                    dataset_being_processed=1
-                    break
-                fi
-            done
-
-            if [ $dataset_being_processed -eq 0 ]; then
-                # this is a heuristic calculation as we do not know how much memory will be used until loading
-                memory_required_gb=$(calculate_memory_required "$dataset")
-                memory_required_mib=$(awk "BEGIN {print int($memory_required_gb * 1024)}")
-
-                echo "$(date): Dataset ${dataset} requires ${memory_required_mib} MiB of memory"
-
-                if (( current_memory + memory_required_mib < GPU_MEMORY_THRESHOLD )) && (( ${#running_jobs[@]} < MAX_CONCURRENT_CHILDS )); then
-                    echo "$(date): Starting training for $dataset on GPU"
-                    /gpfs/radev/home/sr2464/.conda/envs/llamp/bin/python /home/ddz5/Desktop/c2s-RL/gene_programs_dev/scripts/run_training.py \
-                        --input_path "${dataset}/training_inputs.pickle" \
-                        --output_prefix "/home/ddz5/scratch/Cell2GSEA_QA_dataset_models/" \
-                        --dataset_name "$(basename $dataset)" &
-
-                    job_pid=$!
-                    running_jobs+=($job_pid)
-                    job_memory_usage[$job_pid]=$memory_required_mib
-                    job_datasets[$job_pid]=$dataset
-
-                    # Preemptively update memory with heuristic
-                    current_memory=$((current_memory + memory_required_mib))
-                    echo "$(date): Memory updated preemptively: ${current_memory} MiB"
-                else
-                    if (( ${#running_jobs[@]} >= MAX_CONCURRENT_CHILDS )); then
-                        echo "$(date): Maximum concurrent jobs reached. ${#running_jobs[@]} / ${MAX_CONCURRENT_CHILDS}"
+    # check if we are at max concurrent jobs
+    if (( ${#running_jobs[@]} >= MAX_CONCURRENT_CHILDS )); then
+        echo "$(date): Maximum concurrent jobs reached. ${#running_jobs[@]} / ${MAX_CONCURRENT_CHILDS}"
+    else
+        # baseline memory used
+        for dataset in $(ls -d $DATASET_DIR*/); do
+            if [ -f "$dataset/training_inputs.pickle" ] && [ ! -f "$dataset/training_done.flag" ]; then
+                # Check if dataset is already being processed
+                dataset_being_processed=0
+                for job in "${running_jobs[@]}"; do
+                    if [[ "${job_datasets[$job]}" == "$dataset" ]]; then
+                        dataset_being_processed=1
                         break
+                    fi
+                done
+
+                if [ $dataset_being_processed -eq 0 ]; then
+                    # this is a heuristic calculation as we do not know how much memory will be used until loading
+                    memory_required_gb=$(calculate_memory_required "$dataset")
+                    memory_required_mib=$(awk "BEGIN {print int($memory_required_gb * 1024)}")
+
+                    echo "$(date): Dataset ${dataset} requires ${memory_required_mib} MiB of memory"
+
+                    if (( current_memory + memory_required_mib < GPU_MEMORY_THRESHOLD )) && (( ${#running_jobs[@]} < MAX_CONCURRENT_CHILDS )); then
+                        echo "$(date): Starting training for $dataset on GPU"
+                        /gpfs/radev/home/sr2464/.conda/envs/llamp/bin/python /home/ddz5/Desktop/c2s-RL/gene_programs_dev/scripts/run_training.py \
+                            --input_path "${dataset}/training_inputs.pickle" \
+                            --output_prefix "/home/ddz5/scratch/Cell2GSEA_QA_dataset_models/" \
+                            --dataset_name "$(basename $dataset)" &
+
+                        job_pid=$!
+                        running_jobs+=($job_pid)
+                        job_memory_usage[$job_pid]=$memory_required_mib
+                        job_datasets[$job_pid]=$dataset
+
+                        # Preemptively update memory with heuristic
+                        current_memory=$((current_memory + memory_required_mib))
+                        echo "$(date): Memory updated preemptively: ${current_memory} MiB"
                     else
                         echo "$(date): Not enough GPU memory for $dataset. Current: ${current_memory} MiB, Required: ${memory_required_mib} MiB"
                         continue
