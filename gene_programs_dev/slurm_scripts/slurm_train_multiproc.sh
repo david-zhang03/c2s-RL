@@ -90,9 +90,14 @@ while true; do
             continue
         fi
         if ! kill -0 "$job_pid" 2>/dev/null; then
-            echo "$(date): Job $job_pid terminated unexpectedly. Cleaning up..."
+            wait "$job_pid"
+            exit_status=$?
+            if [[ $exit_status -eq 0 ]]; then
+                echo "$(date): Job $job_pid completed successfully."
+            else
+                echo "$(date): Job $job_pid terminated with errors. Exit status: $exit_status"
 
-            # Update memory and remove from tracking
+            # Free memory and update job tracking
             if [[ -n "${job_memory_usage[$job_pid]}" ]]; then
                 memory_freed=${job_memory_usage[$job_pid]}
                 current_memory=$((current_memory - memory_freed))
@@ -100,7 +105,6 @@ while true; do
             else
                 echo "$(date): Warning: job_memory_usage[$job_pid] not found. Skipping memory update for this job."
             fi
-
             # Remove job from tracking
             running_jobs=($(for pid in "${running_jobs[@]}"; do [[ "$pid" != "$job_pid" && -n "$pid" ]] && echo "$pid"; done))
             unset job_memory_usage[$job_pid]
@@ -152,8 +156,8 @@ while true; do
                     fi
                 fi
             fi
-        fi
-    done
+        done
+    fi
     echo "$(date): Current memory usage: ${current_memory} MiB"
     echo "$(date): Memory threshold: ${GPU_MEMORY_THRESHOLD} MiB"
     echo "$(date): Currently running jobs: ${#running_jobs[@]}"
