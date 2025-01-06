@@ -35,7 +35,7 @@ calculate_memory_required() {
         local memory_required_gb=$(awk "BEGIN {print ($num_cells / 10000) * 0.5}")
         echo "$memory_required_gb"
     else
-        echo "$0"
+        echo "0"
     fi
 }
 
@@ -73,10 +73,10 @@ declare -A job_memory_usage # associate memory usage with PID
 declare -A job_datasets # track the dataset each job is processing
 
 # Main loop
-current_memory=$(calculate_memory_usage $GPU_INDEX)
+current_memory=$(calculate_memory_usage $GPU_ID)
 running_jobs=()
 
-trap "echo 'Script terminated. Cleaning up...'; exit 1" SIGINT SIGTERM
+trap "echo 'Script terminated. Cleaning up...'; for job in \"\${running_jobs[@]}\"; do kill -9 \$job; done; exit 1" SIGINT SIGTERM
 while true; do
     all_datasets_done && { echo "All datasets have been trained. Exiting."; break; }
 
@@ -96,7 +96,7 @@ while true; do
                 echo "$(date): Job $job_pid completed successfully."
             else
                 echo "$(date): Job $job_pid terminated with errors. Exit status: $exit_status"
-
+            fi
             # Free memory and update job tracking
             if [[ -n "${job_memory_usage[$job_pid]}" ]]; then
                 memory_freed=${job_memory_usage[$job_pid]}
