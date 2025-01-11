@@ -1,0 +1,51 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "Context": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "Summary_Dataset": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "Question": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "Answer": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "Keyword": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "full_QA_pair": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "Dataset_Name": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "Publication_URL": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "Dataset_Index": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "Used_Rows": {
+      "feature": {
+        "dtype": "int64",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    }
+  },
+  "homepage": "",
+  "license": ""
+}
