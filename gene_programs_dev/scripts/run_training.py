@@ -92,6 +92,14 @@ val_cell_types = None
 if 'cell_type' in dataset.obs.columns:
     train_cell_types = dataset.obs['cell_type'][train_indices].values
     val_cell_types = dataset.obs['cell_type'][val_indices].values
+else:
+    log_str("Dataset has no cell types, exiting...")
+    sys.exit(1)
+
+# only train datasets with more than one cell type
+if len(set(val_cell_types)) <= 1:
+    log_str("Require datasets with more than one cell type, exiting...")
+    sys.exit(1)
 
 log_str("Converting programs from sparse to dense")
 

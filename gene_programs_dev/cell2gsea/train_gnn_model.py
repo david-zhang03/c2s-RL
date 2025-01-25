@@ -34,38 +34,63 @@ from cell2gsea.utils import *
 
 class gnn_config:
     def __init__(self,
-        # model hyperparameters
-        MODEL_TYPE = "GCN_MLP",
-        GCN_HIDDEN_DIM = 128,
-        MLP_HIDDEN_DIM = 128,
-        GCN_DROPOUT_LAYER_P = 0.5,
-        NONNEG = True,
-        # KNN graph hyperparameters
-        KNN_GRAPH_K = 5,
-        KNN_GRAPH_N_PCA = 50,
-        # Training hyperparameters
-        PROGRAM_NORMALIZE = True,
-        PROGRAM_DROPOUT = 0.5, # used only when prog_groups is None
-        PROGRAM_L1_PENALTY=0,
-        LEARNING_RATE = 0.001,
-        MIN_LRN_RATE = 1e-7,
-        WEIGHT_DECAY = 1e-5,
-        N_EPOCHS = 250,   
-        VAL_SPLIT = 0.2,     
-        # Graph sampling hyperparameters
-        GSAMP_BATCH_SIZE = 10,  # number of seed nodes
-        GSAMP_NUM_WORKER = 1,
-        GSAMP_NUM_NBR = 3,
-        CLUSTER_RESOL = 300,
-        # General
-        SEED = 42,
-        UMAP_PLOTTING=50, # plotting every X epochs
-        **kwargs
-        ):
-        # store config parameters in the config object (set the parameters as attributes)
-        args_dict = locals().copy()
-        args_dict.pop('self')
-        for key, value in args_dict.items():
+                 # model hyperparameters
+                 MODEL_TYPE="GCN_MLP",
+                 GCN_HIDDEN_DIM=128,
+                 MLP_HIDDEN_DIM=128,
+                 GCN_DROPOUT_LAYER_P=0.5,
+                 NONNEG=True,
+                 # KNN graph hyperparameters
+                 KNN_GRAPH_K=5,
+                 KNN_GRAPH_N_PCA=50,
+                 # Training hyperparameters
+                 PROGRAM_NORMALIZE=True,
+                 PROGRAM_DROPOUT=0.5,
+                 PROGRAM_L1_PENALTY=0,
+                 LEARNING_RATE=0.005,
+                 SCHEDULER_STEP=25,
+                 MIN_LRN_RATE=1e-5,
+                 WEIGHT_DECAY=1e-4,
+                 N_EPOCHS=100,
+                 MAX_BATCHES_PER_EPOCH=500,
+                 VAL_SPLIT=0.2,
+                 # Graph sampling hyperparameters
+                 GSAMP_BATCH_SIZE=10,
+                 GSAMP_NUM_WORKER=1,
+                 GSAMP_NUM_NBR=3,
+                 CLUSTER_RESOL=300,
+                 # General
+                 SEED=42,
+                 UMAP_PLOTTING=50,
+                 TRAIN_LOGGING_STEP=100
+                 **kwargs):
+        # Directly set each parameter
+        self.MODEL_TYPE = MODEL_TYPE
+        self.GCN_HIDDEN_DIM = GCN_HIDDEN_DIM
+        self.MLP_HIDDEN_DIM = MLP_HIDDEN_DIM
+        self.GCN_DROPOUT_LAYER_P = GCN_DROPOUT_LAYER_P
+        self.NONNEG = NONNEG
+        self.KNN_GRAPH_K = KNN_GRAPH_K
+        self.KNN_GRAPH_N_PCA = KNN_GRAPH_N_PCA
+        self.PROGRAM_NORMALIZE = PROGRAM_NORMALIZE
+        self.PROGRAM_DROPOUT = PROGRAM_DROPOUT
+        self.PROGRAM_L1_PENALTY = PROGRAM_L1_PENALTY
+        self.LEARNING_RATE = LEARNING_RATE
+        self.SCHEDULER_STEP = SCHEDULER_STEP
+        self.MIN_LRN_RATE = MIN_LRN_RATE
+        self.WEIGHT_DECAY = WEIGHT_DECAY
+        self.N_EPOCHS = N_EPOCHS
+        self.MAX_BATCHES_PER_EPOCH = MAX_BATCHES_PER_EPOCH
+        self.VAL_SPLIT = VAL_SPLIT
+        self.GSAMP_BATCH_SIZE = GSAMP_BATCH_SIZE
+        self.GSAMP_NUM_WORKER = GSAMP_NUM_WORKER
+        self.GSAMP_NUM_NBR = GSAMP_NUM_NBR
+        self.CLUSTER_RESOL = CLUSTER_RESOL
+        self.SEED = SEED
+        self.UMAP_PLOTTING = UMAP_PLOTTING
+        self.TRAIN_LOGGING_STEP = TRAIN_LOGGING_STEP
+        # Add any kwargs as attributes
+        for key, value in kwargs.items():
             setattr(self, key, value)
 
     def from_yaml(self,fpath):
@@ -73,6 +98,10 @@ class gnn_config:
             conf_dict = yaml.safe_load(file)
         for key, value in conf_dict.items():
             setattr(self, key, value)
+
+    def __repr__(self):
+        params = [f"{key}={value}" for key, value in vars(self).items()]
+        return "gnn_config(\n  " + "\n  ".join(params) + "\n)"
 
 
 def train_gnn(
@@ -268,7 +297,7 @@ def train_gnn(
 
     criterion = torch.nn.MSELoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=conf.LEARNING_RATE, weight_decay=conf.WEIGHT_DECAY)
-    iterations_per_anneal_cycle = conf.N_EPOCHS 
+    iterations_per_anneal_cycle = conf.SCHEDULER_STEP
     scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, T_0=iterations_per_anneal_cycle, eta_min=conf.MIN_LRN_RATE)
 
     train_neighbor_sampler = NeighborSampler(
@@ -281,8 +310,8 @@ def train_gnn(
         node_sampler=train_neighbor_sampler,
         batch_size = conf.GSAMP_BATCH_SIZE,  # number of seed nodes
         num_workers = conf.GSAMP_NUM_WORKER,
+        shuffle=True
     )
-
 
     if validation_exist:
         validation_neighbor_sampler = NeighborSampler(
@@ -295,6 +324,7 @@ def train_gnn(
             node_sampler = validation_neighbor_sampler,
             batch_size = conf.GSAMP_BATCH_SIZE,  # number of seed nodes
             num_workers = conf.GSAMP_NUM_WORKER,
+            shuffle=True
         )
 
 
@@ -338,6 +368,8 @@ def train_gnn(
 
 
         for idx, subgraph in enumerate(tqdm(train_loader)):
+            if idx >= conf.MAX_BATCHES_PER_EPOCH:
+                break
 
             #### Program dropout
             if (prog_groups is None) and (conf.PROGRAM_DROPOUT == 0):
@@ -380,7 +412,6 @@ def train_gnn(
             else:
                 loss = criterion(subgraph.x, X_reconst)
             loss.backward()
-
 
             prog_scores_cpu = batch_program_scores.detach().cpu().numpy()
 
@@ -437,6 +468,12 @@ def train_gnn(
             optimizer.step()
             scheduler.step(epoch + idx / len(train_loader)) # Adjust learning rate
             tr_batch_idx += 1
+
+            if WANDB_LOGGING and idx % conf.TRAIN_LOGGING_STEP == 0:
+                wandb.log({
+                    "Training Step Loss": loss.item(),
+                    "Learning Rate": scheduler.get_last_lr()[0]
+                }, step=idx + epoch * len(train_loader))
 
         log_memory_usage("Load train", device)
 
@@ -592,7 +629,7 @@ def train_gnn(
 
 
             # plot umap of 
-            if ENABLE_OUTPUT_SCORES and (epoch) % conf.UMAP_PLOTTING == 0 and val_cell_types:
+            if ENABLE_OUTPUT_SCORES and ((epoch % conf.UMAP_PLOTTING == 0) or (epoch == conf.N_EPOCHS-1))  and val_cell_types:
                 # Apply UMAP
                 adata = ad.AnnData(X=validation_assigned_prog_scores)
                 adata.obs['cell_type'] = val_cell_types
@@ -640,7 +677,7 @@ def train_gnn(
         if WANDB_LOGGING:
             wandb.log({
                 "Learning Rate": scheduler.get_last_lr()[0],
-                "Training Loss (MSE-reconstruction)": avg_train_loss,
+                "Training Epoch Loss (MSE-reconstruction)": avg_train_loss,
                 "Training R2 (reconstruction)": avg_train_r2_score,
                 "Training Pearson (reconstruction)": avg_train_pearsonr_score,
                 "Training Cross Entropy (program scores - labels)": avg_train_cross_entropy,
