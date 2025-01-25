@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH --job-name=QA_dataset_msigdb
-#SBATCH --output /home/ddz5/Desktop/c2s-RL/gene_programs_dev/logs/QA_dataset_msigdb/train_model/slurm_%j.log
+#SBATCH --job-name=eighth_set_QA_dataset_msigdb
+#SBATCH --output /home/ddz5/Desktop/c2s-RL/gene_programs_dev/logs/QA_dataset_msigdb/train_model/eighth_set_slurm_%j.log
 #SBATCH --mail-type=ALL                            # Mail events (NONE, BEGIN, END, FAIL, ALL)
 #SBATCH --mail-user=david.zhang.ddz5@yale.edu                   # Where to send mail
 #SBATCH --partition gpu
@@ -8,9 +8,8 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1                        # Run on a single CPU
 #SBATCH --gres=gpu:1                               # start with 1
-#SBATCH --constraint=h100|a100
-#SBATCH --cpus-per-task=16
-#SBATCH --mem=512gb                                 # Job memory request
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=256gb                                 # Job memory request
 #SBATCH --time=2-00:00:00                          # Time limit hrs:min:sec
 date;hostname
 
@@ -60,13 +59,13 @@ GPU_TYPE=$(nvidia-smi --query-gpu=name --format=csv,noheader | head -n 1)
 
 # Change if not A/H100 (80k was causing OOM - probably due to intermediate tensors)
 GPU_MEMORY_THRESHOLD=60000
-MAX_CONCURRENT_CHILDS=3
+MAX_CONCURRENT_CHILDS=1
 
 echo "Detected GPU: $GPU_TYPE at index $GPU_ID with memory threshold: $GPU_MEMORY_THRESHOLD MiB"
 
 # test - change path
 # /home/ddz5/scratch/test_cell2gsea_qa
-DATASET_DIR="/home/ddz5/scratch/Cell2GSEA_QA_dataset_models/"
+DATASET_DIR="/home/ddz5/scratch/Cell2GSEA_QA_dataset_models/eighth_set/"
 SLEEP_INTERVAL=1800  # Interval to check for processed datasets (in seconds)
 
 declare -A job_memory_usage # associate memory usage with PID
@@ -90,13 +89,8 @@ while true; do
             continue
         fi
         if ! kill -0 "$job_pid" 2>/dev/null; then
-            wait "$job_pid"
-            exit_status=$?
-            if [[ $exit_status -eq 0 ]]; then
-                echo "$(date): Job $job_pid completed successfully."
-            else
-                echo "$(date): Job $job_pid terminated with errors. Exit status: $exit_status"
-            fi
+            echo "$(date) Job $job_pid terminated unexpectedly. Cleaning up..."
+            
             # Free memory and update job tracking
             if [[ -n "${job_memory_usage[$job_pid]}" ]]; then
                 memory_freed=${job_memory_usage[$job_pid]}
@@ -129,17 +123,21 @@ while true; do
                 done
 
                 if [ $dataset_being_processed -eq 0 ]; then
+                    if (( ${#running_jobs[@]} >= MAX_CONCURRENT_CHILDS )); then
+                        echo "$(date): Maximum concurrent jobs reached (${#running_jobs[@]} / ${MAX_CONCURRENT_CHILDS}). Breaking loop."
+                        break
+                    fi
                     # this is a heuristic calculation as we do not know how much memory will be used until loading
                     memory_required_gb=$(calculate_memory_required "$dataset")
                     memory_required_mib=$(awk "BEGIN {print int($memory_required_gb * 1024)}")
 
                     echo "$(date): Dataset ${dataset} requires ${memory_required_mib} MiB of memory"
 
-                    if (( current_memory + memory_required_mib < GPU_MEMORY_THRESHOLD )) && (( ${#running_jobs[@]} < MAX_CONCURRENT_CHILDS )); then
+                    if (( current_memory + memory_required_mib < GPU_MEMORY_THRESHOLD )); then
                         echo "$(date): Starting training for $dataset on GPU"
                         /gpfs/radev/home/sr2464/.conda/envs/llamp/bin/python /home/ddz5/Desktop/c2s-RL/gene_programs_dev/scripts/run_training.py \
                             --input_path "${dataset}/training_inputs.pickle" \
-                            --output_prefix "/home/ddz5/scratch/Cell2GSEA_QA_dataset_models/" \
+                            --output_prefix "${DATASET_DIR}" \
                             --dataset_name "$(basename $dataset)" &
 
                         job_pid=$!
