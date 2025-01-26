@@ -21,7 +21,6 @@ def format_size(size_in_bytes):
         return f"{size_in_bytes / 1024**3:.2f} GB"
 
 
-
 def get_knn_edges(X,knn_k,n_pca):
     # Get the KNN graph edges without self-loops
     # reduce X to n_pca dimensions

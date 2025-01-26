@@ -31,6 +31,9 @@ parser.add_argument('--output_prefix', type=str,
 parser.add_argument('--dataset_name', type=str,
                     help='Name of .h5ad dataset')
 
+parser.add_argument('--seed', type=int,
+                    default=42)
+
 # .yml file
 parser.add_argument('--config_file', type=str, 
                     default=None)
@@ -40,8 +43,12 @@ parser.add_argument('--run_name', type=str, default=None)
 
 args = parser.parse_args()
 
+# set all seeds
+torch.manual_seed(args.seed)
+np.random.seed(args.seed)
+
 # default config
-conf = gnn_config()
+conf = gnn_config(SEED=args.seed)
 if args.config_file is not None:
     conf.from_yaml(args.config_file)
 

@@ -62,7 +62,7 @@ class gnn_config:
                  # General
                  SEED=42,
                  UMAP_PLOTTING=50,
-                 TRAIN_LOGGING_STEP=100
+                 TRAIN_LOGGING_STEP=100,
                  **kwargs):
         # Directly set each parameter
         self.MODEL_TYPE = MODEL_TYPE
@@ -126,6 +126,10 @@ def train_gnn(
         RUN_ID = None,
         RUN_NAME = "train_cell2gsea",
         ):
+
+    # set all seeds
+    torch.manual_seed(training_config.SEED)
+    np.random.seed(training_config.SEED)
 
     print ("__________________________________", flush=True)
     script_path = os.path.abspath(__file__)
@@ -734,61 +738,6 @@ def train_gnn(
 
     return output
     
-
-
-def infer_gnn(
-        input_x,
-        input_edges,  
-        trained_model,
-        train_config,
-    ):
-    
-    inference_X = torch.tensor(input_x, dtype=torch.float32)
-    inference_edge_list = torch.tensor(input_edges, dtype=torch.long)
-    inference_data = Data(x=inference_X , edge_index=inference_edge_list)
-
-    inference_neighbor_sampler = NeighborSampler(
-        inference_data,
-        num_neighbors=[train_config.GSAMP_NUM_NBR, train_config.GSAMP_NUM_NBR]
-    )
-
-    inference_loader = NodeLoader(
-        inference_data,
-        node_sampler = inference_neighbor_sampler,
-        batch_size = train_config.GSAMP_BATCH_SIZE,  # number of seed nodes
-        num_workers = train_config.GSAMP_NUM_WORKER,
-    )
-    
-    n_cell, n_genes = input_x.shape
-    
-
-    device_name = 'cuda' if torch.cuda.is_available() else 'mps' if torch.backends.mps.is_available() else 'cpu'
-    log_str(f"Using device: {device_name}")
-    device = torch.device(device_name)
-
-    model = trained_model.to(device)
-    model.eval()
-
-    dummy_x = torch.zeros(1,n_genes,device=device)
-    dummy_edges = torch.tensor([range(1),range(1)], dtype=torch.long,device=device)
-    dummy_out = model(dummy_x,dummy_edges)
-    _, n_progs = dummy_out.shape
-    output_scores = np.zeros((n_cell,n_progs))
-
-    log_str(f"Running inference: {n_cell} cells - {n_genes} genes - {n_progs} programs")
-    with torch.no_grad():
-        for idx, subgraph in tqdm(enumerate(inference_loader)):
-            n_nodes, _ = subgraph.x.shape
-            original_indices = subgraph.input_id
-            subgraph = subgraph.to(device)
-            batch_identity_adj = torch.tensor([range(n_nodes),range(n_nodes)], dtype = torch.long, device=device)
-            edges = torch.cat([batch_identity_adj,subgraph.edge_index],dim = 1)
-            batch_program_scores = model(subgraph.x,edges)
-            seed_nodes_prog_scores = batch_program_scores[:len(original_indices),:].detach().cpu().numpy()
-            output_scores[original_indices,:] = seed_nodes_prog_scores
-            
-    return output_scores
-
 
 if __name__ == '__main__':
     # Random example
