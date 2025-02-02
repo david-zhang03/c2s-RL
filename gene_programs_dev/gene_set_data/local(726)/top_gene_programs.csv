@@ -1,0 +1,751 @@
+Disease,Cell Type,Gene Program,Mean Activity Score,Rank Type
+normal,"CD4-positive, alpha-beta T cell",KEGG_MEDICUS_REFERENCE_TRANSLATION_INITIATION,1016.8675339121256,Top
+normal,"CD4-positive, alpha-beta T cell",AIZARANI_LIVER_C3_NK_NKT_CELLS_2,252.14933349489766,Top
+normal,"CD4-positive, alpha-beta T cell",LAKE_ADULT_KIDNEY_C23_ENDOTHELIAL_CELLS_AVR,240.7454776921296,Top
+normal,"CD4-positive, alpha-beta T cell",LAKE_ADULT_KIDNEY_C18_COLLECTING_DUCT_PRINCIPAL_CELLS_MEDULLA,217.70647733602877,Top
+normal,"CD4-positive, alpha-beta T cell",RUBENSTEIN_SKELETAL_MUSCLE_NK_CELLS,211.73199855524504,Top
+normal,"CD4-positive, alpha-beta T cell",LAKE_ADULT_KIDNEY_C8_DECENDING_THIN_LIMB,187.85464993372062,Top
+normal,"CD4-positive, alpha-beta T cell",LAKE_ADULT_KIDNEY_C19_COLLECTING_DUCT_INTERCALATED_CELLS_TYPE_A_MEDULLA,185.0317568228899,Top
+normal,"CD4-positive, alpha-beta T cell",MORF_ACTG1,178.1317346926096,Top
+normal,"CD4-positive, alpha-beta T cell",TRAVAGLINI_LUNG_CAPILLARY_INTERMEDIATE_2_CELL,175.3522901947665,Top
+normal,"CD4-positive, alpha-beta T cell",LAKE_ADULT_KIDNEY_C10_THIN_ASCENDING_LIMB,174.50687044299187,Top
+normal,"CD4-positive, alpha-beta T cell",PSMB5_TARGET_GENES,170.98760535394752,Top
+normal,"CD4-positive, alpha-beta T cell",FAN_OVARY_CL0_XBP1_SELK_HIGH_STROMAL_CELL,170.83766470427094,Top
+normal,"CD4-positive, alpha-beta T cell",TRAVAGLINI_LUNG_CD4_NAIVE_T_CELL,170.38246187746455,Top
+normal,"CD4-positive, alpha-beta T cell",RUBENSTEIN_SKELETAL_MUSCLE_MYELOID_CELLS,165.5299074063693,Top
+normal,"CD4-positive, alpha-beta T cell",RUBENSTEIN_SKELETAL_MUSCLE_T_CELLS,165.3081603791148,Top
+normal,"CD4-positive, alpha-beta T cell",MODULE_83,158.80503888671427,Top
+normal,"CD4-positive, alpha-beta T cell",FAN_OVARY_CL12_T_LYMPHOCYTE_NK_CELL_2,157.7971469253958,Top
+normal,"CD4-positive, alpha-beta T cell",LAKE_ADULT_KIDNEY_C12_THICK_ASCENDING_LIMB,155.66595042581181,Top
+normal,"CD4-positive, alpha-beta T cell",MORF_TPT1,154.7617665706857,Top
+normal,"CD4-positive, alpha-beta T cell",RUBENSTEIN_SKELETAL_MUSCLE_B_CELLS,150.63207382344578,Top
+normal,"CD4-positive, alpha-beta T cell",PECE_MAMMARY_STEM_CELL_UP,149.6728811104199,Top
+normal,"CD4-positive, alpha-beta T cell",TIEN_INTESTINE_PROBIOTICS_24HR_DN,146.29452980395214,Top
+normal,"CD4-positive, alpha-beta T cell",YAGI_AML_WITH_INV_16_TRANSLOCATION,145.1981299807895,Top
+normal,"CD4-positive, alpha-beta T cell",HSIAO_HOUSEKEEPING_GENES,144.76859213580332,Top
+normal,"CD4-positive, alpha-beta T cell",BUSSLINGER_DUODENAL_IMMUNE_CELLS,144.51691061435676,Top
+normal,"CD4-positive, alpha-beta T cell",GNF2_TPT1,139.7673033736967,Top
+normal,"CD4-positive, alpha-beta T cell",WP_CYTOPLASMIC_RIBOSOMAL_PROTEINS,137.91795313726553,Top
+normal,"CD4-positive, alpha-beta T cell",HAY_BONE_MARROW_NAIVE_T_CELL,136.66038318120778,Top
+normal,"CD4-positive, alpha-beta T cell",BUSSLINGER_GASTRIC_IMMUNE_CELLS,133.6512670910418,Top
+normal,"CD4-positive, alpha-beta T cell",BUSSLINGER_DUODENAL_DIFFERENTIATING_STEM_CELLS,131.3006214449278,Top
+normal,"CD4-positive, alpha-beta T cell",MENON_FETAL_KIDNEY_10_IMMUNE_CELLS,130.8385202985127,Top
+normal,"CD4-positive, alpha-beta T cell",FAN_OVARY_CL4_T_LYMPHOCYTE_NK_CELL_1,130.1566098271082,Top
+normal,"CD4-positive, alpha-beta T cell",BUSSLINGER_GASTRIC_PPP1R1B_POSITIVE_CELLS,125.00250930185753,Top
+normal,"CD4-positive, alpha-beta T cell",TRAVAGLINI_LUNG_CLUB_CELL,123.91330285559468,Top
+normal,"CD4-positive, alpha-beta T cell",LAKE_ADULT_KIDNEY_C9_THIN_ASCENDING_LIMB,123.10564742910383,Top
+normal,"CD4-positive, alpha-beta T cell",TIEN_INTESTINE_PROBIOTICS_6HR_UP,119.12284275481038,Top
+normal,"CD4-positive, alpha-beta T cell",MODULE_114,117.61267025347412,Top
+normal,"CD4-positive, alpha-beta T cell",BUSSLINGER_DUODENAL_STEM_CELLS,117.24388156830265,Top
+normal,"CD4-positive, alpha-beta T cell",MORF_NPM1,116.21282507389512,Top
+normal,"CD4-positive, alpha-beta T cell",BUSSLINGER_DUODENAL_TRANSIT_AMPLIFYING_CELLS,115.3323193443952,Top
+normal,"CD4-positive, alpha-beta T cell",LAKE_ADULT_KIDNEY_C24_ENDOTHELIAL_CELLS_AEA_AND_DVR,109.07188015772014,Top
+normal,"CD4-positive, alpha-beta T cell",TRAVAGLINI_LUNG_MESOTHELIAL_CELL,104.29377953310649,Top
+normal,"CD4-positive, alpha-beta T cell",CHAUHAN_RESPONSE_TO_METHOXYESTRADIOL_DN,100.97658406515782,Top
+normal,"CD4-positive, alpha-beta T cell",RUBENSTEIN_SKELETAL_MUSCLE_SATELLITE_CELLS,97.5045154231543,Top
+normal,"CD4-positive, alpha-beta T cell",GNF2_GLTSCR2,97.00777248133514,Top
+normal,"CD4-positive, alpha-beta T cell",FOXR2_TARGET_GENES,96.67480803298321,Top
+normal,"CD4-positive, alpha-beta T cell",LAKE_ADULT_KIDNEY_C7_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S3,94.57587571191073,Top
+normal,"CD4-positive, alpha-beta T cell",TRAVAGLINI_LUNG_BRONCHIAL_VESSEL_1_CELL,94.35746606087783,Top
+normal,"CD4-positive, alpha-beta T cell",GNATENKO_PLATELET_SIGNATURE,94.01245257821387,Top
+normal,"CD4-positive, alpha-beta T cell",BUSSLINGER_GASTRIC_LYZ_POSITIVE_CELLS,92.24327897273962,Top
+normal,"CD4-positive, alpha-beta T cell",MARTENS_TRETINOIN_RESPONSE_DN,92.1497872012218,Top
+normal,"CD4-positive, alpha-beta T cell",AIZARANI_LIVER_C1_NK_NKT_CELLS_1,91.62601530498887,Top
+normal,"CD4-positive, alpha-beta T cell",BUSSLINGER_ESOPHAGEAL_QUIESCENT_BASAL_CELLS,89.29399888765897,Top
+normal,"CD4-positive, alpha-beta T cell",GSE13411_PLASMA_CELL_VS_MEMORY_BCELL_DN,88.89339542128255,Top
+normal,"CD4-positive, alpha-beta T cell",WIERENGA_PML_INTERACTOME,88.0041093376777,Top
+normal,"CD4-positive, alpha-beta T cell",ZFHX3_TARGET_GENES,87.98556202636237,Top
+normal,"CD4-positive, alpha-beta T cell",TRAVAGLINI_LUNG_PROLIFERATING_BASAL_CELL,87.49264997923505,Top
+normal,"CD4-positive, alpha-beta T cell",DIAZ_CHRONIC_MYELOGENOUS_LEUKEMIA_DN,87.2175618325826,Top
+normal,"CD4-positive, alpha-beta T cell",MODY_HIPPOCAMPUS_PRENATAL,86.19512185108101,Top
+normal,"CD4-positive, alpha-beta T cell",MURARO_PANCREAS_ACINAR_CELL,85.4336486452477,Top
+normal,"CD4-positive, alpha-beta T cell",FAN_OVARY_CL10_PUTATIVE_EARLY_ATRESIA_GRANULOSA_CELL,84.49439661733129,Top
+normal,"CD4-positive, alpha-beta T cell",GSE3982_NEUTROPHIL_VS_BCELL_DN,84.46096418028206,Top
+normal,"CD4-positive, alpha-beta T cell",MODULE_151,83.72057043748066,Top
+normal,"CD4-positive, alpha-beta T cell",MATTIOLI_MGUS_VS_PCL,82.58869815825629,Top
+normal,"CD4-positive, alpha-beta T cell",SETD7_TARGET_GENES,81.88713212057753,Top
+normal,"CD4-positive, alpha-beta T cell",GTF2A2_TARGET_GENES,81.29145442176139,Top
+normal,"CD4-positive, alpha-beta T cell",BUSSLINGER_ESOPHAGEAL_EARLY_SUPRABASAL_CELLS,80.9687627673143,Top
+normal,"CD4-positive, alpha-beta T cell",MA_RAT_AGING_UP,78.49764157969453,Top
+normal,"CD4-positive, alpha-beta T cell",KEGG_RIBOSOME,77.54683813715071,Top
+normal,"CD4-positive, alpha-beta T cell",NKX2_2_TARGET_GENES,74.8709815950528,Top
+normal,"CD4-positive, alpha-beta T cell",RUBENSTEIN_SKELETAL_MUSCLE_PCV_ENDOTHELIAL_CELLS,74.41425909331348,Top
+normal,"CD4-positive, alpha-beta T cell",QI_PBMC_ZOSTAVAX_AGE_50_75YO_CORRELATED_WITH_T_CELL_RESPONSES_1D_INFORMATIVE_OF_LONG_TERM_RESPONSES_NEGATIVE,73.82993400937279,Top
+normal,"CD4-positive, alpha-beta T cell",FAN_OVARY_CL2_PUTATIVE_EARLY_ATRETIC_FOLLICLE_THECAL_CELL_1,73.55466156414721,Top
+normal,"CD4-positive, alpha-beta T cell",BUSSLINGER_ESOPHAGEAL_PROLIFERATING_BASAL_CELLS,72.89893004438223,Top
+normal,"CD4-positive, alpha-beta T cell",HOLLEMAN_VINCRISTINE_RESISTANCE_ALL_DN,72.16937744423811,Top
+normal,"CD4-positive, alpha-beta T cell",GSE14000_TRANSLATED_RNA_VS_MRNA_DC_DN,71.11976358598028,Top
+normal,"CD4-positive, alpha-beta T cell",GAUTAM_EYE_IRIS_CILIARY_BODY_WIF1_HIGH_FIBROBLASTS,70.73517933695837,Top
+normal,"CD4-positive, alpha-beta T cell",TRAVAGLINI_LUNG_PROXIMAL_BASAL_CELL,69.99798801612181,Top
+normal,"CD4-positive, alpha-beta T cell",MANNO_MIDBRAIN_NEUROTYPES_BASAL,69.95406507724005,Top
+normal,"CD4-positive, alpha-beta T cell",WATANABE_RECTAL_CANCER_RADIOTHERAPY_RESPONSIVE_UP,69.65788461534065,Top
+normal,"CD4-positive, alpha-beta T cell",GSE42088_UNINF_VS_LEISHMANIA_INF_DC_4H_DN,68.93327875857082,Top
+normal,"CD4-positive, alpha-beta T cell",MORF_NME2,68.20886498012487,Top
+normal,"CD4-positive, alpha-beta T cell",GSE25088_WT_VS_STAT6_KO_MACROPHAGE_ROSIGLITAZONE_STIM_UP,68.11619533033222,Top
+normal,"CD4-positive, alpha-beta T cell",DURANTE_ADULT_OLFACTORY_NEUROEPITHELIUM_NK_CELLS,67.97286466842039,Top
+normal,"CD4-positive, alpha-beta T cell",CUI_DEVELOPING_HEART_COMPACT_ATRIAL_CARDIOMYOCYTE,67.4367914297208,Top
+normal,"CD4-positive, alpha-beta T cell",MODULE_150,66.98739775809182,Top
+normal,"CD4-positive, alpha-beta T cell",GSE14000_TRANSLATED_RNA_VS_MRNA_4H_LPS_DC_DN,65.93226277084965,Top
+normal,"CD4-positive, alpha-beta T cell",RAG1_TARGET_GENES,65.04759751953851,Top
+normal,"CD4-positive, alpha-beta T cell",LIU_COMMON_CANCER_GENES,64.3872453037333,Top
+normal,"CD4-positive, alpha-beta T cell",ZHENG_CORD_BLOOD_C8_PUTATIVE_LYMPHOID_PRIMED_MULTIPOTENT_PROGENITOR_2,63.95133065535553,Top
+normal,"CD4-positive, alpha-beta T cell",CHAF1B_TARGET_GENES,63.84977810094272,Top
+normal,"CD4-positive, alpha-beta T cell",GOBP_TRANSLATIONAL_ELONGATION,63.49233500020954,Top
+normal,"CD4-positive, alpha-beta T cell",HARALAMBIEVA_PBMC_FLUARIX_AGE_50_74YO_CORR_WITH_28D_MEM_B_CELL_RESPONSE_AT_0DY_POSITIVE,63.287466276805326,Top
+normal,"CD4-positive, alpha-beta T cell",GSE2405_0H_VS_9H_A_PHAGOCYTOPHILUM_STIM_NEUTROPHIL_DN,62.38479797285968,Top
+normal,"CD4-positive, alpha-beta T cell",TRAVAGLINI_LUNG_CD4_MEMORY_EFFECTOR_T_CELL,61.16698490054093,Top
+normal,"CD4-positive, alpha-beta T cell",GSE22886_NAIVE_BCELL_VS_NEUTROPHIL_UP,61.115944648812125,Top
+normal,"CD4-positive, alpha-beta T cell",TRAVAGLINI_LUNG_AIRWAY_SMOOTH_MUSCLE_CELL,60.768178107622795,Top
+normal,"CD4-positive, alpha-beta T cell",FAN_EMBRYONIC_CTX_BIG_GROUPS_BRAIN_IMMUNE,60.7462682420489,Top
+normal,"CD4-positive, alpha-beta T cell",GOCC_RIBOSOME,60.72337418542885,Top
+normal,"CD4-positive, alpha-beta T cell",BROWNE_HCMV_INFECTION_10HR_DN,59.75894021193637,Top
+normal,"CD4-positive, alpha-beta T cell",chr10p13,0.0,Bottom
+normal,"CD4-positive, alpha-beta T cell",chr10q21,0.0,Bottom
+normal,"CD4-positive, alpha-beta T cell",chr10q22,0.0,Bottom
+normal,"CD4-positive, alpha-beta T cell",chr10q23,0.0,Bottom
+normal,"CD4-positive, alpha-beta T cell",chr10q26,0.0,Bottom
+normal,"CD4-positive, alpha-beta T cell",chr11p12,0.0,Bottom
+normal,"CD4-positive, alpha-beta T cell",chr11p13,0.0,Bottom
+normal,"CD4-positive, alpha-beta T cell",chr11p14,0.0,Bottom
+normal,"CD4-positive, alpha-beta T cell",chr11q11,0.0,Bottom
+normal,"CD4-positive, alpha-beta T cell",chr11q12,0.0,Bottom
+normal,"CD4-positive, alpha-beta T cell",chr11q24,0.0,Bottom
+normal,"CD4-positive, alpha-beta T cell",chr12p13,0.0,Bottom
+normal,"CD4-positive, alpha-beta T cell",chr12q12,0.0,Bottom
+normal,"CD4-positive, alpha-beta T cell",chr12q13,0.0,Bottom
+normal,"CD4-positive, alpha-beta T cell",chr12q24,0.0,Bottom
+normal,"CD4-positive, alpha-beta T cell",chr13q11,0.0,Bottom
+normal,"CD4-positive, alpha-beta T cell",chr13q13,0.0,Bottom
+normal,"CD4-positive, alpha-beta T cell",chr13q14,0.0,Bottom
+normal,"CD4-positive, alpha-beta T cell",chr13q21,0.0,Bottom
+normal,"CD4-positive, alpha-beta T cell",chr13q32,0.0,Bottom
+normal,"CD4-positive, alpha-beta T cell",chr14q11,0.0,Bottom
+normal,"CD4-positive, alpha-beta T cell",chr14q22,0.0,Bottom
+normal,"CD4-positive, alpha-beta T cell",chr14q24,0.0,Bottom
+normal,"CD4-positive, alpha-beta T cell",chr15q14,0.0,Bottom
+normal,"CD4-positive, alpha-beta T cell",chr15q15,0.0,Bottom
+normal,"CD4-positive, alpha-beta thymocyte",KEGG_MEDICUS_REFERENCE_TRANSLATION_INITIATION,868.756171441435,Top
+normal,"CD4-positive, alpha-beta thymocyte",AIZARANI_LIVER_C3_NK_NKT_CELLS_2,219.84449263377357,Top
+normal,"CD4-positive, alpha-beta thymocyte",LAKE_ADULT_KIDNEY_C23_ENDOTHELIAL_CELLS_AVR,187.5020412674487,Top
+normal,"CD4-positive, alpha-beta thymocyte",LAKE_ADULT_KIDNEY_C18_COLLECTING_DUCT_PRINCIPAL_CELLS_MEDULLA,167.1881589600889,Top
+normal,"CD4-positive, alpha-beta thymocyte",RUBENSTEIN_SKELETAL_MUSCLE_NK_CELLS,157.1949018276454,Top
+normal,"CD4-positive, alpha-beta thymocyte",TRAVAGLINI_LUNG_CD4_NAIVE_T_CELL,145.13635621886715,Top
+normal,"CD4-positive, alpha-beta thymocyte",FAN_OVARY_CL0_XBP1_SELK_HIGH_STROMAL_CELL,144.954114355518,Top
+normal,"CD4-positive, alpha-beta thymocyte",RUBENSTEIN_SKELETAL_MUSCLE_T_CELLS,143.2591600188033,Top
+normal,"CD4-positive, alpha-beta thymocyte",LAKE_ADULT_KIDNEY_C19_COLLECTING_DUCT_INTERCALATED_CELLS_TYPE_A_MEDULLA,143.15770569480316,Top
+normal,"CD4-positive, alpha-beta thymocyte",LAKE_ADULT_KIDNEY_C8_DECENDING_THIN_LIMB,141.0372162823808,Top
+normal,"CD4-positive, alpha-beta thymocyte",MORF_ACTG1,138.4823209851188,Top
+normal,"CD4-positive, alpha-beta thymocyte",RUBENSTEIN_SKELETAL_MUSCLE_B_CELLS,133.33985149144115,Top
+normal,"CD4-positive, alpha-beta thymocyte",LAKE_ADULT_KIDNEY_C10_THIN_ASCENDING_LIMB,129.59303400317873,Top
+normal,"CD4-positive, alpha-beta thymocyte",TRAVAGLINI_LUNG_CAPILLARY_INTERMEDIATE_2_CELL,128.91315735518094,Top
+normal,"CD4-positive, alpha-beta thymocyte",HAY_BONE_MARROW_NAIVE_T_CELL,128.39969401526508,Top
+normal,"CD4-positive, alpha-beta thymocyte",RUBENSTEIN_SKELETAL_MUSCLE_MYELOID_CELLS,126.42493794479353,Top
+normal,"CD4-positive, alpha-beta thymocyte",YAGI_AML_WITH_INV_16_TRANSLOCATION,126.13996749545198,Top
+normal,"CD4-positive, alpha-beta thymocyte",TIEN_INTESTINE_PROBIOTICS_24HR_DN,125.30652345763218,Top
+normal,"CD4-positive, alpha-beta thymocyte",PSMB5_TARGET_GENES,125.08533289434124,Top
+normal,"CD4-positive, alpha-beta thymocyte",GNF2_TPT1,122.44759894434512,Top
+normal,"CD4-positive, alpha-beta thymocyte",MORF_TPT1,121.51531222677667,Top
+normal,"CD4-positive, alpha-beta thymocyte",TRAVAGLINI_LUNG_CLUB_CELL,119.92596067603688,Top
+normal,"CD4-positive, alpha-beta thymocyte",LAKE_ADULT_KIDNEY_C12_THICK_ASCENDING_LIMB,119.89365387378272,Top
+normal,"CD4-positive, alpha-beta thymocyte",FAN_OVARY_CL12_T_LYMPHOCYTE_NK_CELL_2,118.06645194776415,Top
+normal,"CD4-positive, alpha-beta thymocyte",MODULE_83,117.46098553828158,Top
+normal,"CD4-positive, alpha-beta thymocyte",WP_CYTOPLASMIC_RIBOSOMAL_PROTEINS,117.02181894658851,Top
+normal,"CD4-positive, alpha-beta thymocyte",BUSSLINGER_DUODENAL_IMMUNE_CELLS,110.74736312086998,Top
+normal,"CD4-positive, alpha-beta thymocyte",BUSSLINGER_GASTRIC_PPP1R1B_POSITIVE_CELLS,109.40900121356644,Top
+normal,"CD4-positive, alpha-beta thymocyte",BUSSLINGER_GASTRIC_IMMUNE_CELLS,108.22760606536329,Top
+normal,"CD4-positive, alpha-beta thymocyte",HSIAO_HOUSEKEEPING_GENES,103.39933063751197,Top
+normal,"CD4-positive, alpha-beta thymocyte",PECE_MAMMARY_STEM_CELL_UP,98.89361787039387,Top
+normal,"CD4-positive, alpha-beta thymocyte",BUSSLINGER_DUODENAL_STEM_CELLS,97.06707283339917,Top
+normal,"CD4-positive, alpha-beta thymocyte",MENON_FETAL_KIDNEY_10_IMMUNE_CELLS,92.42200893447259,Top
+normal,"CD4-positive, alpha-beta thymocyte",GNF2_GLTSCR2,90.4350054416109,Top
+normal,"CD4-positive, alpha-beta thymocyte",BUSSLINGER_DUODENAL_DIFFERENTIATING_STEM_CELLS,88.49263313941879,Top
+normal,"CD4-positive, alpha-beta thymocyte",TIEN_INTESTINE_PROBIOTICS_6HR_UP,88.44143872850037,Top
+normal,"CD4-positive, alpha-beta thymocyte",MODULE_114,85.29939784091953,Top
+normal,"CD4-positive, alpha-beta thymocyte",MORF_NPM1,84.85025027140672,Top
+normal,"CD4-positive, alpha-beta thymocyte",GSE13411_PLASMA_CELL_VS_MEMORY_BCELL_DN,84.4257709746758,Top
+normal,"CD4-positive, alpha-beta thymocyte",BUSSLINGER_GASTRIC_LYZ_POSITIVE_CELLS,84.19781501841167,Top
+normal,"CD4-positive, alpha-beta thymocyte",WIERENGA_PML_INTERACTOME,83.6585164982372,Top
+normal,"CD4-positive, alpha-beta thymocyte",AIZARANI_LIVER_C1_NK_NKT_CELLS_1,83.48094216765956,Top
+normal,"CD4-positive, alpha-beta thymocyte",LAKE_ADULT_KIDNEY_C9_THIN_ASCENDING_LIMB,82.60133451075593,Top
+normal,"CD4-positive, alpha-beta thymocyte",BUSSLINGER_ESOPHAGEAL_QUIESCENT_BASAL_CELLS,82.29384984545658,Top
+normal,"CD4-positive, alpha-beta thymocyte",FOXR2_TARGET_GENES,81.75082715843202,Top
+normal,"CD4-positive, alpha-beta thymocyte",CHAUHAN_RESPONSE_TO_METHOXYESTRADIOL_DN,81.27807360460163,Top
+normal,"CD4-positive, alpha-beta thymocyte",MODY_HIPPOCAMPUS_PRENATAL,79.59066565022927,Top
+normal,"CD4-positive, alpha-beta thymocyte",FAN_OVARY_CL4_T_LYMPHOCYTE_NK_CELL_1,79.41614533961818,Top
+normal,"CD4-positive, alpha-beta thymocyte",TRAVAGLINI_LUNG_BRONCHIAL_VESSEL_1_CELL,78.83268370815512,Top
+normal,"CD4-positive, alpha-beta thymocyte",RUBENSTEIN_SKELETAL_MUSCLE_SATELLITE_CELLS,77.61291684360411,Top
+normal,"CD4-positive, alpha-beta thymocyte",LAKE_ADULT_KIDNEY_C24_ENDOTHELIAL_CELLS_AEA_AND_DVR,75.43748853647045,Top
+normal,"CD4-positive, alpha-beta thymocyte",TRAVAGLINI_LUNG_MESOTHELIAL_CELL,74.13269290765375,Top
+normal,"CD4-positive, alpha-beta thymocyte",BUSSLINGER_DUODENAL_TRANSIT_AMPLIFYING_CELLS,73.96613456213983,Top
+normal,"CD4-positive, alpha-beta thymocyte",ZFHX3_TARGET_GENES,73.2523950174341,Top
+normal,"CD4-positive, alpha-beta thymocyte",GSE3982_NEUTROPHIL_VS_BCELL_DN,71.99843837612038,Top
+normal,"CD4-positive, alpha-beta thymocyte",LAKE_ADULT_KIDNEY_C7_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S3,70.92865338894254,Top
+normal,"CD4-positive, alpha-beta thymocyte",MURARO_PANCREAS_ACINAR_CELL,70.91964686473406,Top
+normal,"CD4-positive, alpha-beta thymocyte",GNATENKO_PLATELET_SIGNATURE,70.57053411803076,Top
+normal,"CD4-positive, alpha-beta thymocyte",MARTENS_TRETINOIN_RESPONSE_DN,69.17209762447989,Top
+normal,"CD4-positive, alpha-beta thymocyte",FAN_OVARY_CL2_PUTATIVE_EARLY_ATRETIC_FOLLICLE_THECAL_CELL_1,68.94479507323697,Top
+normal,"CD4-positive, alpha-beta thymocyte",GSE42088_UNINF_VS_LEISHMANIA_INF_DC_4H_DN,68.11038970917893,Top
+normal,"CD4-positive, alpha-beta thymocyte",DIAZ_CHRONIC_MYELOGENOUS_LEUKEMIA_DN,66.55771151344132,Top
+normal,"CD4-positive, alpha-beta thymocyte",GAUTAM_EYE_IRIS_CILIARY_BODY_WIF1_HIGH_FIBROBLASTS,65.4876412234856,Top
+normal,"CD4-positive, alpha-beta thymocyte",QI_PBMC_ZOSTAVAX_AGE_50_75YO_CORRELATED_WITH_T_CELL_RESPONSES_1D_INFORMATIVE_OF_LONG_TERM_RESPONSES_NEGATIVE,64.83013581928729,Top
+normal,"CD4-positive, alpha-beta thymocyte",SETD7_TARGET_GENES,64.14214323507986,Top
+normal,"CD4-positive, alpha-beta thymocyte",NKX2_2_TARGET_GENES,62.691466150311506,Top
+normal,"CD4-positive, alpha-beta thymocyte",GSE25088_WT_VS_STAT6_KO_MACROPHAGE_ROSIGLITAZONE_STIM_UP,62.3189345273504,Top
+normal,"CD4-positive, alpha-beta thymocyte",WATANABE_RECTAL_CANCER_RADIOTHERAPY_RESPONSIVE_UP,62.054385836552584,Top
+normal,"CD4-positive, alpha-beta thymocyte",CUI_DEVELOPING_HEART_COMPACT_ATRIAL_CARDIOMYOCYTE,60.95872523796886,Top
+normal,"CD4-positive, alpha-beta thymocyte",TRAVAGLINI_LUNG_CD4_MEMORY_EFFECTOR_T_CELL,60.70190933463242,Top
+normal,"CD4-positive, alpha-beta thymocyte",TRAVAGLINI_LUNG_PROLIFERATING_BASAL_CELL,59.83873916751696,Top
+normal,"CD4-positive, alpha-beta thymocyte",RUBENSTEIN_SKELETAL_MUSCLE_PCV_ENDOTHELIAL_CELLS,59.33195191396782,Top
+normal,"CD4-positive, alpha-beta thymocyte",MA_RAT_AGING_UP,58.17694765216196,Top
+normal,"CD4-positive, alpha-beta thymocyte",GSE32986_UNSTIM_VS_CURDLAN_HIGHDOSE_STIM_DC_DN,57.87925001998179,Top
+normal,"CD4-positive, alpha-beta thymocyte",GSE26156_DOUBLE_POSITIVE_VS_CD4_SINGLE_POSITIVE_THYMOCYTE_UP,57.804254766680536,Top
+normal,"CD4-positive, alpha-beta thymocyte",MATTIOLI_MGUS_VS_PCL,57.74157870835642,Top
+normal,"CD4-positive, alpha-beta thymocyte",GSE24574_BCL6_HIGH_VS_LOW_TFH_CD4_TCELL_UP,57.29333462130619,Top
+normal,"CD4-positive, alpha-beta thymocyte",GSE14000_TRANSLATED_RNA_VS_MRNA_DC_DN,56.881364492984495,Top
+normal,"CD4-positive, alpha-beta thymocyte",HOLLEMAN_VINCRISTINE_RESISTANCE_ALL_DN,54.874347717441935,Top
+normal,"CD4-positive, alpha-beta thymocyte",BUSSLINGER_ESOPHAGEAL_PROLIFERATING_BASAL_CELLS,54.73200852215383,Top
+normal,"CD4-positive, alpha-beta thymocyte",GTF2A2_TARGET_GENES,54.601688340276326,Top
+normal,"CD4-positive, alpha-beta thymocyte",MODULE_150,54.566192074308766,Top
+normal,"CD4-positive, alpha-beta thymocyte",RAG1_TARGET_GENES,54.46646245794156,Top
+normal,"CD4-positive, alpha-beta thymocyte",BUSSLINGER_ESOPHAGEAL_EARLY_SUPRABASAL_CELLS,53.71032026268314,Top
+normal,"CD4-positive, alpha-beta thymocyte",TRAVAGLINI_LUNG_PROXIMAL_BASAL_CELL,53.28452376478953,Top
+normal,"CD4-positive, alpha-beta thymocyte",TRAVAGLINI_LUNG_AIRWAY_SMOOTH_MUSCLE_CELL,53.217604637039486,Top
+normal,"CD4-positive, alpha-beta thymocyte",MANNO_MIDBRAIN_NEUROTYPES_BASAL,52.99362347624998,Top
+normal,"CD4-positive, alpha-beta thymocyte",MORF_NME2,52.10979422403015,Top
+normal,"CD4-positive, alpha-beta thymocyte",GSE22886_NAIVE_BCELL_VS_NEUTROPHIL_UP,51.75513460452013,Top
+normal,"CD4-positive, alpha-beta thymocyte",GSE12366_GC_BCELL_VS_PLASMA_CELL_UP,51.691783791904285,Top
+normal,"CD4-positive, alpha-beta thymocyte",MODULE_151,51.69109942142469,Top
+normal,"CD4-positive, alpha-beta thymocyte",GOBP_TRANSLATIONAL_ELONGATION,51.312292336964944,Top
+normal,"CD4-positive, alpha-beta thymocyte",LEIN_LOCALIZED_TO_PROXIMAL_DENDRITES,50.74762467040477,Top
+normal,"CD4-positive, alpha-beta thymocyte",HILLION_HMGA1B_TARGETS,50.62866064827404,Top
+normal,"CD4-positive, alpha-beta thymocyte",LIU_COMMON_CANCER_GENES,50.21232270315765,Top
+normal,"CD4-positive, alpha-beta thymocyte",ZHENG_CORD_BLOOD_C8_PUTATIVE_LYMPHOID_PRIMED_MULTIPOTENT_PROGENITOR_2,50.012884000488924,Top
+normal,"CD4-positive, alpha-beta thymocyte",CHAF1B_TARGET_GENES,49.96228495833329,Top
+normal,"CD4-positive, alpha-beta thymocyte",GSE1460_DP_THYMOCYTE_VS_NAIVE_CD4_TCELL_ADULT_BLOOD_DN,49.89690943347548,Top
+normal,"CD4-positive, alpha-beta thymocyte",DURANTE_ADULT_OLFACTORY_NEUROEPITHELIUM_NK_CELLS,49.462774399217814,Top
+normal,"CD4-positive, alpha-beta thymocyte",NFMUE1_Q6,49.36564083011962,Top
+normal,"CD4-positive, alpha-beta thymocyte",chr10p13,0.0,Bottom
+normal,"CD4-positive, alpha-beta thymocyte",chr10q21,0.0,Bottom
+normal,"CD4-positive, alpha-beta thymocyte",chr10q22,0.0,Bottom
+normal,"CD4-positive, alpha-beta thymocyte",chr10q23,0.0,Bottom
+normal,"CD4-positive, alpha-beta thymocyte",chr10q26,0.0,Bottom
+normal,"CD4-positive, alpha-beta thymocyte",chr11p12,0.0,Bottom
+normal,"CD4-positive, alpha-beta thymocyte",chr11p13,0.0,Bottom
+normal,"CD4-positive, alpha-beta thymocyte",chr11p14,0.0,Bottom
+normal,"CD4-positive, alpha-beta thymocyte",chr11q11,0.0,Bottom
+normal,"CD4-positive, alpha-beta thymocyte",chr11q12,0.0,Bottom
+normal,"CD4-positive, alpha-beta thymocyte",chr11q24,0.0,Bottom
+normal,"CD4-positive, alpha-beta thymocyte",chr12p13,0.0,Bottom
+normal,"CD4-positive, alpha-beta thymocyte",chr12q12,0.0,Bottom
+normal,"CD4-positive, alpha-beta thymocyte",chr12q13,0.0,Bottom
+normal,"CD4-positive, alpha-beta thymocyte",chr12q24,0.0,Bottom
+normal,"CD4-positive, alpha-beta thymocyte",chr13q11,0.0,Bottom
+normal,"CD4-positive, alpha-beta thymocyte",chr13q13,0.0,Bottom
+normal,"CD4-positive, alpha-beta thymocyte",chr13q14,0.0,Bottom
+normal,"CD4-positive, alpha-beta thymocyte",chr13q21,0.0,Bottom
+normal,"CD4-positive, alpha-beta thymocyte",chr13q32,0.0,Bottom
+normal,"CD4-positive, alpha-beta thymocyte",chr14q11,0.0,Bottom
+normal,"CD4-positive, alpha-beta thymocyte",chr14q22,0.0,Bottom
+normal,"CD4-positive, alpha-beta thymocyte",chr14q24,0.0,Bottom
+normal,"CD4-positive, alpha-beta thymocyte",chr15q14,0.0,Bottom
+normal,"CD4-positive, alpha-beta thymocyte",chr15q15,0.0,Bottom
+normal,"CD8-positive, alpha-beta T cell",KEGG_MEDICUS_REFERENCE_TRANSLATION_INITIATION,779.485735237416,Top
+normal,"CD8-positive, alpha-beta T cell",RUBENSTEIN_SKELETAL_MUSCLE_NK_CELLS,219.76437391887322,Top
+normal,"CD8-positive, alpha-beta T cell",AIZARANI_LIVER_C3_NK_NKT_CELLS_2,207.392969651523,Top
+normal,"CD8-positive, alpha-beta T cell",LAKE_ADULT_KIDNEY_C23_ENDOTHELIAL_CELLS_AVR,204.37743204061925,Top
+normal,"CD8-positive, alpha-beta T cell",LAKE_ADULT_KIDNEY_C18_COLLECTING_DUCT_PRINCIPAL_CELLS_MEDULLA,189.73875548163588,Top
+normal,"CD8-positive, alpha-beta T cell",TRAVAGLINI_LUNG_CAPILLARY_INTERMEDIATE_2_CELL,171.23721335639416,Top
+normal,"CD8-positive, alpha-beta T cell",FAN_OVARY_CL12_T_LYMPHOCYTE_NK_CELL_2,162.8868287168831,Top
+normal,"CD8-positive, alpha-beta T cell",LAKE_ADULT_KIDNEY_C8_DECENDING_THIN_LIMB,160.1681651671971,Top
+normal,"CD8-positive, alpha-beta T cell",FAN_OVARY_CL4_T_LYMPHOCYTE_NK_CELL_1,159.59726491035747,Top
+normal,"CD8-positive, alpha-beta T cell",LAKE_ADULT_KIDNEY_C19_COLLECTING_DUCT_INTERCALATED_CELLS_TYPE_A_MEDULLA,157.06733564124542,Top
+normal,"CD8-positive, alpha-beta T cell",PSMB5_TARGET_GENES,151.22342647165883,Top
+normal,"CD8-positive, alpha-beta T cell",LAKE_ADULT_KIDNEY_C10_THIN_ASCENDING_LIMB,150.5792045342141,Top
+normal,"CD8-positive, alpha-beta T cell",MORF_ACTG1,150.42099450660933,Top
+normal,"CD8-positive, alpha-beta T cell",RUBENSTEIN_SKELETAL_MUSCLE_MYELOID_CELLS,149.15023072862363,Top
+normal,"CD8-positive, alpha-beta T cell",MODULE_83,146.7869630111045,Top
+normal,"CD8-positive, alpha-beta T cell",BUSSLINGER_DUODENAL_IMMUNE_CELLS,138.3998038276747,Top
+normal,"CD8-positive, alpha-beta T cell",PECE_MAMMARY_STEM_CELL_UP,137.9310385910777,Top
+normal,"CD8-positive, alpha-beta T cell",RUBENSTEIN_SKELETAL_MUSCLE_T_CELLS,134.93179764297938,Top
+normal,"CD8-positive, alpha-beta T cell",MENON_FETAL_KIDNEY_10_IMMUNE_CELLS,134.2824548509905,Top
+normal,"CD8-positive, alpha-beta T cell",HSIAO_HOUSEKEEPING_GENES,131.36754857376903,Top
+normal,"CD8-positive, alpha-beta T cell",MORF_TPT1,129.5806403895937,Top
+normal,"CD8-positive, alpha-beta T cell",LAKE_ADULT_KIDNEY_C12_THICK_ASCENDING_LIMB,128.7111084837893,Top
+normal,"CD8-positive, alpha-beta T cell",FAN_OVARY_CL0_XBP1_SELK_HIGH_STROMAL_CELL,127.6621895310927,Top
+normal,"CD8-positive, alpha-beta T cell",TRAVAGLINI_LUNG_CD4_NAIVE_T_CELL,125.74633686665152,Top
+normal,"CD8-positive, alpha-beta T cell",BUSSLINGER_GASTRIC_IMMUNE_CELLS,116.44990190084333,Top
+normal,"CD8-positive, alpha-beta T cell",MODULE_114,115.63026960364749,Top
+normal,"CD8-positive, alpha-beta T cell",RUBENSTEIN_SKELETAL_MUSCLE_B_CELLS,111.4143599596625,Top
+normal,"CD8-positive, alpha-beta T cell",LAKE_ADULT_KIDNEY_C9_THIN_ASCENDING_LIMB,110.38445014903974,Top
+normal,"CD8-positive, alpha-beta T cell",YAGI_AML_WITH_INV_16_TRANSLOCATION,109.51325409410924,Top
+normal,"CD8-positive, alpha-beta T cell",TIEN_INTESTINE_PROBIOTICS_24HR_DN,108.23405219963995,Top
+normal,"CD8-positive, alpha-beta T cell",GNF2_TPT1,105.127229792898,Top
+normal,"CD8-positive, alpha-beta T cell",TIEN_INTESTINE_PROBIOTICS_6HR_UP,104.71416161750915,Top
+normal,"CD8-positive, alpha-beta T cell",BUSSLINGER_DUODENAL_DIFFERENTIATING_STEM_CELLS,103.05723547132484,Top
+normal,"CD8-positive, alpha-beta T cell",LAKE_ADULT_KIDNEY_C24_ENDOTHELIAL_CELLS_AEA_AND_DVR,101.93843057253429,Top
+normal,"CD8-positive, alpha-beta T cell",DURANTE_ADULT_OLFACTORY_NEUROEPITHELIUM_NK_CELLS,99.10586333581442,Top
+normal,"CD8-positive, alpha-beta T cell",AIZARANI_LIVER_C1_NK_NKT_CELLS_1,97.72481412609808,Top
+normal,"CD8-positive, alpha-beta T cell",WP_CYTOPLASMIC_RIBOSOMAL_PROTEINS,97.39826394693296,Top
+normal,"CD8-positive, alpha-beta T cell",TRAVAGLINI_LUNG_CLUB_CELL,97.25564093102142,Top
+normal,"CD8-positive, alpha-beta T cell",CHAUHAN_RESPONSE_TO_METHOXYESTRADIOL_DN,96.09873427909646,Top
+normal,"CD8-positive, alpha-beta T cell",GNATENKO_PLATELET_SIGNATURE,95.9071321586707,Top
+normal,"CD8-positive, alpha-beta T cell",HAY_BONE_MARROW_NAIVE_T_CELL,94.02318541718155,Top
+normal,"CD8-positive, alpha-beta T cell",MORF_NPM1,93.57484826381705,Top
+normal,"CD8-positive, alpha-beta T cell",FAN_OVARY_CL10_PUTATIVE_EARLY_ATRESIA_GRANULOSA_CELL,92.07302860547922,Top
+normal,"CD8-positive, alpha-beta T cell",BUSSLINGER_DUODENAL_TRANSIT_AMPLIFYING_CELLS,91.80839210828516,Top
+normal,"CD8-positive, alpha-beta T cell",TRAVAGLINI_LUNG_MESOTHELIAL_CELL,88.73809868630207,Top
+normal,"CD8-positive, alpha-beta T cell",MODULE_151,83.170590479974,Top
+normal,"CD8-positive, alpha-beta T cell",BUSSLINGER_GASTRIC_PPP1R1B_POSITIVE_CELLS,81.25880780693689,Top
+normal,"CD8-positive, alpha-beta T cell",MARTENS_TRETINOIN_RESPONSE_DN,80.18540300767405,Top
+normal,"CD8-positive, alpha-beta T cell",BUSSLINGER_DUODENAL_STEM_CELLS,79.8250119531777,Top
+normal,"CD8-positive, alpha-beta T cell",GNF2_GLTSCR2,74.04713739410033,Top
+normal,"CD8-positive, alpha-beta T cell",LAKE_ADULT_KIDNEY_C7_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S3,73.5295986181327,Top
+normal,"CD8-positive, alpha-beta T cell",KEGG_RIBOSOME,73.33048456553222,Top
+normal,"CD8-positive, alpha-beta T cell",MA_RAT_AGING_UP,72.89586113109519,Top
+normal,"CD8-positive, alpha-beta T cell",RUBENSTEIN_SKELETAL_MUSCLE_SATELLITE_CELLS,72.7831291824634,Top
+normal,"CD8-positive, alpha-beta T cell",SETD7_TARGET_GENES,72.29704616818776,Top
+normal,"CD8-positive, alpha-beta T cell",MATTIOLI_MGUS_VS_PCL,72.04970562874139,Top
+normal,"CD8-positive, alpha-beta T cell",FOXR2_TARGET_GENES,71.07606179233862,Top
+normal,"CD8-positive, alpha-beta T cell",BUSSLINGER_ESOPHAGEAL_EARLY_SUPRABASAL_CELLS,68.58032391907902,Top
+normal,"CD8-positive, alpha-beta T cell",TRAVAGLINI_LUNG_PROLIFERATING_BASAL_CELL,68.52472760404682,Top
+normal,"CD8-positive, alpha-beta T cell",ZFHX3_TARGET_GENES,67.6428173671671,Top
+normal,"CD8-positive, alpha-beta T cell",GTF2A2_TARGET_GENES,67.33440807132325,Top
+normal,"CD8-positive, alpha-beta T cell",ZHENG_CORD_BLOOD_C8_PUTATIVE_LYMPHOID_PRIMED_MULTIPOTENT_PROGENITOR_2,66.58791503275529,Top
+normal,"CD8-positive, alpha-beta T cell",DIAZ_CHRONIC_MYELOGENOUS_LEUKEMIA_DN,66.4791861693697,Top
+normal,"CD8-positive, alpha-beta T cell",GSE13411_PLASMA_CELL_VS_MEMORY_BCELL_DN,64.49248847345304,Top
+normal,"CD8-positive, alpha-beta T cell",TRAVAGLINI_LUNG_BRONCHIAL_VESSEL_1_CELL,64.00467518657118,Top
+normal,"CD8-positive, alpha-beta T cell",MURARO_PANCREAS_ACINAR_CELL,63.518131311590494,Top
+normal,"CD8-positive, alpha-beta T cell",RUBENSTEIN_SKELETAL_MUSCLE_ENDOTHELIAL_CELLS,63.39204007339711,Top
+normal,"CD8-positive, alpha-beta T cell",LIU_COMMON_CANCER_GENES,62.45060886492849,Top
+normal,"CD8-positive, alpha-beta T cell",WIERENGA_PML_INTERACTOME,62.25850193564759,Top
+normal,"CD8-positive, alpha-beta T cell",ZHENG_CORD_BLOOD_C9_GRANULOCYTE_MACROPHAGE_PROGENITOR,61.700560978418174,Top
+normal,"CD8-positive, alpha-beta T cell",GSE3982_NEUTROPHIL_VS_BCELL_DN,60.787725199513545,Top
+normal,"CD8-positive, alpha-beta T cell",FAN_EMBRYONIC_CTX_BIG_GROUPS_BRAIN_IMMUNE,60.701153075081834,Top
+normal,"CD8-positive, alpha-beta T cell",BUSSLINGER_GASTRIC_LYZ_POSITIVE_CELLS,60.62896348884704,Top
+normal,"CD8-positive, alpha-beta T cell",MANNO_MIDBRAIN_NEUROTYPES_BASAL,59.59300063609785,Top
+normal,"CD8-positive, alpha-beta T cell",MENON_FETAL_KIDNEY_6_COLLECTING_DUCT_CELLS,59.56217633597484,Top
+normal,"CD8-positive, alpha-beta T cell",BUSSLINGER_ESOPHAGEAL_PROLIFERATING_BASAL_CELLS,59.52631735385596,Top
+normal,"CD8-positive, alpha-beta T cell",BUSSLINGER_ESOPHAGEAL_DENDRITIC_CELLS,59.35895280917309,Top
+normal,"CD8-positive, alpha-beta T cell",HOLLEMAN_VINCRISTINE_RESISTANCE_ALL_DN,59.21545754994487,Top
+normal,"CD8-positive, alpha-beta T cell",RUBENSTEIN_SKELETAL_MUSCLE_PCV_ENDOTHELIAL_CELLS,59.04048199195184,Top
+normal,"CD8-positive, alpha-beta T cell",GSE14000_TRANSLATED_RNA_VS_MRNA_4H_LPS_DC_DN,58.99355023124797,Top
+normal,"CD8-positive, alpha-beta T cell",GSE2405_0H_VS_9H_A_PHAGOCYTOPHILUM_STIM_NEUTROPHIL_DN,58.62904811014957,Top
+normal,"CD8-positive, alpha-beta T cell",MENON_FETAL_KIDNEY_9_ENDOTHELIAL_CELLS,58.437031166617736,Top
+normal,"CD8-positive, alpha-beta T cell",BUSSLINGER_ESOPHAGEAL_QUIESCENT_BASAL_CELLS,58.07086119977946,Top
+normal,"CD8-positive, alpha-beta T cell",QI_PBMC_ZOSTAVAX_AGE_50_75YO_CORRELATED_WITH_T_CELL_RESPONSES_1D_INFORMATIVE_OF_LONG_TERM_RESPONSES_NEGATIVE,57.861801048180695,Top
+normal,"CD8-positive, alpha-beta T cell",GAVISH_3CA_METAPROGRAM_EPITHELIAL_INTERFERON_MHC,57.68176084432,Top
+normal,"CD8-positive, alpha-beta T cell",TRAVAGLINI_LUNG_CD8_NAIVE_T_CELL,57.57313119635055,Top
+normal,"CD8-positive, alpha-beta T cell",NKX2_2_TARGET_GENES,57.536506601585906,Top
+normal,"CD8-positive, alpha-beta T cell",MODY_HIPPOCAMPUS_PRENATAL,56.72024793946883,Top
+normal,"CD8-positive, alpha-beta T cell",GAUTAM_EYE_IRIS_CILIARY_BODY_WIF1_HIGH_FIBROBLASTS,55.50311985521578,Top
+normal,"CD8-positive, alpha-beta T cell",WATANABE_RECTAL_CANCER_RADIOTHERAPY_RESPONSIVE_UP,55.03440991906131,Top
+normal,"CD8-positive, alpha-beta T cell",MORF_NME2,54.816780638928364,Top
+normal,"CD8-positive, alpha-beta T cell",RAG1_TARGET_GENES,54.41520742545519,Top
+normal,"CD8-positive, alpha-beta T cell",FAN_OVARY_CL13_MONOCYTE_MACROPHAGE,54.29476211301923,Top
+normal,"CD8-positive, alpha-beta T cell",HARALAMBIEVA_PBMC_FLUARIX_AGE_50_74YO_CORR_WITH_28D_MEM_B_CELL_RESPONSE_AT_0DY_POSITIVE,53.93126319205549,Top
+normal,"CD8-positive, alpha-beta T cell",TIEN_INTESTINE_PROBIOTICS_2HR_UP,53.57793601385597,Top
+normal,"CD8-positive, alpha-beta T cell",BROWNE_HCMV_INFECTION_10HR_DN,53.363363449367654,Top
+normal,"CD8-positive, alpha-beta T cell",CHAF1B_TARGET_GENES,52.98403564903974,Top
+normal,"CD8-positive, alpha-beta T cell",NATSUME_RESPONSE_TO_INTERFERON_BETA_DN,52.39941289909618,Top
+normal,"CD8-positive, alpha-beta T cell",FAN_OVARY_CL18_B_LYMPHOCYTE,52.17042388420823,Top
+normal,"CD8-positive, alpha-beta T cell",GSE41978_KLRG1_HIGH_VS_LOW_EFFECTOR_CD8_TCELL_DN,52.10529900779771,Top
+normal,"CD8-positive, alpha-beta T cell",chr10p13,0.0,Bottom
+normal,"CD8-positive, alpha-beta T cell",chr10q21,0.0,Bottom
+normal,"CD8-positive, alpha-beta T cell",chr10q22,0.0,Bottom
+normal,"CD8-positive, alpha-beta T cell",chr10q23,0.0,Bottom
+normal,"CD8-positive, alpha-beta T cell",chr10q26,0.0,Bottom
+normal,"CD8-positive, alpha-beta T cell",chr11p13,0.0,Bottom
+normal,"CD8-positive, alpha-beta T cell",chr11p14,0.0,Bottom
+normal,"CD8-positive, alpha-beta T cell",chr11q11,0.0,Bottom
+normal,"CD8-positive, alpha-beta T cell",chr11q12,0.0,Bottom
+normal,"CD8-positive, alpha-beta T cell",chr11q24,0.0,Bottom
+normal,"CD8-positive, alpha-beta T cell",chr12p13,0.0,Bottom
+normal,"CD8-positive, alpha-beta T cell",chr12q12,0.0,Bottom
+normal,"CD8-positive, alpha-beta T cell",chr12q13,0.0,Bottom
+normal,"CD8-positive, alpha-beta T cell",chr12q24,0.0,Bottom
+normal,"CD8-positive, alpha-beta T cell",chr13q11,0.0,Bottom
+normal,"CD8-positive, alpha-beta T cell",chr13q13,0.0,Bottom
+normal,"CD8-positive, alpha-beta T cell",chr13q14,0.0,Bottom
+normal,"CD8-positive, alpha-beta T cell",chr13q21,0.0,Bottom
+normal,"CD8-positive, alpha-beta T cell",chr13q32,0.0,Bottom
+normal,"CD8-positive, alpha-beta T cell",chr14q11,0.0,Bottom
+normal,"CD8-positive, alpha-beta T cell",chr14q22,0.0,Bottom
+normal,"CD8-positive, alpha-beta T cell",chr14q24,0.0,Bottom
+normal,"CD8-positive, alpha-beta T cell",chr15q14,0.0,Bottom
+normal,"CD8-positive, alpha-beta T cell",chr15q15,0.0,Bottom
+normal,"CD8-positive, alpha-beta T cell",chr15q24,0.0,Bottom
+normal,"CD8-positive, alpha-beta thymocyte",KEGG_MEDICUS_REFERENCE_TRANSLATION_INITIATION,565.3211163610433,Top
+normal,"CD8-positive, alpha-beta thymocyte",AIZARANI_LIVER_C3_NK_NKT_CELLS_2,170.4337370473693,Top
+normal,"CD8-positive, alpha-beta thymocyte",RUBENSTEIN_SKELETAL_MUSCLE_NK_CELLS,148.92482183300757,Top
+normal,"CD8-positive, alpha-beta thymocyte",LAKE_ADULT_KIDNEY_C23_ENDOTHELIAL_CELLS_AVR,145.03034918380934,Top
+normal,"CD8-positive, alpha-beta thymocyte",LAKE_ADULT_KIDNEY_C18_COLLECTING_DUCT_PRINCIPAL_CELLS_MEDULLA,130.51195156174037,Top
+normal,"CD8-positive, alpha-beta thymocyte",FAN_OVARY_CL12_T_LYMPHOCYTE_NK_CELL_2,121.10572812503301,Top
+normal,"CD8-positive, alpha-beta thymocyte",TRAVAGLINI_LUNG_CAPILLARY_INTERMEDIATE_2_CELL,117.26482131659004,Top
+normal,"CD8-positive, alpha-beta thymocyte",RUBENSTEIN_SKELETAL_MUSCLE_T_CELLS,109.6975256930176,Top
+normal,"CD8-positive, alpha-beta thymocyte",LAKE_ADULT_KIDNEY_C19_COLLECTING_DUCT_INTERCALATED_CELLS_TYPE_A_MEDULLA,108.98546456466784,Top
+normal,"CD8-positive, alpha-beta thymocyte",RUBENSTEIN_SKELETAL_MUSCLE_MYELOID_CELLS,103.95485014419138,Top
+normal,"CD8-positive, alpha-beta thymocyte",MORF_ACTG1,103.46156984380933,Top
+normal,"CD8-positive, alpha-beta thymocyte",LAKE_ADULT_KIDNEY_C8_DECENDING_THIN_LIMB,103.18466776893253,Top
+normal,"CD8-positive, alpha-beta thymocyte",PSMB5_TARGET_GENES,98.85897077497998,Top
+normal,"CD8-positive, alpha-beta thymocyte",MODULE_83,98.12358818102426,Top
+normal,"CD8-positive, alpha-beta thymocyte",BUSSLINGER_DUODENAL_IMMUNE_CELLS,97.29963181269673,Top
+normal,"CD8-positive, alpha-beta thymocyte",FAN_OVARY_CL4_T_LYMPHOCYTE_NK_CELL_1,96.80752616659412,Top
+normal,"CD8-positive, alpha-beta thymocyte",LAKE_ADULT_KIDNEY_C10_THIN_ASCENDING_LIMB,95.29916032784975,Top
+normal,"CD8-positive, alpha-beta thymocyte",TRAVAGLINI_LUNG_CD4_NAIVE_T_CELL,93.72163467163416,Top
+normal,"CD8-positive, alpha-beta thymocyte",MENON_FETAL_KIDNEY_10_IMMUNE_CELLS,92.92756577357932,Top
+normal,"CD8-positive, alpha-beta thymocyte",FAN_OVARY_CL0_XBP1_SELK_HIGH_STROMAL_CELL,89.17939270023282,Top
+normal,"CD8-positive, alpha-beta thymocyte",RUBENSTEIN_SKELETAL_MUSCLE_B_CELLS,88.28910285305618,Top
+normal,"CD8-positive, alpha-beta thymocyte",MORF_TPT1,88.2016891796178,Top
+normal,"CD8-positive, alpha-beta thymocyte",TRAVAGLINI_LUNG_CLUB_CELL,87.4737897019052,Top
+normal,"CD8-positive, alpha-beta thymocyte",LAKE_ADULT_KIDNEY_C12_THICK_ASCENDING_LIMB,86.80758242359957,Top
+normal,"CD8-positive, alpha-beta thymocyte",BUSSLINGER_GASTRIC_IMMUNE_CELLS,85.81839185619073,Top
+normal,"CD8-positive, alpha-beta thymocyte",HSIAO_HOUSEKEEPING_GENES,85.76988170407833,Top
+normal,"CD8-positive, alpha-beta thymocyte",YAGI_AML_WITH_INV_16_TRANSLOCATION,85.73602729775394,Top
+normal,"CD8-positive, alpha-beta thymocyte",AIZARANI_LIVER_C1_NK_NKT_CELLS_1,83.29535580753091,Top
+normal,"CD8-positive, alpha-beta thymocyte",HAY_BONE_MARROW_NAIVE_T_CELL,82.15096973348055,Top
+normal,"CD8-positive, alpha-beta thymocyte",TIEN_INTESTINE_PROBIOTICS_24HR_DN,81.87328494594813,Top
+normal,"CD8-positive, alpha-beta thymocyte",GNF2_TPT1,80.26127283726203,Top
+normal,"CD8-positive, alpha-beta thymocyte",PECE_MAMMARY_STEM_CELL_UP,79.30299631325879,Top
+normal,"CD8-positive, alpha-beta thymocyte",MODULE_114,78.26533921278332,Top
+normal,"CD8-positive, alpha-beta thymocyte",GNATENKO_PLATELET_SIGNATURE,72.9880777070455,Top
+normal,"CD8-positive, alpha-beta thymocyte",CHAUHAN_RESPONSE_TO_METHOXYESTRADIOL_DN,72.51411793536393,Top
+normal,"CD8-positive, alpha-beta thymocyte",TIEN_INTESTINE_PROBIOTICS_6HR_UP,70.64164767859441,Top
+normal,"CD8-positive, alpha-beta thymocyte",WP_CYTOPLASMIC_RIBOSOMAL_PROTEINS,67.37791153794846,Top
+normal,"CD8-positive, alpha-beta thymocyte",DURANTE_ADULT_OLFACTORY_NEUROEPITHELIUM_NK_CELLS,66.9201635388046,Top
+normal,"CD8-positive, alpha-beta thymocyte",LAKE_ADULT_KIDNEY_C24_ENDOTHELIAL_CELLS_AEA_AND_DVR,66.73268427542713,Top
+normal,"CD8-positive, alpha-beta thymocyte",BUSSLINGER_GASTRIC_PPP1R1B_POSITIVE_CELLS,63.80829453094067,Top
+normal,"CD8-positive, alpha-beta thymocyte",LAKE_ADULT_KIDNEY_C9_THIN_ASCENDING_LIMB,61.436564879665916,Top
+normal,"CD8-positive, alpha-beta thymocyte",GNF2_GLTSCR2,60.34195086386352,Top
+normal,"CD8-positive, alpha-beta thymocyte",MARTENS_TRETINOIN_RESPONSE_DN,56.955323440068426,Top
+normal,"CD8-positive, alpha-beta thymocyte",GSE13411_PLASMA_CELL_VS_MEMORY_BCELL_DN,55.15499957375755,Top
+normal,"CD8-positive, alpha-beta thymocyte",TRAVAGLINI_LUNG_MESOTHELIAL_CELL,55.08582860068134,Top
+normal,"CD8-positive, alpha-beta thymocyte",BUSSLINGER_DUODENAL_STEM_CELLS,54.20361442629717,Top
+normal,"CD8-positive, alpha-beta thymocyte",MA_RAT_AGING_UP,53.108486191210645,Top
+normal,"CD8-positive, alpha-beta thymocyte",WIERENGA_PML_INTERACTOME,52.564603866544864,Top
+normal,"CD8-positive, alpha-beta thymocyte",FOXR2_TARGET_GENES,52.243735411609556,Top
+normal,"CD8-positive, alpha-beta thymocyte",BUSSLINGER_DUODENAL_DIFFERENTIATING_STEM_CELLS,51.90697776917109,Top
+normal,"CD8-positive, alpha-beta thymocyte",MORF_NPM1,51.790621988524514,Top
+normal,"CD8-positive, alpha-beta thymocyte",ZHENG_CORD_BLOOD_C8_PUTATIVE_LYMPHOID_PRIMED_MULTIPOTENT_PROGENITOR_2,51.508932906031724,Top
+normal,"CD8-positive, alpha-beta thymocyte",SETD7_TARGET_GENES,51.1876121574045,Top
+normal,"CD8-positive, alpha-beta thymocyte",MURARO_PANCREAS_ACINAR_CELL,50.78148098887144,Top
+normal,"CD8-positive, alpha-beta thymocyte",BUSSLINGER_ESOPHAGEAL_QUIESCENT_BASAL_CELLS,50.015956535669574,Top
+normal,"CD8-positive, alpha-beta thymocyte",GAUTAM_EYE_IRIS_CILIARY_BODY_WIF1_HIGH_FIBROBLASTS,49.832003063408074,Top
+normal,"CD8-positive, alpha-beta thymocyte",BUSSLINGER_GASTRIC_LYZ_POSITIVE_CELLS,49.320572502959756,Top
+normal,"CD8-positive, alpha-beta thymocyte",ZFHX3_TARGET_GENES,49.034410146066755,Top
+normal,"CD8-positive, alpha-beta thymocyte",MENON_FETAL_KIDNEY_6_COLLECTING_DUCT_CELLS,48.73308107206235,Top
+normal,"CD8-positive, alpha-beta thymocyte",FAN_OVARY_CL10_PUTATIVE_EARLY_ATRESIA_GRANULOSA_CELL,48.569765221421214,Top
+normal,"CD8-positive, alpha-beta thymocyte",MODY_HIPPOCAMPUS_PRENATAL,48.18083349535482,Top
+normal,"CD8-positive, alpha-beta thymocyte",RUBENSTEIN_SKELETAL_MUSCLE_SATELLITE_CELLS,47.949874231362884,Top
+normal,"CD8-positive, alpha-beta thymocyte",RUBENSTEIN_SKELETAL_MUSCLE_ENDOTHELIAL_CELLS,47.173719562863276,Top
+normal,"CD8-positive, alpha-beta thymocyte",GSE3982_NEUTROPHIL_VS_BCELL_DN,47.084212828827866,Top
+normal,"CD8-positive, alpha-beta thymocyte",WATANABE_RECTAL_CANCER_RADIOTHERAPY_RESPONSIVE_UP,47.072315316033475,Top
+normal,"CD8-positive, alpha-beta thymocyte",LAKE_ADULT_KIDNEY_C7_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S3,46.63223201609977,Top
+normal,"CD8-positive, alpha-beta thymocyte",GAVISH_3CA_METAPROGRAM_EPITHELIAL_INTERFERON_MHC,46.36381681281239,Top
+normal,"CD8-positive, alpha-beta thymocyte",FAN_EMBRYONIC_CTX_BIG_GROUPS_BRAIN_IMMUNE,45.99694635607182,Top
+normal,"CD8-positive, alpha-beta thymocyte",BUSSLINGER_ESOPHAGEAL_DENDRITIC_CELLS,45.85873689449207,Top
+normal,"CD8-positive, alpha-beta thymocyte",BUSSLINGER_DUODENAL_TRANSIT_AMPLIFYING_CELLS,45.76013097555086,Top
+normal,"CD8-positive, alpha-beta thymocyte",MODULE_151,45.49510719676017,Top
+normal,"CD8-positive, alpha-beta thymocyte",MATTIOLI_MGUS_VS_PCL,45.43008665402864,Top
+normal,"CD8-positive, alpha-beta thymocyte",RAG1_TARGET_GENES,44.80919582379268,Top
+normal,"CD8-positive, alpha-beta thymocyte",TRAVAGLINI_LUNG_CD8_NAIVE_T_CELL,44.7768096436542,Top
+normal,"CD8-positive, alpha-beta thymocyte",TRAVAGLINI_LUNG_BRONCHIAL_VESSEL_1_CELL,44.41562220883313,Top
+normal,"CD8-positive, alpha-beta thymocyte",FAN_OVARY_CL2_PUTATIVE_EARLY_ATRETIC_FOLLICLE_THECAL_CELL_1,44.415086181943444,Top
+normal,"CD8-positive, alpha-beta thymocyte",MENON_FETAL_KIDNEY_9_ENDOTHELIAL_CELLS,44.24587668942541,Top
+normal,"CD8-positive, alpha-beta thymocyte",GOBP_NEGATIVE_REGULATION_OF_BINDING,44.150945682591946,Top
+normal,"CD8-positive, alpha-beta thymocyte",QI_PBMC_ZOSTAVAX_AGE_50_75YO_CORRELATED_WITH_T_CELL_RESPONSES_1D_INFORMATIVE_OF_LONG_TERM_RESPONSES_NEGATIVE,43.90132956760019,Top
+normal,"CD8-positive, alpha-beta thymocyte",LIU_COMMON_CANCER_GENES,43.87149889306048,Top
+normal,"CD8-positive, alpha-beta thymocyte",TRAVAGLINI_LUNG_CD4_MEMORY_EFFECTOR_T_CELL,43.35504756984893,Top
+normal,"CD8-positive, alpha-beta thymocyte",LEIN_LOCALIZED_TO_PROXIMAL_DENDRITES,43.06779113862769,Top
+normal,"CD8-positive, alpha-beta thymocyte",DIAZ_CHRONIC_MYELOGENOUS_LEUKEMIA_DN,42.9478506916007,Top
+normal,"CD8-positive, alpha-beta thymocyte",RUBENSTEIN_SKELETAL_MUSCLE_PCV_ENDOTHELIAL_CELLS,42.917146405170335,Top
+normal,"CD8-positive, alpha-beta thymocyte",NKX2_2_TARGET_GENES,42.33922575464207,Top
+normal,"CD8-positive, alpha-beta thymocyte",GAVISH_3CA_METAPROGRAM_B_CELLS_MHC_II,42.23594980749593,Top
+normal,"CD8-positive, alpha-beta thymocyte",CUI_DEVELOPING_HEART_COMPACT_ATRIAL_CARDIOMYOCYTE,41.17189373295534,Top
+normal,"CD8-positive, alpha-beta thymocyte",GTF2A2_TARGET_GENES,40.99572563251764,Top
+normal,"CD8-positive, alpha-beta thymocyte",BUSSLINGER_ESOPHAGEAL_PROLIFERATING_BASAL_CELLS,40.796141451907836,Top
+normal,"CD8-positive, alpha-beta thymocyte",BUSSLINGER_ESOPHAGEAL_EARLY_SUPRABASAL_CELLS,40.445841737402375,Top
+normal,"CD8-positive, alpha-beta thymocyte",GSE25088_WT_VS_STAT6_KO_MACROPHAGE_ROSIGLITAZONE_STIM_UP,40.33207133789548,Top
+normal,"CD8-positive, alpha-beta thymocyte",DURANTE_ADULT_OLFACTORY_NEUROEPITHELIUM_CD8_T_CELLS,39.65585051865236,Top
+normal,"CD8-positive, alpha-beta thymocyte",MIR548AO_5P_MIR548AX,39.50450364777104,Top
+normal,"CD8-positive, alpha-beta thymocyte",MANNO_MIDBRAIN_NEUROTYPES_BASAL,38.956466382767886,Top
+normal,"CD8-positive, alpha-beta thymocyte",GSE32986_UNSTIM_VS_CURDLAN_HIGHDOSE_STIM_DC_DN,38.7716905857375,Top
+normal,"CD8-positive, alpha-beta thymocyte",GSE7568_IL4_TGFB_DEXAMETHASONE_VS_IL4_TGFB_TREATED_MACROPHAGE_DN,38.64757025524009,Top
+normal,"CD8-positive, alpha-beta thymocyte",GAUTAM_EYE_IRIS_CILIARY_BODY_CILIARY_BODY_ENDOTHELIAL_CELLS,38.5950203638831,Top
+normal,"CD8-positive, alpha-beta thymocyte",CHAF1B_TARGET_GENES,38.17869029739697,Top
+normal,"CD8-positive, alpha-beta thymocyte",TRAVAGLINI_LUNG_CD8_MEMORY_EFFECTOR_T_CELL,38.163841587520245,Top
+normal,"CD8-positive, alpha-beta thymocyte",BROWNE_HCMV_INFECTION_10HR_DN,37.78706489029285,Top
+normal,"CD8-positive, alpha-beta thymocyte",chr10p13,0.0,Bottom
+normal,"CD8-positive, alpha-beta thymocyte",chr10q21,0.0,Bottom
+normal,"CD8-positive, alpha-beta thymocyte",chr10q22,0.0,Bottom
+normal,"CD8-positive, alpha-beta thymocyte",chr10q23,0.0,Bottom
+normal,"CD8-positive, alpha-beta thymocyte",chr10q26,0.0,Bottom
+normal,"CD8-positive, alpha-beta thymocyte",chr11p12,0.0,Bottom
+normal,"CD8-positive, alpha-beta thymocyte",chr11p13,0.0,Bottom
+normal,"CD8-positive, alpha-beta thymocyte",chr11p14,0.0,Bottom
+normal,"CD8-positive, alpha-beta thymocyte",chr11q11,0.0,Bottom
+normal,"CD8-positive, alpha-beta thymocyte",chr11q12,0.0,Bottom
+normal,"CD8-positive, alpha-beta thymocyte",chr11q24,0.0,Bottom
+normal,"CD8-positive, alpha-beta thymocyte",chr12p13,0.0,Bottom
+normal,"CD8-positive, alpha-beta thymocyte",chr12q12,0.0,Bottom
+normal,"CD8-positive, alpha-beta thymocyte",chr12q13,0.0,Bottom
+normal,"CD8-positive, alpha-beta thymocyte",chr12q24,0.0,Bottom
+normal,"CD8-positive, alpha-beta thymocyte",chr13q11,0.0,Bottom
+normal,"CD8-positive, alpha-beta thymocyte",chr13q13,0.0,Bottom
+normal,"CD8-positive, alpha-beta thymocyte",chr13q14,0.0,Bottom
+normal,"CD8-positive, alpha-beta thymocyte",chr13q21,0.0,Bottom
+normal,"CD8-positive, alpha-beta thymocyte",chr13q32,0.0,Bottom
+normal,"CD8-positive, alpha-beta thymocyte",chr14q11,0.0,Bottom
+normal,"CD8-positive, alpha-beta thymocyte",chr14q22,0.0,Bottom
+normal,"CD8-positive, alpha-beta thymocyte",chr14q24,0.0,Bottom
+normal,"CD8-positive, alpha-beta thymocyte",chr15q14,0.0,Bottom
+normal,"CD8-positive, alpha-beta thymocyte",chr15q15,0.0,Bottom
+normal,immature alpha-beta T cell,KEGG_MEDICUS_REFERENCE_TRANSLATION_INITIATION,404.8891457252838,Top
+normal,immature alpha-beta T cell,AIZARANI_LIVER_C3_NK_NKT_CELLS_2,107.95278554787734,Top
+normal,immature alpha-beta T cell,LAKE_ADULT_KIDNEY_C23_ENDOTHELIAL_CELLS_AVR,92.91554247948432,Top
+normal,immature alpha-beta T cell,LAKE_ADULT_KIDNEY_C18_COLLECTING_DUCT_PRINCIPAL_CELLS_MEDULLA,82.88465059118187,Top
+normal,immature alpha-beta T cell,RUBENSTEIN_SKELETAL_MUSCLE_NK_CELLS,82.6053039125683,Top
+normal,immature alpha-beta T cell,RUBENSTEIN_SKELETAL_MUSCLE_T_CELLS,70.73642088590829,Top
+normal,immature alpha-beta T cell,LAKE_ADULT_KIDNEY_C19_COLLECTING_DUCT_INTERCALATED_CELLS_TYPE_A_MEDULLA,70.5452627198787,Top
+normal,immature alpha-beta T cell,LAKE_ADULT_KIDNEY_C8_DECENDING_THIN_LIMB,68.1497295525067,Top
+normal,immature alpha-beta T cell,TRAVAGLINI_LUNG_CD4_NAIVE_T_CELL,68.02121371327956,Top
+normal,immature alpha-beta T cell,MORF_ACTG1,67.14584064763312,Top
+normal,immature alpha-beta T cell,FAN_OVARY_CL0_XBP1_SELK_HIGH_STROMAL_CELL,66.81789268706201,Top
+normal,immature alpha-beta T cell,TRAVAGLINI_LUNG_CAPILLARY_INTERMEDIATE_2_CELL,66.68433846056986,Top
+normal,immature alpha-beta T cell,RUBENSTEIN_SKELETAL_MUSCLE_MYELOID_CELLS,63.681615902181946,Top
+normal,immature alpha-beta T cell,FAN_OVARY_CL12_T_LYMPHOCYTE_NK_CELL_2,63.490474919070245,Top
+normal,immature alpha-beta T cell,LAKE_ADULT_KIDNEY_C10_THIN_ASCENDING_LIMB,62.960233783442256,Top
+normal,immature alpha-beta T cell,PSMB5_TARGET_GENES,62.934038581736274,Top
+normal,immature alpha-beta T cell,RUBENSTEIN_SKELETAL_MUSCLE_B_CELLS,62.62047092516052,Top
+normal,immature alpha-beta T cell,HAY_BONE_MARROW_NAIVE_T_CELL,59.42113598350905,Top
+normal,immature alpha-beta T cell,MODULE_83,59.405896995074585,Top
+normal,immature alpha-beta T cell,YAGI_AML_WITH_INV_16_TRANSLOCATION,59.2471416674751,Top
+normal,immature alpha-beta T cell,TIEN_INTESTINE_PROBIOTICS_24HR_DN,58.81957953556542,Top
+normal,immature alpha-beta T cell,MORF_TPT1,58.645330143813865,Top
+normal,immature alpha-beta T cell,LAKE_ADULT_KIDNEY_C12_THICK_ASCENDING_LIMB,57.91821859589071,Top
+normal,immature alpha-beta T cell,TRAVAGLINI_LUNG_CLUB_CELL,57.70273780543084,Top
+normal,immature alpha-beta T cell,GNF2_TPT1,57.302868487897854,Top
+normal,immature alpha-beta T cell,BUSSLINGER_DUODENAL_IMMUNE_CELLS,56.73844844225215,Top
+normal,immature alpha-beta T cell,WP_CYTOPLASMIC_RIBOSOMAL_PROTEINS,54.018233416716726,Top
+normal,immature alpha-beta T cell,BUSSLINGER_GASTRIC_IMMUNE_CELLS,53.619609905477844,Top
+normal,immature alpha-beta T cell,HSIAO_HOUSEKEEPING_GENES,52.024012959947335,Top
+normal,immature alpha-beta T cell,PECE_MAMMARY_STEM_CELL_UP,50.467187663327216,Top
+normal,immature alpha-beta T cell,MENON_FETAL_KIDNEY_10_IMMUNE_CELLS,50.14927946856994,Top
+normal,immature alpha-beta T cell,BUSSLINGER_GASTRIC_PPP1R1B_POSITIVE_CELLS,49.85350452210547,Top
+normal,immature alpha-beta T cell,FAN_OVARY_CL4_T_LYMPHOCYTE_NK_CELL_1,45.911439940377065,Top
+normal,immature alpha-beta T cell,MODULE_114,44.186638980317326,Top
+normal,immature alpha-beta T cell,BUSSLINGER_DUODENAL_STEM_CELLS,44.06214368028725,Top
+normal,immature alpha-beta T cell,AIZARANI_LIVER_C1_NK_NKT_CELLS_1,43.92091044372827,Top
+normal,immature alpha-beta T cell,TIEN_INTESTINE_PROBIOTICS_6HR_UP,43.77572324758401,Top
+normal,immature alpha-beta T cell,GNF2_GLTSCR2,42.36013384788267,Top
+normal,immature alpha-beta T cell,CHAUHAN_RESPONSE_TO_METHOXYESTRADIOL_DN,41.598231654013354,Top
+normal,immature alpha-beta T cell,BUSSLINGER_DUODENAL_DIFFERENTIATING_STEM_CELLS,41.078147416939835,Top
+normal,immature alpha-beta T cell,LAKE_ADULT_KIDNEY_C9_THIN_ASCENDING_LIMB,40.522640921852805,Top
+normal,immature alpha-beta T cell,MORF_NPM1,39.652443860632935,Top
+normal,immature alpha-beta T cell,LAKE_ADULT_KIDNEY_C24_ENDOTHELIAL_CELLS_AEA_AND_DVR,39.362090846310615,Top
+normal,immature alpha-beta T cell,GSE13411_PLASMA_CELL_VS_MEMORY_BCELL_DN,39.32897566770179,Top
+normal,immature alpha-beta T cell,GNATENKO_PLATELET_SIGNATURE,38.57076802071938,Top
+normal,immature alpha-beta T cell,WIERENGA_PML_INTERACTOME,38.43567992375394,Top
+normal,immature alpha-beta T cell,BUSSLINGER_GASTRIC_LYZ_POSITIVE_CELLS,38.21817641663761,Top
+normal,immature alpha-beta T cell,FOXR2_TARGET_GENES,38.084323273376285,Top
+normal,immature alpha-beta T cell,BUSSLINGER_ESOPHAGEAL_QUIESCENT_BASAL_CELLS,37.98535643295109,Top
+normal,immature alpha-beta T cell,TRAVAGLINI_LUNG_MESOTHELIAL_CELL,36.66717328773566,Top
+normal,immature alpha-beta T cell,MODY_HIPPOCAMPUS_PRENATAL,36.33893876621101,Top
+normal,immature alpha-beta T cell,RUBENSTEIN_SKELETAL_MUSCLE_SATELLITE_CELLS,36.08534188144717,Top
+normal,immature alpha-beta T cell,TRAVAGLINI_LUNG_BRONCHIAL_VESSEL_1_CELL,35.997570584596424,Top
+normal,immature alpha-beta T cell,BUSSLINGER_DUODENAL_TRANSIT_AMPLIFYING_CELLS,35.16706524846141,Top
+normal,immature alpha-beta T cell,MARTENS_TRETINOIN_RESPONSE_DN,34.90042550542837,Top
+normal,immature alpha-beta T cell,ZFHX3_TARGET_GENES,34.4704751325143,Top
+normal,immature alpha-beta T cell,MURARO_PANCREAS_ACINAR_CELL,33.88559377508079,Top
+normal,immature alpha-beta T cell,LAKE_ADULT_KIDNEY_C7_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S3,33.78024819729265,Top
+normal,immature alpha-beta T cell,GSE3982_NEUTROPHIL_VS_BCELL_DN,33.7555737201769,Top
+normal,immature alpha-beta T cell,GAUTAM_EYE_IRIS_CILIARY_BODY_WIF1_HIGH_FIBROBLASTS,32.5745613400188,Top
+normal,immature alpha-beta T cell,FAN_OVARY_CL2_PUTATIVE_EARLY_ATRETIC_FOLLICLE_THECAL_CELL_1,31.970911920944616,Top
+normal,immature alpha-beta T cell,DIAZ_CHRONIC_MYELOGENOUS_LEUKEMIA_DN,31.897868429111245,Top
+normal,immature alpha-beta T cell,SETD7_TARGET_GENES,31.8937821653931,Top
+normal,immature alpha-beta T cell,MA_RAT_AGING_UP,30.687576878455378,Top
+normal,immature alpha-beta T cell,GSE42088_UNINF_VS_LEISHMANIA_INF_DC_4H_DN,30.27522794976612,Top
+normal,immature alpha-beta T cell,QI_PBMC_ZOSTAVAX_AGE_50_75YO_CORRELATED_WITH_T_CELL_RESPONSES_1D_INFORMATIVE_OF_LONG_TERM_RESPONSES_NEGATIVE,30.260689995505594,Top
+normal,immature alpha-beta T cell,NKX2_2_TARGET_GENES,29.685839580300964,Top
+normal,immature alpha-beta T cell,WATANABE_RECTAL_CANCER_RADIOTHERAPY_RESPONSIVE_UP,29.64464651314744,Top
+normal,immature alpha-beta T cell,DURANTE_ADULT_OLFACTORY_NEUROEPITHELIUM_NK_CELLS,29.581110070527824,Top
+normal,immature alpha-beta T cell,RUBENSTEIN_SKELETAL_MUSCLE_PCV_ENDOTHELIAL_CELLS,29.04352982932172,Top
+normal,immature alpha-beta T cell,GSE25088_WT_VS_STAT6_KO_MACROPHAGE_ROSIGLITAZONE_STIM_UP,28.949349582370075,Top
+normal,immature alpha-beta T cell,TRAVAGLINI_LUNG_CD4_MEMORY_EFFECTOR_T_CELL,28.803679415906977,Top
+normal,immature alpha-beta T cell,CUI_DEVELOPING_HEART_COMPACT_ATRIAL_CARDIOMYOCYTE,28.76625019644013,Top
+normal,immature alpha-beta T cell,MATTIOLI_MGUS_VS_PCL,28.4261574059987,Top
+normal,immature alpha-beta T cell,TRAVAGLINI_LUNG_PROLIFERATING_BASAL_CELL,28.020451915578757,Top
+normal,immature alpha-beta T cell,GTF2A2_TARGET_GENES,27.453885772011496,Top
+normal,immature alpha-beta T cell,RAG1_TARGET_GENES,27.41035429823084,Top
+normal,immature alpha-beta T cell,ZHENG_CORD_BLOOD_C8_PUTATIVE_LYMPHOID_PRIMED_MULTIPOTENT_PROGENITOR_2,27.050090017906033,Top
+normal,immature alpha-beta T cell,GSE32986_UNSTIM_VS_CURDLAN_HIGHDOSE_STIM_DC_DN,26.99858055226614,Top
+normal,immature alpha-beta T cell,GSE14000_TRANSLATED_RNA_VS_MRNA_DC_DN,26.44887834420302,Top
+normal,immature alpha-beta T cell,MODULE_151,26.40933573770383,Top
+normal,immature alpha-beta T cell,BUSSLINGER_ESOPHAGEAL_PROLIFERATING_BASAL_CELLS,26.407234161130845,Top
+normal,immature alpha-beta T cell,BUSSLINGER_ESOPHAGEAL_EARLY_SUPRABASAL_CELLS,26.190092601384585,Top
+normal,immature alpha-beta T cell,LEIN_LOCALIZED_TO_PROXIMAL_DENDRITES,26.04494840029048,Top
+normal,immature alpha-beta T cell,HOLLEMAN_VINCRISTINE_RESISTANCE_ALL_DN,26.019427674257162,Top
+normal,immature alpha-beta T cell,MANNO_MIDBRAIN_NEUROTYPES_BASAL,25.746625103209375,Top
+normal,immature alpha-beta T cell,FAN_OVARY_CL10_PUTATIVE_EARLY_ATRESIA_GRANULOSA_CELL,25.742398852127387,Top
+normal,immature alpha-beta T cell,MODULE_150,25.51745188061443,Top
+normal,immature alpha-beta T cell,GSE24574_BCL6_HIGH_VS_LOW_TFH_CD4_TCELL_UP,25.24546016975582,Top
+normal,immature alpha-beta T cell,LIU_COMMON_CANCER_GENES,24.94999239241972,Top
+normal,immature alpha-beta T cell,GSE26156_DOUBLE_POSITIVE_VS_CD4_SINGLE_POSITIVE_THYMOCYTE_UP,24.81572422149244,Top
+normal,immature alpha-beta T cell,GSE22886_NAIVE_BCELL_VS_NEUTROPHIL_UP,24.794930322428954,Top
+normal,immature alpha-beta T cell,TRAVAGLINI_LUNG_AIRWAY_SMOOTH_MUSCLE_CELL,24.77387111837214,Top
+normal,immature alpha-beta T cell,CHAF1B_TARGET_GENES,24.589678951722085,Top
+normal,immature alpha-beta T cell,GAUTAM_EYE_IRIS_CILIARY_BODY_CILIARY_BODY_ENDOTHELIAL_CELLS,24.477374149557434,Top
+normal,immature alpha-beta T cell,GOBP_TRANSLATIONAL_ELONGATION,24.434503084054093,Top
+normal,immature alpha-beta T cell,MORF_NME2,24.27735225336293,Top
+normal,immature alpha-beta T cell,TRAVAGLINI_LUNG_PROXIMAL_BASAL_CELL,24.08782709885902,Top
+normal,immature alpha-beta T cell,FAN_EMBRYONIC_CTX_BIG_GROUPS_BRAIN_IMMUNE,23.885936734263847,Top
+normal,immature alpha-beta T cell,MENON_FETAL_KIDNEY_6_COLLECTING_DUCT_CELLS,23.593882275466694,Top
+normal,immature alpha-beta T cell,chr10p13,0.0,Bottom
+normal,immature alpha-beta T cell,chr10q21,0.0,Bottom
+normal,immature alpha-beta T cell,chr10q22,0.0,Bottom
+normal,immature alpha-beta T cell,chr10q23,0.0,Bottom
+normal,immature alpha-beta T cell,chr10q26,0.0,Bottom
+normal,immature alpha-beta T cell,chr11p12,0.0,Bottom
+normal,immature alpha-beta T cell,chr11p13,0.0,Bottom
+normal,immature alpha-beta T cell,chr11p14,0.0,Bottom
+normal,immature alpha-beta T cell,chr11q11,0.0,Bottom
+normal,immature alpha-beta T cell,chr11q12,0.0,Bottom
+normal,immature alpha-beta T cell,chr11q24,0.0,Bottom
+normal,immature alpha-beta T cell,chr12p13,0.0,Bottom
+normal,immature alpha-beta T cell,chr12q12,0.0,Bottom
+normal,immature alpha-beta T cell,chr12q13,0.0,Bottom
+normal,immature alpha-beta T cell,chr12q15,0.0,Bottom
+normal,immature alpha-beta T cell,chr12q24,0.0,Bottom
+normal,immature alpha-beta T cell,chr13q11,0.0,Bottom
+normal,immature alpha-beta T cell,chr13q13,0.0,Bottom
+normal,immature alpha-beta T cell,chr13q14,0.0,Bottom
+normal,immature alpha-beta T cell,chr13q21,0.0,Bottom
+normal,immature alpha-beta T cell,chr13q32,0.0,Bottom
+normal,immature alpha-beta T cell,chr14q11,0.0,Bottom
+normal,immature alpha-beta T cell,chr14q22,0.0,Bottom
+normal,immature alpha-beta T cell,chr14q24,0.0,Bottom
+normal,immature alpha-beta T cell,chr15q14,0.0,Bottom
+normal,mature alpha-beta T cell,KEGG_MEDICUS_REFERENCE_TRANSLATION_INITIATION,463.7718717656584,Top
+normal,mature alpha-beta T cell,AIZARANI_LIVER_C3_NK_NKT_CELLS_2,115.97104553809532,Top
+normal,mature alpha-beta T cell,LAKE_ADULT_KIDNEY_C23_ENDOTHELIAL_CELLS_AVR,101.69651903005747,Top
+normal,mature alpha-beta T cell,LAKE_ADULT_KIDNEY_C18_COLLECTING_DUCT_PRINCIPAL_CELLS_MEDULLA,91.4425152835683,Top
+normal,mature alpha-beta T cell,RUBENSTEIN_SKELETAL_MUSCLE_NK_CELLS,86.71230220957699,Top
+normal,mature alpha-beta T cell,LAKE_ADULT_KIDNEY_C8_DECENDING_THIN_LIMB,78.27015289567474,Top
+normal,mature alpha-beta T cell,LAKE_ADULT_KIDNEY_C19_COLLECTING_DUCT_INTERCALATED_CELLS_TYPE_A_MEDULLA,78.05963308546278,Top
+normal,mature alpha-beta T cell,TRAVAGLINI_LUNG_CD4_NAIVE_T_CELL,77.45217333736582,Top
+normal,mature alpha-beta T cell,FAN_OVARY_CL0_XBP1_SELK_HIGH_STROMAL_CELL,77.35569641895783,Top
+normal,mature alpha-beta T cell,MORF_ACTG1,75.9766356378539,Top
+normal,mature alpha-beta T cell,RUBENSTEIN_SKELETAL_MUSCLE_T_CELLS,75.17749067453238,Top
+normal,mature alpha-beta T cell,LAKE_ADULT_KIDNEY_C10_THIN_ASCENDING_LIMB,71.86920321537899,Top
+normal,mature alpha-beta T cell,TRAVAGLINI_LUNG_CAPILLARY_INTERMEDIATE_2_CELL,71.32307600363707,Top
+normal,mature alpha-beta T cell,RUBENSTEIN_SKELETAL_MUSCLE_B_CELLS,70.46228776100354,Top
+normal,mature alpha-beta T cell,RUBENSTEIN_SKELETAL_MUSCLE_MYELOID_CELLS,68.84045842488607,Top
+normal,mature alpha-beta T cell,PSMB5_TARGET_GENES,68.58537600101569,Top
+normal,mature alpha-beta T cell,YAGI_AML_WITH_INV_16_TRANSLOCATION,67.27700798165085,Top
+normal,mature alpha-beta T cell,TIEN_INTESTINE_PROBIOTICS_24HR_DN,66.75052579733041,Top
+normal,mature alpha-beta T cell,HAY_BONE_MARROW_NAIVE_T_CELL,66.66493124839587,Top
+normal,mature alpha-beta T cell,MORF_TPT1,66.39531707111587,Top
+normal,mature alpha-beta T cell,LAKE_ADULT_KIDNEY_C12_THICK_ASCENDING_LIMB,65.82326661297398,Top
+normal,mature alpha-beta T cell,MODULE_83,64.95224192040598,Top
+normal,mature alpha-beta T cell,GNF2_TPT1,64.84870390932784,Top
+normal,mature alpha-beta T cell,FAN_OVARY_CL12_T_LYMPHOCYTE_NK_CELL_2,64.79484649723412,Top
+normal,mature alpha-beta T cell,WP_CYTOPLASMIC_RIBOSOMAL_PROTEINS,62.251815644288676,Top
+normal,mature alpha-beta T cell,TRAVAGLINI_LUNG_CLUB_CELL,61.29791187547211,Top
+normal,mature alpha-beta T cell,BUSSLINGER_DUODENAL_IMMUNE_CELLS,60.35525116390652,Top
+normal,mature alpha-beta T cell,BUSSLINGER_GASTRIC_IMMUNE_CELLS,58.27479854322906,Top
+normal,mature alpha-beta T cell,BUSSLINGER_GASTRIC_PPP1R1B_POSITIVE_CELLS,57.96737727548322,Top
+normal,mature alpha-beta T cell,HSIAO_HOUSEKEEPING_GENES,57.81226577595768,Top
+normal,mature alpha-beta T cell,PECE_MAMMARY_STEM_CELL_UP,55.90186610751682,Top
+normal,mature alpha-beta T cell,BUSSLINGER_DUODENAL_STEM_CELLS,52.06355058963482,Top
+normal,mature alpha-beta T cell,MENON_FETAL_KIDNEY_10_IMMUNE_CELLS,51.05687211517595,Top
+normal,mature alpha-beta T cell,BUSSLINGER_DUODENAL_DIFFERENTIATING_STEM_CELLS,50.55562457712288,Top
+normal,mature alpha-beta T cell,TIEN_INTESTINE_PROBIOTICS_6HR_UP,49.339583462120125,Top
+normal,mature alpha-beta T cell,MODULE_114,47.55683764759292,Top
+normal,mature alpha-beta T cell,LAKE_ADULT_KIDNEY_C9_THIN_ASCENDING_LIMB,47.34526067554441,Top
+normal,mature alpha-beta T cell,GNF2_GLTSCR2,47.24549875992995,Top
+normal,mature alpha-beta T cell,MORF_NPM1,47.05882092663366,Top
+normal,mature alpha-beta T cell,FAN_OVARY_CL4_T_LYMPHOCYTE_NK_CELL_1,46.393148983034315,Top
+normal,mature alpha-beta T cell,BUSSLINGER_GASTRIC_LYZ_POSITIVE_CELLS,44.09326621324588,Top
+normal,mature alpha-beta T cell,FOXR2_TARGET_GENES,43.796905427916435,Top
+normal,mature alpha-beta T cell,GSE13411_PLASMA_CELL_VS_MEMORY_BCELL_DN,43.74333942364424,Top
+normal,mature alpha-beta T cell,WIERENGA_PML_INTERACTOME,43.715596303369246,Top
+normal,mature alpha-beta T cell,CHAUHAN_RESPONSE_TO_METHOXYESTRADIOL_DN,43.70151051578359,Top
+normal,mature alpha-beta T cell,AIZARANI_LIVER_C1_NK_NKT_CELLS_1,43.39732076856825,Top
+normal,mature alpha-beta T cell,BUSSLINGER_ESOPHAGEAL_QUIESCENT_BASAL_CELLS,42.848936577332324,Top
+normal,mature alpha-beta T cell,BUSSLINGER_DUODENAL_TRANSIT_AMPLIFYING_CELLS,42.7502343772823,Top
+normal,mature alpha-beta T cell,TRAVAGLINI_LUNG_BRONCHIAL_VESSEL_1_CELL,42.43917257398622,Top
+normal,mature alpha-beta T cell,RUBENSTEIN_SKELETAL_MUSCLE_SATELLITE_CELLS,42.1752871032454,Top
+normal,mature alpha-beta T cell,LAKE_ADULT_KIDNEY_C24_ENDOTHELIAL_CELLS_AEA_AND_DVR,42.17015905624781,Top
+normal,mature alpha-beta T cell,MODY_HIPPOCAMPUS_PRENATAL,41.845793180384184,Top
+normal,mature alpha-beta T cell,TRAVAGLINI_LUNG_MESOTHELIAL_CELL,41.37944094176985,Top
+normal,mature alpha-beta T cell,ZFHX3_TARGET_GENES,39.304643287006606,Top
+normal,mature alpha-beta T cell,LAKE_ADULT_KIDNEY_C7_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S3,38.88887200070243,Top
+normal,mature alpha-beta T cell,GSE3982_NEUTROPHIL_VS_BCELL_DN,38.40991565753252,Top
+normal,mature alpha-beta T cell,GNATENKO_PLATELET_SIGNATURE,38.25315750317696,Top
+normal,mature alpha-beta T cell,MARTENS_TRETINOIN_RESPONSE_DN,38.10184585538685,Top
+normal,mature alpha-beta T cell,MURARO_PANCREAS_ACINAR_CELL,38.0971704067328,Top
+normal,mature alpha-beta T cell,DIAZ_CHRONIC_MYELOGENOUS_LEUKEMIA_DN,36.555546858371834,Top
+normal,mature alpha-beta T cell,FAN_OVARY_CL2_PUTATIVE_EARLY_ATRETIC_FOLLICLE_THECAL_CELL_1,35.74501190837632,Top
+normal,mature alpha-beta T cell,GSE42088_UNINF_VS_LEISHMANIA_INF_DC_4H_DN,35.11606557573009,Top
+normal,mature alpha-beta T cell,SETD7_TARGET_GENES,34.75088500813541,Top
+normal,mature alpha-beta T cell,QI_PBMC_ZOSTAVAX_AGE_50_75YO_CORRELATED_WITH_T_CELL_RESPONSES_1D_INFORMATIVE_OF_LONG_TERM_RESPONSES_NEGATIVE,34.28155084512173,Top
+normal,mature alpha-beta T cell,TRAVAGLINI_LUNG_PROLIFERATING_BASAL_CELL,33.96504822510939,Top
+normal,mature alpha-beta T cell,NKX2_2_TARGET_GENES,33.57080208052937,Top
+normal,mature alpha-beta T cell,GAUTAM_EYE_IRIS_CILIARY_BODY_WIF1_HIGH_FIBROBLASTS,33.40554762864724,Top
+normal,mature alpha-beta T cell,WATANABE_RECTAL_CANCER_RADIOTHERAPY_RESPONSIVE_UP,33.166235670269046,Top
+normal,mature alpha-beta T cell,MATTIOLI_MGUS_VS_PCL,32.93827218275804,Top
+normal,mature alpha-beta T cell,GSE25088_WT_VS_STAT6_KO_MACROPHAGE_ROSIGLITAZONE_STIM_UP,32.73393774195614,Top
+normal,mature alpha-beta T cell,CUI_DEVELOPING_HEART_COMPACT_ATRIAL_CARDIOMYOCYTE,31.869274511092748,Top
+normal,mature alpha-beta T cell,MA_RAT_AGING_UP,31.780193478836974,Top
+normal,mature alpha-beta T cell,RUBENSTEIN_SKELETAL_MUSCLE_PCV_ENDOTHELIAL_CELLS,31.63893472964947,Top
+normal,mature alpha-beta T cell,BUSSLINGER_ESOPHAGEAL_EARLY_SUPRABASAL_CELLS,31.17639234819983,Top
+normal,mature alpha-beta T cell,TRAVAGLINI_LUNG_CD4_MEMORY_EFFECTOR_T_CELL,31.122213299254067,Top
+normal,mature alpha-beta T cell,GSE14000_TRANSLATED_RNA_VS_MRNA_DC_DN,30.690704326955682,Top
+normal,mature alpha-beta T cell,MODULE_151,30.689759151752178,Top
+normal,mature alpha-beta T cell,GTF2A2_TARGET_GENES,30.618425000019563,Top
+normal,mature alpha-beta T cell,BUSSLINGER_ESOPHAGEAL_PROLIFERATING_BASAL_CELLS,30.56556976513985,Top
+normal,mature alpha-beta T cell,HOLLEMAN_VINCRISTINE_RESISTANCE_ALL_DN,30.054397845472025,Top
+normal,mature alpha-beta T cell,GSE32986_UNSTIM_VS_CURDLAN_HIGHDOSE_STIM_DC_DN,29.629563333234216,Top
+normal,mature alpha-beta T cell,MODULE_150,29.460297370160745,Top
+normal,mature alpha-beta T cell,TRAVAGLINI_LUNG_PROXIMAL_BASAL_CELL,29.303914753595986,Top
+normal,mature alpha-beta T cell,GSE26156_DOUBLE_POSITIVE_VS_CD4_SINGLE_POSITIVE_THYMOCYTE_UP,29.137815491358438,Top
+normal,mature alpha-beta T cell,MANNO_MIDBRAIN_NEUROTYPES_BASAL,29.023407790192174,Top
+normal,mature alpha-beta T cell,RAG1_TARGET_GENES,28.913771596729244,Top
+normal,mature alpha-beta T cell,GSE24574_BCL6_HIGH_VS_LOW_TFH_CD4_TCELL_UP,28.885404602482787,Top
+normal,mature alpha-beta T cell,MORF_NME2,28.677876763466077,Top
+normal,mature alpha-beta T cell,TRAVAGLINI_LUNG_AIRWAY_SMOOTH_MUSCLE_CELL,28.27018938553639,Top
+normal,mature alpha-beta T cell,LIU_COMMON_CANCER_GENES,28.090301221863836,Top
+normal,mature alpha-beta T cell,GOBP_TRANSLATIONAL_ELONGATION,27.74343657045283,Top
+normal,mature alpha-beta T cell,GSE22886_NAIVE_BCELL_VS_NEUTROPHIL_UP,27.62837829915886,Top
+normal,mature alpha-beta T cell,DURANTE_ADULT_OLFACTORY_NEUROEPITHELIUM_NK_CELLS,27.19853983822032,Top
+normal,mature alpha-beta T cell,FAN_OVARY_CL10_PUTATIVE_EARLY_ATRESIA_GRANULOSA_CELL,27.176210705031696,Top
+normal,mature alpha-beta T cell,CHAF1B_TARGET_GENES,27.079014499370867,Top
+normal,mature alpha-beta T cell,HILLION_HMGA1B_TARGETS,26.988780976156903,Top
+normal,mature alpha-beta T cell,GSE12366_GC_BCELL_VS_PLASMA_CELL_UP,26.911647002309817,Top
+normal,mature alpha-beta T cell,ZHENG_CORD_BLOOD_C8_PUTATIVE_LYMPHOID_PRIMED_MULTIPOTENT_PROGENITOR_2,26.57756583955553,Top
+normal,mature alpha-beta T cell,GSE14000_TRANSLATED_RNA_VS_MRNA_4H_LPS_DC_DN,26.562108610430336,Top
+normal,mature alpha-beta T cell,GSE1460_DP_THYMOCYTE_VS_NAIVE_CD4_TCELL_ADULT_BLOOD_DN,26.29602411221235,Top
+normal,mature alpha-beta T cell,chr10p13,0.0,Bottom
+normal,mature alpha-beta T cell,chr10q21,0.0,Bottom
+normal,mature alpha-beta T cell,chr10q22,0.0,Bottom
+normal,mature alpha-beta T cell,chr10q23,0.0,Bottom
+normal,mature alpha-beta T cell,chr10q26,0.0,Bottom
+normal,mature alpha-beta T cell,chr11p12,0.0,Bottom
+normal,mature alpha-beta T cell,chr11p13,0.0,Bottom
+normal,mature alpha-beta T cell,chr11p14,0.0,Bottom
+normal,mature alpha-beta T cell,chr11q11,0.0,Bottom
+normal,mature alpha-beta T cell,chr11q12,0.0,Bottom
+normal,mature alpha-beta T cell,chr11q24,0.0,Bottom
+normal,mature alpha-beta T cell,chr12p13,0.0,Bottom
+normal,mature alpha-beta T cell,chr12q12,0.0,Bottom
+normal,mature alpha-beta T cell,chr12q13,0.0,Bottom
+normal,mature alpha-beta T cell,chr12q24,0.0,Bottom
+normal,mature alpha-beta T cell,chr13q11,0.0,Bottom
+normal,mature alpha-beta T cell,chr13q13,0.0,Bottom
+normal,mature alpha-beta T cell,chr13q14,0.0,Bottom
+normal,mature alpha-beta T cell,chr13q21,0.0,Bottom
+normal,mature alpha-beta T cell,chr13q32,0.0,Bottom
+normal,mature alpha-beta T cell,chr14q11,0.0,Bottom
+normal,mature alpha-beta T cell,chr14q22,0.0,Bottom
+normal,mature alpha-beta T cell,chr14q24,0.0,Bottom
+normal,mature alpha-beta T cell,chr15q14,0.0,Bottom
+normal,mature alpha-beta T cell,chr15q15,0.0,Bottom
