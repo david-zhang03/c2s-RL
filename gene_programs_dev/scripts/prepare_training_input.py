@@ -50,14 +50,17 @@ parser.add_argument('--knn_k', type=int, required=False, default=5,
 parser.add_argument('--knn_n_pca', type=int, required=False, default=50,
                     help='number of neighbors in the knn graph')
     
+parser.add_argument('--cell_type_column', type=str, required=False, default='cell_type',
+                    help='column name in adata.obs that contains cell type information')
+
 args = parser.parse_args()
 
 output_prefix = os.path.abspath(args.output_prefix)
 
 output_path = os.path.join(output_prefix, args.dataset_name)
 
-if not os.path.exists(output_path):
-    os.makedirs(output_path, exist_ok=True)
+# if not os.path.exists(output_path):
+#     os.makedirs(output_path, exist_ok=True)
 
 
 print ("__________________________________",flush=True)
@@ -74,6 +77,19 @@ log_str(f"Loading h5ad file  {os.path.abspath((args.h5ad_path))}")
 adata = sc.read_h5ad(args.h5ad_path)
 log_str(f"Loaded h5ad file: n_cells = {adata.shape[0]:,} , n_genes = {adata.shape[1]:,}")
 
+# Check for cell type information
+cell_type_column = args.cell_type_column
+if cell_type_column in adata.obs.columns:
+    log_str(f"Found cell type information in column '{cell_type_column}'")
+    cell_types = adata.obs[cell_type_column].values
+    unique_cell_types = set(cell_types)
+    log_str(f"Dataset has {len(unique_cell_types)} unique cell types")
+    if len(unique_cell_types) <= 1:
+        log_str("Dataset has one or less cell types. Exiting...")
+        sys.exit(1)
+else:
+    log_str(f"Cell type column '{cell_type_column}' not found in dataset. Exiting...")
+    sys.exit(1)
 
 ## build knn graph 
 log_str(f"Building KNN graph with K={args.knn_k}")
@@ -172,7 +188,6 @@ for cl in cluster_cols:
     cluster_of  = {terms[i]:clusters[i] for i in range(len(terms))}
     cluster_dict[cl] = pd.Series(filtered_gene_set_names).map(cluster_of).values
 
-
 ## store the prepared inputs in a dictionary 
 log_str(f"Saving the prepared training inputs...")
 prepared_input = dict()
@@ -185,6 +200,10 @@ prepared_input['gene_names'] = list(common_genes) # array of shape (n_genes) to 
 # adata_relevant is the gene filtered .X matrix
 prepared_input['cell_ids'] = adata_relevant.obs.index.tolist() # array of shape (n_cells) to store the cell ids that correpond rows in matrix x when it would be inputed to the training script
 prepared_input['extra'] = None # other string-formated notes that will be attached to this input
+
+if cell_types is not None:
+    prepared_input['cell_types'] = cell_types.tolist() # array of shape (n_cells) to store the cell type for each cell
+
 ## data: for input to the train_gnn function
 prepared_input['train_x_sparse'] = csr_matrix(adata_relevant.X) # sparse matrix of shape (n_cells, n_genes) to store the gene expression data
 prepared_input['train_edges'] = edge_list # list of length 2, each of shape (n_edges) to store the edges of the knn graph
