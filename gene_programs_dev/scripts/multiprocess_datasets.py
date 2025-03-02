@@ -5,55 +5,59 @@ from functools import partial
 import math
 import uuid
 
-def process_dataset(dataset_name, data_prefix, geneset_path, output_prefix):
-    # Function to process a single dataset
-    print(f"Processing {dataset_name}...\n")
+def process_dataset_group(group_index, dataset_group, data_prefix, geneset_path, output_prefix, datasets_per_group=3):
+    """Process a group of datasets, storing them in a common subdirectory"""
+    # Generate a subdirectory name based on the group index
+    subdir_name = f"set_{group_index + 1}"
+    subdir_path = os.path.join(output_prefix, subdir_name)
+    
+    # Create the subdirectory if it doesn't exist
+    os.makedirs(subdir_path, exist_ok=True)
+    
+    print(f"Processing group {group_index + 1} with datasets: {dataset_group} in directory {subdir_path}")
+    
+    # Process each dataset in the group
+    for dataset_name in dataset_group:
+        process_single_dataset(dataset_name, data_prefix, geneset_path, subdir_path)
+    
+    return subdir_path, len(dataset_group)
+
+
+def process_single_dataset(dataset_name, data_prefix, geneset_path, output_path):
+    """Process a single dataset within a group"""
+    print(f"Processing {dataset_name}...")
+    
     # Note that os.system creates a subshell which does not inherit conda env's python interpreter
     python_env = "/gpfs/radev/home/sr2464/.conda/envs/llamp/bin/python"
     full_path = f"{data_prefix}/{dataset_name}_colunified.h5ad"
     
-    # output_path = os.path.join(output_prefix, dataset_name)
-
-    # copy over temporarily
-    # if not os.path.exists(output_path):
-    #     os.makedirs(output_path, exist_ok=True)
-
-    # temp_file = os.path.join(output_path, f"{dataset_name}_colunified.h5ad")
-
-    # try:
-        # print(f"Copying {full_path} to {temp_file}...")
-        # shutil.copy2(full_path, temp_file)
-        
     exit_code = os.system(f"""
     {python_env} /home/ddz5/Desktop/c2s-RL/gene_programs_dev/scripts/prepare_training_input.py \
         --h5ad_path "{full_path}" \
         --genesets_path "{geneset_path}" \
         --dataset_name "{dataset_name}" \
-        --output_prefix "{output_prefix}"
+        --output_prefix "{output_path}"
     """)
     
     if exit_code == 0:
-        print(f"Completed processing {dataset_name}\n")
+        print(f"Completed processing {dataset_name}")
     else:
-        print(f"Failed to process {dataset_name}: Exit code: {exit_code}\n")
-    
-    # finally:
-    #     # Clean up - remove the temporary file after processing
-    #     if os.path.exists(temp_file):
-    #         print(f"Removing temporary file {temp_file}")
-    #         os.remove(temp_file)
+        print(f"Failed to process {dataset_name}: Exit code: {exit_code}")
+
 
 if __name__ == "__main__":
     # Dataset and paths configuration --> paths refer to TRANSFER PARTITION
-
     DATA_PREFIX = "/SAY/standard/HCA-CC1022-InternalMedicine/datasets/HCA_CxG_Processing/hca_cellxgene_step1_colunified_h5ad"
     GENESET_PATH = "/home/ddz5/Desktop/c2s-RL/gene_programs_dev/gene_set_data/msigdb.tsv"
     OUTPUT_PREFIX = "/home/ddz5/scratch/Cell2GSEA_QA_dataset_models_bk/Cell2GSEA_QA_dataset_models/"
-
+    
+    # Number of datasets to process in each group
+    DATASETS_PER_GROUP = 3
+    
     DATASET_NAMES = []
-
+    
     DATASET_PATHS = "/home/ddz5/scratch/Cell2GSEA_QA_dataset_models_bk/Cell2GSEA_QA_dataset_models/to_train_filepaths.txt"
-
+    
     with open(DATASET_PATHS, 'r') as f:
         for line in f:
             if line.strip():
@@ -66,19 +70,50 @@ if __name__ == "__main__":
                     else:
                         dataset_name = os.path.splitext(filename)[0]
                     DATASET_NAMES.append(dataset_name)
-
+    
     print(f"Datasets to process: {DATASET_NAMES}")
-    print(f"Number of datasets: {len(DATASET_NAMES)}")
-
+    print(f"Total number of datasets: {len(DATASET_NAMES)}")
+    
+    # Group datasets into chunks of DATASETS_PER_GROUP
+    dataset_groups = []
+    n_groups = math.ceil(len(DATASET_NAMES) / DATASETS_PER_GROUP)
+    
+    for i in range(n_groups):
+        start_idx = i * DATASETS_PER_GROUP
+        end_idx = min((i + 1) * DATASETS_PER_GROUP, len(DATASET_NAMES))
+        dataset_groups.append(DATASET_NAMES[start_idx:end_idx])
+    
+    print(f"Number of dataset groups: {len(dataset_groups)}")
+    
+    # Create a list of group indices to pass to the multiprocessing function
+    group_indices = list(range(len(dataset_groups)))
+    
     # Number of CPU cores to use
     NUM_CORES = mp.cpu_count()
-
-    print(f"Number of cores: {NUM_CORES}")
-
-    # Multiprocessing pool
+    print(f"Number of cores available: {NUM_CORES}")
+    
+    # Set up a record of which datasets are in which group
+    group_record_path = os.path.join(OUTPUT_PREFIX, "dataset_groups.txt")
+    with open(group_record_path, 'w') as f:
+        for i, group in enumerate(dataset_groups):
+            f.write(f"set_{i+1}: {', '.join(group)}\n")
+    
+    print(f"Dataset group assignments saved to {group_record_path}")
+    
+    # Multiprocessing pool to process groups in parallel
     with mp.Pool(NUM_CORES) as pool:
-        pool.map(partial(process_dataset, data_prefix=DATA_PREFIX, geneset_path=GENESET_PATH, output_prefix=OUTPUT_PREFIX), DATASET_NAMES)
-
+        results = pool.starmap(
+            process_dataset_group,
+            [(i, dataset_groups[i], DATA_PREFIX, GENESET_PATH, OUTPUT_PREFIX, DATASETS_PER_GROUP) for i in group_indices]
+        )
+    
+    # Print summary
+    for subdir_path, count in results:
+        if count > 0:  # Only print successful groups
+            print(f"Processed {count} datasets in directory {subdir_path}")
+    
+    print("All processing complete!")
+    
     # DATASET_NAMES = [
     #     "local(474)",
     #     "local(468)",

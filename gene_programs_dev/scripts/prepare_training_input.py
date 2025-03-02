@@ -59,9 +59,8 @@ output_prefix = os.path.abspath(args.output_prefix)
 
 output_path = os.path.join(output_prefix, args.dataset_name)
 
-# if not os.path.exists(output_path):
-#     os.makedirs(output_path, exist_ok=True)
-
+if not os.path.exists(output_path):
+    os.makedirs(output_path, exist_ok=True)
 
 print ("__________________________________",flush=True)
 script_path = os.path.abspath(__file__)
@@ -216,4 +215,22 @@ with open(output_path, 'wb') as f:
     pickle.dump(prepared_input, f)
 
 log_str(f"Saved the prepared training inputs at {os.path.abspath(output_path)}")
+
+metadata_output_path = os.path.join(output_path, "metadata.txt")
+log_str(f"Writing metadata to {os.path.abspath(metadata_output_path)}")
+
+with open(metadata_output_path, 'w') as f:
+    f.write(f"dataset_name: {args.dataset_name}\n")
+    f.write(f"num_cells: {adata.shape[0]}\n")
+    f.write(f"num_genes: {adata.shape[1]}\n")
+    f.write(f"num_genes_after_filtering: {n_genes}\n")
+    f.write(f"num_gene_sets: {n_progs}\n")
+    f.write(f"num_cell_types: {len(unique_cell_types)}\n")
+    f.write(f"cell_types: {', '.join(sorted(map(str, unique_cell_types)))}\n")
+    f.write(f"num_edges: {len(edge_list[0])}\n")
+    # reference timestamp
+    f.write(f"processed_time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+
+log_str(f"Metadata file created successfully")
+
 print ("__________________________________",flush=True)

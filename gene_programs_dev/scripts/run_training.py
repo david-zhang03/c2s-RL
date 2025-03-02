@@ -78,7 +78,8 @@ progs =  prepared_input['progs_sparse']
 
 log_str("Preparing train and val set")
 
-dataset = ad.read_h5ad(prepared_input['input_h5ad_file_path'])
+# notice dataset is only used to obtain cell types
+# dataset = ad.read_h5ad(prepared_input['input_h5ad_file_path'])
 
 train_indices, val_indices = train_test_split(
     np.arange(n_cell),
@@ -96,9 +97,18 @@ val_edges = get_knn_edges(val_x, conf.KNN_GRAPH_K, conf.KNN_GRAPH_N_PCA)
 # cell types
 train_cell_types = None
 val_cell_types = None
-if 'cell_type' in dataset.obs.columns:
-    train_cell_types = dataset.obs['cell_type'][train_indices].values
-    val_cell_types = dataset.obs['cell_type'][val_indices].values
+# if 'cell_type' in dataset.obs.columns:
+#     train_cell_types = dataset.obs['cell_type'][train_indices].values
+#     val_cell_types = dataset.obs['cell_type'][val_indices].values
+# else:
+#     log_str("Dataset has no cell types, exiting...")
+#     sys.exit(1)
+
+if 'cell_types' in prepared_input:
+    log_str("Using cell type information from prepared input")
+    all_cell_types = prepared_input['cell_types']
+    train_cell_types = np.array([all_cell_types[i] for i in train_indices])
+    val_cell_types = np.array([all_cell_types[i] for i in val_indices])
 else:
     log_str("Dataset has no cell types, exiting...")
     sys.exit(1)
@@ -107,6 +117,8 @@ else:
 if len(set(val_cell_types)) <= 1:
     log_str("Require datasets with more than one cell type, exiting...")
     sys.exit(1)
+
+log_str(f"Found {len(set(all_cell_types))} unique cell types")
 
 log_str("Converting programs from sparse to dense")
 
