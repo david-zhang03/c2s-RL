@@ -210,8 +210,8 @@ prepared_input['progs_sparse'] = progs # sparse matrix of shape (n_programs, n_g
 prepared_input['prog_clusters'] = cluster_dict # array of shape (n_programs) to store the cluster number for each of the programs
 
 ## save the prepared input as a pickle file
-output_path = os.path.join(output_path,"training_inputs.pickle")
-with open(output_path, 'wb') as f:
+pickle_output_path = os.path.join(output_path,"training_inputs.pickle")
+with open(pickle_output_path, 'wb') as f:
     pickle.dump(prepared_input, f)
 
 log_str(f"Saved the prepared training inputs at {os.path.abspath(output_path)}")

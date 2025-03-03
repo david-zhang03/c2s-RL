@@ -16,11 +16,26 @@ def process_dataset_group(group_index, dataset_group, data_prefix, geneset_path,
     
     print(f"Processing group {group_index + 1} with datasets: {dataset_group} in directory {subdir_path}")
     
+    processed_count = 0
+    skipped_count = 0
+
     # Process each dataset in the group
     for dataset_name in dataset_group:
+        # Check if this dataset has already been processed
+        dataset_output_path = os.path.join(subdir_path, dataset_name)
+        pickle_file = os.path.join(dataset_output_path, "training_inputs.pickle")
+        metadata_file = os.path.join(dataset_output_path, "metadata.txt")
+        
+        if os.path.exists(pickle_file) and os.path.exists(metadata_file):
+            print(f"Skipping {dataset_name} - already processed (found both training_inputs.pickle and metadata.txt)")
+            skipped_count += 1
+            continue
+
         process_single_dataset(dataset_name, data_prefix, geneset_path, subdir_path)
+        processed_count += 1
     
-    return subdir_path, len(dataset_group)
+    print(f"Group {group_index + 1}: Processed {processed_count} datasets, skipped {skipped_count} datasets")
+    return subdir_path, processed_count, skipped_count
 
 
 def process_single_dataset(dataset_name, data_prefix, geneset_path, output_path):
@@ -78,6 +93,8 @@ if __name__ == "__main__":
     dataset_groups = []
     n_groups = math.ceil(len(DATASET_NAMES) / DATASETS_PER_GROUP)
     
+    # this should be deterministic, so running again on unprocessed datasets should
+    # not overwrite processed datasets
     for i in range(n_groups):
         start_idx = i * DATASETS_PER_GROUP
         end_idx = min((i + 1) * DATASETS_PER_GROUP, len(DATASET_NAMES))
@@ -108,10 +125,15 @@ if __name__ == "__main__":
         )
     
     # Print summary
-    for subdir_path, count in results:
-        if count > 0:  # Only print successful groups
-            print(f"Processed {count} datasets in directory {subdir_path}")
+    total_processed = 0
+    total_skipped = 0
+    for subdir_path, processed, skipped in results:
+        total_processed += processed
+        total_skipped += skipped
+        if processed > 0:  # Only print groups that processed something
+            print(f"Processed {processed} datasets in directory {subdir_path}")
     
+    print(f"Summary: Processed {total_processed} datasets, skipped {total_skipped} datasets")
     print("All processing complete!")
     
     # DATASET_NAMES = [
