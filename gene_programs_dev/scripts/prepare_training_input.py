@@ -53,6 +53,9 @@ parser.add_argument('--knn_n_pca', type=int, required=False, default=50,
 parser.add_argument('--cell_type_column', type=str, required=False, default='cell_type',
                     help='column name in adata.obs that contains cell type information')
 
+parser.add_argument('--disease_column', type=str, required=False, default='disease',
+                    help='column name in adata.obs that contains disease information')
+
 args = parser.parse_args()
 
 output_prefix = os.path.abspath(args.output_prefix)
@@ -89,6 +92,18 @@ if cell_type_column in adata.obs.columns:
 else:
     log_str(f"Cell type column '{cell_type_column}' not found in dataset. Exiting...")
     sys.exit(1)
+
+# Check for disease information
+disease_column = args.disease_column
+if disease_column in adata.obs.columns:
+    log_str(f"Found disease information in column '{disease_column}'")
+    diseases = adata.obs[disease_column].values
+    unique_diseases = set(diseases)
+    log_str(f"Dataset has {len(unique_diseases)} unique disease states")
+    diseases = diseases.tolist()  # array of shape (n_cells) to store the disease for each cell
+else:
+    log_str(f"Disease column '{disease_column}' not found in dataset. Using 'Unknown' as default")
+    diseases = ['Unknown'] * adata.shape[0]
 
 ## build knn graph 
 log_str(f"Building KNN graph with K={args.knn_k}")
@@ -203,6 +218,9 @@ prepared_input['extra'] = None # other string-formated notes that will be attach
 if cell_types is not None:
     prepared_input['cell_types'] = cell_types.tolist() # array of shape (n_cells) to store the cell type for each cell
 
+if diseases is not None:
+    prepared_input['disease'] = diseases # should already be in a list
+
 ## data: for input to the train_gnn function
 prepared_input['train_x_sparse'] = csr_matrix(adata_relevant.X) # sparse matrix of shape (n_cells, n_genes) to store the gene expression data
 prepared_input['train_edges'] = edge_list # list of length 2, each of shape (n_edges) to store the edges of the knn graph
@@ -210,7 +228,7 @@ prepared_input['progs_sparse'] = progs # sparse matrix of shape (n_programs, n_g
 prepared_input['prog_clusters'] = cluster_dict # array of shape (n_programs) to store the cluster number for each of the programs
 
 ## save the prepared input as a pickle file
-pickle_output_path = os.path.join(output_path,"training_inputs.pickle")
+pickle_output_path = os.path.join(output_path,"new_training_inputs.pickle")
 with open(pickle_output_path, 'wb') as f:
     pickle.dump(prepared_input, f)
 
@@ -228,6 +246,8 @@ with open(metadata_output_path, 'w') as f:
     f.write(f"num_cell_types: {len(unique_cell_types)}\n")
     f.write(f"cell_types: {', '.join(sorted(map(str, unique_cell_types)))}\n")
     f.write(f"num_edges: {len(edge_list[0])}\n")
+    f.write(f"num_diseases: {len(unique_diseases)}\n")
+    f.write(f"diseases: {', '.join(sorted(map(str, unique_diseases)))}\n")
     # reference timestamp
     f.write(f"processed_time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
 
