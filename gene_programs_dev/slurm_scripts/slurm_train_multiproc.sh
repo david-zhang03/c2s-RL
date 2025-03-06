@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH --job-name=QA_set_13_dataset_msigdb
-#SBATCH --output /home/ddz5/Desktop/c2s-RL/gene_programs_dev/logs/QA_dataset_msigdb/train_model/set_13_%j.log
+#SBATCH --job-name=set_24_QA_dataset_msigdb
+#SBATCH --output /home/ddz5/Desktop/c2s-RL/gene_programs_dev/logs/QA_dataset_msigdb/train_model/set_24_%j.log
 #SBATCH --mail-type=ALL                            # Mail events (NONE, BEGIN, END, FAIL, ALL)
 #SBATCH --mail-user=david.zhang.ddz5@yale.edu                   # Where to send mail
 #SBATCH --partition gpu
@@ -10,7 +10,7 @@
 #SBATCH --gres=gpu:1                               # start with 1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=256gb                                 # Job memory request
-#SBATCH --time=2-00:00:00                          # Time limit hrs:min:sec
+#SBATCH --time=1-12:00:00                          # Time limit hrs:min:sec
 date;hostname
 
 module load miniconda
@@ -40,7 +40,12 @@ calculate_memory_required() {
 
 # Function to get total number of datasets in training directory
 count_total_datasets() {
-    local count=$(ls -d "${DATASET_DIR}"*/ 2>/dev/null | wc -l)
+    local count=0
+    for dir in "${DATASET_DIR}"*/; do
+        if [ -f "$dir/training_inputs.pickle" ]; then
+            count=$((count+1))
+        fi
+    done
     echo $count
 }
 
@@ -48,9 +53,7 @@ count_total_datasets() {
 all_datasets_done() {
     local total_datasets=$(count_total_datasets)
     local processed_count=${#processed_datasets[@]}
-
     echo "$(date): Processed $processed_count out of $total_datasets datasets"
-
     if [ $processed_count -ge $total_datasets ]; then
         return 0
     else
@@ -77,7 +80,7 @@ echo "Detected GPU: $GPU_TYPE at index $GPU_ID with memory threshold: $GPU_MEMOR
 # /home/ddz5/scratch/test_cell2gsea_qa
 # DATASET_DIR="/home/ddz5/scratch/Cell2GSEA_QA_dataset_models/eighth_set/"
 # DATASET_DIR="/home/ddz5/scratch/Cell2GSEA_QA_dataset_models/fourth_set/"
-DATASET_DIR="/home/ddz5/scratch/Cell2GSEA_QA_dataset_models_bk/Cell2GSEA_QA_dataset_models/set_13/"
+DATASET_DIR="/home/ddz5/scratch/Cell2GSEA_QA_dataset_models_bk/Cell2GSEA_QA_dataset_models/set_24/"
 SLEEP_INTERVAL=1800  # Interval to check for processed datasets (in seconds)
 
 # declare -A job_memory_usage # associate memory usage with PID
@@ -96,7 +99,26 @@ running_jobs=()
 
 # Error log file
 ERROR_LOG="${DATASET_DIR}/error_datasets.log"
+OVERSIZED_LOG="${DATASET_DIR}/oversized_datasets.log"
 touch "$ERROR_LOG"  # Create or clear the log file
+touch "$OVERSIZED_LOG" # Create or clear oversized dataset log file
+
+# Initial check for oversized datasets
+echo "$(date): Performing initial check for oversized datasets..."
+for dataset in $(ls -d $DATASET_DIR*/); do
+    if [ -f "$dataset/training_inputs.pickle" ]; then
+        memory_required_gb=$(calculate_memory_required "$dataset")
+        memory_required_mib=$(awk "BEGIN {print int($memory_required_gb * 1024)}")
+
+        if (( memory_required_mib > GPU_MEMORY_THRESHOLD )); then
+            echo "$(date): WARNING - Dataset $dataset requires ${memory_required_mib} MiB which exceeds GPU memory threshold (${GPU_MEMORY_THRESHOLD} MiB)"
+            echo "$(date): Marking dataset as 'oversized' and skipping training"
+            processed_datasets["$dataset"]="oversized"
+            dataset_status["$dataset"]="oversized"
+            echo "[$(date)]: Dataset $dataset requires ${memory_required_mib} MiB which exceeds GPU memory threshold" >> "$OVERSIZED_LOG"
+        fi
+    fi
+done
 
 trap "echo 'Script terminated. Cleaning up...'; for job in \"\${running_jobs[@]}\"; do kill -9 \$job; done; exit 1" SIGINT SIGTERM
 while true; do
@@ -208,6 +230,15 @@ while true; do
                 memory_required_mib=$(awk "BEGIN {print int($memory_required_gb * 1024)}")
 
                 echo "$(date): Dataset ${dataset} requires ${memory_required_mib} MiB of memory"
+                # Check if oversized
+                if (( memory_required_mib > GPU_MEMORY_THRESHOLD )); then
+                    echo "$(date): Dataset $dataset requires ${memory_required_mib} MiB which exceeds GPU memory threshold (${GPU_MEMORY_THRESHOLD} MiB)"
+                    echo "$(date): Marking dataset as 'oversized' and skipping training"
+                    processed_datasets["$dataset"]="oversized"
+                    dataset_status["$dataset"]="oversized"
+                    echo "[$(date)]: Dataset $dataset requires ${memory_required_mib} MiB which exceeds GPU memory threshold" >> "$OVERSIZED_LOG"
+                    continue
+                fi
 
                 if (( current_memory + memory_required_mib < GPU_MEMORY_THRESHOLD )); then
                     # Initialize attempt counter if first try
@@ -238,6 +269,7 @@ while true; do
                     fi
                 else
                     echo "$(date): Not enough GPU memory for $dataset. Current: ${current_memory} MiB, Required: ${memory_required_mib} MiB"
+
                     continue
                 fi
             fi
@@ -264,7 +296,10 @@ done
 
 # Final report
 echo "=== Final Processing Report ==="
+echo "Total datasets with training_inputs.pickle: $(count_total_datasets)"
 echo "Total datasets processed: ${#processed_datasets[@]}"
 echo "Successful datasets: $(grep -c "success" <<< "$(printf '%s\n' "${dataset_status[@]}")")"
 echo "Failed datasets: $(grep -c "error" <<< "$(printf '%s\n' "${dataset_status[@]}")")"
+echo "Oversized datasets: $(grep -c "oversized" <<< "$(printf '%s\n' "${dataset_status[@]}")")"
 echo "See $ERROR_LOG for details on failed datasets"
+echo "See $OVERSIZED_LOG for details on oversized datasets"
