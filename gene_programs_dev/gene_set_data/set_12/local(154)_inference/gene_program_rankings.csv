@@ -1,0 +1,1501 @@
+Disease,Cell Type,Gene Program,Mean Activity Score,Rank Type
+normal,astrocyte,MANNO_MIDBRAIN_NEUROTYPES_HGABA,81.39012335597558,Top
+normal,astrocyte,MANNO_MIDBRAIN_NEUROTYPES_HNBGABA,75.03281776123823,Top
+normal,astrocyte,MANNO_MIDBRAIN_NEUROTYPES_HDA1,55.620719489500765,Top
+normal,astrocyte,MANNO_MIDBRAIN_NEUROTYPES_HSERT,51.887942867894324,Top
+normal,astrocyte,MANNO_MIDBRAIN_NEUROTYPES_HDA,50.27294273651719,Top
+normal,astrocyte,LAKE_ADULT_KIDNEY_C16_COLLECTING_SYSTEM_PRINCIPAL_CELLS_CORTEX,48.969111614194915,Top
+normal,astrocyte,MANNO_MIDBRAIN_NEUROTYPES_HDA2,46.74064070583402,Top
+normal,astrocyte,MANNO_MIDBRAIN_NEUROTYPES_HNBML5,44.629917261353576,Top
+normal,astrocyte,LAKE_ADULT_KIDNEY_C15_CONNECTING_TUBULE,40.40430271686237,Top
+normal,astrocyte,LAKE_ADULT_KIDNEY_C5_PROXIMAL_TUBULE_EPITHELIAL_CELLS_STRESS_INFLAM,39.506024911164836,Top
+normal,astrocyte,LAKE_ADULT_KIDNEY_C14_DISTAL_CONVOLUTED_TUBULE,36.87248402176162,Top
+normal,astrocyte,LAKE_ADULT_KIDNEY_C13_THICK_ASCENDING_LIMB,35.837038279794065,Top
+normal,astrocyte,BLALOCK_ALZHEIMERS_DISEASE_DN,35.3380252290865,Top
+normal,astrocyte,GSE11924_TH1_VS_TH17_CD4_TCELL_UP,35.3350599123788,Top
+normal,astrocyte,RIGGI_EWING_SARCOMA_PROGENITOR_UP,34.843783957444145,Top
+normal,astrocyte,MIR218_5P,34.56045795256092,Top
+normal,astrocyte,STARK_PREFRONTAL_CORTEX_22Q11_DELETION_UP,34.10925394327005,Top
+normal,astrocyte,PAX7_TARGET_GENES,33.395176070655346,Top
+normal,astrocyte,PAX3_TARGET_GENES,31.805423539037008,Top
+normal,astrocyte,GSE19941_UNSTIM_VS_LPS_AND_IL10_STIM_IL10_KO_MACROPHAGE_UP,31.253377843186488,Top
+normal,astrocyte,LAKE_ADULT_KIDNEY_C3_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S1_S2,29.859605801732915,Top
+normal,astrocyte,GAVISH_3CA_METAPROGRAM_FIBROBLASTS_CAF_4,29.722007800039087,Top
+normal,astrocyte,DESCARTES_FETAL_LUNG_VISCERAL_NEURONS,29.702489545268396,Top
+normal,astrocyte,MURARO_PANCREAS_ALPHA_CELL,28.74297464602265,Top
+normal,astrocyte,ZHONG_PFC_C3_MICROGLIA,28.128790278993357,Top
+normal,astrocyte,PBXIP1_TARGET_GENES,27.754433460672765,Top
+normal,astrocyte,IWANAGA_CARCINOGENESIS_BY_KRAS_DN,27.644998726496674,Top
+normal,astrocyte,HE_LIM_SUN_FETAL_LUNG_C1_PULMONARY_NEUROENDOCRINE_CELL,26.86256967457122,Top
+normal,astrocyte,MANNO_MIDBRAIN_NEUROTYPES_HOMTN,26.85233225077644,Top
+normal,astrocyte,SRSF9_TARGET_GENES,26.82967140759596,Top
+normal,astrocyte,ALX4_TARGET_GENES,26.478357983364113,Top
+normal,astrocyte,GSE32986_UNSTIM_VS_GMCSF_AND_CURDLAN_HIGHDOSE_STIM_DC_DN,26.407447199667654,Top
+normal,astrocyte,LAKE_ADULT_KIDNEY_C29_UNKNOWN_NOVEL_PT_CFH_POS_SUBPOPULATION_S2,25.91197005192574,Top
+normal,astrocyte,MANNO_MIDBRAIN_NEUROTYPES_HRN,25.622758531813307,Top
+normal,astrocyte,PARK_HSC_VS_MULTIPOTENT_PROGENITORS_UP,25.44617797603834,Top
+normal,astrocyte,HE_LIM_SUN_FETAL_LUNG_C1_PULMONARY_NE_PRECURSOR_CELL,25.354719023955496,Top
+normal,astrocyte,TAKEDA_TARGETS_OF_NUP98_HOXA9_FUSION_3D_UP,25.041071774801697,Top
+normal,astrocyte,SOX11_TARGET_GENES,24.979054859821986,Top
+normal,astrocyte,GLI1_TARGET_GENES,24.92259739412719,Top
+normal,astrocyte,CHANDRAN_METASTASIS_TOP50_DN,24.861210557924668,Top
+normal,astrocyte,HE_LIM_SUN_FETAL_LUNG_C1_INTERM_NEUROENDOCRINE_CELL,24.788428424372132,Top
+normal,astrocyte,PAX6_TARGET_GENES,24.77804797857443,Top
+normal,astrocyte,TRAVAGLINI_LUNG_CD8_MEMORY_EFFECTOR_T_CELL,24.772065079272906,Top
+normal,astrocyte,DESCARTES_FETAL_HEART_SATB2_LRRC7_POSITIVE_CELLS,24.700007106330883,Top
+normal,astrocyte,GOCC_SYNAPTIC_MEMBRANE,24.680438343252106,Top
+normal,astrocyte,LAKE_ADULT_KIDNEY_C2_PODOCYTES,24.526236925546097,Top
+normal,astrocyte,GSE24671_CTRL_VS_SENDAI_VIRUS_INFECTED_MOUSE_SPLENOCYTES_UP,24.256981200394687,Top
+normal,astrocyte,MARSON_FOXP3_TARGETS_UP,24.208168247559684,Top
+normal,astrocyte,CHICAS_RB1_TARGETS_LOW_SERUM,24.12720761922503,Top
+normal,astrocyte,STAMBOLSKY_TARGETS_OF_MUTATED_TP53_UP,24.111417978850206,Top
+normal,astrocyte,GSE18791_UNSTIM_VS_NEWCATSLE_VIRUS_DC_2H_DN,24.084267517504344,Top
+normal,astrocyte,LAKE_ADULT_KIDNEY_C11_THIN_ASCENDING_LIMB,23.906075216918325,Top
+normal,astrocyte,MIR448,23.70617767100828,Top
+normal,astrocyte,IRX2_TARGET_GENES,23.698699726920783,Top
+normal,astrocyte,LMX1B_TARGET_GENES,23.694407293468664,Top
+normal,astrocyte,MIR548L,23.640118917099283,Top
+normal,astrocyte,GSE2770_TGFB_AND_IL4_VS_TGFB_AND_IL12_TREATED_ACT_CD4_TCELL_48H_UP,23.632760609754683,Top
+normal,astrocyte,GSE7509_FCGRIIB_VS_TNFA_IL1B_IL6_PGE_STIM_DC_DN,23.514206129342874,Top
+normal,astrocyte,BRACHAT_RESPONSE_TO_CISPLATIN,23.349672097301646,Top
+normal,astrocyte,GSE19888_ADENOSINE_A3R_ACT_VS_TCELL_MEMBRANES_ACT_IN_MAST_CELL_DN,23.330125021003504,Top
+normal,astrocyte,GOCC_CATION_CHANNEL_COMPLEX,23.17698339493044,Top
+normal,astrocyte,GSE23308_CTRL_VS_CORTICOSTERONE_TREATED_MACROPHAGE_MINERALCORTICOID_REC_KO_DN,23.00087060304975,Top
+normal,astrocyte,ZSCAN5C_TARGET_GENES,22.88496140794155,Top
+normal,astrocyte,ZHENG_CORD_BLOOD_C7_PUTATIVE_LYMPHOID_PRIMED_MULTIPOTENT_PROGENITOR_1,22.84184114961349,Top
+normal,astrocyte,OLSSON_E2F3_TARGETS_UP,22.813870906020263,Top
+normal,astrocyte,TFCP2_TARGET_GENES,22.765807154223147,Top
+normal,astrocyte,GSE5542_UNTREATED_VS_IFNA_AND_IFNG_TREATED_EPITHELIAL_CELLS_24H_UP,22.679862587885054,Top
+normal,astrocyte,LAKE_ADULT_KIDNEY_C4_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S2,22.664000499835442,Top
+normal,astrocyte,ATGTACA_MIR493,22.602139510606463,Top
+normal,astrocyte,RODRIGUES_NTN1_AND_DCC_TARGETS,22.583029242241928,Top
+normal,astrocyte,AAGCACA_MIR218,22.527066671585185,Top
+normal,astrocyte,GSE10500_ARTHRITIC_SYNOVIAL_FLUID_VS_HEALTHY_MACROPHAGE_DN,22.502498789027914,Top
+normal,astrocyte,GAUTAM_EYE_IRIS_CILIARY_BODY_PUTATIVE_STEM_CELLS,22.431925470031583,Top
+normal,astrocyte,GOCC_SYNAPSE,22.363462411284647,Top
+normal,astrocyte,MAP2K1_TARGET_GENES,22.337422668023102,Top
+normal,astrocyte,GSE22589_HEALTHY_VS_SIV_INFECTED_DC_UP,22.331873242033357,Top
+normal,astrocyte,CEBPE_TARGET_GENES,22.329381055864292,Top
+normal,astrocyte,MIR5696,22.315616458300216,Top
+normal,astrocyte,CTGCAGY_UNKNOWN,22.26976496052054,Top
+normal,astrocyte,YATGNWAAT_OCT_C,22.222512080025794,Top
+normal,astrocyte,GOBP_CARDIAC_MUSCLE_MYOBLAST_PROLIFERATION,22.137262603422982,Top
+normal,astrocyte,GOBP_POSITIVE_REGULATION_OF_MYOBLAST_PROLIFERATION,22.09014420881741,Top
+normal,astrocyte,GSE27786_LSK_VS_CD4_TCELL_DN,22.035326273210586,Top
+normal,astrocyte,MIR4659A_3P_MIR4659B_3P,21.961977888246548,Top
+normal,astrocyte,CAVARD_LIVER_CANCER_MALIGNANT_VS_BENIGN,21.89079169668447,Top
+normal,astrocyte,GOCC_NEURON_TO_NEURON_SYNAPSE,21.806206393525233,Top
+normal,astrocyte,GOCC_POSTSYNAPTIC_SPECIALIZATION,21.72118703132979,Top
+normal,astrocyte,GSE25087_FETAL_VS_ADULT_TCONV_DN,21.68440671242356,Top
+normal,astrocyte,HOWLIN_CITED1_TARGETS_2_UP,21.65923616882091,Top
+normal,astrocyte,ZHENG_CORD_BLOOD_C10_MULTILYMPHOID_PROGENITOR,21.461714612607842,Top
+normal,astrocyte,GAVISH_3CA_MALIGNANT_METAPROGRAM_41_UNASSIGNED,21.40420151121143,Top
+normal,astrocyte,GOBP_REGULATION_OF_MYOBLAST_PROLIFERATION,21.399124895575092,Top
+normal,astrocyte,PSIP1_TARGET_GENES,21.35337082841805,Top
+normal,astrocyte,BRUINS_UVC_RESPONSE_VIA_TP53_GROUP_C,21.309673594699852,Top
+normal,astrocyte,MANNO_MIDBRAIN_NEUROTYPES_HNBML1,21.21406468065971,Top
+normal,astrocyte,GAVISH_3CA_MALIGNANT_METAPROGRAM_10_PROTEIN_MATURATION,21.20872603248052,Top
+normal,astrocyte,ZNF236_TARGET_GENES,21.20716231180978,Top
+normal,astrocyte,GAVISH_3CA_METAPROGRAM_EPITHELIAL_V_ATPASE,21.20063982309429,Top
+normal,astrocyte,HERNANDEZ_MITOTIC_ARREST_BY_DOCETAXEL_1_UP,21.041028434432828,Top
+normal,astrocyte,HOWLIN_CITED1_TARGETS_1_UP,21.01535426578619,Top
+normal,astrocyte,chr12q15,0.0,Bottom
+normal,astrocyte,chr13q12,0.0,Bottom
+normal,astrocyte,chr13q14,0.0,Bottom
+normal,astrocyte,chr13q32,0.0,Bottom
+normal,astrocyte,chr19p12,0.0,Bottom
+normal,astrocyte,chr19p13,0.0,Bottom
+normal,astrocyte,chr19q13,0.0,Bottom
+normal,astrocyte,chr1p35,0.0,Bottom
+normal,astrocyte,chr20q11,0.0,Bottom
+normal,astrocyte,chr2p23,0.0,Bottom
+normal,astrocyte,chr3p23,0.0,Bottom
+normal,astrocyte,chr4p11,0.0,Bottom
+normal,astrocyte,chr6p11,0.0,Bottom
+normal,astrocyte,chr6q15,0.0,Bottom
+normal,astrocyte,chr9p13,0.0,Bottom
+normal,astrocyte,chr9p21,0.0,Bottom
+normal,astrocyte,chr9q32,0.0,Bottom
+normal,astrocyte,chr9q33,0.0,Bottom
+normal,astrocyte,ABBUD_LIF_SIGNALING_1_DN,0.0,Bottom
+normal,astrocyte,ABBUD_LIF_SIGNALING_1_UP,0.0,Bottom
+normal,astrocyte,ABBUD_LIF_SIGNALING_2_DN,0.0,Bottom
+normal,astrocyte,ABBUD_LIF_SIGNALING_2_UP,0.0,Bottom
+normal,astrocyte,ABDELMOHSEN_ELAVL4_TARGETS,0.0,Bottom
+normal,astrocyte,ABDULRAHMAN_KIDNEY_CANCER_VHL_DN,0.0,Bottom
+normal,astrocyte,ABE_INNER_EAR,0.0,Bottom
+normal,central nervous system macrophage,MANNO_MIDBRAIN_NEUROTYPES_HGABA,36.77699847848631,Top
+normal,central nervous system macrophage,MANNO_MIDBRAIN_NEUROTYPES_HNBGABA,33.92630598767355,Top
+normal,central nervous system macrophage,MANNO_MIDBRAIN_NEUROTYPES_HDA1,25.175737623358444,Top
+normal,central nervous system macrophage,MANNO_MIDBRAIN_NEUROTYPES_HSERT,23.438182428878843,Top
+normal,central nervous system macrophage,MANNO_MIDBRAIN_NEUROTYPES_HDA,22.78481294429774,Top
+normal,central nervous system macrophage,LAKE_ADULT_KIDNEY_C16_COLLECTING_SYSTEM_PRINCIPAL_CELLS_CORTEX,22.013470039513834,Top
+normal,central nervous system macrophage,MANNO_MIDBRAIN_NEUROTYPES_HDA2,21.298138847448513,Top
+normal,central nervous system macrophage,MANNO_MIDBRAIN_NEUROTYPES_HNBML5,20.2490952310282,Top
+normal,central nervous system macrophage,LAKE_ADULT_KIDNEY_C15_CONNECTING_TUBULE,18.186066911290585,Top
+normal,central nervous system macrophage,LAKE_ADULT_KIDNEY_C5_PROXIMAL_TUBULE_EPITHELIAL_CELLS_STRESS_INFLAM,17.90571747215924,Top
+normal,central nervous system macrophage,LAKE_ADULT_KIDNEY_C14_DISTAL_CONVOLUTED_TUBULE,16.7288984978336,Top
+normal,central nervous system macrophage,LAKE_ADULT_KIDNEY_C13_THICK_ASCENDING_LIMB,16.196685926210833,Top
+normal,central nervous system macrophage,BLALOCK_ALZHEIMERS_DISEASE_DN,15.92055255334496,Top
+normal,central nervous system macrophage,GSE11924_TH1_VS_TH17_CD4_TCELL_UP,15.851793882338328,Top
+normal,central nervous system macrophage,MIR218_5P,15.65410586731035,Top
+normal,central nervous system macrophage,RIGGI_EWING_SARCOMA_PROGENITOR_UP,15.54925835756811,Top
+normal,central nervous system macrophage,STARK_PREFRONTAL_CORTEX_22Q11_DELETION_UP,15.386117376130203,Top
+normal,central nervous system macrophage,PAX7_TARGET_GENES,15.05609640216462,Top
+normal,central nervous system macrophage,PAX3_TARGET_GENES,14.440971221046887,Top
+normal,central nervous system macrophage,GSE19941_UNSTIM_VS_LPS_AND_IL10_STIM_IL10_KO_MACROPHAGE_UP,13.937050651316442,Top
+normal,central nervous system macrophage,LAKE_ADULT_KIDNEY_C3_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S1_S2,13.606699492282795,Top
+normal,central nervous system macrophage,DESCARTES_FETAL_LUNG_VISCERAL_NEURONS,13.408903403909422,Top
+normal,central nervous system macrophage,GAVISH_3CA_METAPROGRAM_FIBROBLASTS_CAF_4,13.374451103795078,Top
+normal,central nervous system macrophage,MURARO_PANCREAS_ALPHA_CELL,13.108675062123538,Top
+normal,central nervous system macrophage,ZHONG_PFC_C3_MICROGLIA,12.777590652382997,Top
+normal,central nervous system macrophage,PBXIP1_TARGET_GENES,12.717935505497959,Top
+normal,central nervous system macrophage,IWANAGA_CARCINOGENESIS_BY_KRAS_DN,12.446995607281096,Top
+normal,central nervous system macrophage,SRSF9_TARGET_GENES,12.30683006150208,Top
+normal,central nervous system macrophage,HE_LIM_SUN_FETAL_LUNG_C1_PULMONARY_NEUROENDOCRINE_CELL,12.19472786963062,Top
+normal,central nervous system macrophage,MANNO_MIDBRAIN_NEUROTYPES_HOMTN,12.192378456412909,Top
+normal,central nervous system macrophage,ALX4_TARGET_GENES,11.923739788328247,Top
+normal,central nervous system macrophage,GSE32986_UNSTIM_VS_GMCSF_AND_CURDLAN_HIGHDOSE_STIM_DC_DN,11.905338066900066,Top
+normal,central nervous system macrophage,LAKE_ADULT_KIDNEY_C29_UNKNOWN_NOVEL_PT_CFH_POS_SUBPOPULATION_S2,11.737493321356645,Top
+normal,central nervous system macrophage,MANNO_MIDBRAIN_NEUROTYPES_HRN,11.6721924748914,Top
+normal,central nervous system macrophage,HE_LIM_SUN_FETAL_LUNG_C1_PULMONARY_NE_PRECURSOR_CELL,11.555815130966986,Top
+normal,central nervous system macrophage,TAKEDA_TARGETS_OF_NUP98_HOXA9_FUSION_3D_UP,11.505284471986851,Top
+normal,central nervous system macrophage,PARK_HSC_VS_MULTIPOTENT_PROGENITORS_UP,11.474103083555725,Top
+normal,central nervous system macrophage,GOCC_SYNAPTIC_MEMBRANE,11.422687585935435,Top
+normal,central nervous system macrophage,DESCARTES_FETAL_HEART_SATB2_LRRC7_POSITIVE_CELLS,11.270725235628442,Top
+normal,central nervous system macrophage,GLI1_TARGET_GENES,11.265053419013284,Top
+normal,central nervous system macrophage,HE_LIM_SUN_FETAL_LUNG_C1_INTERM_NEUROENDOCRINE_CELL,11.238766921129873,Top
+normal,central nervous system macrophage,PAX6_TARGET_GENES,11.236997421673887,Top
+normal,central nervous system macrophage,CHANDRAN_METASTASIS_TOP50_DN,11.232311598338082,Top
+normal,central nervous system macrophage,SOX11_TARGET_GENES,11.19675930676028,Top
+normal,central nervous system macrophage,TRAVAGLINI_LUNG_CD8_MEMORY_EFFECTOR_T_CELL,11.188093828515532,Top
+normal,central nervous system macrophage,LAKE_ADULT_KIDNEY_C2_PODOCYTES,11.079491555005655,Top
+normal,central nervous system macrophage,LAKE_ADULT_KIDNEY_C11_THIN_ASCENDING_LIMB,10.970097541809082,Top
+normal,central nervous system macrophage,MARSON_FOXP3_TARGETS_UP,10.885411752747089,Top
+normal,central nervous system macrophage,CHICAS_RB1_TARGETS_LOW_SERUM,10.875869986654697,Top
+normal,central nervous system macrophage,GSE24671_CTRL_VS_SENDAI_VIRUS_INFECTED_MOUSE_SPLENOCYTES_UP,10.867360794072255,Top
+normal,central nervous system macrophage,STAMBOLSKY_TARGETS_OF_MUTATED_TP53_UP,10.866134217263486,Top
+normal,central nervous system macrophage,GSE18791_UNSTIM_VS_NEWCATSLE_VIRUS_DC_2H_DN,10.816706027107678,Top
+normal,central nervous system macrophage,LMX1B_TARGET_GENES,10.717798460184538,Top
+normal,central nervous system macrophage,IRX2_TARGET_GENES,10.69288767099685,Top
+normal,central nervous system macrophage,BRACHAT_RESPONSE_TO_CISPLATIN,10.648122646190503,Top
+normal,central nervous system macrophage,GSE7509_FCGRIIB_VS_TNFA_IL1B_IL6_PGE_STIM_DC_DN,10.615922489385495,Top
+normal,central nervous system macrophage,GSE19888_ADENOSINE_A3R_ACT_VS_TCELL_MEMBRANES_ACT_IN_MAST_CELL_DN,10.612396419885666,Top
+normal,central nervous system macrophage,GSE2770_TGFB_AND_IL4_VS_TGFB_AND_IL12_TREATED_ACT_CD4_TCELL_48H_UP,10.611116073749683,Top
+normal,central nervous system macrophage,MIR448,10.572525066434196,Top
+normal,central nervous system macrophage,MIR548L,10.470714435114562,Top
+normal,central nervous system macrophage,GOCC_CATION_CHANNEL_COMPLEX,10.42953490845545,Top
+normal,central nervous system macrophage,ZSCAN5C_TARGET_GENES,10.419955704251773,Top
+normal,central nervous system macrophage,OLSSON_E2F3_TARGETS_UP,10.3632787208752,Top
+normal,central nervous system macrophage,GSE23308_CTRL_VS_CORTICOSTERONE_TREATED_MACROPHAGE_MINERALCORTICOID_REC_KO_DN,10.33263902980858,Top
+normal,central nervous system macrophage,ZHENG_CORD_BLOOD_C7_PUTATIVE_LYMPHOID_PRIMED_MULTIPOTENT_PROGENITOR_1,10.304354333329474,Top
+normal,central nervous system macrophage,LAKE_ADULT_KIDNEY_C4_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S2,10.28859204746602,Top
+normal,central nervous system macrophage,GOCC_SYNAPSE,10.279759804103263,Top
+normal,central nervous system macrophage,AAGCACA_MIR218,10.245212906317388,Top
+normal,central nervous system macrophage,GSE5542_UNTREATED_VS_IFNA_AND_IFNG_TREATED_EPITHELIAL_CELLS_24H_UP,10.23447467419075,Top
+normal,central nervous system macrophage,TFCP2_TARGET_GENES,10.23042873830783,Top
+normal,central nervous system macrophage,RODRIGUES_NTN1_AND_DCC_TARGETS,10.198411057278571,Top
+normal,central nervous system macrophage,ATGTACA_MIR493,10.177021323797195,Top
+normal,central nervous system macrophage,GAUTAM_EYE_IRIS_CILIARY_BODY_PUTATIVE_STEM_CELLS,10.158894956644772,Top
+normal,central nervous system macrophage,MIR5696,10.128610079924874,Top
+normal,central nervous system macrophage,CEBPE_TARGET_GENES,10.107831799055273,Top
+normal,central nervous system macrophage,CTGCAGY_UNKNOWN,10.079526041963852,Top
+normal,central nervous system macrophage,GSE22589_HEALTHY_VS_SIV_INFECTED_DC_UP,10.065230988908088,Top
+normal,central nervous system macrophage,MAP2K1_TARGET_GENES,10.060842987830307,Top
+normal,central nervous system macrophage,GOBP_CARDIAC_MUSCLE_MYOBLAST_PROLIFERATION,10.014031432140833,Top
+normal,central nervous system macrophage,YATGNWAAT_OCT_C,10.003829385433464,Top
+normal,central nervous system macrophage,GOBP_POSITIVE_REGULATION_OF_MYOBLAST_PROLIFERATION,9.994174389090118,Top
+normal,central nervous system macrophage,GOCC_NEURON_TO_NEURON_SYNAPSE,9.993891979694975,Top
+normal,central nervous system macrophage,GSE27786_LSK_VS_CD4_TCELL_DN,9.985956617698816,Top
+normal,central nervous system macrophage,MIR4659A_3P_MIR4659B_3P,9.969156457698817,Top
+normal,central nervous system macrophage,GSE10500_ARTHRITIC_SYNOVIAL_FLUID_VS_HEALTHY_MACROPHAGE_DN,9.904983200789411,Top
+normal,central nervous system macrophage,CAVARD_LIVER_CANCER_MALIGNANT_VS_BENIGN,9.887678295564225,Top
+normal,central nervous system macrophage,GOCC_POSTSYNAPTIC_SPECIALIZATION,9.853419807526649,Top
+normal,central nervous system macrophage,HOWLIN_CITED1_TARGETS_2_UP,9.779053940170114,Top
+normal,central nervous system macrophage,GSE25087_FETAL_VS_ADULT_TCONV_DN,9.774909808108937,Top
+normal,central nervous system macrophage,ZHENG_CORD_BLOOD_C10_MULTILYMPHOID_PROGENITOR,9.741935581387535,Top
+normal,central nervous system macrophage,PSIP1_TARGET_GENES,9.711815294482546,Top
+normal,central nervous system macrophage,MANNO_MIDBRAIN_NEUROTYPES_HNBML1,9.698905638503541,Top
+normal,central nervous system macrophage,GAVISH_3CA_MALIGNANT_METAPROGRAM_41_UNASSIGNED,9.65562521421742,Top
+normal,central nervous system macrophage,BRUINS_UVC_RESPONSE_VIA_TP53_GROUP_C,9.625755745484607,Top
+normal,central nervous system macrophage,GOBP_REGULATION_OF_MYOBLAST_PROLIFERATION,9.624872770954974,Top
+normal,central nervous system macrophage,ZNF236_TARGET_GENES,9.598845419146853,Top
+normal,central nervous system macrophage,GAVISH_3CA_MALIGNANT_METAPROGRAM_10_PROTEIN_MATURATION,9.564899365411712,Top
+normal,central nervous system macrophage,GAVISH_3CA_METAPROGRAM_EPITHELIAL_V_ATPASE,9.538940054551242,Top
+normal,central nervous system macrophage,HERNANDEZ_MITOTIC_ARREST_BY_DOCETAXEL_1_UP,9.497924858887382,Top
+normal,central nervous system macrophage,GOCC_POSTSYNAPSE,9.460501601412835,Top
+normal,central nervous system macrophage,chr12q15,0.0,Bottom
+normal,central nervous system macrophage,chr13q12,0.0,Bottom
+normal,central nervous system macrophage,chr13q14,0.0,Bottom
+normal,central nervous system macrophage,chr13q32,0.0,Bottom
+normal,central nervous system macrophage,chr19p12,0.0,Bottom
+normal,central nervous system macrophage,chr19p13,0.0,Bottom
+normal,central nervous system macrophage,chr19q13,0.0,Bottom
+normal,central nervous system macrophage,chr1p35,0.0,Bottom
+normal,central nervous system macrophage,chr20q11,0.0,Bottom
+normal,central nervous system macrophage,chr2p23,0.0,Bottom
+normal,central nervous system macrophage,chr3p23,0.0,Bottom
+normal,central nervous system macrophage,chr4p11,0.0,Bottom
+normal,central nervous system macrophage,chr6p11,0.0,Bottom
+normal,central nervous system macrophage,chr6q15,0.0,Bottom
+normal,central nervous system macrophage,chr9p13,0.0,Bottom
+normal,central nervous system macrophage,chr9p21,0.0,Bottom
+normal,central nervous system macrophage,chr9q32,0.0,Bottom
+normal,central nervous system macrophage,chr9q33,0.0,Bottom
+normal,central nervous system macrophage,ABBUD_LIF_SIGNALING_1_DN,0.0,Bottom
+normal,central nervous system macrophage,ABBUD_LIF_SIGNALING_1_UP,0.0,Bottom
+normal,central nervous system macrophage,ABBUD_LIF_SIGNALING_2_DN,0.0,Bottom
+normal,central nervous system macrophage,ABBUD_LIF_SIGNALING_2_UP,0.0,Bottom
+normal,central nervous system macrophage,ABDELMOHSEN_ELAVL4_TARGETS,0.0,Bottom
+normal,central nervous system macrophage,ABDULRAHMAN_KIDNEY_CANCER_VHL_DN,0.0,Bottom
+normal,central nervous system macrophage,ABE_INNER_EAR,0.0,Bottom
+normal,choroid plexus epithelial cell,MANNO_MIDBRAIN_NEUROTYPES_HGABA,89.42135492960612,Top
+normal,choroid plexus epithelial cell,MANNO_MIDBRAIN_NEUROTYPES_HNBGABA,82.4206657409668,Top
+normal,choroid plexus epithelial cell,MANNO_MIDBRAIN_NEUROTYPES_HDA1,61.17322031656901,Top
+normal,choroid plexus epithelial cell,MANNO_MIDBRAIN_NEUROTYPES_HSERT,57.0235964457194,Top
+normal,choroid plexus epithelial cell,MANNO_MIDBRAIN_NEUROTYPES_HDA,55.358744303385414,Top
+normal,choroid plexus epithelial cell,LAKE_ADULT_KIDNEY_C16_COLLECTING_SYSTEM_PRINCIPAL_CELLS_CORTEX,53.67298889160156,Top
+normal,choroid plexus epithelial cell,MANNO_MIDBRAIN_NEUROTYPES_HDA2,51.6352284749349,Top
+normal,choroid plexus epithelial cell,MANNO_MIDBRAIN_NEUROTYPES_HNBML5,49.158199310302734,Top
+normal,choroid plexus epithelial cell,LAKE_ADULT_KIDNEY_C15_CONNECTING_TUBULE,44.332940419514976,Top
+normal,choroid plexus epithelial cell,LAKE_ADULT_KIDNEY_C5_PROXIMAL_TUBULE_EPITHELIAL_CELLS_STRESS_INFLAM,43.552788416544594,Top
+normal,choroid plexus epithelial cell,LAKE_ADULT_KIDNEY_C14_DISTAL_CONVOLUTED_TUBULE,40.6423708597819,Top
+normal,choroid plexus epithelial cell,LAKE_ADULT_KIDNEY_C13_THICK_ASCENDING_LIMB,39.43095016479492,Top
+normal,choroid plexus epithelial cell,BLALOCK_ALZHEIMERS_DISEASE_DN,38.79613049825033,Top
+normal,choroid plexus epithelial cell,GSE11924_TH1_VS_TH17_CD4_TCELL_UP,38.52743593851725,Top
+normal,choroid plexus epithelial cell,MIR218_5P,38.02853775024414,Top
+normal,choroid plexus epithelial cell,RIGGI_EWING_SARCOMA_PROGENITOR_UP,37.89739799499512,Top
+normal,choroid plexus epithelial cell,STARK_PREFRONTAL_CORTEX_22Q11_DELETION_UP,37.36804072062174,Top
+normal,choroid plexus epithelial cell,PAX7_TARGET_GENES,36.58997344970703,Top
+normal,choroid plexus epithelial cell,PAX3_TARGET_GENES,35.08745002746582,Top
+normal,choroid plexus epithelial cell,GSE19941_UNSTIM_VS_LPS_AND_IL10_STIM_IL10_KO_MACROPHAGE_UP,33.97575569152832,Top
+normal,choroid plexus epithelial cell,LAKE_ADULT_KIDNEY_C3_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S1_S2,33.026466369628906,Top
+normal,choroid plexus epithelial cell,DESCARTES_FETAL_LUNG_VISCERAL_NEURONS,32.63346163431803,Top
+normal,choroid plexus epithelial cell,GAVISH_3CA_METAPROGRAM_FIBROBLASTS_CAF_4,32.487741470336914,Top
+normal,choroid plexus epithelial cell,MURARO_PANCREAS_ALPHA_CELL,31.709150950113933,Top
+normal,choroid plexus epithelial cell,ZHONG_PFC_C3_MICROGLIA,31.037524541219074,Top
+normal,choroid plexus epithelial cell,PBXIP1_TARGET_GENES,30.709548950195312,Top
+normal,choroid plexus epithelial cell,IWANAGA_CARCINOGENESIS_BY_KRAS_DN,30.189359029134113,Top
+normal,choroid plexus epithelial cell,SRSF9_TARGET_GENES,29.676467259724934,Top
+normal,choroid plexus epithelial cell,HE_LIM_SUN_FETAL_LUNG_C1_PULMONARY_NEUROENDOCRINE_CELL,29.62934939066569,Top
+normal,choroid plexus epithelial cell,MANNO_MIDBRAIN_NEUROTYPES_HOMTN,29.61305554707845,Top
+normal,choroid plexus epithelial cell,ALX4_TARGET_GENES,28.928688049316406,Top
+normal,choroid plexus epithelial cell,GSE32986_UNSTIM_VS_GMCSF_AND_CURDLAN_HIGHDOSE_STIM_DC_DN,28.873836517333984,Top
+normal,choroid plexus epithelial cell,LAKE_ADULT_KIDNEY_C29_UNKNOWN_NOVEL_PT_CFH_POS_SUBPOPULATION_S2,28.52768834431966,Top
+normal,choroid plexus epithelial cell,MANNO_MIDBRAIN_NEUROTYPES_HRN,28.36098353068034,Top
+normal,choroid plexus epithelial cell,HE_LIM_SUN_FETAL_LUNG_C1_PULMONARY_NE_PRECURSOR_CELL,28.01322301228841,Top
+normal,choroid plexus epithelial cell,PARK_HSC_VS_MULTIPOTENT_PROGENITORS_UP,27.8657169342041,Top
+normal,choroid plexus epithelial cell,TAKEDA_TARGETS_OF_NUP98_HOXA9_FUSION_3D_UP,27.77284876505534,Top
+normal,choroid plexus epithelial cell,GOCC_SYNAPTIC_MEMBRANE,27.553117752075195,Top
+normal,choroid plexus epithelial cell,DESCARTES_FETAL_HEART_SATB2_LRRC7_POSITIVE_CELLS,27.36645444234212,Top
+normal,choroid plexus epithelial cell,PAX6_TARGET_GENES,27.283002853393555,Top
+normal,choroid plexus epithelial cell,GLI1_TARGET_GENES,27.25980504353841,Top
+normal,choroid plexus epithelial cell,HE_LIM_SUN_FETAL_LUNG_C1_INTERM_NEUROENDOCRINE_CELL,27.254777272542317,Top
+normal,choroid plexus epithelial cell,SOX11_TARGET_GENES,27.21822992960612,Top
+normal,choroid plexus epithelial cell,CHANDRAN_METASTASIS_TOP50_DN,27.177403767903645,Top
+normal,choroid plexus epithelial cell,TRAVAGLINI_LUNG_CD8_MEMORY_EFFECTOR_T_CELL,27.1074161529541,Top
+normal,choroid plexus epithelial cell,LAKE_ADULT_KIDNEY_C2_PODOCYTES,26.936136881510418,Top
+normal,choroid plexus epithelial cell,LAKE_ADULT_KIDNEY_C11_THIN_ASCENDING_LIMB,26.561516443888348,Top
+normal,choroid plexus epithelial cell,GSE24671_CTRL_VS_SENDAI_VIRUS_INFECTED_MOUSE_SPLENOCYTES_UP,26.42241668701172,Top
+normal,choroid plexus epithelial cell,MARSON_FOXP3_TARGETS_UP,26.376501719156902,Top
+normal,choroid plexus epithelial cell,STAMBOLSKY_TARGETS_OF_MUTATED_TP53_UP,26.35259437561035,Top
+normal,choroid plexus epithelial cell,CHICAS_RB1_TARGETS_LOW_SERUM,26.330783208211262,Top
+normal,choroid plexus epithelial cell,GSE18791_UNSTIM_VS_NEWCATSLE_VIRUS_DC_2H_DN,26.255793889363606,Top
+normal,choroid plexus epithelial cell,IRX2_TARGET_GENES,25.939526240030926,Top
+normal,choroid plexus epithelial cell,MIR448,25.89507802327474,Top
+normal,choroid plexus epithelial cell,LMX1B_TARGET_GENES,25.89010492960612,Top
+normal,choroid plexus epithelial cell,GSE2770_TGFB_AND_IL4_VS_TGFB_AND_IL12_TREATED_ACT_CD4_TCELL_48H_UP,25.843990961710613,Top
+normal,choroid plexus epithelial cell,GSE7509_FCGRIIB_VS_TNFA_IL1B_IL6_PGE_STIM_DC_DN,25.68561299641927,Top
+normal,choroid plexus epithelial cell,MIR548L,25.661956787109375,Top
+normal,choroid plexus epithelial cell,GSE19888_ADENOSINE_A3R_ACT_VS_TCELL_MEMBRANES_ACT_IN_MAST_CELL_DN,25.653003056844074,Top
+normal,choroid plexus epithelial cell,BRACHAT_RESPONSE_TO_CISPLATIN,25.558462142944336,Top
+normal,choroid plexus epithelial cell,GOCC_CATION_CHANNEL_COMPLEX,25.41198794047038,Top
+normal,choroid plexus epithelial cell,ZSCAN5C_TARGET_GENES,25.21165148417155,Top
+normal,choroid plexus epithelial cell,GSE23308_CTRL_VS_CORTICOSTERONE_TREATED_MACROPHAGE_MINERALCORTICOID_REC_KO_DN,25.110340754191082,Top
+normal,choroid plexus epithelial cell,LAKE_ADULT_KIDNEY_C4_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S2,25.003605842590332,Top
+normal,choroid plexus epithelial cell,OLSSON_E2F3_TARGETS_UP,24.958602905273438,Top
+normal,choroid plexus epithelial cell,ZHENG_CORD_BLOOD_C7_PUTATIVE_LYMPHOID_PRIMED_MULTIPOTENT_PROGENITOR_1,24.95409647623698,Top
+normal,choroid plexus epithelial cell,AAGCACA_MIR218,24.872557640075684,Top
+normal,choroid plexus epithelial cell,GOCC_SYNAPSE,24.834595998128254,Top
+normal,choroid plexus epithelial cell,GSE5542_UNTREATED_VS_IFNA_AND_IFNG_TREATED_EPITHELIAL_CELLS_24H_UP,24.82447878519694,Top
+normal,choroid plexus epithelial cell,TFCP2_TARGET_GENES,24.815890630086262,Top
+normal,choroid plexus epithelial cell,ATGTACA_MIR493,24.792148272196453,Top
+normal,choroid plexus epithelial cell,RODRIGUES_NTN1_AND_DCC_TARGETS,24.700459162394207,Top
+normal,choroid plexus epithelial cell,MIR5696,24.637813250223797,Top
+normal,choroid plexus epithelial cell,GAUTAM_EYE_IRIS_CILIARY_BODY_PUTATIVE_STEM_CELLS,24.572967529296875,Top
+normal,choroid plexus epithelial cell,CTGCAGY_UNKNOWN,24.566426595052082,Top
+normal,choroid plexus epithelial cell,YATGNWAAT_OCT_C,24.444035530090332,Top
+normal,choroid plexus epithelial cell,GSE22589_HEALTHY_VS_SIV_INFECTED_DC_UP,24.412831624348957,Top
+normal,choroid plexus epithelial cell,CEBPE_TARGET_GENES,24.37410608927409,Top
+normal,choroid plexus epithelial cell,GSE10500_ARTHRITIC_SYNOVIAL_FLUID_VS_HEALTHY_MACROPHAGE_DN,24.371667226155598,Top
+normal,choroid plexus epithelial cell,MAP2K1_TARGET_GENES,24.346384048461914,Top
+normal,choroid plexus epithelial cell,GSE27786_LSK_VS_CD4_TCELL_DN,24.215147654215496,Top
+normal,choroid plexus epithelial cell,GOCC_NEURON_TO_NEURON_SYNAPSE,24.200706481933594,Top
+normal,choroid plexus epithelial cell,MIR4659A_3P_MIR4659B_3P,24.1960932413737,Top
+normal,choroid plexus epithelial cell,GOBP_CARDIAC_MUSCLE_MYOBLAST_PROLIFERATION,24.192258834838867,Top
+normal,choroid plexus epithelial cell,GOBP_POSITIVE_REGULATION_OF_MYOBLAST_PROLIFERATION,24.071194966634113,Top
+normal,choroid plexus epithelial cell,CAVARD_LIVER_CANCER_MALIGNANT_VS_BENIGN,23.934643745422363,Top
+normal,choroid plexus epithelial cell,GOCC_POSTSYNAPTIC_SPECIALIZATION,23.914960543314617,Top
+normal,choroid plexus epithelial cell,GSE25087_FETAL_VS_ADULT_TCONV_DN,23.71006965637207,Top
+normal,choroid plexus epithelial cell,HOWLIN_CITED1_TARGETS_2_UP,23.653566360473633,Top
+normal,choroid plexus epithelial cell,ZHENG_CORD_BLOOD_C10_MULTILYMPHOID_PROGENITOR,23.589444160461426,Top
+normal,choroid plexus epithelial cell,MANNO_MIDBRAIN_NEUROTYPES_HNBML1,23.51994450887044,Top
+normal,choroid plexus epithelial cell,PSIP1_TARGET_GENES,23.488132158915203,Top
+normal,choroid plexus epithelial cell,GAVISH_3CA_MALIGNANT_METAPROGRAM_41_UNASSIGNED,23.375508944193523,Top
+normal,choroid plexus epithelial cell,GOBP_REGULATION_OF_MYOBLAST_PROLIFERATION,23.352645874023438,Top
+normal,choroid plexus epithelial cell,BRUINS_UVC_RESPONSE_VIA_TP53_GROUP_C,23.326658248901367,Top
+normal,choroid plexus epithelial cell,ZNF236_TARGET_GENES,23.222747802734375,Top
+normal,choroid plexus epithelial cell,GAVISH_3CA_MALIGNANT_METAPROGRAM_10_PROTEIN_MATURATION,23.17960039774577,Top
+normal,choroid plexus epithelial cell,GAVISH_3CA_METAPROGRAM_EPITHELIAL_V_ATPASE,23.13399600982666,Top
+normal,choroid plexus epithelial cell,HERNANDEZ_MITOTIC_ARREST_BY_DOCETAXEL_1_UP,22.9477326075236,Top
+normal,choroid plexus epithelial cell,HOWLIN_CITED1_TARGETS_1_UP,22.902862548828125,Top
+normal,choroid plexus epithelial cell,chr12q15,0.0,Bottom
+normal,choroid plexus epithelial cell,chr13q12,0.0,Bottom
+normal,choroid plexus epithelial cell,chr13q14,0.0,Bottom
+normal,choroid plexus epithelial cell,chr13q32,0.0,Bottom
+normal,choroid plexus epithelial cell,chr19p12,0.0,Bottom
+normal,choroid plexus epithelial cell,chr19p13,0.0,Bottom
+normal,choroid plexus epithelial cell,chr19q13,0.0,Bottom
+normal,choroid plexus epithelial cell,chr1p35,0.0,Bottom
+normal,choroid plexus epithelial cell,chr20q11,0.0,Bottom
+normal,choroid plexus epithelial cell,chr2p23,0.0,Bottom
+normal,choroid plexus epithelial cell,chr3p23,0.0,Bottom
+normal,choroid plexus epithelial cell,chr4p11,0.0,Bottom
+normal,choroid plexus epithelial cell,chr6p11,0.0,Bottom
+normal,choroid plexus epithelial cell,chr6q15,0.0,Bottom
+normal,choroid plexus epithelial cell,chr9p13,0.0,Bottom
+normal,choroid plexus epithelial cell,chr9p21,0.0,Bottom
+normal,choroid plexus epithelial cell,chr9q32,0.0,Bottom
+normal,choroid plexus epithelial cell,chr9q33,0.0,Bottom
+normal,choroid plexus epithelial cell,ABBUD_LIF_SIGNALING_1_DN,0.0,Bottom
+normal,choroid plexus epithelial cell,ABBUD_LIF_SIGNALING_1_UP,0.0,Bottom
+normal,choroid plexus epithelial cell,ABBUD_LIF_SIGNALING_2_DN,0.0,Bottom
+normal,choroid plexus epithelial cell,ABBUD_LIF_SIGNALING_2_UP,0.0,Bottom
+normal,choroid plexus epithelial cell,ABDELMOHSEN_ELAVL4_TARGETS,0.0,Bottom
+normal,choroid plexus epithelial cell,ABDULRAHMAN_KIDNEY_CANCER_VHL_DN,0.0,Bottom
+normal,choroid plexus epithelial cell,ABE_INNER_EAR,0.0,Bottom
+normal,endothelial cell,MANNO_MIDBRAIN_NEUROTYPES_HGABA,44.29468301137288,Top
+normal,endothelial cell,MANNO_MIDBRAIN_NEUROTYPES_HNBGABA,40.85113786061605,Top
+normal,endothelial cell,MANNO_MIDBRAIN_NEUROTYPES_HDA1,30.33138214747111,Top
+normal,endothelial cell,MANNO_MIDBRAIN_NEUROTYPES_HSERT,28.26818469365438,Top
+normal,endothelial cell,MANNO_MIDBRAIN_NEUROTYPES_HDA,27.434969170888266,Top
+normal,endothelial cell,LAKE_ADULT_KIDNEY_C16_COLLECTING_SYSTEM_PRINCIPAL_CELLS_CORTEX,26.631660334269206,Top
+normal,endothelial cell,MANNO_MIDBRAIN_NEUROTYPES_HDA2,25.587078285217284,Top
+normal,endothelial cell,MANNO_MIDBRAIN_NEUROTYPES_HNBML5,24.382998530069987,Top
+normal,endothelial cell,LAKE_ADULT_KIDNEY_C15_CONNECTING_TUBULE,21.993110752105714,Top
+normal,endothelial cell,LAKE_ADULT_KIDNEY_C5_PROXIMAL_TUBULE_EPITHELIAL_CELLS_STRESS_INFLAM,21.596710554758708,Top
+normal,endothelial cell,LAKE_ADULT_KIDNEY_C14_DISTAL_CONVOLUTED_TUBULE,20.157538827260336,Top
+normal,endothelial cell,LAKE_ADULT_KIDNEY_C13_THICK_ASCENDING_LIMB,19.55623280207316,Top
+normal,endothelial cell,BLALOCK_ALZHEIMERS_DISEASE_DN,19.252152665456137,Top
+normal,endothelial cell,GSE11924_TH1_VS_TH17_CD4_TCELL_UP,19.122173976898193,Top
+normal,endothelial cell,MIR218_5P,18.875178368886314,Top
+normal,endothelial cell,RIGGI_EWING_SARCOMA_PROGENITOR_UP,18.79213956197103,Top
+normal,endothelial cell,STARK_PREFRONTAL_CORTEX_22Q11_DELETION_UP,18.485885270436604,Top
+normal,endothelial cell,PAX7_TARGET_GENES,18.098968092600504,Top
+normal,endothelial cell,PAX3_TARGET_GENES,17.410414918263754,Top
+normal,endothelial cell,GSE19941_UNSTIM_VS_LPS_AND_IL10_STIM_IL10_KO_MACROPHAGE_UP,16.841680844624836,Top
+normal,endothelial cell,LAKE_ADULT_KIDNEY_C3_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S1_S2,16.368141651153564,Top
+normal,endothelial cell,DESCARTES_FETAL_LUNG_VISCERAL_NEURONS,16.200848372777305,Top
+normal,endothelial cell,GAVISH_3CA_METAPROGRAM_FIBROBLASTS_CAF_4,16.075692399342856,Top
+normal,endothelial cell,MURARO_PANCREAS_ALPHA_CELL,15.68063735961914,Top
+normal,endothelial cell,ZHONG_PFC_C3_MICROGLIA,15.385322284698486,Top
+normal,endothelial cell,PBXIP1_TARGET_GENES,15.12014036178589,Top
+normal,endothelial cell,IWANAGA_CARCINOGENESIS_BY_KRAS_DN,14.928286520640055,Top
+normal,endothelial cell,HE_LIM_SUN_FETAL_LUNG_C1_PULMONARY_NEUROENDOCRINE_CELL,14.681553379694622,Top
+normal,endothelial cell,MANNO_MIDBRAIN_NEUROTYPES_HOMTN,14.675553607940675,Top
+normal,endothelial cell,SRSF9_TARGET_GENES,14.67499861717224,Top
+normal,endothelial cell,ALX4_TARGET_GENES,14.293169959386189,Top
+normal,endothelial cell,GSE32986_UNSTIM_VS_GMCSF_AND_CURDLAN_HIGHDOSE_STIM_DC_DN,14.282747220993041,Top
+normal,endothelial cell,LAKE_ADULT_KIDNEY_C29_UNKNOWN_NOVEL_PT_CFH_POS_SUBPOPULATION_S2,14.157406822840374,Top
+normal,endothelial cell,MANNO_MIDBRAIN_NEUROTYPES_HRN,14.022679885228476,Top
+normal,endothelial cell,HE_LIM_SUN_FETAL_LUNG_C1_PULMONARY_NE_PRECURSOR_CELL,13.877002334594726,Top
+normal,endothelial cell,PARK_HSC_VS_MULTIPOTENT_PROGENITORS_UP,13.739229567845662,Top
+normal,endothelial cell,TAKEDA_TARGETS_OF_NUP98_HOXA9_FUSION_3D_UP,13.658258724212647,Top
+normal,endothelial cell,GOCC_SYNAPTIC_MEMBRANE,13.612220446268717,Top
+normal,endothelial cell,HE_LIM_SUN_FETAL_LUNG_C1_INTERM_NEUROENDOCRINE_CELL,13.544086694717407,Top
+normal,endothelial cell,DESCARTES_FETAL_HEART_SATB2_LRRC7_POSITIVE_CELLS,13.525703430175781,Top
+normal,endothelial cell,GLI1_TARGET_GENES,13.513513374328614,Top
+normal,endothelial cell,PAX6_TARGET_GENES,13.481522051493327,Top
+normal,endothelial cell,SOX11_TARGET_GENES,13.459891335169475,Top
+normal,endothelial cell,CHANDRAN_METASTASIS_TOP50_DN,13.45147933959961,Top
+normal,endothelial cell,TRAVAGLINI_LUNG_CD8_MEMORY_EFFECTOR_T_CELL,13.387849537531535,Top
+normal,endothelial cell,LAKE_ADULT_KIDNEY_C2_PODOCYTES,13.377484671274821,Top
+normal,endothelial cell,LAKE_ADULT_KIDNEY_C11_THIN_ASCENDING_LIMB,13.147957213719685,Top
+normal,endothelial cell,GSE24671_CTRL_VS_SENDAI_VIRUS_INFECTED_MOUSE_SPLENOCYTES_UP,13.084487136205038,Top
+normal,endothelial cell,MARSON_FOXP3_TARGETS_UP,13.066375954945881,Top
+normal,endothelial cell,CHICAS_RB1_TARGETS_LOW_SERUM,13.025947046279907,Top
+normal,endothelial cell,STAMBOLSKY_TARGETS_OF_MUTATED_TP53_UP,13.025223143895467,Top
+normal,endothelial cell,GSE18791_UNSTIM_VS_NEWCATSLE_VIRUS_DC_2H_DN,12.962179549535115,Top
+normal,endothelial cell,MIR448,12.842231194178263,Top
+normal,endothelial cell,LMX1B_TARGET_GENES,12.818755499521892,Top
+normal,endothelial cell,IRX2_TARGET_GENES,12.813071743647258,Top
+normal,endothelial cell,MIR548L,12.77089591026306,Top
+normal,endothelial cell,GSE2770_TGFB_AND_IL4_VS_TGFB_AND_IL12_TREATED_ACT_CD4_TCELL_48H_UP,12.721293926239014,Top
+normal,endothelial cell,GSE7509_FCGRIIB_VS_TNFA_IL1B_IL6_PGE_STIM_DC_DN,12.710859298706055,Top
+normal,endothelial cell,GSE19888_ADENOSINE_A3R_ACT_VS_TCELL_MEMBRANES_ACT_IN_MAST_CELL_DN,12.66565554936727,Top
+normal,endothelial cell,BRACHAT_RESPONSE_TO_CISPLATIN,12.66328870455424,Top
+normal,endothelial cell,GOCC_CATION_CHANNEL_COMPLEX,12.610599803924561,Top
+normal,endothelial cell,ZSCAN5C_TARGET_GENES,12.411845191319783,Top
+normal,endothelial cell,LAKE_ADULT_KIDNEY_C4_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S2,12.401305611928304,Top
+normal,endothelial cell,GSE23308_CTRL_VS_CORTICOSTERONE_TREATED_MACROPHAGE_MINERALCORTICOID_REC_KO_DN,12.396597162882488,Top
+normal,endothelial cell,OLSSON_E2F3_TARGETS_UP,12.355293528238933,Top
+normal,endothelial cell,AAGCACA_MIR218,12.34334953625997,Top
+normal,endothelial cell,ZHENG_CORD_BLOOD_C7_PUTATIVE_LYMPHOID_PRIMED_MULTIPOTENT_PROGENITOR_1,12.333160368601481,Top
+normal,endothelial cell,ATGTACA_MIR493,12.309690109888713,Top
+normal,endothelial cell,GOCC_SYNAPSE,12.300677998860676,Top
+normal,endothelial cell,GSE5542_UNTREATED_VS_IFNA_AND_IFNG_TREATED_EPITHELIAL_CELLS_24H_UP,12.258633788426717,Top
+normal,endothelial cell,TFCP2_TARGET_GENES,12.256132745742798,Top
+normal,endothelial cell,RODRIGUES_NTN1_AND_DCC_TARGETS,12.20422698656718,Top
+normal,endothelial cell,MIR5696,12.191983318328857,Top
+normal,endothelial cell,CTGCAGY_UNKNOWN,12.1678826491038,Top
+normal,endothelial cell,GAUTAM_EYE_IRIS_CILIARY_BODY_PUTATIVE_STEM_CELLS,12.144683742523194,Top
+normal,endothelial cell,GSE10500_ARTHRITIC_SYNOVIAL_FLUID_VS_HEALTHY_MACROPHAGE_DN,12.125458431243896,Top
+normal,endothelial cell,YATGNWAAT_OCT_C,12.094913800557455,Top
+normal,endothelial cell,CEBPE_TARGET_GENES,12.064889430999756,Top
+normal,endothelial cell,GSE22589_HEALTHY_VS_SIV_INFECTED_DC_UP,12.055901924769083,Top
+normal,endothelial cell,MAP2K1_TARGET_GENES,12.048951323827108,Top
+normal,endothelial cell,MIR4659A_3P_MIR4659B_3P,12.01493109067281,Top
+normal,endothelial cell,GOCC_NEURON_TO_NEURON_SYNAPSE,11.965561707814535,Top
+normal,endothelial cell,GOBP_CARDIAC_MUSCLE_MYOBLAST_PROLIFERATION,11.962080717086792,Top
+normal,endothelial cell,GOBP_POSITIVE_REGULATION_OF_MYOBLAST_PROLIFERATION,11.935245815912882,Top
+normal,endothelial cell,GSE27786_LSK_VS_CD4_TCELL_DN,11.92561902999878,Top
+normal,endothelial cell,GOCC_POSTSYNAPTIC_SPECIALIZATION,11.86987738609314,Top
+normal,endothelial cell,CAVARD_LIVER_CANCER_MALIGNANT_VS_BENIGN,11.82360143661499,Top
+normal,endothelial cell,GSE25087_FETAL_VS_ADULT_TCONV_DN,11.708971977233887,Top
+normal,endothelial cell,HOWLIN_CITED1_TARGETS_2_UP,11.692903200785318,Top
+normal,endothelial cell,MANNO_MIDBRAIN_NEUROTYPES_HNBML1,11.640152788162231,Top
+normal,endothelial cell,ZHENG_CORD_BLOOD_C10_MULTILYMPHOID_PROGENITOR,11.623466618855794,Top
+normal,endothelial cell,PSIP1_TARGET_GENES,11.588021834691366,Top
+normal,endothelial cell,GAVISH_3CA_MALIGNANT_METAPROGRAM_41_UNASSIGNED,11.543686946233114,Top
+normal,endothelial cell,GOBP_REGULATION_OF_MYOBLAST_PROLIFERATION,11.529005972544352,Top
+normal,endothelial cell,BRUINS_UVC_RESPONSE_VIA_TP53_GROUP_C,11.51024432182312,Top
+normal,endothelial cell,ZNF236_TARGET_GENES,11.47186148961385,Top
+normal,endothelial cell,GAVISH_3CA_MALIGNANT_METAPROGRAM_10_PROTEIN_MATURATION,11.455269400278727,Top
+normal,endothelial cell,GAVISH_3CA_METAPROGRAM_EPITHELIAL_V_ATPASE,11.431641006469727,Top
+normal,endothelial cell,HERNANDEZ_MITOTIC_ARREST_BY_DOCETAXEL_1_UP,11.376776472727459,Top
+normal,endothelial cell,GOCC_POSTSYNAPSE,11.335834328333537,Top
+normal,endothelial cell,chr12q15,0.0,Bottom
+normal,endothelial cell,chr13q12,0.0,Bottom
+normal,endothelial cell,chr13q14,0.0,Bottom
+normal,endothelial cell,chr13q32,0.0,Bottom
+normal,endothelial cell,chr19p12,0.0,Bottom
+normal,endothelial cell,chr19p13,0.0,Bottom
+normal,endothelial cell,chr19q13,0.0,Bottom
+normal,endothelial cell,chr1p35,0.0,Bottom
+normal,endothelial cell,chr20q11,0.0,Bottom
+normal,endothelial cell,chr2p23,0.0,Bottom
+normal,endothelial cell,chr3p23,0.0,Bottom
+normal,endothelial cell,chr4p11,0.0,Bottom
+normal,endothelial cell,chr6p11,0.0,Bottom
+normal,endothelial cell,chr6q15,0.0,Bottom
+normal,endothelial cell,chr9p13,0.0,Bottom
+normal,endothelial cell,chr9p21,0.0,Bottom
+normal,endothelial cell,chr9q32,0.0,Bottom
+normal,endothelial cell,chr9q33,0.0,Bottom
+normal,endothelial cell,ABBUD_LIF_SIGNALING_1_DN,0.0,Bottom
+normal,endothelial cell,ABBUD_LIF_SIGNALING_1_UP,0.0,Bottom
+normal,endothelial cell,ABBUD_LIF_SIGNALING_2_DN,0.0,Bottom
+normal,endothelial cell,ABBUD_LIF_SIGNALING_2_UP,0.0,Bottom
+normal,endothelial cell,ABDELMOHSEN_ELAVL4_TARGETS,0.0,Bottom
+normal,endothelial cell,ABDULRAHMAN_KIDNEY_CANCER_VHL_DN,0.0,Bottom
+normal,endothelial cell,ABE_INNER_EAR,0.0,Bottom
+normal,ependymal cell,MANNO_MIDBRAIN_NEUROTYPES_HGABA,67.41839619804831,Top
+normal,ependymal cell,MANNO_MIDBRAIN_NEUROTYPES_HNBGABA,62.157732368918026,Top
+normal,ependymal cell,MANNO_MIDBRAIN_NEUROTYPES_HDA1,46.109913545496326,Top
+normal,ependymal cell,MANNO_MIDBRAIN_NEUROTYPES_HSERT,43.01067216536578,Top
+normal,ependymal cell,MANNO_MIDBRAIN_NEUROTYPES_HDA,41.7026917738073,Top
+normal,ependymal cell,LAKE_ADULT_KIDNEY_C16_COLLECTING_SYSTEM_PRINCIPAL_CELLS_CORTEX,40.5729876574348,Top
+normal,ependymal cell,MANNO_MIDBRAIN_NEUROTYPES_HDA2,38.833274841308594,Top
+normal,ependymal cell,MANNO_MIDBRAIN_NEUROTYPES_HNBML5,37.03864912145278,Top
+normal,ependymal cell,LAKE_ADULT_KIDNEY_C15_CONNECTING_TUBULE,33.49234724605785,Top
+normal,ependymal cell,LAKE_ADULT_KIDNEY_C5_PROXIMAL_TUBULE_EPITHELIAL_CELLS_STRESS_INFLAM,32.807051176183364,Top
+normal,ependymal cell,LAKE_ADULT_KIDNEY_C14_DISTAL_CONVOLUTED_TUBULE,30.628728002660417,Top
+normal,ependymal cell,LAKE_ADULT_KIDNEY_C13_THICK_ASCENDING_LIMB,29.73836754069609,Top
+normal,ependymal cell,BLALOCK_ALZHEIMERS_DISEASE_DN,29.309730395148783,Top
+normal,ependymal cell,GSE11924_TH1_VS_TH17_CD4_TCELL_UP,29.163500785827637,Top
+normal,ependymal cell,RIGGI_EWING_SARCOMA_PROGENITOR_UP,28.750583682340736,Top
+normal,ependymal cell,MIR218_5P,28.6813450757195,Top
+normal,ependymal cell,STARK_PREFRONTAL_CORTEX_22Q11_DELETION_UP,28.188709977093865,Top
+normal,ependymal cell,PAX7_TARGET_GENES,27.601296604380888,Top
+normal,ependymal cell,PAX3_TARGET_GENES,26.43571487314561,Top
+normal,ependymal cell,GSE19941_UNSTIM_VS_LPS_AND_IL10_STIM_IL10_KO_MACROPHAGE_UP,25.762061988606174,Top
+normal,ependymal cell,LAKE_ADULT_KIDNEY_C3_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S1_S2,24.824003253263587,Top
+normal,ependymal cell,DESCARTES_FETAL_LUNG_VISCERAL_NEURONS,24.621725794848274,Top
+normal,ependymal cell,GAVISH_3CA_METAPROGRAM_FIBROBLASTS_CAF_4,24.534447064119227,Top
+normal,ependymal cell,MURARO_PANCREAS_ALPHA_CELL,23.82092657650218,Top
+normal,ependymal cell,ZHONG_PFC_C3_MICROGLIA,23.355836340960334,Top
+normal,ependymal cell,PBXIP1_TARGET_GENES,22.979775928048525,Top
+normal,ependymal cell,IWANAGA_CARCINOGENESIS_BY_KRAS_DN,22.791704542496625,Top
+normal,ependymal cell,MANNO_MIDBRAIN_NEUROTYPES_HOMTN,22.305438535353716,Top
+normal,ependymal cell,HE_LIM_SUN_FETAL_LUNG_C1_PULMONARY_NEUROENDOCRINE_CELL,22.30512254378375,Top
+normal,ependymal cell,SRSF9_TARGET_GENES,22.248444770364202,Top
+normal,ependymal cell,ALX4_TARGET_GENES,21.822860846799962,Top
+normal,ependymal cell,GSE32986_UNSTIM_VS_GMCSF_AND_CURDLAN_HIGHDOSE_STIM_DC_DN,21.79606882544125,Top
+normal,ependymal cell,LAKE_ADULT_KIDNEY_C29_UNKNOWN_NOVEL_PT_CFH_POS_SUBPOPULATION_S2,21.511487091288846,Top
+normal,ependymal cell,MANNO_MIDBRAIN_NEUROTYPES_HRN,21.291887743332808,Top
+normal,ependymal cell,HE_LIM_SUN_FETAL_LUNG_C1_PULMONARY_NE_PRECURSOR_CELL,21.05827049928553,Top
+normal,ependymal cell,PARK_HSC_VS_MULTIPOTENT_PROGENITORS_UP,20.96609661999871,Top
+normal,ependymal cell,TAKEDA_TARGETS_OF_NUP98_HOXA9_FUSION_3D_UP,20.7662693752962,Top
+normal,ependymal cell,HE_LIM_SUN_FETAL_LUNG_C1_INTERM_NEUROENDOCRINE_CELL,20.59190397823558,Top
+normal,ependymal cell,GLI1_TARGET_GENES,20.57961467855117,Top
+normal,ependymal cell,SOX11_TARGET_GENES,20.577960429472082,Top
+normal,ependymal cell,GOCC_SYNAPTIC_MEMBRANE,20.57516299977022,Top
+normal,ependymal cell,DESCARTES_FETAL_HEART_SATB2_LRRC7_POSITIVE_CELLS,20.53040137571447,Top
+normal,ependymal cell,PAX6_TARGET_GENES,20.51531862371108,Top
+normal,ependymal cell,CHANDRAN_METASTASIS_TOP50_DN,20.49099802129409,Top
+normal,ependymal cell,TRAVAGLINI_LUNG_CD8_MEMORY_EFFECTOR_T_CELL,20.429739301344927,Top
+normal,ependymal cell,LAKE_ADULT_KIDNEY_C2_PODOCYTES,20.342549318425796,Top
+normal,ependymal cell,GSE24671_CTRL_VS_SENDAI_VIRUS_INFECTED_MOUSE_SPLENOCYTES_UP,19.99552697574391,Top
+normal,ependymal cell,MARSON_FOXP3_TARGETS_UP,19.957294020933265,Top
+normal,ependymal cell,LAKE_ADULT_KIDNEY_C11_THIN_ASCENDING_LIMB,19.91844180051018,Top
+normal,ependymal cell,CHICAS_RB1_TARGETS_LOW_SERUM,19.884548164816465,Top
+normal,ependymal cell,STAMBOLSKY_TARGETS_OF_MUTATED_TP53_UP,19.883409292557662,Top
+normal,ependymal cell,GSE18791_UNSTIM_VS_NEWCATSLE_VIRUS_DC_2H_DN,19.824305371677173,Top
+normal,ependymal cell,MIR448,19.61043061649098,Top
+normal,ependymal cell,IRX2_TARGET_GENES,19.55358362197876,Top
+normal,ependymal cell,LMX1B_TARGET_GENES,19.531045420029585,Top
+normal,ependymal cell,MIR548L,19.52892594056971,Top
+normal,ependymal cell,GSE2770_TGFB_AND_IL4_VS_TGFB_AND_IL12_TREATED_ACT_CD4_TCELL_48H_UP,19.456305099936092,Top
+normal,ependymal cell,GSE7509_FCGRIIB_VS_TNFA_IL1B_IL6_PGE_STIM_DC_DN,19.3892816992367,Top
+normal,ependymal cell,BRACHAT_RESPONSE_TO_CISPLATIN,19.28466141644646,Top
+normal,ependymal cell,GSE19888_ADENOSINE_A3R_ACT_VS_TCELL_MEMBRANES_ACT_IN_MAST_CELL_DN,19.280476300856645,Top
+normal,ependymal cell,GOCC_CATION_CHANNEL_COMPLEX,19.20852782866534,Top
+normal,ependymal cell,GSE23308_CTRL_VS_CORTICOSTERONE_TREATED_MACROPHAGE_MINERALCORTICOID_REC_KO_DN,18.95707483291626,Top
+normal,ependymal cell,ZSCAN5C_TARGET_GENES,18.910384363286635,Top
+normal,ependymal cell,OLSSON_E2F3_TARGETS_UP,18.83987408806296,Top
+normal,ependymal cell,LAKE_ADULT_KIDNEY_C4_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S2,18.837183531592874,Top
+normal,ependymal cell,ZHENG_CORD_BLOOD_C7_PUTATIVE_LYMPHOID_PRIMED_MULTIPOTENT_PROGENITOR_1,18.833094596862793,Top
+normal,ependymal cell,TFCP2_TARGET_GENES,18.755001634709977,Top
+normal,ependymal cell,ATGTACA_MIR493,18.72751849118401,Top
+normal,ependymal cell,AAGCACA_MIR218,18.727119799221263,Top
+normal,ependymal cell,GSE5542_UNTREATED_VS_IFNA_AND_IFNG_TREATED_EPITHELIAL_CELLS_24H_UP,18.709193072599522,Top
+normal,ependymal cell,RODRIGUES_NTN1_AND_DCC_TARGETS,18.623522130180806,Top
+normal,ependymal cell,GOCC_SYNAPSE,18.61586664424223,Top
+normal,ependymal cell,GSE10500_ARTHRITIC_SYNOVIAL_FLUID_VS_HEALTHY_MACROPHAGE_DN,18.586389104057762,Top
+normal,ependymal cell,MIR5696,18.527681249730726,Top
+normal,ependymal cell,GAUTAM_EYE_IRIS_CILIARY_BODY_PUTATIVE_STEM_CELLS,18.523200119242947,Top
+normal,ependymal cell,CTGCAGY_UNKNOWN,18.497715860254623,Top
+normal,ependymal cell,YATGNWAAT_OCT_C,18.426979912028592,Top
+normal,ependymal cell,GSE22589_HEALTHY_VS_SIV_INFECTED_DC_UP,18.409008334664737,Top
+normal,ependymal cell,CEBPE_TARGET_GENES,18.397920412175797,Top
+normal,ependymal cell,MAP2K1_TARGET_GENES,18.390168128294103,Top
+normal,ependymal cell,MIR4659A_3P_MIR4659B_3P,18.243199236252728,Top
+normal,ependymal cell,GOBP_CARDIAC_MUSCLE_MYOBLAST_PROLIFERATION,18.235047699423397,Top
+normal,ependymal cell,GOBP_POSITIVE_REGULATION_OF_MYOBLAST_PROLIFERATION,18.194524478912353,Top
+normal,ependymal cell,GSE27786_LSK_VS_CD4_TCELL_DN,18.189746548147763,Top
+normal,ependymal cell,GOCC_NEURON_TO_NEURON_SYNAPSE,18.133261691822725,Top
+normal,ependymal cell,CAVARD_LIVER_CANCER_MALIGNANT_VS_BENIGN,18.032423041848574,Top
+normal,ependymal cell,GOCC_POSTSYNAPTIC_SPECIALIZATION,18.029435864616843,Top
+normal,ependymal cell,GSE25087_FETAL_VS_ADULT_TCONV_DN,17.87870387470021,Top
+normal,ependymal cell,HOWLIN_CITED1_TARGETS_2_UP,17.855608760609346,Top
+normal,ependymal cell,ZHENG_CORD_BLOOD_C10_MULTILYMPHOID_PROGENITOR,17.71987595277674,Top
+normal,ependymal cell,MANNO_MIDBRAIN_NEUROTYPES_HNBML1,17.648790224860697,Top
+normal,ependymal cell,PSIP1_TARGET_GENES,17.64625223384184,Top
+normal,ependymal cell,GAVISH_3CA_MALIGNANT_METAPROGRAM_41_UNASSIGNED,17.637609784743365,Top
+normal,ependymal cell,GOBP_REGULATION_OF_MYOBLAST_PROLIFERATION,17.62302786883186,Top
+normal,ependymal cell,BRUINS_UVC_RESPONSE_VIA_TP53_GROUP_C,17.568684678919176,Top
+normal,ependymal cell,ZNF236_TARGET_GENES,17.52411035649917,Top
+normal,ependymal cell,GAVISH_3CA_MALIGNANT_METAPROGRAM_10_PROTEIN_MATURATION,17.487640156465417,Top
+normal,ependymal cell,GAVISH_3CA_METAPROGRAM_EPITHELIAL_V_ATPASE,17.46752134771908,Top
+normal,ependymal cell,HERNANDEZ_MITOTIC_ARREST_BY_DOCETAXEL_1_UP,17.358087298449348,Top
+normal,ependymal cell,HOWLIN_CITED1_TARGETS_1_UP,17.30768289005055,Top
+normal,ependymal cell,chr12q15,0.0,Bottom
+normal,ependymal cell,chr13q12,0.0,Bottom
+normal,ependymal cell,chr13q14,0.0,Bottom
+normal,ependymal cell,chr13q32,0.0,Bottom
+normal,ependymal cell,chr19p12,0.0,Bottom
+normal,ependymal cell,chr19p13,0.0,Bottom
+normal,ependymal cell,chr19q13,0.0,Bottom
+normal,ependymal cell,chr1p35,0.0,Bottom
+normal,ependymal cell,chr20q11,0.0,Bottom
+normal,ependymal cell,chr2p23,0.0,Bottom
+normal,ependymal cell,chr3p23,0.0,Bottom
+normal,ependymal cell,chr4p11,0.0,Bottom
+normal,ependymal cell,chr6p11,0.0,Bottom
+normal,ependymal cell,chr6q15,0.0,Bottom
+normal,ependymal cell,chr9p13,0.0,Bottom
+normal,ependymal cell,chr9p21,0.0,Bottom
+normal,ependymal cell,chr9q32,0.0,Bottom
+normal,ependymal cell,chr9q33,0.0,Bottom
+normal,ependymal cell,ABBUD_LIF_SIGNALING_1_DN,0.0,Bottom
+normal,ependymal cell,ABBUD_LIF_SIGNALING_1_UP,0.0,Bottom
+normal,ependymal cell,ABBUD_LIF_SIGNALING_2_DN,0.0,Bottom
+normal,ependymal cell,ABBUD_LIF_SIGNALING_2_UP,0.0,Bottom
+normal,ependymal cell,ABDELMOHSEN_ELAVL4_TARGETS,0.0,Bottom
+normal,ependymal cell,ABDULRAHMAN_KIDNEY_CANCER_VHL_DN,0.0,Bottom
+normal,ependymal cell,ABE_INNER_EAR,0.0,Bottom
+normal,fibroblast,MANNO_MIDBRAIN_NEUROTYPES_HGABA,49.03289725780487,Top
+normal,fibroblast,MANNO_MIDBRAIN_NEUROTYPES_HNBGABA,45.218062090873715,Top
+normal,fibroblast,MANNO_MIDBRAIN_NEUROTYPES_HDA1,33.59282958507538,Top
+normal,fibroblast,MANNO_MIDBRAIN_NEUROTYPES_HSERT,31.321777319908144,Top
+normal,fibroblast,MANNO_MIDBRAIN_NEUROTYPES_HDA,30.38005520105362,Top
+normal,fibroblast,LAKE_ADULT_KIDNEY_C16_COLLECTING_SYSTEM_PRINCIPAL_CELLS_CORTEX,29.53729671239853,Top
+normal,fibroblast,MANNO_MIDBRAIN_NEUROTYPES_HDA2,28.31252019405365,Top
+normal,fibroblast,MANNO_MIDBRAIN_NEUROTYPES_HNBML5,27.00015287399292,Top
+normal,fibroblast,LAKE_ADULT_KIDNEY_C15_CONNECTING_TUBULE,24.397094428539276,Top
+normal,fibroblast,LAKE_ADULT_KIDNEY_C5_PROXIMAL_TUBULE_EPITHELIAL_CELLS_STRESS_INFLAM,23.944485533237458,Top
+normal,fibroblast,LAKE_ADULT_KIDNEY_C14_DISTAL_CONVOLUTED_TUBULE,22.336526906490327,Top
+normal,fibroblast,LAKE_ADULT_KIDNEY_C13_THICK_ASCENDING_LIMB,21.683005654811858,Top
+normal,fibroblast,BLALOCK_ALZHEIMERS_DISEASE_DN,21.353579246997832,Top
+normal,fibroblast,GSE11924_TH1_VS_TH17_CD4_TCELL_UP,21.15329467058182,Top
+normal,fibroblast,MIR218_5P,20.912966763973238,Top
+normal,fibroblast,RIGGI_EWING_SARCOMA_PROGENITOR_UP,20.814637815952302,Top
+normal,fibroblast,STARK_PREFRONTAL_CORTEX_22Q11_DELETION_UP,20.430314004421234,Top
+normal,fibroblast,PAX7_TARGET_GENES,20.006347465515137,Top
+normal,fibroblast,PAX3_TARGET_GENES,19.299363875389098,Top
+normal,fibroblast,GSE19941_UNSTIM_VS_LPS_AND_IL10_STIM_IL10_KO_MACROPHAGE_UP,18.642942333221434,Top
+normal,fibroblast,LAKE_ADULT_KIDNEY_C3_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S1_S2,18.125845277309416,Top
+normal,fibroblast,DESCARTES_FETAL_LUNG_VISCERAL_NEURONS,17.959023916721343,Top
+normal,fibroblast,GAVISH_3CA_METAPROGRAM_FIBROBLASTS_CAF_4,17.76175993680954,Top
+normal,fibroblast,MURARO_PANCREAS_ALPHA_CELL,17.30212105512619,Top
+normal,fibroblast,ZHONG_PFC_C3_MICROGLIA,17.03926352262497,Top
+normal,fibroblast,PBXIP1_TARGET_GENES,16.643973541259765,Top
+normal,fibroblast,IWANAGA_CARCINOGENESIS_BY_KRAS_DN,16.47119245529175,Top
+normal,fibroblast,HE_LIM_SUN_FETAL_LUNG_C1_PULMONARY_NEUROENDOCRINE_CELL,16.26150577068329,Top
+normal,fibroblast,MANNO_MIDBRAIN_NEUROTYPES_HOMTN,16.253261291980742,Top
+normal,fibroblast,SRSF9_TARGET_GENES,16.1736110329628,Top
+normal,fibroblast,ALX4_TARGET_GENES,15.77478666305542,Top
+normal,fibroblast,GSE32986_UNSTIM_VS_GMCSF_AND_CURDLAN_HIGHDOSE_STIM_DC_DN,15.761391067504883,Top
+normal,fibroblast,LAKE_ADULT_KIDNEY_C29_UNKNOWN_NOVEL_PT_CFH_POS_SUBPOPULATION_S2,15.690776693820954,Top
+normal,fibroblast,MANNO_MIDBRAIN_NEUROTYPES_HRN,15.53225160241127,Top
+normal,fibroblast,HE_LIM_SUN_FETAL_LUNG_C1_PULMONARY_NE_PRECURSOR_CELL,15.354899197816849,Top
+normal,fibroblast,PARK_HSC_VS_MULTIPOTENT_PROGENITORS_UP,15.156126511096954,Top
+normal,fibroblast,TAKEDA_TARGETS_OF_NUP98_HOXA9_FUSION_3D_UP,15.03227070569992,Top
+normal,fibroblast,GOCC_SYNAPTIC_MEMBRANE,15.026988452672958,Top
+normal,fibroblast,HE_LIM_SUN_FETAL_LUNG_C1_INTERM_NEUROENDOCRINE_CELL,15.00373467206955,Top
+normal,fibroblast,DESCARTES_FETAL_HEART_SATB2_LRRC7_POSITIVE_CELLS,14.969139832258225,Top
+normal,fibroblast,GLI1_TARGET_GENES,14.913531303405762,Top
+normal,fibroblast,PAX6_TARGET_GENES,14.892964404821395,Top
+normal,fibroblast,SOX11_TARGET_GENES,14.863313925266265,Top
+normal,fibroblast,LAKE_ADULT_KIDNEY_C2_PODOCYTES,14.829170203208923,Top
+normal,fibroblast,CHANDRAN_METASTASIS_TOP50_DN,14.828231382369996,Top
+normal,fibroblast,TRAVAGLINI_LUNG_CD8_MEMORY_EFFECTOR_T_CELL,14.760158598423004,Top
+normal,fibroblast,LAKE_ADULT_KIDNEY_C11_THIN_ASCENDING_LIMB,14.552413964271546,Top
+normal,fibroblast,GSE24671_CTRL_VS_SENDAI_VIRUS_INFECTED_MOUSE_SPLENOCYTES_UP,14.456101131439208,Top
+normal,fibroblast,MARSON_FOXP3_TARGETS_UP,14.414532136917114,Top
+normal,fibroblast,STAMBOLSKY_TARGETS_OF_MUTATED_TP53_UP,14.370774906873702,Top
+normal,fibroblast,CHICAS_RB1_TARGETS_LOW_SERUM,14.359722632169724,Top
+normal,fibroblast,GSE18791_UNSTIM_VS_NEWCATSLE_VIRUS_DC_2H_DN,14.298733216524123,Top
+normal,fibroblast,MIR448,14.264524394273758,Top
+normal,fibroblast,MIR548L,14.200843864679337,Top
+normal,fibroblast,IRX2_TARGET_GENES,14.137030518054962,Top
+normal,fibroblast,LMX1B_TARGET_GENES,14.125349593162536,Top
+normal,fibroblast,GSE2770_TGFB_AND_IL4_VS_TGFB_AND_IL12_TREATED_ACT_CD4_TCELL_48H_UP,14.042717671394348,Top
+normal,fibroblast,GSE7509_FCGRIIB_VS_TNFA_IL1B_IL6_PGE_STIM_DC_DN,14.014859342575074,Top
+normal,fibroblast,GOCC_CATION_CHANNEL_COMPLEX,13.983314150571823,Top
+normal,fibroblast,GSE19888_ADENOSINE_A3R_ACT_VS_TCELL_MEMBRANES_ACT_IN_MAST_CELL_DN,13.95447706580162,Top
+normal,fibroblast,BRACHAT_RESPONSE_TO_CISPLATIN,13.92919056415558,Top
+normal,fibroblast,LAKE_ADULT_KIDNEY_C4_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S2,13.745054441690446,Top
+normal,fibroblast,GSE23308_CTRL_VS_CORTICOSTERONE_TREATED_MACROPHAGE_MINERALCORTICOID_REC_KO_DN,13.68118125796318,Top
+normal,fibroblast,AAGCACA_MIR218,13.67968379855156,Top
+normal,fibroblast,ZSCAN5C_TARGET_GENES,13.665201932191849,Top
+normal,fibroblast,ATGTACA_MIR493,13.654896664619447,Top
+normal,fibroblast,OLSSON_E2F3_TARGETS_UP,13.60191976428032,Top
+normal,fibroblast,GOCC_SYNAPSE,13.596933925151825,Top
+normal,fibroblast,ZHENG_CORD_BLOOD_C7_PUTATIVE_LYMPHOID_PRIMED_MULTIPOTENT_PROGENITOR_1,13.593002504110336,Top
+normal,fibroblast,GSE5542_UNTREATED_VS_IFNA_AND_IFNG_TREATED_EPITHELIAL_CELLS_24H_UP,13.522162646055222,Top
+normal,fibroblast,TFCP2_TARGET_GENES,13.518265104293823,Top
+normal,fibroblast,MIR5696,13.506960433721542,Top
+normal,fibroblast,GSE10500_ARTHRITIC_SYNOVIAL_FLUID_VS_HEALTHY_MACROPHAGE_DN,13.503872460126876,Top
+normal,fibroblast,CTGCAGY_UNKNOWN,13.499879789352416,Top
+normal,fibroblast,RODRIGUES_NTN1_AND_DCC_TARGETS,13.454267024993896,Top
+normal,fibroblast,YATGNWAAT_OCT_C,13.422091412544251,Top
+normal,fibroblast,GAUTAM_EYE_IRIS_CILIARY_BODY_PUTATIVE_STEM_CELLS,13.383808195590973,Top
+normal,fibroblast,MIR4659A_3P_MIR4659B_3P,13.314230751991271,Top
+normal,fibroblast,GSE22589_HEALTHY_VS_SIV_INFECTED_DC_UP,13.295749241113663,Top
+normal,fibroblast,MAP2K1_TARGET_GENES,13.281559950113296,Top
+normal,fibroblast,CEBPE_TARGET_GENES,13.280241626501084,Top
+normal,fibroblast,GOCC_NEURON_TO_NEURON_SYNAPSE,13.223075234889984,Top
+normal,fibroblast,GOBP_CARDIAC_MUSCLE_MYOBLAST_PROLIFERATION,13.17323550581932,Top
+normal,fibroblast,GSE27786_LSK_VS_CD4_TCELL_DN,13.146596932411194,Top
+normal,fibroblast,GOCC_POSTSYNAPTIC_SPECIALIZATION,13.146468353271484,Top
+normal,fibroblast,GOBP_POSITIVE_REGULATION_OF_MYOBLAST_PROLIFERATION,13.134872728586197,Top
+normal,fibroblast,CAVARD_LIVER_CANCER_MALIGNANT_VS_BENIGN,13.02388455271721,Top
+normal,fibroblast,GSE25087_FETAL_VS_ADULT_TCONV_DN,12.914525401592254,Top
+normal,fibroblast,MANNO_MIDBRAIN_NEUROTYPES_HNBML1,12.881419610977172,Top
+normal,fibroblast,HOWLIN_CITED1_TARGETS_2_UP,12.881047374010086,Top
+normal,fibroblast,ZHENG_CORD_BLOOD_C10_MULTILYMPHOID_PROGENITOR,12.802465045452118,Top
+normal,fibroblast,PSIP1_TARGET_GENES,12.768361604213714,Top
+normal,fibroblast,GAVISH_3CA_MALIGNANT_METAPROGRAM_41_UNASSIGNED,12.718947356939315,Top
+normal,fibroblast,GOBP_REGULATION_OF_MYOBLAST_PROLIFERATION,12.715704518556596,Top
+normal,fibroblast,BRUINS_UVC_RESPONSE_VIA_TP53_GROUP_C,12.685557889938355,Top
+normal,fibroblast,ZNF236_TARGET_GENES,12.64738033413887,Top
+normal,fibroblast,GAVISH_3CA_MALIGNANT_METAPROGRAM_10_PROTEIN_MATURATION,12.631977838277816,Top
+normal,fibroblast,GAVISH_3CA_METAPROGRAM_EPITHELIAL_V_ATPASE,12.607912993431091,Top
+normal,fibroblast,DESCARTES_FETAL_STOMACH_ENS_NEURONS,12.587104135751725,Top
+normal,fibroblast,HERNANDEZ_MITOTIC_ARREST_BY_DOCETAXEL_1_UP,12.538745057582855,Top
+normal,fibroblast,chr12q15,0.0,Bottom
+normal,fibroblast,chr13q12,0.0,Bottom
+normal,fibroblast,chr13q14,0.0,Bottom
+normal,fibroblast,chr13q32,0.0,Bottom
+normal,fibroblast,chr19p12,0.0,Bottom
+normal,fibroblast,chr19p13,0.0,Bottom
+normal,fibroblast,chr19q13,0.0,Bottom
+normal,fibroblast,chr1p35,0.0,Bottom
+normal,fibroblast,chr20q11,0.0,Bottom
+normal,fibroblast,chr2p23,0.0,Bottom
+normal,fibroblast,chr3p23,0.0,Bottom
+normal,fibroblast,chr4p11,0.0,Bottom
+normal,fibroblast,chr6p11,0.0,Bottom
+normal,fibroblast,chr6q15,0.0,Bottom
+normal,fibroblast,chr9p13,0.0,Bottom
+normal,fibroblast,chr9p21,0.0,Bottom
+normal,fibroblast,chr9q32,0.0,Bottom
+normal,fibroblast,chr9q33,0.0,Bottom
+normal,fibroblast,ABBUD_LIF_SIGNALING_1_DN,0.0,Bottom
+normal,fibroblast,ABBUD_LIF_SIGNALING_1_UP,0.0,Bottom
+normal,fibroblast,ABBUD_LIF_SIGNALING_2_DN,0.0,Bottom
+normal,fibroblast,ABBUD_LIF_SIGNALING_2_UP,0.0,Bottom
+normal,fibroblast,ABDELMOHSEN_ELAVL4_TARGETS,0.0,Bottom
+normal,fibroblast,ABDULRAHMAN_KIDNEY_CANCER_VHL_DN,0.0,Bottom
+normal,fibroblast,ABE_INNER_EAR,0.0,Bottom
+normal,leukocyte,MANNO_MIDBRAIN_NEUROTYPES_HGABA,43.28626120717902,Top
+normal,leukocyte,MANNO_MIDBRAIN_NEUROTYPES_HNBGABA,39.92411131607859,Top
+normal,leukocyte,MANNO_MIDBRAIN_NEUROTYPES_HDA1,29.597259822644684,Top
+normal,leukocyte,MANNO_MIDBRAIN_NEUROTYPES_HSERT,27.58955875195955,Top
+normal,leukocyte,MANNO_MIDBRAIN_NEUROTYPES_HDA,26.763801273546722,Top
+normal,leukocyte,LAKE_ADULT_KIDNEY_C16_COLLECTING_SYSTEM_PRINCIPAL_CELLS_CORTEX,25.996043857775238,Top
+normal,leukocyte,MANNO_MIDBRAIN_NEUROTYPES_HDA2,24.940813064575195,Top
+normal,leukocyte,MANNO_MIDBRAIN_NEUROTYPES_HNBML5,23.768488532618473,Top
+normal,leukocyte,LAKE_ADULT_KIDNEY_C15_CONNECTING_TUBULE,21.452488598070648,Top
+normal,leukocyte,LAKE_ADULT_KIDNEY_C5_PROXIMAL_TUBULE_EPITHELIAL_CELLS_STRESS_INFLAM,21.02123401039525,Top
+normal,leukocyte,LAKE_ADULT_KIDNEY_C14_DISTAL_CONVOLUTED_TUBULE,19.6359473278648,Top
+normal,leukocyte,LAKE_ADULT_KIDNEY_C13_THICK_ASCENDING_LIMB,19.059908716302168,Top
+normal,leukocyte,BLALOCK_ALZHEIMERS_DISEASE_DN,18.77934752012554,Top
+normal,leukocyte,GSE11924_TH1_VS_TH17_CD4_TCELL_UP,18.767733824880498,Top
+normal,leukocyte,RIGGI_EWING_SARCOMA_PROGENITOR_UP,18.473748207092285,Top
+normal,leukocyte,MIR218_5P,18.400692237050908,Top
+normal,leukocyte,STARK_PREFRONTAL_CORTEX_22Q11_DELETION_UP,18.144041161788138,Top
+normal,leukocyte,PAX7_TARGET_GENES,17.757165908813477,Top
+normal,leukocyte,PAX3_TARGET_GENES,16.944667213841488,Top
+normal,leukocyte,GSE19941_UNSTIM_VS_LPS_AND_IL10_STIM_IL10_KO_MACROPHAGE_UP,16.564132590042917,Top
+normal,leukocyte,LAKE_ADULT_KIDNEY_C3_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S1_S2,15.919168070742959,Top
+normal,leukocyte,GAVISH_3CA_METAPROGRAM_FIBROBLASTS_CAF_4,15.79775689777575,Top
+normal,leukocyte,DESCARTES_FETAL_LUNG_VISCERAL_NEURONS,15.795685216000205,Top
+normal,leukocyte,MURARO_PANCREAS_ALPHA_CELL,15.346400762859144,Top
+normal,leukocyte,ZHONG_PFC_C3_MICROGLIA,14.995069955524645,Top
+normal,leukocyte,PBXIP1_TARGET_GENES,14.827930450439453,Top
+normal,leukocyte,IWANAGA_CARCINOGENESIS_BY_KRAS_DN,14.701115206668252,Top
+normal,leukocyte,SRSF9_TARGET_GENES,14.35481447922556,Top
+normal,leukocyte,HE_LIM_SUN_FETAL_LUNG_C1_PULMONARY_NEUROENDOCRINE_CELL,14.306170563948783,Top
+normal,leukocyte,MANNO_MIDBRAIN_NEUROTYPES_HOMTN,14.304150882520174,Top
+normal,leukocyte,ALX4_TARGET_GENES,14.07145791304739,Top
+normal,leukocyte,GSE32986_UNSTIM_VS_GMCSF_AND_CURDLAN_HIGHDOSE_STIM_DC_DN,14.05861006285015,Top
+normal,leukocyte,LAKE_ADULT_KIDNEY_C29_UNKNOWN_NOVEL_PT_CFH_POS_SUBPOPULATION_S2,13.792868664390163,Top
+normal,leukocyte,MANNO_MIDBRAIN_NEUROTYPES_HRN,13.648748799374228,Top
+normal,leukocyte,PARK_HSC_VS_MULTIPOTENT_PROGENITORS_UP,13.527051122565018,Top
+normal,leukocyte,HE_LIM_SUN_FETAL_LUNG_C1_PULMONARY_NE_PRECURSOR_CELL,13.524564291301527,Top
+normal,leukocyte,TAKEDA_TARGETS_OF_NUP98_HOXA9_FUSION_3D_UP,13.414318034523411,Top
+normal,leukocyte,GLI1_TARGET_GENES,13.282302304318076,Top
+normal,leukocyte,SOX11_TARGET_GENES,13.26123669272975,Top
+normal,leukocyte,CHANDRAN_METASTASIS_TOP50_DN,13.248231636850457,Top
+normal,leukocyte,GOCC_SYNAPTIC_MEMBRANE,13.232502334996274,Top
+normal,leukocyte,HE_LIM_SUN_FETAL_LUNG_C1_INTERM_NEUROENDOCRINE_CELL,13.21642710033216,Top
+normal,leukocyte,PAX6_TARGET_GENES,13.197598156176115,Top
+normal,leukocyte,TRAVAGLINI_LUNG_CD8_MEMORY_EFFECTOR_T_CELL,13.185864850094443,Top
+normal,leukocyte,DESCARTES_FETAL_HEART_SATB2_LRRC7_POSITIVE_CELLS,13.170218166552091,Top
+normal,leukocyte,LAKE_ADULT_KIDNEY_C2_PODOCYTES,13.04296162253932,Top
+normal,leukocyte,MARSON_FOXP3_TARGETS_UP,12.892735531455592,Top
+normal,leukocyte,GSE24671_CTRL_VS_SENDAI_VIRUS_INFECTED_MOUSE_SPLENOCYTES_UP,12.88539003071032,Top
+normal,leukocyte,CHICAS_RB1_TARGETS_LOW_SERUM,12.846996608533358,Top
+normal,leukocyte,STAMBOLSKY_TARGETS_OF_MUTATED_TP53_UP,12.825470673410516,Top
+normal,leukocyte,GSE18791_UNSTIM_VS_NEWCATSLE_VIRUS_DC_2H_DN,12.78547517876876,Top
+normal,leukocyte,LAKE_ADULT_KIDNEY_C11_THIN_ASCENDING_LIMB,12.775921219273618,Top
+normal,leukocyte,LMX1B_TARGET_GENES,12.634835845545718,Top
+normal,leukocyte,IRX2_TARGET_GENES,12.607851279409308,Top
+normal,leukocyte,MIR448,12.545309869866623,Top
+normal,leukocyte,GSE2770_TGFB_AND_IL4_VS_TGFB_AND_IL12_TREATED_ACT_CD4_TCELL_48H_UP,12.525900589792352,Top
+normal,leukocyte,GSE7509_FCGRIIB_VS_TNFA_IL1B_IL6_PGE_STIM_DC_DN,12.517752898366828,Top
+normal,leukocyte,BRACHAT_RESPONSE_TO_CISPLATIN,12.513894131309108,Top
+normal,leukocyte,MIR548L,12.494128729167738,Top
+normal,leukocyte,GSE19888_ADENOSINE_A3R_ACT_VS_TCELL_MEMBRANES_ACT_IN_MAST_CELL_DN,12.447995035271896,Top
+normal,leukocyte,GOCC_CATION_CHANNEL_COMPLEX,12.31578214544999,Top
+normal,leukocyte,GSE23308_CTRL_VS_CORTICOSTERONE_TREATED_MACROPHAGE_MINERALCORTICOID_REC_KO_DN,12.21506028426321,Top
+normal,leukocyte,ZSCAN5C_TARGET_GENES,12.204048859445672,Top
+normal,leukocyte,OLSSON_E2F3_TARGETS_UP,12.201143214577122,Top
+normal,leukocyte,ZHENG_CORD_BLOOD_C7_PUTATIVE_LYMPHOID_PRIMED_MULTIPOTENT_PROGENITOR_1,12.156959132144326,Top
+normal,leukocyte,TFCP2_TARGET_GENES,12.09978871596487,Top
+normal,leukocyte,LAKE_ADULT_KIDNEY_C4_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S2,12.068206686722604,Top
+normal,leukocyte,GSE5542_UNTREATED_VS_IFNA_AND_IFNG_TREATED_EPITHELIAL_CELLS_24H_UP,12.06676563463713,Top
+normal,leukocyte,RODRIGUES_NTN1_AND_DCC_TARGETS,12.024037260758249,Top
+normal,leukocyte,ATGTACA_MIR493,12.005702319898104,Top
+normal,leukocyte,AAGCACA_MIR218,12.004812064923739,Top
+normal,leukocyte,GOCC_SYNAPSE,11.962993220279092,Top
+normal,leukocyte,GAUTAM_EYE_IRIS_CILIARY_BODY_PUTATIVE_STEM_CELLS,11.956204313980905,Top
+normal,leukocyte,CEBPE_TARGET_GENES,11.909227019862124,Top
+normal,leukocyte,MAP2K1_TARGET_GENES,11.888418398405376,Top
+normal,leukocyte,GSE22589_HEALTHY_VS_SIV_INFECTED_DC_UP,11.87805461883545,Top
+normal,leukocyte,MIR5696,11.873778543974224,Top
+normal,leukocyte,GSE10500_ARTHRITIC_SYNOVIAL_FLUID_VS_HEALTHY_MACROPHAGE_DN,11.870217248013144,Top
+normal,leukocyte,CTGCAGY_UNKNOWN,11.831964793958162,Top
+normal,leukocyte,GOBP_CARDIAC_MUSCLE_MYOBLAST_PROLIFERATION,11.79720371647885,Top
+normal,leukocyte,GOBP_POSITIVE_REGULATION_OF_MYOBLAST_PROLIFERATION,11.792054929231343,Top
+normal,leukocyte,YATGNWAAT_OCT_C,11.789436691685728,Top
+normal,leukocyte,GSE27786_LSK_VS_CD4_TCELL_DN,11.730288982391357,Top
+normal,leukocyte,MIR4659A_3P_MIR4659B_3P,11.69989518115395,Top
+normal,leukocyte,CAVARD_LIVER_CANCER_MALIGNANT_VS_BENIGN,11.64919416527999,Top
+normal,leukocyte,GOCC_NEURON_TO_NEURON_SYNAPSE,11.646956820237008,Top
+normal,leukocyte,GOCC_POSTSYNAPTIC_SPECIALIZATION,11.571695126985249,Top
+normal,leukocyte,HOWLIN_CITED1_TARGETS_2_UP,11.540973813910233,Top
+normal,leukocyte,GSE25087_FETAL_VS_ADULT_TCONV_DN,11.532432982796117,Top
+normal,leukocyte,ZHENG_CORD_BLOOD_C10_MULTILYMPHOID_PROGENITOR,11.446827461844997,Top
+normal,leukocyte,GAVISH_3CA_MALIGNANT_METAPROGRAM_41_UNASSIGNED,11.393354717053866,Top
+normal,leukocyte,PSIP1_TARGET_GENES,11.389833726381001,Top
+normal,leukocyte,GOBP_REGULATION_OF_MYOBLAST_PROLIFERATION,11.369736094223825,Top
+normal,leukocyte,BRUINS_UVC_RESPONSE_VIA_TP53_GROUP_C,11.343646752206903,Top
+normal,leukocyte,MANNO_MIDBRAIN_NEUROTYPES_HNBML1,11.327867382451108,Top
+normal,leukocyte,ZNF236_TARGET_GENES,11.313452846125552,Top
+normal,leukocyte,GAVISH_3CA_MALIGNANT_METAPROGRAM_10_PROTEIN_MATURATION,11.287064326436896,Top
+normal,leukocyte,GAVISH_3CA_METAPROGRAM_EPITHELIAL_V_ATPASE,11.274459412223415,Top
+normal,leukocyte,HERNANDEZ_MITOTIC_ARREST_BY_DOCETAXEL_1_UP,11.224296118083753,Top
+normal,leukocyte,HOWLIN_CITED1_TARGETS_1_UP,11.173072212620786,Top
+normal,leukocyte,chr12q15,0.0,Bottom
+normal,leukocyte,chr13q12,0.0,Bottom
+normal,leukocyte,chr13q14,0.0,Bottom
+normal,leukocyte,chr13q32,0.0,Bottom
+normal,leukocyte,chr19p12,0.0,Bottom
+normal,leukocyte,chr19p13,0.0,Bottom
+normal,leukocyte,chr19q13,0.0,Bottom
+normal,leukocyte,chr1p35,0.0,Bottom
+normal,leukocyte,chr20q11,0.0,Bottom
+normal,leukocyte,chr2p23,0.0,Bottom
+normal,leukocyte,chr3p23,0.0,Bottom
+normal,leukocyte,chr4p11,0.0,Bottom
+normal,leukocyte,chr6p11,0.0,Bottom
+normal,leukocyte,chr6q15,0.0,Bottom
+normal,leukocyte,chr9p13,0.0,Bottom
+normal,leukocyte,chr9p21,0.0,Bottom
+normal,leukocyte,chr9q32,0.0,Bottom
+normal,leukocyte,chr9q33,0.0,Bottom
+normal,leukocyte,ABBUD_LIF_SIGNALING_1_DN,0.0,Bottom
+normal,leukocyte,ABBUD_LIF_SIGNALING_1_UP,0.0,Bottom
+normal,leukocyte,ABBUD_LIF_SIGNALING_2_DN,0.0,Bottom
+normal,leukocyte,ABBUD_LIF_SIGNALING_2_UP,0.0,Bottom
+normal,leukocyte,ABDELMOHSEN_ELAVL4_TARGETS,0.0,Bottom
+normal,leukocyte,ABDULRAHMAN_KIDNEY_CANCER_VHL_DN,0.0,Bottom
+normal,leukocyte,ABE_INNER_EAR,0.0,Bottom
+normal,neuron,MANNO_MIDBRAIN_NEUROTYPES_HGABA,379.676224069536,Top
+normal,neuron,MANNO_MIDBRAIN_NEUROTYPES_HNBGABA,349.7448625049824,Top
+normal,neuron,MANNO_MIDBRAIN_NEUROTYPES_HDA1,261.29253154951573,Top
+normal,neuron,MANNO_MIDBRAIN_NEUROTYPES_HSERT,243.47207635407844,Top
+normal,neuron,MANNO_MIDBRAIN_NEUROTYPES_HDA,236.60721656124997,Top
+normal,neuron,LAKE_ADULT_KIDNEY_C16_COLLECTING_SYSTEM_PRINCIPAL_CELLS_CORTEX,229.46850999479167,Top
+normal,neuron,MANNO_MIDBRAIN_NEUROTYPES_HDA2,220.94531254101304,Top
+normal,neuron,MANNO_MIDBRAIN_NEUROTYPES_HNBML5,210.55791381344486,Top
+normal,neuron,LAKE_ADULT_KIDNEY_C15_CONNECTING_TUBULE,190.0956693404884,Top
+normal,neuron,LAKE_ADULT_KIDNEY_C5_PROXIMAL_TUBULE_EPITHELIAL_CELLS_STRESS_INFLAM,187.7655377050621,Top
+normal,neuron,LAKE_ADULT_KIDNEY_C14_DISTAL_CONVOLUTED_TUBULE,174.56619959805082,Top
+normal,neuron,LAKE_ADULT_KIDNEY_C13_THICK_ASCENDING_LIMB,169.50860341332097,Top
+normal,neuron,BLALOCK_ALZHEIMERS_DISEASE_DN,166.29018886233837,Top
+normal,neuron,MIR218_5P,162.89925838882786,Top
+normal,neuron,GSE11924_TH1_VS_TH17_CD4_TCELL_UP,160.98532212299804,Top
+normal,neuron,RIGGI_EWING_SARCOMA_PROGENITOR_UP,157.59350092690727,Top
+normal,neuron,STARK_PREFRONTAL_CORTEX_22Q11_DELETION_UP,155.7970257783491,Top
+normal,neuron,PAX7_TARGET_GENES,153.00938227229966,Top
+normal,neuron,PAX3_TARGET_GENES,151.2880876550369,Top
+normal,neuron,LAKE_ADULT_KIDNEY_C3_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S1_S2,142.73925736621382,Top
+normal,neuron,GSE19941_UNSTIM_VS_LPS_AND_IL10_STIM_IL10_KO_MACROPHAGE_UP,140.90507115585845,Top
+normal,neuron,DESCARTES_FETAL_LUNG_VISCERAL_NEURONS,140.1695299690565,Top
+normal,neuron,GAVISH_3CA_METAPROGRAM_FIBROBLASTS_CAF_4,134.95708968219023,Top
+normal,neuron,MURARO_PANCREAS_ALPHA_CELL,133.24385001577522,Top
+normal,neuron,ZHONG_PFC_C3_MICROGLIA,133.06481539075017,Top
+normal,neuron,PBXIP1_TARGET_GENES,127.84156250948179,Top
+normal,neuron,HE_LIM_SUN_FETAL_LUNG_C1_PULMONARY_NEUROENDOCRINE_CELL,127.01359805010189,Top
+normal,neuron,MANNO_MIDBRAIN_NEUROTYPES_HOMTN,126.84040762922626,Top
+normal,neuron,SRSF9_TARGET_GENES,125.04921198143995,Top
+normal,neuron,IWANAGA_CARCINOGENESIS_BY_KRAS_DN,124.12539007530204,Top
+normal,neuron,LAKE_ADULT_KIDNEY_C29_UNKNOWN_NOVEL_PT_CFH_POS_SUBPOPULATION_S2,122.55505717799092,Top
+normal,neuron,MANNO_MIDBRAIN_NEUROTYPES_HRN,122.19680657724159,Top
+normal,neuron,HE_LIM_SUN_FETAL_LUNG_C1_PULMONARY_NE_PRECURSOR_CELL,120.01664239556374,Top
+normal,neuron,ALX4_TARGET_GENES,119.22765778218252,Top
+normal,neuron,GSE32986_UNSTIM_VS_GMCSF_AND_CURDLAN_HIGHDOSE_STIM_DC_DN,119.00614718219381,Top
+normal,neuron,GOCC_SYNAPTIC_MEMBRANE,118.54599632626719,Top
+normal,neuron,DESCARTES_FETAL_HEART_SATB2_LRRC7_POSITIVE_CELLS,117.60801547864364,Top
+normal,neuron,HE_LIM_SUN_FETAL_LUNG_C1_INTERM_NEUROENDOCRINE_CELL,116.03756693002403,Top
+normal,neuron,LAKE_ADULT_KIDNEY_C2_PODOCYTES,115.47351410303777,Top
+normal,neuron,TAKEDA_TARGETS_OF_NUP98_HOXA9_FUSION_3D_UP,115.03402417286884,Top
+normal,neuron,LAKE_ADULT_KIDNEY_C11_THIN_ASCENDING_LIMB,114.88327067171437,Top
+normal,neuron,PAX6_TARGET_GENES,114.80162942655132,Top
+normal,neuron,PARK_HSC_VS_MULTIPOTENT_PROGENITORS_UP,114.66558559694222,Top
+normal,neuron,GLI1_TARGET_GENES,112.99872566778338,Top
+normal,neuron,CHANDRAN_METASTASIS_TOP50_DN,111.90067355691576,Top
+normal,neuron,SOX11_TARGET_GENES,111.73417693703206,Top
+normal,neuron,TRAVAGLINI_LUNG_CD8_MEMORY_EFFECTOR_T_CELL,111.39152925635956,Top
+normal,neuron,MIR448,110.85094260532038,Top
+normal,neuron,MIR548L,109.27112545805555,Top
+normal,neuron,GSE24671_CTRL_VS_SENDAI_VIRUS_INFECTED_MOUSE_SPLENOCYTES_UP,108.9178950786041,Top
+normal,neuron,STAMBOLSKY_TARGETS_OF_MUTATED_TP53_UP,108.51474881428237,Top
+normal,neuron,GOCC_CATION_CHANNEL_COMPLEX,108.37902933917691,Top
+normal,neuron,MARSON_FOXP3_TARGETS_UP,107.71265833815772,Top
+normal,neuron,LAKE_ADULT_KIDNEY_C4_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S2,107.63911750839173,Top
+normal,neuron,CHICAS_RB1_TARGETS_LOW_SERUM,107.58767320303687,Top
+normal,neuron,AAGCACA_MIR218,107.4201210634531,Top
+normal,neuron,GSE18791_UNSTIM_VS_NEWCATSLE_VIRUS_DC_2H_DN,107.26600971164778,Top
+normal,neuron,IRX2_TARGET_GENES,107.07017039980144,Top
+normal,neuron,GOCC_SYNAPSE,106.82352188705546,Top
+normal,neuron,GSE2770_TGFB_AND_IL4_VS_TGFB_AND_IL12_TREATED_ACT_CD4_TCELL_48H_UP,106.56757271806885,Top
+normal,neuron,ATGTACA_MIR493,106.53464209129525,Top
+normal,neuron,CTGCAGY_UNKNOWN,106.34787506390123,Top
+normal,neuron,MIR5696,106.0595555628794,Top
+normal,neuron,GSE19888_ADENOSINE_A3R_ACT_VS_TCELL_MEMBRANES_ACT_IN_MAST_CELL_DN,106.02402007585847,Top
+normal,neuron,LMX1B_TARGET_GENES,105.6796674970164,Top
+normal,neuron,GSE7509_FCGRIIB_VS_TNFA_IL1B_IL6_PGE_STIM_DC_DN,105.36457102312474,Top
+normal,neuron,YATGNWAAT_OCT_C,105.05335077644905,Top
+normal,neuron,ZSCAN5C_TARGET_GENES,104.24202922786758,Top
+normal,neuron,MIR4659A_3P_MIR4659B_3P,104.14835405747553,Top
+normal,neuron,GSE10500_ARTHRITIC_SYNOVIAL_FLUID_VS_HEALTHY_MACROPHAGE_DN,103.93475315101027,Top
+normal,neuron,GOCC_NEURON_TO_NEURON_SYNAPSE,103.80785603533145,Top
+normal,neuron,BRACHAT_RESPONSE_TO_CISPLATIN,102.9536348778302,Top
+normal,neuron,GSE23308_CTRL_VS_CORTICOSTERONE_TREATED_MACROPHAGE_MINERALCORTICOID_REC_KO_DN,102.94980567337373,Top
+normal,neuron,GOCC_POSTSYNAPTIC_SPECIALIZATION,102.34421371526777,Top
+normal,neuron,GSE5542_UNTREATED_VS_IFNA_AND_IFNG_TREATED_EPITHELIAL_CELLS_24H_UP,102.32937516339723,Top
+normal,neuron,ZHENG_CORD_BLOOD_C7_PUTATIVE_LYMPHOID_PRIMED_MULTIPOTENT_PROGENITOR_1,102.04148344717753,Top
+normal,neuron,MANNO_MIDBRAIN_NEUROTYPES_HNBML1,101.39268920660624,Top
+normal,neuron,RODRIGUES_NTN1_AND_DCC_TARGETS,101.3103694670924,Top
+normal,neuron,OLSSON_E2F3_TARGETS_UP,100.9379462110032,Top
+normal,neuron,GAUTAM_EYE_IRIS_CILIARY_BODY_PUTATIVE_STEM_CELLS,100.89419684727693,Top
+normal,neuron,TFCP2_TARGET_GENES,100.67410186282719,Top
+normal,neuron,GSE22589_HEALTHY_VS_SIV_INFECTED_DC_UP,100.25921023782702,Top
+normal,neuron,GSE27786_LSK_VS_CD4_TCELL_DN,99.82736748811644,Top
+normal,neuron,MAP2K1_TARGET_GENES,99.21253137302773,Top
+normal,neuron,CEBPE_TARGET_GENES,98.95313417413153,Top
+normal,neuron,GOBP_CARDIAC_MUSCLE_MYOBLAST_PROLIFERATION,98.81960684667949,Top
+normal,neuron,CAVARD_LIVER_CANCER_MALIGNANT_VS_BENIGN,98.2585871693395,Top
+normal,neuron,GOCC_POSTSYNAPSE,97.81337193099824,Top
+normal,neuron,GSE25087_FETAL_VS_ADULT_TCONV_DN,97.50342098325319,Top
+normal,neuron,GOBP_POSITIVE_REGULATION_OF_MYOBLAST_PROLIFERATION,97.37655519015999,Top
+normal,neuron,PSIP1_TARGET_GENES,97.1179277654781,Top
+normal,neuron,DESCARTES_FETAL_STOMACH_ENS_NEURONS,97.00866392313212,Top
+normal,neuron,ZHENG_CORD_BLOOD_C10_MULTILYMPHOID_PROGENITOR,96.96186248953371,Top
+normal,neuron,MIR129_5P,96.83361201590726,Top
+normal,neuron,HOWLIN_CITED1_TARGETS_2_UP,95.97929313797697,Top
+normal,neuron,BRUINS_UVC_RESPONSE_VIA_TP53_GROUP_C,95.62164960581192,Top
+normal,neuron,GOBP_REGULATION_OF_MYOBLAST_PROLIFERATION,95.56273972455685,Top
+normal,neuron,FAN_EMBRYONIC_CTX_EX_4_EXCITATORY_NEURON,95.37126281669707,Top
+normal,neuron,GAVISH_3CA_MALIGNANT_METAPROGRAM_10_PROTEIN_MATURATION,95.06157085034506,Top
+normal,neuron,GAVISH_3CA_MALIGNANT_METAPROGRAM_41_UNASSIGNED,95.05199055907967,Top
+normal,neuron,chr12q15,0.0,Bottom
+normal,neuron,chr13q12,0.0,Bottom
+normal,neuron,chr13q14,0.0,Bottom
+normal,neuron,chr13q32,0.0,Bottom
+normal,neuron,chr19p12,0.0,Bottom
+normal,neuron,chr19p13,0.0,Bottom
+normal,neuron,chr19q13,0.0,Bottom
+normal,neuron,chr1p35,0.0,Bottom
+normal,neuron,chr20q11,0.0,Bottom
+normal,neuron,chr2p23,0.0,Bottom
+normal,neuron,chr3p23,0.0,Bottom
+normal,neuron,chr4p11,0.0,Bottom
+normal,neuron,chr6p11,0.0,Bottom
+normal,neuron,chr6q15,0.0,Bottom
+normal,neuron,chr9p13,0.0,Bottom
+normal,neuron,chr9p21,0.0,Bottom
+normal,neuron,chr9q32,0.0,Bottom
+normal,neuron,chr9q33,0.0,Bottom
+normal,neuron,ABBUD_LIF_SIGNALING_1_DN,0.0,Bottom
+normal,neuron,ABBUD_LIF_SIGNALING_1_UP,0.0,Bottom
+normal,neuron,ABBUD_LIF_SIGNALING_2_DN,0.0,Bottom
+normal,neuron,ABBUD_LIF_SIGNALING_2_UP,0.0,Bottom
+normal,neuron,ABDELMOHSEN_ELAVL4_TARGETS,0.0,Bottom
+normal,neuron,ABDULRAHMAN_KIDNEY_CANCER_VHL_DN,0.0,Bottom
+normal,neuron,ABE_INNER_EAR,0.0,Bottom
+normal,oligodendrocyte,MANNO_MIDBRAIN_NEUROTYPES_HGABA,50.16999097703202,Top
+normal,oligodendrocyte,MANNO_MIDBRAIN_NEUROTYPES_HNBGABA,46.27363979680539,Top
+normal,oligodendrocyte,MANNO_MIDBRAIN_NEUROTYPES_HDA1,34.150578499057765,Top
+normal,oligodendrocyte,MANNO_MIDBRAIN_NEUROTYPES_HSERT,31.82878481934074,Top
+normal,oligodendrocyte,MANNO_MIDBRAIN_NEUROTYPES_HDA,30.914086793907362,Top
+normal,oligodendrocyte,LAKE_ADULT_KIDNEY_C16_COLLECTING_SYSTEM_PRINCIPAL_CELLS_CORTEX,29.89970261116741,Top
+normal,oligodendrocyte,MANNO_MIDBRAIN_NEUROTYPES_HDA2,28.83481277443207,Top
+normal,oligodendrocyte,MANNO_MIDBRAIN_NEUROTYPES_HNBML5,27.427186476059063,Top
+normal,oligodendrocyte,LAKE_ADULT_KIDNEY_C15_CONNECTING_TUBULE,24.64469522762342,Top
+normal,oligodendrocyte,LAKE_ADULT_KIDNEY_C5_PROXIMAL_TUBULE_EPITHELIAL_CELLS_STRESS_INFLAM,24.127515363845443,Top
+normal,oligodendrocyte,LAKE_ADULT_KIDNEY_C14_DISTAL_CONVOLUTED_TUBULE,22.581752340270675,Top
+normal,oligodendrocyte,GSE11924_TH1_VS_TH17_CD4_TCELL_UP,21.908976753389677,Top
+normal,oligodendrocyte,LAKE_ADULT_KIDNEY_C13_THICK_ASCENDING_LIMB,21.898070364307173,Top
+normal,oligodendrocyte,BLALOCK_ALZHEIMERS_DISEASE_DN,21.56306033954194,Top
+normal,oligodendrocyte,RIGGI_EWING_SARCOMA_PROGENITOR_UP,21.536292058498525,Top
+normal,oligodendrocyte,STARK_PREFRONTAL_CORTEX_22Q11_DELETION_UP,21.28398272831365,Top
+normal,oligodendrocyte,MIR218_5P,21.18107981677475,Top
+normal,oligodendrocyte,PAX7_TARGET_GENES,20.78815813473355,Top
+normal,oligodendrocyte,PAX3_TARGET_GENES,19.437563510339007,Top
+normal,oligodendrocyte,GSE19941_UNSTIM_VS_LPS_AND_IL10_STIM_IL10_KO_MACROPHAGE_UP,19.375574040619465,Top
+normal,oligodendrocyte,GAVISH_3CA_METAPROGRAM_FIBROBLASTS_CAF_4,18.553835322744924,Top
+normal,oligodendrocyte,LAKE_ADULT_KIDNEY_C3_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S1_S2,18.319970088629105,Top
+normal,oligodendrocyte,DESCARTES_FETAL_LUNG_VISCERAL_NEURONS,18.164244469909217,Top
+normal,oligodendrocyte,MURARO_PANCREAS_ALPHA_CELL,18.000639507447644,Top
+normal,oligodendrocyte,PBXIP1_TARGET_GENES,17.579446331312056,Top
+normal,oligodendrocyte,IWANAGA_CARCINOGENESIS_BY_KRAS_DN,17.396748771528323,Top
+normal,oligodendrocyte,ZHONG_PFC_C3_MICROGLIA,17.28680466779334,Top
+normal,oligodendrocyte,SRSF9_TARGET_GENES,16.871587188940747,Top
+normal,oligodendrocyte,ALX4_TARGET_GENES,16.623264545400666,Top
+normal,oligodendrocyte,GSE32986_UNSTIM_VS_GMCSF_AND_CURDLAN_HIGHDOSE_STIM_DC_DN,16.598715818586058,Top
+normal,oligodendrocyte,HE_LIM_SUN_FETAL_LUNG_C1_PULMONARY_NEUROENDOCRINE_CELL,16.498029712123845,Top
+normal,oligodendrocyte,MANNO_MIDBRAIN_NEUROTYPES_HOMTN,16.493463713775963,Top
+normal,oligodendrocyte,PARK_HSC_VS_MULTIPOTENT_PROGENITORS_UP,16.019288258633004,Top
+normal,oligodendrocyte,TAKEDA_TARGETS_OF_NUP98_HOXA9_FUSION_3D_UP,15.925746979367716,Top
+normal,oligodendrocyte,LAKE_ADULT_KIDNEY_C29_UNKNOWN_NOVEL_PT_CFH_POS_SUBPOPULATION_S2,15.85633428989346,Top
+normal,oligodendrocyte,MANNO_MIDBRAIN_NEUROTYPES_HRN,15.71907954818301,Top
+normal,oligodendrocyte,SOX11_TARGET_GENES,15.672940979686656,Top
+normal,oligodendrocyte,CHANDRAN_METASTASIS_TOP50_DN,15.670990534259259,Top
+normal,oligodendrocyte,HE_LIM_SUN_FETAL_LUNG_C1_PULMONARY_NE_PRECURSOR_CELL,15.641937629523149,Top
+normal,oligodendrocyte,TRAVAGLINI_LUNG_CD8_MEMORY_EFFECTOR_T_CELL,15.634347059603863,Top
+normal,oligodendrocyte,GLI1_TARGET_GENES,15.624496131741289,Top
+normal,oligodendrocyte,PAX6_TARGET_GENES,15.435119427343073,Top
+normal,oligodendrocyte,GOCC_SYNAPTIC_MEMBRANE,15.37772323103512,Top
+normal,oligodendrocyte,MARSON_FOXP3_TARGETS_UP,15.26818742351993,Top
+normal,oligodendrocyte,CHICAS_RB1_TARGETS_LOW_SERUM,15.241310791397442,Top
+normal,oligodendrocyte,HE_LIM_SUN_FETAL_LUNG_C1_INTERM_NEUROENDOCRINE_CELL,15.233509429448063,Top
+normal,oligodendrocyte,DESCARTES_FETAL_HEART_SATB2_LRRC7_POSITIVE_CELLS,15.201381841316866,Top
+normal,oligodendrocyte,GSE24671_CTRL_VS_SENDAI_VIRUS_INFECTED_MOUSE_SPLENOCYTES_UP,15.180070761181804,Top
+normal,oligodendrocyte,GSE18791_UNSTIM_VS_NEWCATSLE_VIRUS_DC_2H_DN,15.174316531058267,Top
+normal,oligodendrocyte,STAMBOLSKY_TARGETS_OF_MUTATED_TP53_UP,15.171419455262553,Top
+normal,oligodendrocyte,LMX1B_TARGET_GENES,14.997731152376627,Top
+normal,oligodendrocyte,LAKE_ADULT_KIDNEY_C2_PODOCYTES,14.995309067816153,Top
+normal,oligodendrocyte,BRACHAT_RESPONSE_TO_CISPLATIN,14.941080566307098,Top
+normal,oligodendrocyte,IRX2_TARGET_GENES,14.901801461886446,Top
+normal,oligodendrocyte,GSE2770_TGFB_AND_IL4_VS_TGFB_AND_IL12_TREATED_ACT_CD4_TCELL_48H_UP,14.841503214846993,Top
+normal,oligodendrocyte,GSE7509_FCGRIIB_VS_TNFA_IL1B_IL6_PGE_STIM_DC_DN,14.831350139434404,Top
+normal,oligodendrocyte,GSE19888_ADENOSINE_A3R_ACT_VS_TCELL_MEMBRANES_ACT_IN_MAST_CELL_DN,14.753870486125955,Top
+normal,oligodendrocyte,LAKE_ADULT_KIDNEY_C11_THIN_ASCENDING_LIMB,14.690283972761483,Top
+normal,oligodendrocyte,OLSSON_E2F3_TARGETS_UP,14.557637406765355,Top
+normal,oligodendrocyte,ZSCAN5C_TARGET_GENES,14.508791352209848,Top
+normal,oligodendrocyte,GSE23308_CTRL_VS_CORTICOSTERONE_TREATED_MACROPHAGE_MINERALCORTICOID_REC_KO_DN,14.486934324295838,Top
+normal,oligodendrocyte,ZHENG_CORD_BLOOD_C7_PUTATIVE_LYMPHOID_PRIMED_MULTIPOTENT_PROGENITOR_1,14.460904931130607,Top
+normal,oligodendrocyte,MIR448,14.399280274778645,Top
+normal,oligodendrocyte,TFCP2_TARGET_GENES,14.39101087976361,Top
+normal,oligodendrocyte,MIR548L,14.288103113531033,Top
+normal,oligodendrocyte,GSE5542_UNTREATED_VS_IFNA_AND_IFNG_TREATED_EPITHELIAL_CELLS_24H_UP,14.278863745631554,Top
+normal,oligodendrocyte,RODRIGUES_NTN1_AND_DCC_TARGETS,14.261338199266712,Top
+normal,oligodendrocyte,CEBPE_TARGET_GENES,14.199265891212988,Top
+normal,oligodendrocyte,GOCC_CATION_CHANNEL_COMPLEX,14.174139455307362,Top
+normal,oligodendrocyte,GAUTAM_EYE_IRIS_CILIARY_BODY_PUTATIVE_STEM_CELLS,14.17044844129452,Top
+normal,oligodendrocyte,MAP2K1_TARGET_GENES,14.106343368933835,Top
+normal,oligodendrocyte,GSE22589_HEALTHY_VS_SIV_INFECTED_DC_UP,14.078984281867811,Top
+normal,oligodendrocyte,GOBP_POSITIVE_REGULATION_OF_MYOBLAST_PROLIFERATION,14.064004522559308,Top
+normal,oligodendrocyte,GOBP_CARDIAC_MUSCLE_MYOBLAST_PROLIFERATION,14.019451623195609,Top
+normal,oligodendrocyte,GSE27786_LSK_VS_CD4_TCELL_DN,13.912489635130068,Top
+normal,oligodendrocyte,LAKE_ADULT_KIDNEY_C4_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S2,13.856617364935607,Top
+normal,oligodendrocyte,CAVARD_LIVER_CANCER_MALIGNANT_VS_BENIGN,13.838970331204193,Top
+normal,oligodendrocyte,GOCC_SYNAPSE,13.835382703227971,Top
+normal,oligodendrocyte,ATGTACA_MIR493,13.781744039933866,Top
+normal,oligodendrocyte,AAGCACA_MIR218,13.768559325736133,Top
+normal,oligodendrocyte,HOWLIN_CITED1_TARGETS_2_UP,13.74892875140408,Top
+normal,oligodendrocyte,MIR5696,13.662604855556115,Top
+normal,oligodendrocyte,GSE25087_FETAL_VS_ADULT_TCONV_DN,13.661309054492545,Top
+normal,oligodendrocyte,ZHENG_CORD_BLOOD_C10_MULTILYMPHOID_PROGENITOR,13.6177111982049,Top
+normal,oligodendrocyte,GAVISH_3CA_MALIGNANT_METAPROGRAM_41_UNASSIGNED,13.57337651913752,Top
+normal,oligodendrocyte,CTGCAGY_UNKNOWN,13.543417453983306,Top
+normal,oligodendrocyte,YATGNWAAT_OCT_C,13.540619615001653,Top
+normal,oligodendrocyte,GSE10500_ARTHRITIC_SYNOVIAL_FLUID_VS_HEALTHY_MACROPHAGE_DN,13.508599994066259,Top
+normal,oligodendrocyte,GOBP_REGULATION_OF_MYOBLAST_PROLIFERATION,13.496837316774855,Top
+normal,oligodendrocyte,PSIP1_TARGET_GENES,13.496080626323785,Top
+normal,oligodendrocyte,GOCC_NEURON_TO_NEURON_SYNAPSE,13.494988942657276,Top
+normal,oligodendrocyte,BRUINS_UVC_RESPONSE_VIA_TP53_GROUP_C,13.47788327424101,Top
+normal,oligodendrocyte,ZNF236_TARGET_GENES,13.444289766921337,Top
+normal,oligodendrocyte,MIR4659A_3P_MIR4659B_3P,13.426575831718985,Top
+normal,oligodendrocyte,GAVISH_3CA_MALIGNANT_METAPROGRAM_10_PROTEIN_MATURATION,13.381411526554315,Top
+normal,oligodendrocyte,GAVISH_3CA_METAPROGRAM_EPITHELIAL_V_ATPASE,13.37403857398131,Top
+normal,oligodendrocyte,GOCC_POSTSYNAPTIC_SPECIALIZATION,13.34051096966644,Top
+normal,oligodendrocyte,HERNANDEZ_MITOTIC_ARREST_BY_DOCETAXEL_1_UP,13.328360180087248,Top
+normal,oligodendrocyte,HOWLIN_CITED1_TARGETS_1_UP,13.25364248033968,Top
+normal,oligodendrocyte,STAMBOLSKY_RESPONSE_TO_VITAMIN_D3_UP,13.232780643864087,Top
+normal,oligodendrocyte,chr12q15,0.0,Bottom
+normal,oligodendrocyte,chr13q12,0.0,Bottom
+normal,oligodendrocyte,chr13q14,0.0,Bottom
+normal,oligodendrocyte,chr13q32,0.0,Bottom
+normal,oligodendrocyte,chr19p12,0.0,Bottom
+normal,oligodendrocyte,chr19p13,0.0,Bottom
+normal,oligodendrocyte,chr19q13,0.0,Bottom
+normal,oligodendrocyte,chr1p35,0.0,Bottom
+normal,oligodendrocyte,chr20q11,0.0,Bottom
+normal,oligodendrocyte,chr2p23,0.0,Bottom
+normal,oligodendrocyte,chr3p23,0.0,Bottom
+normal,oligodendrocyte,chr4p11,0.0,Bottom
+normal,oligodendrocyte,chr6p11,0.0,Bottom
+normal,oligodendrocyte,chr6q15,0.0,Bottom
+normal,oligodendrocyte,chr9p13,0.0,Bottom
+normal,oligodendrocyte,chr9p21,0.0,Bottom
+normal,oligodendrocyte,chr9q32,0.0,Bottom
+normal,oligodendrocyte,chr9q33,0.0,Bottom
+normal,oligodendrocyte,ABBUD_LIF_SIGNALING_1_DN,0.0,Bottom
+normal,oligodendrocyte,ABBUD_LIF_SIGNALING_1_UP,0.0,Bottom
+normal,oligodendrocyte,ABBUD_LIF_SIGNALING_2_DN,0.0,Bottom
+normal,oligodendrocyte,ABBUD_LIF_SIGNALING_2_UP,0.0,Bottom
+normal,oligodendrocyte,ABDELMOHSEN_ELAVL4_TARGETS,0.0,Bottom
+normal,oligodendrocyte,ABDULRAHMAN_KIDNEY_CANCER_VHL_DN,0.0,Bottom
+normal,oligodendrocyte,ABE_INNER_EAR,0.0,Bottom
+normal,oligodendrocyte precursor cell,MANNO_MIDBRAIN_NEUROTYPES_HGABA,49.244242228329455,Top
+normal,oligodendrocyte precursor cell,MANNO_MIDBRAIN_NEUROTYPES_HNBGABA,45.4324225334272,Top
+normal,oligodendrocyte precursor cell,MANNO_MIDBRAIN_NEUROTYPES_HDA1,33.71059887594284,Top
+normal,oligodendrocyte precursor cell,MANNO_MIDBRAIN_NEUROTYPES_HSERT,31.33948518587574,Top
+normal,oligodendrocyte precursor cell,MANNO_MIDBRAIN_NEUROTYPES_HDA,30.582381548946852,Top
+normal,oligodendrocyte precursor cell,LAKE_ADULT_KIDNEY_C16_COLLECTING_SYSTEM_PRINCIPAL_CELLS_CORTEX,29.23889945304557,Top
+normal,oligodendrocyte precursor cell,MANNO_MIDBRAIN_NEUROTYPES_HDA2,28.772413343055064,Top
+normal,oligodendrocyte precursor cell,MANNO_MIDBRAIN_NEUROTYPES_HNBML5,27.170466414325315,Top
+normal,oligodendrocyte precursor cell,LAKE_ADULT_KIDNEY_C15_CONNECTING_TUBULE,24.212019539314863,Top
+normal,oligodendrocyte precursor cell,LAKE_ADULT_KIDNEY_C5_PROXIMAL_TUBULE_EPITHELIAL_CELLS_STRESS_INFLAM,24.019571929217474,Top
+normal,oligodendrocyte precursor cell,LAKE_ADULT_KIDNEY_C14_DISTAL_CONVOLUTED_TUBULE,22.448481220088592,Top
+normal,oligodendrocyte precursor cell,LAKE_ADULT_KIDNEY_C13_THICK_ASCENDING_LIMB,21.625108281227007,Top
+normal,oligodendrocyte precursor cell,BLALOCK_ALZHEIMERS_DISEASE_DN,21.157046039354857,Top
+normal,oligodendrocyte precursor cell,GSE11924_TH1_VS_TH17_CD4_TCELL_UP,20.982152289995863,Top
+normal,oligodendrocyte precursor cell,MIR218_5P,20.951022805688588,Top
+normal,oligodendrocyte precursor cell,STARK_PREFRONTAL_CORTEX_22Q11_DELETION_UP,20.628597938851133,Top
+normal,oligodendrocyte precursor cell,RIGGI_EWING_SARCOMA_PROGENITOR_UP,20.534310236369095,Top
+normal,oligodendrocyte precursor cell,PAX7_TARGET_GENES,20.170559563048897,Top
+normal,oligodendrocyte precursor cell,PAX3_TARGET_GENES,19.38078808675618,Top
+normal,oligodendrocyte precursor cell,GSE19941_UNSTIM_VS_LPS_AND_IL10_STIM_IL10_KO_MACROPHAGE_UP,18.37819893283931,Top
+normal,oligodendrocyte precursor cell,LAKE_ADULT_KIDNEY_C3_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S1_S2,18.357602820548838,Top
+normal,oligodendrocyte precursor cell,GAVISH_3CA_METAPROGRAM_FIBROBLASTS_CAF_4,17.8814947855527,Top
+normal,oligodendrocyte precursor cell,DESCARTES_FETAL_LUNG_VISCERAL_NEURONS,17.85414538318164,Top
+normal,oligodendrocyte precursor cell,MURARO_PANCREAS_ALPHA_CELL,17.77036151058598,Top
+normal,oligodendrocyte precursor cell,PBXIP1_TARGET_GENES,17.477794666812844,Top
+normal,oligodendrocyte precursor cell,ZHONG_PFC_C3_MICROGLIA,17.155126790477805,Top
+normal,oligodendrocyte precursor cell,SRSF9_TARGET_GENES,16.813149271490367,Top
+normal,oligodendrocyte precursor cell,IWANAGA_CARCINOGENESIS_BY_KRAS_DN,16.672907184792436,Top
+normal,oligodendrocyte precursor cell,HE_LIM_SUN_FETAL_LUNG_C1_PULMONARY_NEUROENDOCRINE_CELL,16.409386590191218,Top
+normal,oligodendrocyte precursor cell,MANNO_MIDBRAIN_NEUROTYPES_HOMTN,16.3940043514722,Top
+normal,oligodendrocyte precursor cell,ALX4_TARGET_GENES,15.969334446676246,Top
+normal,oligodendrocyte precursor cell,GSE32986_UNSTIM_VS_GMCSF_AND_CURDLAN_HIGHDOSE_STIM_DC_DN,15.938053179004966,Top
+normal,oligodendrocyte precursor cell,TAKEDA_TARGETS_OF_NUP98_HOXA9_FUSION_3D_UP,15.867053459768426,Top
+normal,oligodendrocyte precursor cell,MANNO_MIDBRAIN_NEUROTYPES_HRN,15.816636695165068,Top
+normal,oligodendrocyte precursor cell,GOCC_SYNAPTIC_MEMBRANE,15.757292504724303,Top
+normal,oligodendrocyte precursor cell,LAKE_ADULT_KIDNEY_C29_UNKNOWN_NOVEL_PT_CFH_POS_SUBPOPULATION_S2,15.707563084554454,Top
+normal,oligodendrocyte precursor cell,HE_LIM_SUN_FETAL_LUNG_C1_PULMONARY_NE_PRECURSOR_CELL,15.609286917943388,Top
+normal,oligodendrocyte precursor cell,PARK_HSC_VS_MULTIPOTENT_PROGENITORS_UP,15.502818230624612,Top
+normal,oligodendrocyte precursor cell,DESCARTES_FETAL_HEART_SATB2_LRRC7_POSITIVE_CELLS,15.281727381492859,Top
+normal,oligodendrocyte precursor cell,PAX6_TARGET_GENES,15.183475545552223,Top
+normal,oligodendrocyte precursor cell,TRAVAGLINI_LUNG_CD8_MEMORY_EFFECTOR_T_CELL,15.070020307688953,Top
+normal,oligodendrocyte precursor cell,GLI1_TARGET_GENES,15.06042385645653,Top
+normal,oligodendrocyte precursor cell,CHANDRAN_METASTASIS_TOP50_DN,15.059582716798129,Top
+normal,oligodendrocyte precursor cell,HE_LIM_SUN_FETAL_LUNG_C1_INTERM_NEUROENDOCRINE_CELL,15.035123855555982,Top
+normal,oligodendrocyte precursor cell,SOX11_TARGET_GENES,14.966019118757552,Top
+normal,oligodendrocyte precursor cell,LAKE_ADULT_KIDNEY_C11_THIN_ASCENDING_LIMB,14.945102959463041,Top
+normal,oligodendrocyte precursor cell,LAKE_ADULT_KIDNEY_C2_PODOCYTES,14.781272164218501,Top
+normal,oligodendrocyte precursor cell,CHICAS_RB1_TARGETS_LOW_SERUM,14.61983007274262,Top
+normal,oligodendrocyte precursor cell,STAMBOLSKY_TARGETS_OF_MUTATED_TP53_UP,14.590342287603578,Top
+normal,oligodendrocyte precursor cell,MARSON_FOXP3_TARGETS_UP,14.503604219384389,Top
+normal,oligodendrocyte precursor cell,GSE18791_UNSTIM_VS_NEWCATSLE_VIRUS_DC_2H_DN,14.488808250862714,Top
+normal,oligodendrocyte precursor cell,GSE24671_CTRL_VS_SENDAI_VIRUS_INFECTED_MOUSE_SPLENOCYTES_UP,14.453277234073099,Top
+normal,oligodendrocyte precursor cell,GSE19888_ADENOSINE_A3R_ACT_VS_TCELL_MEMBRANES_ACT_IN_MAST_CELL_DN,14.406745842058365,Top
+normal,oligodendrocyte precursor cell,LMX1B_TARGET_GENES,14.392536656497276,Top
+normal,oligodendrocyte precursor cell,BRACHAT_RESPONSE_TO_CISPLATIN,14.3840857227099,Top
+normal,oligodendrocyte precursor cell,IRX2_TARGET_GENES,14.379619314245982,Top
+normal,oligodendrocyte precursor cell,GSE2770_TGFB_AND_IL4_VS_TGFB_AND_IL12_TREATED_ACT_CD4_TCELL_48H_UP,14.333106929308748,Top
+normal,oligodendrocyte precursor cell,ZSCAN5C_TARGET_GENES,14.261990432869899,Top
+normal,oligodendrocyte precursor cell,GSE7509_FCGRIIB_VS_TNFA_IL1B_IL6_PGE_STIM_DC_DN,14.253752507031235,Top
+normal,oligodendrocyte precursor cell,GOCC_SYNAPSE,14.023255271998714,Top
+normal,oligodendrocyte precursor cell,OLSSON_E2F3_TARGETS_UP,13.98983876128175,Top
+normal,oligodendrocyte precursor cell,MIR448,13.927742475788342,Top
+normal,oligodendrocyte precursor cell,GSE23308_CTRL_VS_CORTICOSTERONE_TREATED_MACROPHAGE_MINERALCORTICOID_REC_KO_DN,13.894434248475724,Top
+normal,oligodendrocyte precursor cell,ZHENG_CORD_BLOOD_C7_PUTATIVE_LYMPHOID_PRIMED_MULTIPOTENT_PROGENITOR_1,13.867129455418347,Top
+normal,oligodendrocyte precursor cell,GOCC_CATION_CHANNEL_COMPLEX,13.86002289105768,Top
+normal,oligodendrocyte precursor cell,LAKE_ADULT_KIDNEY_C4_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S2,13.811611479275847,Top
+normal,oligodendrocyte precursor cell,AAGCACA_MIR218,13.773033457803944,Top
+normal,oligodendrocyte precursor cell,GSE5542_UNTREATED_VS_IFNA_AND_IFNG_TREATED_EPITHELIAL_CELLS_24H_UP,13.771124683014333,Top
+normal,oligodendrocyte precursor cell,RODRIGUES_NTN1_AND_DCC_TARGETS,13.726427439685281,Top
+normal,oligodendrocyte precursor cell,TFCP2_TARGET_GENES,13.697144099022156,Top
+normal,oligodendrocyte precursor cell,GAUTAM_EYE_IRIS_CILIARY_BODY_PUTATIVE_STEM_CELLS,13.692471290832241,Top
+normal,oligodendrocyte precursor cell,MIR5696,13.645583417317638,Top
+normal,oligodendrocyte precursor cell,CEBPE_TARGET_GENES,13.621898343029631,Top
+normal,oligodendrocyte precursor cell,MIR548L,13.602193132383094,Top
+normal,oligodendrocyte precursor cell,GOCC_NEURON_TO_NEURON_SYNAPSE,13.586415971250839,Top
+normal,oligodendrocyte precursor cell,GSE27786_LSK_VS_CD4_TCELL_DN,13.537749774924151,Top
+normal,oligodendrocyte precursor cell,GSE22589_HEALTHY_VS_SIV_INFECTED_DC_UP,13.528243912953764,Top
+normal,oligodendrocyte precursor cell,ATGTACA_MIR493,13.519616455792292,Top
+normal,oligodendrocyte precursor cell,CTGCAGY_UNKNOWN,13.507766005111067,Top
+normal,oligodendrocyte precursor cell,GOBP_CARDIAC_MUSCLE_MYOBLAST_PROLIFERATION,13.481976828074346,Top
+normal,oligodendrocyte precursor cell,MAP2K1_TARGET_GENES,13.466156981307078,Top
+normal,oligodendrocyte precursor cell,GOBP_POSITIVE_REGULATION_OF_MYOBLAST_PROLIFERATION,13.405962043701242,Top
+normal,oligodendrocyte precursor cell,MIR4659A_3P_MIR4659B_3P,13.367060102828562,Top
+normal,oligodendrocyte precursor cell,YATGNWAAT_OCT_C,13.366267322949623,Top
+normal,oligodendrocyte precursor cell,CAVARD_LIVER_CANCER_MALIGNANT_VS_BENIGN,13.290021132116449,Top
+normal,oligodendrocyte precursor cell,ZHENG_CORD_BLOOD_C10_MULTILYMPHOID_PROGENITOR,13.240964082822408,Top
+normal,oligodendrocyte precursor cell,MIR129_5P,13.212327939734612,Top
+normal,oligodendrocyte precursor cell,GOCC_POSTSYNAPTIC_SPECIALIZATION,13.209009660433416,Top
+normal,oligodendrocyte precursor cell,PSIP1_TARGET_GENES,13.196968557627779,Top
+normal,oligodendrocyte precursor cell,MANNO_MIDBRAIN_NEUROTYPES_HNBML1,13.157536470726745,Top
+normal,oligodendrocyte precursor cell,GSE25087_FETAL_VS_ADULT_TCONV_DN,13.144502956573277,Top
+normal,oligodendrocyte precursor cell,HOWLIN_CITED1_TARGETS_2_UP,13.133076651455605,Top
+normal,oligodendrocyte precursor cell,GAVISH_3CA_MALIGNANT_METAPROGRAM_41_UNASSIGNED,12.996916865649288,Top
+normal,oligodendrocyte precursor cell,BRUINS_UVC_RESPONSE_VIA_TP53_GROUP_C,12.98015718917324,Top
+normal,oligodendrocyte precursor cell,GOBP_REGULATION_OF_MYOBLAST_PROLIFERATION,12.937480744705898,Top
+normal,oligodendrocyte precursor cell,ZNF236_TARGET_GENES,12.934822452667097,Top
+normal,oligodendrocyte precursor cell,GAVISH_3CA_MALIGNANT_METAPROGRAM_10_PROTEIN_MATURATION,12.855299860375112,Top
+normal,oligodendrocyte precursor cell,GOCC_POSTSYNAPSE,12.82439970861287,Top
+normal,oligodendrocyte precursor cell,GSE10500_ARTHRITIC_SYNOVIAL_FLUID_VS_HEALTHY_MACROPHAGE_DN,12.786527512824698,Top
+normal,oligodendrocyte precursor cell,GAVISH_3CA_METAPROGRAM_EPITHELIAL_V_ATPASE,12.784122493169079,Top
+normal,oligodendrocyte precursor cell,chr12q15,0.0,Bottom
+normal,oligodendrocyte precursor cell,chr13q12,0.0,Bottom
+normal,oligodendrocyte precursor cell,chr13q14,0.0,Bottom
+normal,oligodendrocyte precursor cell,chr13q32,0.0,Bottom
+normal,oligodendrocyte precursor cell,chr19p12,0.0,Bottom
+normal,oligodendrocyte precursor cell,chr19p13,0.0,Bottom
+normal,oligodendrocyte precursor cell,chr19q13,0.0,Bottom
+normal,oligodendrocyte precursor cell,chr1p35,0.0,Bottom
+normal,oligodendrocyte precursor cell,chr20q11,0.0,Bottom
+normal,oligodendrocyte precursor cell,chr2p23,0.0,Bottom
+normal,oligodendrocyte precursor cell,chr3p23,0.0,Bottom
+normal,oligodendrocyte precursor cell,chr4p11,0.0,Bottom
+normal,oligodendrocyte precursor cell,chr6p11,0.0,Bottom
+normal,oligodendrocyte precursor cell,chr6q15,0.0,Bottom
+normal,oligodendrocyte precursor cell,chr9p13,0.0,Bottom
+normal,oligodendrocyte precursor cell,chr9p21,0.0,Bottom
+normal,oligodendrocyte precursor cell,chr9q32,0.0,Bottom
+normal,oligodendrocyte precursor cell,chr9q33,0.0,Bottom
+normal,oligodendrocyte precursor cell,ABBUD_LIF_SIGNALING_1_DN,0.0,Bottom
+normal,oligodendrocyte precursor cell,ABBUD_LIF_SIGNALING_1_UP,0.0,Bottom
+normal,oligodendrocyte precursor cell,ABBUD_LIF_SIGNALING_2_DN,0.0,Bottom
+normal,oligodendrocyte precursor cell,ABBUD_LIF_SIGNALING_2_UP,0.0,Bottom
+normal,oligodendrocyte precursor cell,ABDELMOHSEN_ELAVL4_TARGETS,0.0,Bottom
+normal,oligodendrocyte precursor cell,ABDULRAHMAN_KIDNEY_CANCER_VHL_DN,0.0,Bottom
+normal,oligodendrocyte precursor cell,ABE_INNER_EAR,0.0,Bottom
+normal,pericyte,MANNO_MIDBRAIN_NEUROTYPES_HGABA,58.48453538314156,Top
+normal,pericyte,MANNO_MIDBRAIN_NEUROTYPES_HNBGABA,53.92480195086935,Top
+normal,pericyte,MANNO_MIDBRAIN_NEUROTYPES_HDA1,40.04892647784689,Top
+normal,pericyte,MANNO_MIDBRAIN_NEUROTYPES_HSERT,37.36405173591945,Top
+normal,pericyte,MANNO_MIDBRAIN_NEUROTYPES_HDA,36.20222904371179,Top
+normal,pericyte,LAKE_ADULT_KIDNEY_C16_COLLECTING_SYSTEM_PRINCIPAL_CELLS_CORTEX,35.287460866181746,Top
+normal,pericyte,MANNO_MIDBRAIN_NEUROTYPES_HDA2,33.67380776612655,Top
+normal,pericyte,MANNO_MIDBRAIN_NEUROTYPES_HNBML5,32.16740251624066,Top
+normal,pericyte,LAKE_ADULT_KIDNEY_C15_CONNECTING_TUBULE,29.143320498259172,Top
+normal,pericyte,LAKE_ADULT_KIDNEY_C5_PROXIMAL_TUBULE_EPITHELIAL_CELLS_STRESS_INFLAM,28.536575524703316,Top
+normal,pericyte,LAKE_ADULT_KIDNEY_C14_DISTAL_CONVOLUTED_TUBULE,26.611731695092242,Top
+normal,pericyte,LAKE_ADULT_KIDNEY_C13_THICK_ASCENDING_LIMB,25.86009290943975,Top
+normal,pericyte,BLALOCK_ALZHEIMERS_DISEASE_DN,25.493884003680684,Top
+normal,pericyte,GSE11924_TH1_VS_TH17_CD4_TCELL_UP,25.291264616924785,Top
+normal,pericyte,RIGGI_EWING_SARCOMA_PROGENITOR_UP,24.928198648535687,Top
+normal,pericyte,MIR218_5P,24.92779955656632,Top
+normal,pericyte,STARK_PREFRONTAL_CORTEX_22Q11_DELETION_UP,24.388094280077063,Top
+normal,pericyte,PAX7_TARGET_GENES,23.876723662666652,Top
+normal,pericyte,PAX3_TARGET_GENES,22.982606431712274,Top
+normal,pericyte,GSE19941_UNSTIM_VS_LPS_AND_IL10_STIM_IL10_KO_MACROPHAGE_UP,22.33257355897323,Top
+normal,pericyte,LAKE_ADULT_KIDNEY_C3_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S1_S2,21.555736210035242,Top
+normal,pericyte,DESCARTES_FETAL_LUNG_VISCERAL_NEURONS,21.4262638092041,Top
+normal,pericyte,GAVISH_3CA_METAPROGRAM_FIBROBLASTS_CAF_4,21.213431399801504,Top
+normal,pericyte,MURARO_PANCREAS_ALPHA_CELL,20.568907198698625,Top
+normal,pericyte,ZHONG_PFC_C3_MICROGLIA,20.287562245907992,Top
+normal,pericyte,PBXIP1_TARGET_GENES,19.752724149952765,Top
+normal,pericyte,IWANAGA_CARCINOGENESIS_BY_KRAS_DN,19.671323610388715,Top
+normal,pericyte,HE_LIM_SUN_FETAL_LUNG_C1_PULMONARY_NEUROENDOCRINE_CELL,19.365381157916524,Top
+normal,pericyte,MANNO_MIDBRAIN_NEUROTYPES_HOMTN,19.35909839298414,Top
+normal,pericyte,SRSF9_TARGET_GENES,19.18820451653522,Top
+normal,pericyte,ALX4_TARGET_GENES,18.83403720026431,Top
+normal,pericyte,GSE32986_UNSTIM_VS_GMCSF_AND_CURDLAN_HIGHDOSE_STIM_DC_DN,18.809864044189453,Top
+normal,pericyte,LAKE_ADULT_KIDNEY_C29_UNKNOWN_NOVEL_PT_CFH_POS_SUBPOPULATION_S2,18.702300527821418,Top
+normal,pericyte,MANNO_MIDBRAIN_NEUROTYPES_HRN,18.48400472558063,Top
+normal,pericyte,HE_LIM_SUN_FETAL_LUNG_C1_PULMONARY_NE_PRECURSOR_CELL,18.258974946063496,Top
+normal,pericyte,PARK_HSC_VS_MULTIPOTENT_PROGENITORS_UP,18.082573144332223,Top
+normal,pericyte,HE_LIM_SUN_FETAL_LUNG_C1_INTERM_NEUROENDOCRINE_CELL,17.8771392573481,Top
+normal,pericyte,TAKEDA_TARGETS_OF_NUP98_HOXA9_FUSION_3D_UP,17.819581529368524,Top
+normal,pericyte,DESCARTES_FETAL_HEART_SATB2_LRRC7_POSITIVE_CELLS,17.79334366839865,Top
+normal,pericyte,GLI1_TARGET_GENES,17.782928383868672,Top
+normal,pericyte,GOCC_SYNAPTIC_MEMBRANE,17.781059099280316,Top
+normal,pericyte,SOX11_TARGET_GENES,17.774703938028086,Top
+normal,pericyte,PAX6_TARGET_GENES,17.73786681631337,Top
+normal,pericyte,LAKE_ADULT_KIDNEY_C2_PODOCYTES,17.68850444710773,Top
+normal,pericyte,CHANDRAN_METASTASIS_TOP50_DN,17.68050994043765,Top
+normal,pericyte,TRAVAGLINI_LUNG_CD8_MEMORY_EFFECTOR_T_CELL,17.605322671973187,Top
+normal,pericyte,GSE24671_CTRL_VS_SENDAI_VIRUS_INFECTED_MOUSE_SPLENOCYTES_UP,17.289979022482168,Top
+normal,pericyte,LAKE_ADULT_KIDNEY_C11_THIN_ASCENDING_LIMB,17.267111778259277,Top
+normal,pericyte,MARSON_FOXP3_TARGETS_UP,17.214473143867824,Top
+normal,pericyte,STAMBOLSKY_TARGETS_OF_MUTATED_TP53_UP,17.154656451681387,Top
+normal,pericyte,CHICAS_RB1_TARGETS_LOW_SERUM,17.131832931352697,Top
+normal,pericyte,MIR448,17.089631764785103,Top
+normal,pericyte,GSE18791_UNSTIM_VS_NEWCATSLE_VIRUS_DC_2H_DN,17.08156202150428,Top
+normal,pericyte,MIR548L,17.051187328670334,Top
+normal,pericyte,IRX2_TARGET_GENES,16.86674120115197,Top
+normal,pericyte,LMX1B_TARGET_GENES,16.843722861746084,Top
+normal,pericyte,GSE2770_TGFB_AND_IL4_VS_TGFB_AND_IL12_TREATED_ACT_CD4_TCELL_48H_UP,16.780145271964695,Top
+normal,pericyte,GSE7509_FCGRIIB_VS_TNFA_IL1B_IL6_PGE_STIM_DC_DN,16.717327325240426,Top
+normal,pericyte,GOCC_CATION_CHANNEL_COMPLEX,16.703765330107316,Top
+normal,pericyte,GSE19888_ADENOSINE_A3R_ACT_VS_TCELL_MEMBRANES_ACT_IN_MAST_CELL_DN,16.60296863058339,Top
+normal,pericyte,BRACHAT_RESPONSE_TO_CISPLATIN,16.588406396948773,Top
+normal,pericyte,LAKE_ADULT_KIDNEY_C4_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S2,16.370854108229928,Top
+normal,pericyte,GSE23308_CTRL_VS_CORTICOSTERONE_TREATED_MACROPHAGE_MINERALCORTICOID_REC_KO_DN,16.345153953718103,Top
+normal,pericyte,ATGTACA_MIR493,16.304152343584143,Top
+normal,pericyte,AAGCACA_MIR218,16.28472732461017,Top
+normal,pericyte,GSE10500_ARTHRITIC_SYNOVIAL_FLUID_VS_HEALTHY_MACROPHAGE_DN,16.248915444249693,Top
+normal,pericyte,ZSCAN5C_TARGET_GENES,16.24724116532699,Top
+normal,pericyte,ZHENG_CORD_BLOOD_C7_PUTATIVE_LYMPHOID_PRIMED_MULTIPOTENT_PROGENITOR_1,16.21804882132489,Top
+normal,pericyte,OLSSON_E2F3_TARGETS_UP,16.20378121085789,Top
+normal,pericyte,TFCP2_TARGET_GENES,16.152794630631156,Top
+normal,pericyte,GSE5542_UNTREATED_VS_IFNA_AND_IFNG_TREATED_EPITHELIAL_CELLS_24H_UP,16.13148604268613,Top
+normal,pericyte,GOCC_SYNAPSE,16.1286214330922,Top
+normal,pericyte,CTGCAGY_UNKNOWN,16.09265843681667,Top
+normal,pericyte,MIR5696,16.087457159291144,Top
+normal,pericyte,RODRIGUES_NTN1_AND_DCC_TARGETS,16.049170784328293,Top
+normal,pericyte,YATGNWAAT_OCT_C,16.03059250375499,Top
+normal,pericyte,GAUTAM_EYE_IRIS_CILIARY_BODY_PUTATIVE_STEM_CELLS,15.952759203703508,Top
+normal,pericyte,GSE22589_HEALTHY_VS_SIV_INFECTED_DC_UP,15.868510723114014,Top
+normal,pericyte,MIR4659A_3P_MIR4659B_3P,15.857535486635955,Top
+normal,pericyte,MAP2K1_TARGET_GENES,15.857388807379682,Top
+normal,pericyte,CEBPE_TARGET_GENES,15.833322172579559,Top
+normal,pericyte,GOBP_CARDIAC_MUSCLE_MYOBLAST_PROLIFERATION,15.710408646127451,Top
+normal,pericyte,GOCC_NEURON_TO_NEURON_SYNAPSE,15.686377815578295,Top
+normal,pericyte,GOBP_POSITIVE_REGULATION_OF_MYOBLAST_PROLIFERATION,15.665176661118217,Top
+normal,pericyte,GOCC_POSTSYNAPTIC_SPECIALIZATION,15.663140379864236,Top
+normal,pericyte,GSE27786_LSK_VS_CD4_TCELL_DN,15.659996633944305,Top
+normal,pericyte,CAVARD_LIVER_CANCER_MALIGNANT_VS_BENIGN,15.530912212703539,Top
+normal,pericyte,GSE25087_FETAL_VS_ADULT_TCONV_DN,15.413139011548912,Top
+normal,pericyte,HOWLIN_CITED1_TARGETS_2_UP,15.375999347023342,Top
+normal,pericyte,MANNO_MIDBRAIN_NEUROTYPES_HNBML1,15.301458213640297,Top
+normal,pericyte,ZHENG_CORD_BLOOD_C10_MULTILYMPHOID_PROGENITOR,15.237429162730342,Top
+normal,pericyte,PSIP1_TARGET_GENES,15.192573257114576,Top
+normal,pericyte,GOBP_REGULATION_OF_MYOBLAST_PROLIFERATION,15.187048414479131,Top
+normal,pericyte,GAVISH_3CA_MALIGNANT_METAPROGRAM_41_UNASSIGNED,15.18054951792178,Top
+normal,pericyte,BRUINS_UVC_RESPONSE_VIA_TP53_GROUP_C,15.128255595331607,Top
+normal,pericyte,DESCARTES_FETAL_STOMACH_ENS_NEURONS,15.100603704867156,Top
+normal,pericyte,ZNF236_TARGET_GENES,15.087987360746965,Top
+normal,pericyte,GAVISH_3CA_MALIGNANT_METAPROGRAM_10_PROTEIN_MATURATION,15.075249817060387,Top
+normal,pericyte,GAVISH_3CA_METAPROGRAM_EPITHELIAL_V_ATPASE,15.05483747565228,Top
+normal,pericyte,HERNANDEZ_MITOTIC_ARREST_BY_DOCETAXEL_1_UP,14.964741188546885,Top
+normal,pericyte,chr12q15,0.0,Bottom
+normal,pericyte,chr13q12,0.0,Bottom
+normal,pericyte,chr13q14,0.0,Bottom
+normal,pericyte,chr13q32,0.0,Bottom
+normal,pericyte,chr19p12,0.0,Bottom
+normal,pericyte,chr19p13,0.0,Bottom
+normal,pericyte,chr19q13,0.0,Bottom
+normal,pericyte,chr1p35,0.0,Bottom
+normal,pericyte,chr20q11,0.0,Bottom
+normal,pericyte,chr2p23,0.0,Bottom
+normal,pericyte,chr3p23,0.0,Bottom
+normal,pericyte,chr4p11,0.0,Bottom
+normal,pericyte,chr6p11,0.0,Bottom
+normal,pericyte,chr6q15,0.0,Bottom
+normal,pericyte,chr9p13,0.0,Bottom
+normal,pericyte,chr9p21,0.0,Bottom
+normal,pericyte,chr9q32,0.0,Bottom
+normal,pericyte,chr9q33,0.0,Bottom
+normal,pericyte,ABBUD_LIF_SIGNALING_1_DN,0.0,Bottom
+normal,pericyte,ABBUD_LIF_SIGNALING_1_UP,0.0,Bottom
+normal,pericyte,ABBUD_LIF_SIGNALING_2_DN,0.0,Bottom
+normal,pericyte,ABBUD_LIF_SIGNALING_2_UP,0.0,Bottom
+normal,pericyte,ABDELMOHSEN_ELAVL4_TARGETS,0.0,Bottom
+normal,pericyte,ABDULRAHMAN_KIDNEY_CANCER_VHL_DN,0.0,Bottom
+normal,pericyte,ABE_INNER_EAR,0.0,Bottom
+normal,vascular associated smooth muscle cell,MANNO_MIDBRAIN_NEUROTYPES_HGABA,42.10220909118652,Top
+normal,vascular associated smooth muscle cell,MANNO_MIDBRAIN_NEUROTYPES_HNBGABA,38.83162975311279,Top
+normal,vascular associated smooth muscle cell,MANNO_MIDBRAIN_NEUROTYPES_HDA1,28.76780605316162,Top
+normal,vascular associated smooth muscle cell,MANNO_MIDBRAIN_NEUROTYPES_HSERT,26.823787689208984,Top
+normal,vascular associated smooth muscle cell,MANNO_MIDBRAIN_NEUROTYPES_HDA,26.019582748413086,Top
+normal,vascular associated smooth muscle cell,LAKE_ADULT_KIDNEY_C16_COLLECTING_SYSTEM_PRINCIPAL_CELLS_CORTEX,25.27401113510132,Top
+normal,vascular associated smooth muscle cell,MANNO_MIDBRAIN_NEUROTYPES_HDA2,24.244295835494995,Top
+normal,vascular associated smooth muscle cell,MANNO_MIDBRAIN_NEUROTYPES_HNBML5,23.103638648986816,Top
+normal,vascular associated smooth muscle cell,LAKE_ADULT_KIDNEY_C15_CONNECTING_TUBULE,20.85927391052246,Top
+normal,vascular associated smooth muscle cell,LAKE_ADULT_KIDNEY_C5_PROXIMAL_TUBULE_EPITHELIAL_CELLS_STRESS_INFLAM,20.428143739700317,Top
+normal,vascular associated smooth muscle cell,LAKE_ADULT_KIDNEY_C14_DISTAL_CONVOLUTED_TUBULE,19.08207941055298,Top
+normal,vascular associated smooth muscle cell,LAKE_ADULT_KIDNEY_C13_THICK_ASCENDING_LIMB,18.522517204284668,Top
+normal,vascular associated smooth muscle cell,GSE11924_TH1_VS_TH17_CD4_TCELL_UP,18.272719621658325,Top
+normal,vascular associated smooth muscle cell,BLALOCK_ALZHEIMERS_DISEASE_DN,18.249613761901855,Top
+normal,vascular associated smooth muscle cell,RIGGI_EWING_SARCOMA_PROGENITOR_UP,18.0012309551239,Top
+normal,vascular associated smooth muscle cell,MIR218_5P,17.8857684135437,Top
+normal,vascular associated smooth muscle cell,STARK_PREFRONTAL_CORTEX_22Q11_DELETION_UP,17.67240595817566,Top
+normal,vascular associated smooth muscle cell,PAX7_TARGET_GENES,17.289725303649902,Top
+normal,vascular associated smooth muscle cell,PAX3_TARGET_GENES,16.458491325378418,Top
+normal,vascular associated smooth muscle cell,GSE19941_UNSTIM_VS_LPS_AND_IL10_STIM_IL10_KO_MACROPHAGE_UP,16.141472339630127,Top
+normal,vascular associated smooth muscle cell,LAKE_ADULT_KIDNEY_C3_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S1_S2,15.45942759513855,Top
+normal,vascular associated smooth muscle cell,GAVISH_3CA_METAPROGRAM_FIBROBLASTS_CAF_4,15.38991117477417,Top
+normal,vascular associated smooth muscle cell,DESCARTES_FETAL_LUNG_VISCERAL_NEURONS,15.351269721984863,Top
+normal,vascular associated smooth muscle cell,MURARO_PANCREAS_ALPHA_CELL,14.925065755844116,Top
+normal,vascular associated smooth muscle cell,ZHONG_PFC_C3_MICROGLIA,14.573139190673828,Top
+normal,vascular associated smooth muscle cell,PBXIP1_TARGET_GENES,14.434149980545044,Top
+normal,vascular associated smooth muscle cell,IWANAGA_CARCINOGENESIS_BY_KRAS_DN,14.332832336425781,Top
+normal,vascular associated smooth muscle cell,SRSF9_TARGET_GENES,13.961396098136902,Top
+normal,vascular associated smooth muscle cell,HE_LIM_SUN_FETAL_LUNG_C1_PULMONARY_NEUROENDOCRINE_CELL,13.905434608459473,Top
+normal,vascular associated smooth muscle cell,MANNO_MIDBRAIN_NEUROTYPES_HOMTN,13.900972962379456,Top
+normal,vascular associated smooth muscle cell,ALX4_TARGET_GENES,13.708762764930725,Top
+normal,vascular associated smooth muscle cell,GSE32986_UNSTIM_VS_GMCSF_AND_CURDLAN_HIGHDOSE_STIM_DC_DN,13.699244618415833,Top
+normal,vascular associated smooth muscle cell,LAKE_ADULT_KIDNEY_C29_UNKNOWN_NOVEL_PT_CFH_POS_SUBPOPULATION_S2,13.404650568962097,Top
+normal,vascular associated smooth muscle cell,MANNO_MIDBRAIN_NEUROTYPES_HRN,13.258751153945923,Top
+normal,vascular associated smooth muscle cell,PARK_HSC_VS_MULTIPOTENT_PROGENITORS_UP,13.178882837295532,Top
+normal,vascular associated smooth muscle cell,HE_LIM_SUN_FETAL_LUNG_C1_PULMONARY_NE_PRECURSOR_CELL,13.142707347869873,Top
+normal,vascular associated smooth muscle cell,TAKEDA_TARGETS_OF_NUP98_HOXA9_FUSION_3D_UP,13.060810208320618,Top
+normal,vascular associated smooth muscle cell,SOX11_TARGET_GENES,12.936470985412598,Top
+normal,vascular associated smooth muscle cell,GLI1_TARGET_GENES,12.934501886367798,Top
+normal,vascular associated smooth muscle cell,CHANDRAN_METASTASIS_TOP50_DN,12.901427030563354,Top
+normal,vascular associated smooth muscle cell,GOCC_SYNAPTIC_MEMBRANE,12.852801442146301,Top
+normal,vascular associated smooth muscle cell,TRAVAGLINI_LUNG_CD8_MEMORY_EFFECTOR_T_CELL,12.852443933486938,Top
+normal,vascular associated smooth muscle cell,HE_LIM_SUN_FETAL_LUNG_C1_INTERM_NEUROENDOCRINE_CELL,12.85051953792572,Top
+normal,vascular associated smooth muscle cell,PAX6_TARGET_GENES,12.841568350791931,Top
+normal,vascular associated smooth muscle cell,DESCARTES_FETAL_HEART_SATB2_LRRC7_POSITIVE_CELLS,12.794565558433533,Top
+normal,vascular associated smooth muscle cell,LAKE_ADULT_KIDNEY_C2_PODOCYTES,12.677135467529297,Top
+normal,vascular associated smooth muscle cell,MARSON_FOXP3_TARGETS_UP,12.567695379257202,Top
+normal,vascular associated smooth muscle cell,GSE24671_CTRL_VS_SENDAI_VIRUS_INFECTED_MOUSE_SPLENOCYTES_UP,12.564641118049622,Top
+normal,vascular associated smooth muscle cell,CHICAS_RB1_TARGETS_LOW_SERUM,12.521588206291199,Top
+normal,vascular associated smooth muscle cell,STAMBOLSKY_TARGETS_OF_MUTATED_TP53_UP,12.502822637557983,Top
+normal,vascular associated smooth muscle cell,GSE18791_UNSTIM_VS_NEWCATSLE_VIRUS_DC_2H_DN,12.460251927375793,Top
+normal,vascular associated smooth muscle cell,LAKE_ADULT_KIDNEY_C11_THIN_ASCENDING_LIMB,12.400995969772339,Top
+normal,vascular associated smooth muscle cell,LMX1B_TARGET_GENES,12.319520235061646,Top
+normal,vascular associated smooth muscle cell,IRX2_TARGET_GENES,12.285794734954834,Top
+normal,vascular associated smooth muscle cell,BRACHAT_RESPONSE_TO_CISPLATIN,12.224842429161072,Top
+normal,vascular associated smooth muscle cell,GSE2770_TGFB_AND_IL4_VS_TGFB_AND_IL12_TREATED_ACT_CD4_TCELL_48H_UP,12.212059140205383,Top
+normal,vascular associated smooth muscle cell,MIR448,12.203451156616211,Top
+normal,vascular associated smooth muscle cell,GSE7509_FCGRIIB_VS_TNFA_IL1B_IL6_PGE_STIM_DC_DN,12.201600790023804,Top
+normal,vascular associated smooth muscle cell,MIR548L,12.156869053840637,Top
+normal,vascular associated smooth muscle cell,GSE19888_ADENOSINE_A3R_ACT_VS_TCELL_MEMBRANES_ACT_IN_MAST_CELL_DN,12.12582528591156,Top
+normal,vascular associated smooth muscle cell,GOCC_CATION_CHANNEL_COMPLEX,11.975943684577942,Top
+normal,vascular associated smooth muscle cell,GSE23308_CTRL_VS_CORTICOSTERONE_TREATED_MACROPHAGE_MINERALCORTICOID_REC_KO_DN,11.921513199806213,Top
+normal,vascular associated smooth muscle cell,OLSSON_E2F3_TARGETS_UP,11.919037222862244,Top
+normal,vascular associated smooth muscle cell,ZSCAN5C_TARGET_GENES,11.890484929084778,Top
+normal,vascular associated smooth muscle cell,ZHENG_CORD_BLOOD_C7_PUTATIVE_LYMPHOID_PRIMED_MULTIPOTENT_PROGENITOR_1,11.857236742973328,Top
+normal,vascular associated smooth muscle cell,TFCP2_TARGET_GENES,11.805510759353638,Top
+normal,vascular associated smooth muscle cell,GSE5542_UNTREATED_VS_IFNA_AND_IFNG_TREATED_EPITHELIAL_CELLS_24H_UP,11.759032011032104,Top
+normal,vascular associated smooth muscle cell,LAKE_ADULT_KIDNEY_C4_PROXIMAL_TUBULE_EPITHELIAL_CELLS_S2,11.72903859615326,Top
+normal,vascular associated smooth muscle cell,RODRIGUES_NTN1_AND_DCC_TARGETS,11.72207486629486,Top
+normal,vascular associated smooth muscle cell,ATGTACA_MIR493,11.667471289634705,Top
+normal,vascular associated smooth muscle cell,AAGCACA_MIR218,11.661093354225159,Top
+normal,vascular associated smooth muscle cell,GAUTAM_EYE_IRIS_CILIARY_BODY_PUTATIVE_STEM_CELLS,11.652272462844849,Top
+normal,vascular associated smooth muscle cell,GOCC_SYNAPSE,11.620226740837097,Top
+normal,vascular associated smooth muscle cell,CEBPE_TARGET_GENES,11.617589235305786,Top
+normal,vascular associated smooth muscle cell,MAP2K1_TARGET_GENES,11.582191467285156,Top
+normal,vascular associated smooth muscle cell,GSE22589_HEALTHY_VS_SIV_INFECTED_DC_UP,11.57841181755066,Top
+normal,vascular associated smooth muscle cell,GSE10500_ARTHRITIC_SYNOVIAL_FLUID_VS_HEALTHY_MACROPHAGE_DN,11.550849556922913,Top
+normal,vascular associated smooth muscle cell,MIR5696,11.53524923324585,Top
+normal,vascular associated smooth muscle cell,GOBP_CARDIAC_MUSCLE_MYOBLAST_PROLIFERATION,11.503110766410828,Top
+normal,vascular associated smooth muscle cell,GOBP_POSITIVE_REGULATION_OF_MYOBLAST_PROLIFERATION,11.501206040382385,Top
+normal,vascular associated smooth muscle cell,CTGCAGY_UNKNOWN,11.490246891975403,Top
+normal,vascular associated smooth muscle cell,YATGNWAAT_OCT_C,11.462751507759094,Top
+normal,vascular associated smooth muscle cell,GSE27786_LSK_VS_CD4_TCELL_DN,11.424526453018188,Top
+normal,vascular associated smooth muscle cell,MIR4659A_3P_MIR4659B_3P,11.364054918289185,Top
+normal,vascular associated smooth muscle cell,CAVARD_LIVER_CANCER_MALIGNANT_VS_BENIGN,11.345121383666992,Top
+normal,vascular associated smooth muscle cell,GOCC_NEURON_TO_NEURON_SYNAPSE,11.305068850517273,Top
+normal,vascular associated smooth muscle cell,HOWLIN_CITED1_TARGETS_2_UP,11.264564633369446,Top
+normal,vascular associated smooth muscle cell,GOCC_POSTSYNAPTIC_SPECIALIZATION,11.2486252784729,Top
+normal,vascular associated smooth muscle cell,GSE25087_FETAL_VS_ADULT_TCONV_DN,11.240781784057617,Top
+normal,vascular associated smooth muscle cell,ZHENG_CORD_BLOOD_C10_MULTILYMPHOID_PROGENITOR,11.153968334197998,Top
+normal,vascular associated smooth muscle cell,GAVISH_3CA_MALIGNANT_METAPROGRAM_41_UNASSIGNED,11.116934537887573,Top
+normal,vascular associated smooth muscle cell,PSIP1_TARGET_GENES,11.094467282295227,Top
+normal,vascular associated smooth muscle cell,GOBP_REGULATION_OF_MYOBLAST_PROLIFERATION,11.08733880519867,Top
+normal,vascular associated smooth muscle cell,BRUINS_UVC_RESPONSE_VIA_TP53_GROUP_C,11.058012127876282,Top
+normal,vascular associated smooth muscle cell,ZNF236_TARGET_GENES,11.043346405029297,Top
+normal,vascular associated smooth muscle cell,GAVISH_3CA_MALIGNANT_METAPROGRAM_10_PROTEIN_MATURATION,11.005432605743408,Top
+normal,vascular associated smooth muscle cell,MANNO_MIDBRAIN_NEUROTYPES_HNBML1,11.002151727676392,Top
+normal,vascular associated smooth muscle cell,GAVISH_3CA_METAPROGRAM_EPITHELIAL_V_ATPASE,10.993940234184265,Top
+normal,vascular associated smooth muscle cell,HERNANDEZ_MITOTIC_ARREST_BY_DOCETAXEL_1_UP,10.95361328125,Top
+normal,vascular associated smooth muscle cell,HOWLIN_CITED1_TARGETS_1_UP,10.897014737129211,Top
+normal,vascular associated smooth muscle cell,chr12q15,0.0,Bottom
+normal,vascular associated smooth muscle cell,chr13q12,0.0,Bottom
+normal,vascular associated smooth muscle cell,chr13q14,0.0,Bottom
+normal,vascular associated smooth muscle cell,chr13q32,0.0,Bottom
+normal,vascular associated smooth muscle cell,chr19p12,0.0,Bottom
+normal,vascular associated smooth muscle cell,chr19p13,0.0,Bottom
+normal,vascular associated smooth muscle cell,chr19q13,0.0,Bottom
+normal,vascular associated smooth muscle cell,chr1p35,0.0,Bottom
+normal,vascular associated smooth muscle cell,chr20q11,0.0,Bottom
+normal,vascular associated smooth muscle cell,chr2p23,0.0,Bottom
+normal,vascular associated smooth muscle cell,chr3p23,0.0,Bottom
+normal,vascular associated smooth muscle cell,chr4p11,0.0,Bottom
+normal,vascular associated smooth muscle cell,chr6p11,0.0,Bottom
+normal,vascular associated smooth muscle cell,chr6q15,0.0,Bottom
+normal,vascular associated smooth muscle cell,chr9p13,0.0,Bottom
+normal,vascular associated smooth muscle cell,chr9p21,0.0,Bottom
+normal,vascular associated smooth muscle cell,chr9q32,0.0,Bottom
+normal,vascular associated smooth muscle cell,chr9q33,0.0,Bottom
+normal,vascular associated smooth muscle cell,ABBUD_LIF_SIGNALING_1_DN,0.0,Bottom
+normal,vascular associated smooth muscle cell,ABBUD_LIF_SIGNALING_1_UP,0.0,Bottom
+normal,vascular associated smooth muscle cell,ABBUD_LIF_SIGNALING_2_DN,0.0,Bottom
+normal,vascular associated smooth muscle cell,ABBUD_LIF_SIGNALING_2_UP,0.0,Bottom
+normal,vascular associated smooth muscle cell,ABDELMOHSEN_ELAVL4_TARGETS,0.0,Bottom
+normal,vascular associated smooth muscle cell,ABDULRAHMAN_KIDNEY_CANCER_VHL_DN,0.0,Bottom
+normal,vascular associated smooth muscle cell,ABE_INNER_EAR,0.0,Bottom

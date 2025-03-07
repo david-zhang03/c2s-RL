@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH --job-name=set_24_QA_dataset_msigdb
-#SBATCH --output /home/ddz5/Desktop/c2s-RL/gene_programs_dev/logs/QA_dataset_msigdb/train_model/set_24_%j.log
+#SBATCH --job-name=set_34_QA_dataset_msigdb
+#SBATCH --output /home/ddz5/Desktop/c2s-RL/gene_programs_dev/logs/QA_dataset_msigdb/train_model/set_34_%j.log
 #SBATCH --mail-type=ALL                            # Mail events (NONE, BEGIN, END, FAIL, ALL)
 #SBATCH --mail-user=david.zhang.ddz5@yale.edu                   # Where to send mail
 #SBATCH --partition gpu
@@ -80,7 +80,7 @@ echo "Detected GPU: $GPU_TYPE at index $GPU_ID with memory threshold: $GPU_MEMOR
 # /home/ddz5/scratch/test_cell2gsea_qa
 # DATASET_DIR="/home/ddz5/scratch/Cell2GSEA_QA_dataset_models/eighth_set/"
 # DATASET_DIR="/home/ddz5/scratch/Cell2GSEA_QA_dataset_models/fourth_set/"
-DATASET_DIR="/home/ddz5/scratch/Cell2GSEA_QA_dataset_models_bk/Cell2GSEA_QA_dataset_models/set_24/"
+DATASET_DIR="/home/ddz5/scratch/Cell2GSEA_QA_dataset_models_bk/Cell2GSEA_QA_dataset_models/set_34/"
 SLEEP_INTERVAL=1800  # Interval to check for processed datasets (in seconds)
 
 # declare -A job_memory_usage # associate memory usage with PID
