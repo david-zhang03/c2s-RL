@@ -1,5 +1,16 @@
 #!/bin/bash
-# Script to run inference on trained models across multiple datasets
+#SBATCH --job-name=inf_QA_dataset_msigdb
+#SBATCH --output /home/ddz5/Desktop/c2s-RL/gene_programs_dev/logs/QA_dataset_msigdb/inference/03_07_25_%j.log
+#SBATCH --mail-type=ALL                            # Mail events (NONE, BEGIN, END, FAIL, ALL)
+#SBATCH --mail-user=david.zhang.ddz5@yale.edu                   # Where to send mail
+#SBATCH --partition gpu
+#SBATCH --requeue
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1                        # Run on a single CPU
+#SBATCH --gres=gpu:1                               # start with 1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=256gb                                 # Job memory request
+#SBATCH --time=1-12:00:00                          # Time limit hrs:min:sec
 
 # Base directory containing all datasets
 DATASET_DIR="/home/ddz5/scratch/Cell2GSEA_QA_dataset_models_bk/Cell2GSEA_QA_dataset_models"
@@ -47,7 +58,7 @@ for set_dir in "$DATASET_DIR"/set_*/; do
                 found_complete_training=false
                 
                 # Check if this dataset has been trained
-                if [ -f "$dataset_dir/training_done.flag" ] && [ -f "$dataset_dir/training_output.pickle" ]; then
+                if [ -f "$dataset_dir/training_done.flag" ] && [ -f "$dataset_dir/new_training_inputs.pickle" ]; then
                     # Check if dataset has been trained successfully (exists a UMAP at epoch 249)
                     for training_run_dir in "$dataset_dir"/*; do
                         if [ -d "$training_run_dir" ]; then
@@ -62,7 +73,7 @@ for set_dir in "$DATASET_DIR"/set_*/; do
                                     continue
                                 fi
 
-                                inputs_path="$dataset_dir/training_inputs.pickle"
+                                inputs_path="$dataset_dir/new_training_inputs.pickle"
                                 inference_csv_results_dir="$set_results_dir/${dataset_name}_inference"
                                 
                                 mkdir -p "$inference_csv_results_dir"
@@ -76,7 +87,7 @@ for set_dir in "$DATASET_DIR"/set_*/; do
                                 /gpfs/radev/home/sr2464/.conda/envs/llamp/bin/python /home/ddz5/Desktop/c2s-RL/gene_programs_dev/scripts/run_inference.py \
                                     --model_path "${model_path}" \
                                     --prepared_train_inputs "${inputs_path}" \
-                                    --output_saved_path "${dataset_dir}" \
+                                    --output_save_path "${dataset_dir}" \
                                     --output_csv_save_path "${inference_csv_results_dir}"
                                 
                                 # Check if inference was successful

@@ -17,6 +17,7 @@ from torch_geometric.data import Data
 from torch_geometric.loader import NodeLoader
 from torch_geometric.sampler.neighbor_sampler import NeighborSampler
 
+sys.path.append('/home/ddz5/Desktop/c2s-RL/gene_programs_dev/')
 from cell2gsea import models, gnn_config
 from cell2gsea.utils import *
 import temp_import
