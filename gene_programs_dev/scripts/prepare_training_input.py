@@ -56,6 +56,12 @@ parser.add_argument('--cell_type_column', type=str, required=False, default='cel
 parser.add_argument('--disease_column', type=str, required=False, default='disease',
                     help='column name in adata.obs that contains disease information')
 
+parser.add_argument('--norm_method', type=str, required=False, default='auto',
+                    help='normalization method to use')
+
+parser.add_argument('--target_sum', type=float, required=False, default=1e4,
+                    help='target sum for library size normalization before log1p (default: 10000)')
+
 args = parser.parse_args()
 
 output_prefix = os.path.abspath(args.output_prefix)
@@ -78,6 +84,17 @@ log_str(f"Loaded gene-set library file: {num_genesets_in_lib:,} gene-sets in the
 log_str(f"Loading h5ad file  {os.path.abspath((args.h5ad_path))}")
 adata = sc.read_h5ad(args.h5ad_path)
 log_str(f"Loaded h5ad file: n_cells = {adata.shape[0]:,} , n_genes = {adata.shape[1]:,}")
+
+# basic normalization check
+if 'normalization' not in adata.uns or 'log1p' not in adata.uns:
+    log_str("Data is unnormalized. Normalizing...")
+    if args.norm_method != 'auto':
+        log_str("Unsupported normalization method")
+        sys.exit(1)
+    adata.layers['raw'] = adata.X.copy()
+    sc.pp.normalize_total(adata, target_sum=args.target_sum)
+    sc.pp.log1p(adata)
+    log_str("Normalization complete")
 
 # Check for cell type information
 cell_type_column = args.cell_type_column
@@ -226,6 +243,7 @@ prepared_input['train_x_sparse'] = csr_matrix(adata_relevant.X) # sparse matrix 
 prepared_input['train_edges'] = edge_list # list of length 2, each of shape (n_edges) to store the edges of the knn graph
 prepared_input['progs_sparse'] = progs # sparse matrix of shape (n_programs, n_genes) to store the binary gene programs
 prepared_input['prog_clusters'] = cluster_dict # array of shape (n_programs) to store the cluster number for each of the programs
+prepared_input['normalization_method'] = args.norm_method
 
 ## save the prepared input as a pickle file
 pickle_output_path = os.path.join(output_path,"new_training_inputs.pickle")
@@ -248,6 +266,8 @@ with open(metadata_output_path, 'w') as f:
     f.write(f"num_edges: {len(edge_list[0])}\n")
     f.write(f"num_diseases: {len(unique_diseases)}\n")
     f.write(f"diseases: {', '.join(sorted(map(str, unique_diseases)))}\n")
+    f.write(f"normalization_method: {args.norm_method}\n")
+    f.write(f"normalization_target_sum: {args.target_sum}\n")
     # reference timestamp
     f.write(f"processed_time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
 
