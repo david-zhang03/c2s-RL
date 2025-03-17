@@ -91,7 +91,7 @@ def run_de_analysis(h5ad_path, dataset_name, output_prefix, cell_type_column="ce
 def get_datasets_to_process(data_prefix, output_prefix):
     """
     Compare datasets between output and data prefix to obtain datasets to process.
-    Returns datasets that exist in data_prefix but not in output_prefix.
+    Returns datasets that exist in data_prefix but don't have a flag file in output_prefix.
     """
     # Get all h5ad files in the data directory
     h5ad_files = glob.glob(os.path.join(data_prefix, "**", "*.h5ad"), recursive=True)
@@ -102,16 +102,12 @@ def get_datasets_to_process(data_prefix, output_prefix):
         dataset_name = os.path.basename(h5ad_path).replace(".h5ad", "")
         all_datasets.append((dataset_name, h5ad_path))
     
-    # Get all processed datasets (directories in output_prefix)
-    processed_datasets = set()
-    if os.path.exists(output_prefix):
-        processed_datasets = set(os.listdir(output_prefix))
-    
-    # Filter datasets that haven't been processed yet
+    # Filter datasets that haven't been processed yet (no flag file)
     datasets_to_process = []
     for dataset_name, h5ad_path in all_datasets:
-        # Check if this dataset has been processed or is in progress
-        if dataset_name not in processed_datasets:
+        # Check if flag file exists for this dataset
+        flag_file_path = os.path.join(output_prefix, dataset_name, 'processing_status.json')
+        if not os.path.exists(flag_file_path):
             datasets_to_process.append((dataset_name, h5ad_path))
     
     return datasets_to_process

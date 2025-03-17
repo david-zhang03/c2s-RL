@@ -23,7 +23,7 @@ def process_dataset_group(group_index, dataset_group, data_prefix, geneset_path,
     for dataset_name in dataset_group:
         # Check if this dataset has already been processed
         dataset_output_path = os.path.join(subdir_path, dataset_name)
-        pickle_file = os.path.join(dataset_output_path, "training_inputs.pickle")
+        pickle_file = os.path.join(dataset_output_path, "new_training_inputs.pickle")
         metadata_file = os.path.join(dataset_output_path, "metadata.txt")
         
         if os.path.exists(pickle_file) and os.path.exists(metadata_file):

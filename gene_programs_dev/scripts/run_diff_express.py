@@ -2,6 +2,8 @@
 import os
 import sys
 import argparse
+import datetime
+import json
 
 import numpy as np
 import pandas as pd
@@ -43,10 +45,41 @@ parser.add_argument('--logfc_cutoff', type=float, required=False, default=1.0,
                     help='log fold change cutoff for significance (default: 1.0)')
 
 parser.add_argument('--reference_disease', type=str, required=False, default="normal",
-                    help='label for reference disease to use to compare withiin cell types (default: normal)')
-
+                    help='label for reference disease to use to compare within cell types (default: normal)')
 
 args = parser.parse_args()
+
+def create_flag_file(output_path, status, message=None):
+    """
+    Create a flag file to indicate processing status
+    
+    Parameters:
+    -----------
+    output_path : str
+        Path to output directory for the dataset
+    status : str
+        Status of processing ('success', 'error', or 'warning')
+    message : str, optional
+        Additional information about the status
+    """
+    flag_file_path = os.path.join(output_path, 'processing_status.json')
+    
+    # Prepare flag data
+    flag_data = {
+        'status': status,
+        'timestamp': datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        'message': message or '',
+        'command_args': vars(args)
+    }
+    
+    # Create the directory if it doesn't exist
+    os.makedirs(os.path.dirname(flag_file_path), exist_ok=True)
+    
+    # Write the flag file
+    with open(flag_file_path, 'w') as f:
+        json.dump(flag_data, f, indent=2)
+    
+    print(f"Created flag file: {flag_file_path}")
 
 # Define output directory
 output_prefix = os.path.abspath(args.output_prefix)
@@ -74,12 +107,16 @@ cell_type_col = args.cell_type_column
 disease_col = args.disease_column
 
 if cell_type_col not in adata.obs.columns:
-    print(f"Cell type annotations not found in column '{cell_type_col}'. Please make sure your dataset has cell type labels.")
+    message = f"Cell type annotations not found in column '{cell_type_col}'. Please make sure your dataset has cell type labels."
+    print(message)
+    create_flag_file(output_path, 'error', message)
     sys.exit(1)
 
 if disease_col not in adata.obs.columns:
-    print(f"Disease annotations not found in column '{disease_col}'. Please make sure your dataset has disease information.")
+    message = f"Disease annotations not found in column '{disease_col}'. Please make sure your dataset has disease information."
+    print(message)
     print(f"Available columns: {list(adata.obs.columns)}")
+    create_flag_file(output_path, 'error', message)
     sys.exit(1)
 
 cell_types = sorted(adata.obs[cell_type_col].unique())
@@ -88,15 +125,19 @@ disease_states = sorted(adata.obs[disease_col].unique())
 print(f"\nCell types in the dataset: {cell_types}")
 print(f"\nDisease states in the dataset: {disease_states}")
 
-if len(cell_types) <= 1:
-    print(f"Require at least two cell types to perform differential expression analysis")
+if len(cell_types) < 2:
+    message = f"Require at least two cell types to perform differential expression analysis"
+    print(message)
+    create_flag_file(output_path, 'error', message)
     sys.exit(1)
 
 # Normalize data if not already normalized
 if 'normalization' not in adata.uns or 'log1p' not in adata.uns:
     print("Data is unnormalized. Normalizing...")
     if args.norm_method != 'auto':
-        print("Unsupported normalization method")
+        message = "Unsupported normalization method. Exiting..."
+        print(message)
+        create_flag_file(output_path, 'error', message)
         sys.exit(1)
     adata.layers['raw'] = adata.X.copy()
     sc.pp.normalize_total(adata, target_sum=args.target_sum)
@@ -104,7 +145,8 @@ if 'normalization' not in adata.uns or 'log1p' not in adata.uns:
     print("Normalization complete")
 
 # Function to perform DE analysis and extract dotplot values
-def run_de_analysis(adata, group_by, group_value, condition_name=None, filter_condition=None):
+def run_de_analysis(adata, group_by, group_value, condition_name=None, filter_condition=None, 
+                    min_cells=10, min_percentage=1.0):
     """
     Perform differential expression analysis and extract values for plotting
     
@@ -120,6 +162,10 @@ def run_de_analysis(adata, group_by, group_value, condition_name=None, filter_co
         Name of additional condition for combined analysis
     filter_condition : tuple, optional
         (column, value) tuple for filtering data before analysis
+    min_cells : int, optional
+        Minimum number of cells required in both groups (default: 10)
+    min_percentage : float, optional
+        Minimum percentage of cells required in the group of interest (default: 1.0)
         
     Returns:
     --------
@@ -144,7 +190,31 @@ def run_de_analysis(adata, group_by, group_value, condition_name=None, filter_co
         working_adata = adata.copy()
     
     # Create a mask for the current group
-    working_adata.obs['is_group'] = (working_adata.obs[group_by] == group_value).astype('category')
+    group_mask = working_adata.obs[group_by] == group_value
+    
+    # Check minimum cell count and percentage requirements
+    group_count = sum(group_mask)
+    total_cells = len(working_adata)
+    group_percentage = (group_count / total_cells) * 100
+    
+    if group_count < min_cells:
+        print(f"Skipping {group_by}={group_value}: Only {group_count} cells in group (minimum required: {min_cells}).")
+        return None
+        
+    if group_percentage < min_percentage:
+        print(f"Skipping {group_by}={group_value}: Group represents only {group_percentage:.2f}% of cells " +
+              f"(minimum required: {min_percentage}%).")
+        return None
+    
+    # Also check that there are enough cells in the other group for comparison
+    other_count = total_cells - group_count
+    if other_count < min_cells:
+        print(f"Skipping {group_by}={group_value}: Only {other_count} cells in comparison group " +
+              f"(minimum required: {min_cells}).")
+        return None
+    
+    # Continue with analysis if all checks pass
+    working_adata.obs['is_group'] = group_mask.map({True: 'True', False: 'False'}).astype('category')
     
     # Perform rank_genes_groups
     sc.tl.rank_genes_groups(working_adata, 'is_group', method='wilcoxon')
@@ -169,8 +239,8 @@ def run_de_analysis(adata, group_by, group_value, condition_name=None, filter_co
     group_row = {
         f'{group_by}': group_value,
         'Num_DE_Genes': len(significant_de_genes),
-        'Num_Cells': sum(working_adata.obs['is_group'] == 'True'),
-        'Percentage_Cells': round((working_adata.obs['is_group'] == 'True').mean() * 100, 2),
+        'Num_Cells': group_count,
+        'Percentage_Cells': round(group_percentage, 2),
         'Mean_LogFC': mean_logfc,
         'Max_LogFC': max_logfc,
         'Min_Pval': min_pval
@@ -713,6 +783,8 @@ if cell_types_within_disease_results:
     plt.tight_layout()
     plt.savefig(os.path.join(plots_dir, "cell_types_within_disease_heatmap.png"), dpi=300, bbox_inches='tight')
     plt.close()
+
+create_flag_file(output_path, 'success', "All differential expression analyses completed successfully")
 
 print("\nAll differential expression analyses completed!")
 print(f"Results saved to: {output_path}")
