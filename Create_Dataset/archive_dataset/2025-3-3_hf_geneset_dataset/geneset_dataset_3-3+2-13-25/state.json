@@ -1,0 +1,25 @@
+{
+  "_data_files": [
+    {
+      "filename": "data-00000-of-00001.arrow"
+    }
+  ],
+  "_fingerprint": "24df2ed05c6f8aa2",
+  "_format_columns": [
+    "Context",
+    "Summary_Dataset",
+    "Question",
+    "Chain of Thoughts",
+    "Answer",
+    "Keyword",
+    "full_QA_pair",
+    "Dataset_Name",
+    "Publication_URL",
+    "Dataset_Index",
+    "Used_Rows"
+  ],
+  "_format_kwargs": {},
+  "_format_type": null,
+  "_output_all_columns": false,
+  "_split": null
+}
