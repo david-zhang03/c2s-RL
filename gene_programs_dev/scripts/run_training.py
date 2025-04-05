@@ -104,7 +104,7 @@ val_cell_types = None
 #     log_str("Dataset has no cell types, exiting...")
 #     sys.exit(1)
 
-if 'cell_types' in prepared_input:
+if 'cell_types' in prepared_input or 'cell_type' in prepared_input:
     log_str("Using cell type information from prepared input")
     all_cell_types = prepared_input['cell_types']
     train_cell_types = np.array([all_cell_types[i] for i in train_indices])
