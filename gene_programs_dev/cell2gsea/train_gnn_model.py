@@ -39,7 +39,7 @@ class gnn_config:
                  GCN_HIDDEN_DIM=128,
                  MLP_HIDDEN_DIM=128,
                  GCN_DROPOUT_LAYER_P=0.5,
-                 NONNEG=True,
+                 NONNEG=False,
                  # KNN graph hyperparameters
                  KNN_GRAPH_K=5,
                  KNN_GRAPH_N_PCA=50,
@@ -47,11 +47,11 @@ class gnn_config:
                  PROGRAM_NORMALIZE=True,
                  PROGRAM_DROPOUT=0.5,
                  PROGRAM_L1_PENALTY=0,
-                 LEARNING_RATE=0.005,
+                 LEARNING_RATE=0.0001,
                  SCHEDULER_STEP=25,
                  MIN_LRN_RATE=1e-5,
                  WEIGHT_DECAY=1e-4,
-                 N_EPOCHS=100,
+                 N_EPOCHS=250,
                  MAX_BATCHES_PER_EPOCH=500,
                  VAL_SPLIT=0.2,
                  # Graph sampling hyperparameters
@@ -301,7 +301,7 @@ def train_gnn(
 
     criterion = torch.nn.MSELoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=conf.LEARNING_RATE, weight_decay=conf.WEIGHT_DECAY)
-    iterations_per_anneal_cycle = conf.SCHEDULER_STEP
+    iterations_per_anneal_cycle = conf.N_EPOCHS
     scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, T_0=iterations_per_anneal_cycle, eta_min=conf.MIN_LRN_RATE)
 
     train_neighbor_sampler = NeighborSampler(
@@ -473,11 +473,12 @@ def train_gnn(
             scheduler.step(epoch + idx / len(train_loader)) # Adjust learning rate
             tr_batch_idx += 1
 
-            if WANDB_LOGGING and idx % conf.TRAIN_LOGGING_STEP == 0:
-                wandb.log({
-                    "Training Step Loss": loss.item(),
-                    "Learning Rate": scheduler.get_last_lr()[0]
-                }, step=idx + epoch * len(train_loader))
+            # per batch logging --> not needed
+            # if WANDB_LOGGING and idx % conf.TRAIN_LOGGING_STEP == 0:
+            #     wandb.log({
+            #         "Training Step Loss": loss.item(),
+            #         "Learning Rate": scheduler.get_last_lr()[0]
+            #     }, step=idx + epoch * len(train_loader))
 
         log_memory_usage("Load train", device)
 
@@ -632,8 +633,8 @@ def train_gnn(
                     # log_str(f"At epoch {epoch}, saved model checkpoint at {os.path.abspath(model_save_path)}")
 
 
-            # plot umap of 
-            if ENABLE_OUTPUT_SCORES and ((epoch % conf.UMAP_PLOTTING == 0) or (epoch == conf.N_EPOCHS-1))  and val_cell_types:
+            # plot umap of val program scores
+            if ENABLE_OUTPUT_SCORES and ((epoch % conf.UMAP_PLOTTING == 0) or (epoch == conf.N_EPOCHS-1)) and val_cell_types is not None:
                 # Apply UMAP
                 adata = ad.AnnData(X=validation_assigned_prog_scores)
                 adata.obs['cell_type'] = val_cell_types
@@ -681,7 +682,7 @@ def train_gnn(
         if WANDB_LOGGING:
             wandb.log({
                 "Learning Rate": scheduler.get_last_lr()[0],
-                "Training Epoch Loss (MSE-reconstruction)": avg_train_loss,
+                "Training Loss (MSE-reconstruction)": avg_train_loss,
                 "Training R2 (reconstruction)": avg_train_r2_score,
                 "Training Pearson (reconstruction)": avg_train_pearsonr_score,
                 "Training Cross Entropy (program scores - labels)": avg_train_cross_entropy,
