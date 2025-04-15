@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH --job-name=calc_metrics_scgsea
-#SBATCH --output /home/ddz5/Desktop/c2s-RL/gene_programs_dev/logs/QA_dataset_msigdb/pseudobulk_gsea/slurm_calc_metrics_scgsea_%j.log
+#SBATCH --job-name=calc_metrics_scgsea_random
+#SBATCH --output /home/ddz5/Desktop/c2s-RL/gene_programs_dev/logs/QA_dataset_msigdb/pseudobulk_gsea/slurm_calc_metrics_scgsea_random_%j.log
 #SBATCH --mail-type=ALL                            # Mail events (NONE, BEGIN, END, FAIL, ALL)
 #SBATCH --mail-user=david.zhang.ddz5@yale.edu                   # Where to send mail
 #SBATCH --partition bigmem
@@ -14,4 +14,4 @@ date;hostname
 
 # THIS SCRIPT IS TO MULTIPROCESS ANALYSIS BETWEEN PSEUDOBULK RNA-seq GSEA and SCGSEA METHOD 
 
-/gpfs/radev/home/ddz5/.conda/envs/c2gsea_clean/bin/python /home/ddz5/Desktop/c2s-RL/gene_programs_dev/scripts/multiprocess_gsea_metrics.py
+/gpfs/radev/home/ddz5/.conda/envs/452_env/bin/python /home/ddz5/Desktop/c2s-RL/gene_programs_dev/scripts/multiprocess_random_gsea_metrics.py
