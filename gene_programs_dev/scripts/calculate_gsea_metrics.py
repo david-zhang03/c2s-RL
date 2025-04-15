@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import re
 from tqdm import tqdm
+import pickle
 
 def sanitize_filename(name):
     return re.sub(r"[^\w\-_\. ]", "_", name)
@@ -21,6 +22,11 @@ def compute_meta_gsea_enrichment(ranked_gene_sets, reference_set):
     return ES, running_sum
 
 def compute_meta_gsea_pval(ranked_gene_sets, reference_set, n_perm=1000):
+    """
+    args:
+        ranked_gene_sets denotes the ranked gene sets produced by pseudobulk GSEA for current cell grouping
+        reference_set denotes scGSEA output of top 10 gene sets for current cell grouping
+    """
     ES_obs, _ = compute_meta_gsea_enrichment(ranked_gene_sets, reference_set)
 
     perm_ES = []
@@ -96,7 +102,7 @@ def run_meta_gsea_all(
 
                 ranked_gene_sets = df_sorted["Term"].tolist()
 
-                # Reference sets: Find the top gene programs for the current condition and cell type
+                # Reference sets: Find the top (100) gene programs for the current condition and cell type
                 reference_set = gps_df_dataset[
                     (gps_df_dataset['Cell Type'] == cell_type) &
                     (gps_df_dataset['Disease'] == cond) &
@@ -131,4 +137,114 @@ def run_meta_gsea_all(
     results_df = pd.DataFrame(results)
     results_df.to_csv(output_path, index=False)
     print(f"\nSaved final summary to: {output_path}")
+    return results_df
+
+def run_random_meta_gsea_all(dataset_name,
+                            scgsea_gps_df_dataset, 
+                            pseudobulk_base_dir, 
+                            scgsea_base_dir,
+                            output_path, 
+                            sort_by="NES", 
+                            n_perm=1000,
+                            n_random_repeats=10):
+    """
+    args:
+        scgsea_gps_df_dataset: actual pd.DataFrame which contains the top programs from scGSEA results / cell grouping
+        pseudobulk_base_dir: path to the pseudobulk results (i.e. pseudobulk enrichment results / cell grouping)
+        scgsea_base_dir: path to actual scGSEA matrix of cells x gene programs
+        n_perm: # times to draw random samples to create our null distribution
+        n_random_repeats: # times to draw random cells of size N (where N = size(cell grouping)) to repeat analysis (i.e. n_random_repeats * n_perm # of 100 random selectly gene sets)
+    """
+
+    def sort_pseudobulk_results(df, sort_by):
+        if sort_by == "NES":
+            df_sorted = df.sort_values(by=["FDR q-val", "NES"], ascending=[True, False])
+        elif sort_by == "FDR":
+            df_sorted = df.sort_values(by="FDR q-val", ascending=True)
+        elif sort_by == "neglog10FDR":
+            df["-log10FDR"] = -np.log10(df["FDR q-val"] + 1e-8)
+            df_sorted = df.sort_values(by="-log10FDR", ascending=False)
+        else:
+            raise ValueError(f"Invalid sort_by: {sort_by}")
+        return df_sorted
+
+    # recall: we require the scGSEA matrix of gene programs scores for all cells as well as the training_inputs
+    try:
+        with open(os.path.join(scgsea_base_dir, "output_scores.pickle"), 'rb') as f:
+            output_scores = pickle.load(f)
+        train_inputs_path = os.path.join(scgsea_base_dir, "new_training_inputs.pickle")
+        # NOTE: we cannot use fallback path here as it does not contain the cell type for each cell
+        # fallback_train_inputs_path = os.path.join(scgsea_base_dir, "training_inputs.pickle")
+        if os.path.exists(train_inputs_path):
+            with open(train_inputs_path, 'rb') as f:
+                inputs = pickle.load(f)
+        # elif os.path.exists(fallback_train_inputs_path):
+        #     with open(fallback_train_inputs_path, 'rb') as f:
+        #         inputs = pickle.load(f)
+        else:
+            raise FileNotFoundError(f"{train_inputs_path} does not exist")
+    except Exception as e:
+        print(f"[ERROR] Failed to load data for {dataset_name}: {e}")
+        return None
+    
+    cell_types = np.array(inputs["cell_types"])
+    diseases = np.array(inputs["disease"])
+    gene_set_names = list(inputs["gene_set_names"])
+    n_cells = output_scores.shape[0]
+    
+    results = []
+
+    for cond in scgsea_gps_df_dataset['Disease'].unique():
+        for cell_type in scgsea_gps_df_dataset['Cell Type'].unique():
+            csv_name = sanitize_filename(f"{cell_type}_{cond}") + ".csv"
+            result_path = os.path.join(pseudobulk_base_dir, csv_name)
+            if not os.path.exists(result_path):
+                continue
+                
+            # Recall: our pseudobulk results are all gene sets for this given cell grouping
+            df = pd.read_csv(result_path)
+            if df.empty or "Term" not in df.columns:
+                continue
+
+            df_sorted = sort_pseudobulk_results(df, sort_by)
+            ranked_gene_sets = df_sorted["Term"].tolist()
+
+            # top 100 gene programs from our scGSEA result
+            reference_set_size = scgsea_gps_df_dataset[
+                (scgsea_gps_df_dataset['Cell Type'] == cell_type) &
+                (scgsea_gps_df_dataset['Disease'] == cond) &
+                (scgsea_gps_df_dataset['Rank Type'] == "Top")
+            ].shape[0]
+            if reference_set_size == 0:
+                continue
+
+            mask = (cell_types == cell_type) & (diseases == cond)
+            group_size = np.sum(mask)
+            if group_size < 5 or group_size > n_cells:
+                continue
+
+            for _ in range(n_random_repeats):
+                random_indices = np.random.choice(n_cells, size=group_size, replace=False)
+                # sample directly from our scGSEA cells x gene program matrix
+                mean_scores = output_scores[random_indices].mean(axis=0)
+                # ascending sort
+                top_indices = np.argsort(mean_scores)[-reference_set_size:][::-1]
+                top_programs = [gene_set_names[i] for i in top_indices]
+
+                es, nes, pval, _ = compute_meta_gsea_pval(ranked_gene_sets, top_programs, n_perm=n_perm)
+
+                results.append({
+                    "dataset": dataset_name,
+                    "cell_type": cell_type,
+                    "condition": cond,
+                    "ES": es,
+                    "NES": nes,
+                    "p_value": pval,
+                    "n_random_cells": group_size,
+                    "reference_size": reference_set_size
+                })
+
+    results_df = pd.DataFrame(results)
+    results_df.to_csv(output_path, index=False)
+    print(f"[DONE] Saved: {output_path}")
     return results_df
