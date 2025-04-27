@@ -1,6 +1,5 @@
 __pycache__/
 
-
 *.json
 *.arrow
 *.log
@@ -8,3 +7,20 @@ __pycache__/
 *.wandb
 *.yaml
 *.txt
+._*
+*.zip
+*.DS_Store
+wandb/
+
+# repo specific files
+gene_set_data/
+mnist*
+*.ipynb
+run_baselines.py
+run_scalability_on_random.py
+run_hyperparam_sweep.py
+generate_slurm_script.py
+baselines.py
+test_env.py
+slurm_train_multiproc.sh
+slurm_validation.sh

@@ -14,4 +14,4 @@ date;hostname
 
 # THIS SCRIPT IS TO MULTIPROCESS PSEUDO-BULK RNA-seq GSEA 
 
-/gpfs/radev/home/sr2464/.conda/envs/llamp/bin/python /home/ddz5/Desktop/c2s-RL/gene_programs_dev/scripts/multiprocess_gsea_datasets.py
+/gpfs/radev/home/sr2464/.conda/envs/llamp/bin/python /home/ddz5/Desktop/c2s-RL/gene_programs_dev/scripts/multiprocess_pseudobulk_gsea_datasets.py

@@ -25,7 +25,7 @@ def compute_meta_gsea_pval(ranked_gene_sets, reference_set, n_perm=1000):
     """
     args:
         ranked_gene_sets denotes the ranked gene sets produced by pseudobulk GSEA for current cell grouping
-        reference_set denotes scGSEA output of top 10 gene sets for current cell grouping
+        reference_set denotes scGSEA output of top 100 gene sets for current cell grouping
     """
     ES_obs, _ = compute_meta_gsea_enrichment(ranked_gene_sets, reference_set)
 
